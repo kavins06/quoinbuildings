@@ -1,0 +1,10 @@
+dist
+dist-ssr
+.next
+node_modules
+Logo_Quoin.png
+Logo_Quoin_webp.webp
+quoin-codex-build-prompt.txt
+quoin-website-blueprint.md
+quoin-dev.log
+quoin-dev.err.log
