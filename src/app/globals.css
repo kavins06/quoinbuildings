@@ -1,0 +1,132 @@
+@import "@fontsource-variable/manrope/index.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f3ee;
+  --surface: #fbf9f5;
+  --surface-strong: #f1ece4;
+  --text: #111111;
+  --muted: #6d675f;
+  --line: #d8d2c7;
+  --line-strong: #bcb4a7;
+  --accent: #7d8883;
+  --accent-strong: #68736e;
+}
+
+@theme inline {
+  --font-sans: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top right, rgba(125, 136, 131, 0.14), transparent 26rem),
+    radial-gradient(circle at bottom left, rgba(17, 17, 17, 0.04), transparent 22rem),
+    var(--bg);
+  font-family: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(216, 210, 199, 0.24) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(216, 210, 199, 0.18) 1px, transparent 1px);
+  background-position: center top;
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.32), transparent 80%);
+}
+
+::selection {
+  background: rgba(125, 136, 131, 0.25);
+}
+
+a,
+button,
+input,
+textarea {
+  transition:
+    color 200ms ease,
+    background-color 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    opacity 200ms ease;
+}
+
+:where(a, button, input, textarea):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: color-mix(in srgb, var(--muted) 75%, transparent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .diagram-trace {
+    stroke-dasharray: 8 10;
+    animation: trace-flow 18s linear infinite;
+  }
+
+  .diagram-pulse {
+    animation: node-pulse 8s ease-in-out infinite;
+    transform-origin: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes trace-flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -180;
+  }
+}
+
+@keyframes node-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.72;
+    transform: scale(1.18);
+  }
+}

@@ -1,13 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="faviconTitle">
-  <title id="faviconTitle">Quoin Buildings favicon</title>
-  <rect width="64" height="64" rx="16" fill="#9a4f2f" />
-  <path
-    d="M32 14c-10.493 0-19 8.507-19 19s8.507 19 19 19c4.144 0 7.977-1.329 11.096-3.586L50 55.318"
-    fill="none"
-    stroke="#fffaf3"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width="7"
-  />
-  <circle cx="46" cy="51" r="4" fill="#fffaf3" />
+  <title id="faviconTitle">QUOIN favicon</title>
+  <rect width="64" height="64" rx="14" fill="#f6f3ee" />
+  <rect x="11" y="11" width="42" height="42" rx="4" fill="none" stroke="#bcb4a7" />
+  <rect x="18" y="18" width="28" height="28" fill="none" stroke="#d8d2c7" />
+  <rect x="24" y="24" width="16" height="16" fill="#7d8883" opacity="0.2" stroke="#7d8883" />
 </svg>
