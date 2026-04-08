@@ -4,12 +4,12 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f6f3ee;
-  --surface: #fbf9f5;
-  --surface-strong: #f1ece4;
-  --text: #111111;
-  --muted: #6d675f;
-  --line: #ddd7cf;
+  --bg: #f3f4f1;
+  --surface: #fafaf7;
+  --surface-strong: #eef0eb;
+  --text: #101114;
+  --muted: #61656b;
+  --line: #d9ddd7;
   --line-strong: #bcb4a7;
   --accent: #7d8883;
   --accent-strong: #68736e;
@@ -45,8 +45,8 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(to right, rgba(221, 215, 207, 0.28) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(221, 215, 207, 0.22) 1px, transparent 1px);
+    linear-gradient(to right, rgba(217, 221, 215, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(217, 221, 215, 0.24) 1px, transparent 1px);
   background-position: center top;
   background-size: 72px 72px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.32), transparent 80%);
