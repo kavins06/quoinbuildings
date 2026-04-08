@@ -4,7 +4,9 @@ import { FormEvent, useState } from "react";
 
 type FormStatus =
   | { state: "idle" }
-  | { state: "submitted"; timestamp: string };
+  | { state: "submitting" }
+  | { state: "submitted" }
+  | { state: "error"; message: string };
 
 const fields = [
   { id: "name", label: "Name", type: "text", autoComplete: "name" },
@@ -26,28 +28,42 @@ const fields = [
 export function PartnerForm() {
   const [status, setStatus] = useState<FormStatus>({ state: "idle" });
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
-    const payload = Object.fromEntries(formData.entries());
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries()) as Record<string, string>;
 
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem(
-        "quoin-partner-inquiry",
-        JSON.stringify(payload),
-      );
+    setStatus({ state: "submitting" });
+
+    try {
+      const response = await fetch("/api/partner-inquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const body = (await response.json().catch(() => null)) as
+          | { error?: string }
+          | null;
+
+        throw new Error(body?.error ?? "Unable to submit the form right now.");
+      }
+
+      setStatus({ state: "submitted" });
+      form.reset();
+    } catch (error) {
+      const message =
+        error instanceof Error
+          ? error.message
+          : "Unable to submit the form right now.";
+
+      setStatus({ state: "error", message });
     }
-
-    setStatus({
-      state: "submitted",
-      timestamp: new Date().toLocaleString("en-US", {
-        dateStyle: "medium",
-        timeStyle: "short",
-      }),
-    });
-
-    event.currentTarget.reset();
   }
 
   return (
@@ -106,17 +122,25 @@ export function PartnerForm() {
           </p>
           <button
             type="submit"
+            disabled={status.state === "submitting"}
             className="inline-flex min-h-11 items-center justify-center rounded-full border border-[color:var(--accent)] bg-[color:var(--accent)] px-5 text-sm font-medium text-[color:var(--surface)] transition-colors duration-200 hover:border-[color:var(--accent-strong)] hover:bg-[color:var(--accent-strong)]"
           >
-            Share your details
+            {status.state === "submitting"
+              ? "Submitting..."
+              : "Share your details"}
           </button>
         </div>
       </form>
 
       {status.state === "submitted" ? (
         <p className="mt-5 rounded-2xl border border-[color:var(--line)] bg-white/70 px-4 py-3 text-sm leading-6 text-[color:var(--muted)]">
-          Inquiry draft saved locally on {status.timestamp}. Wire this form to
-          your preferred submission endpoint before launch.
+          Thanks. Your inquiry was submitted successfully.
+        </p>
+      ) : null}
+
+      {status.state === "error" ? (
+        <p className="mt-5 rounded-2xl border border-[color:var(--line)] bg-white/70 px-4 py-3 text-sm leading-6 text-[color:var(--muted)]">
+          {status.message}
         </p>
       ) : null}
     </div>
