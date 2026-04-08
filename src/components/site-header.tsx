@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 import { LinkButton } from "@/components/link-button";
@@ -17,6 +18,9 @@ function isActive(pathname: string, href: string) {
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigationItems = navItems.slice(0, -1);
 
   return (
     <header className="sticky top-0 z-50 border-b border-[color:var(--line)] bg-[color:rgba(246,243,238,0.88)] backdrop-blur-md">
@@ -25,6 +29,7 @@ export function SiteHeader() {
           href="/"
           className="group inline-flex items-center gap-3 text-[color:var(--text)]"
           aria-label={`${siteMeta.name} home`}
+          onClick={() => setIsMenuOpen(false)}
         >
           <Image
             src="/logo-quoin-cropped.png"
@@ -44,11 +49,38 @@ export function SiteHeader() {
           </span>
         </Link>
 
+        <button
+          type="button"
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-navigation"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          className="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--line)] bg-[color:var(--surface)] text-[color:var(--text)] lg:hidden"
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          <span className="relative block h-4 w-4">
+            <span
+              className={`absolute left-0 top-[2px] h-px w-4 bg-current transition-transform duration-200 ${
+                isMenuOpen ? "translate-y-[5px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-[7px] h-px w-4 bg-current transition-opacity duration-200 ${
+                isMenuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-[12px] h-px w-4 bg-current transition-transform duration-200 ${
+                isMenuOpen ? "-translate-y-[5px] -rotate-45" : ""
+              }`}
+            />
+          </span>
+        </button>
+
         <nav
           aria-label="Primary"
-          className="ml-auto flex flex-wrap items-center justify-end gap-1 text-sm"
+          className="ml-auto hidden flex-wrap items-center justify-end gap-1 text-sm lg:flex"
         >
-          {navItems.slice(0, -1).map((item) => {
+          {navigationItems.map((item) => {
             const active = isActive(pathname, item.href);
 
             return (
@@ -74,6 +106,43 @@ export function SiteHeader() {
             className="ml-2"
           />
         </nav>
+
+        {isMenuOpen ? (
+          <div
+            id="mobile-navigation"
+            className="w-full rounded-[1.75rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-4 lg:hidden"
+          >
+            <nav aria-label="Mobile primary" className="flex flex-col gap-2">
+              {navigationItems.map((item) => {
+                const active = isActive(pathname, item.href);
+
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    aria-current={active ? "page" : undefined}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`rounded-2xl px-4 py-3 text-sm transition-colors duration-200 ${
+                      active
+                        ? "bg-white/70 text-[color:var(--text)] ring-1 ring-[color:var(--line)]"
+                        : "text-[color:var(--muted)] hover:bg-black/[0.02] hover:text-[color:var(--text)]"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+
+              <Link
+                href="/partner"
+                onClick={() => setIsMenuOpen(false)}
+                className="mt-2 inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[color:var(--accent)] bg-[color:var(--accent)] px-5 text-sm font-medium tracking-[-0.01em] text-[color:var(--surface)] transition-colors duration-200 hover:border-[color:var(--accent-strong)] hover:bg-[color:var(--accent-strong)]"
+              >
+                Partner
+              </Link>
+            </nav>
+          </div>
+        ) : null}
       </div>
     </header>
   );
