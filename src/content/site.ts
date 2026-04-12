@@ -36,7 +36,6 @@ export const navItems: CtaLink[] = [
   { href: "/", label: "Home" },
   { href: "/vision", label: "Vision" },
   { href: "/applications", label: "Applications" },
-  { href: "/about", label: "About" },
   { href: "/partner", label: "Partner" },
 ];
 

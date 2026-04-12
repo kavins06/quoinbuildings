@@ -6,7 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "setup:cloud": "npm run vercel:pull && npm run env:sync",
+    "env:sync": "node -e \"const fs=require('fs'); const src='.vercel/.env.development.local'; const dst='.env.local'; if(!fs.existsSync(src)){throw new Error('Run npm run vercel:pull first.')} fs.copyFileSync(src,dst); console.log('Updated .env.local from Vercel development env.');\"",
+    "vercel:link": "vercel link --yes",
+    "vercel:pull": "vercel pull --yes --environment=development",
+    "vercel:pull:prod": "vercel pull --yes --environment=production",
+    "vercel:env:ls": "vercel env ls",
+    "deploy:preview": "vercel",
+    "deploy:prod": "vercel --prod",
+    "supabase:status": "supabase status",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:db:push": "supabase db push",
+    "supabase:link": "supabase link"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "^5.2.8",
@@ -24,5 +37,9 @@
     "react-dom": "^19.2.4",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.2"
+  },
+  "devDependencies": {
+    "supabase": "^2.89.1",
+    "vercel": "^50.44.0"
   }
 }

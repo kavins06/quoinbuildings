@@ -26,8 +26,8 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <div className="min-h-screen">
           <SiteHeader />
           <main className="mx-auto flex w-full max-w-[92rem] flex-col gap-6 px-5 pb-20 lg:px-8">
