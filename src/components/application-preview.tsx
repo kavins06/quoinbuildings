@@ -22,11 +22,11 @@ export function ApplicationPreview({
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-[color:var(--muted)]">
             {label}
           </p>
-          <h2 className="mt-5 text-balance font-sans text-3xl tracking-[-0.05em] text-[color:var(--text)] md:text-4xl">
+          <h2 className="mt-5 text-balance font-serif text-[1.75rem] tracking-[-0.02em] text-[color:var(--text)] sm:text-3xl md:text-4xl">
             {title}
           </h2>
         </div>
-        <p className="max-w-2xl text-lg leading-8 text-[color:var(--muted)]">{body}</p>
+        <p className="max-w-2xl text-lg leading-[1.8] text-[color:var(--muted)]">{body}</p>
       </div>
 
       <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -34,19 +34,34 @@ export function ApplicationPreview({
           <Link
             key={card.title}
             href={card.href}
-            className="card-hover group relative rounded-[1.5rem] border border-[color:var(--line)] bg-[color:rgba(255,255,255,0.52)] p-6 hover:border-[color:var(--line-strong)] hover:bg-white/70"
+            className="card-hover group relative overflow-hidden rounded-xl border border-[color:var(--line)] bg-[color:rgba(255,255,255,0.52)] p-6 transition-colors hover:border-[color:var(--accent)]/30 hover:bg-white/70"
           >
             <span className="font-mono text-xs uppercase tracking-[0.22em] text-[color:var(--muted)]">
               0{index + 1}
             </span>
-            <h3 className="mt-10 text-2xl tracking-[-0.04em] text-[color:var(--text)]">
+            <h3 className="mt-10 font-serif text-2xl tracking-[-0.02em] text-[color:var(--text)]">
               {card.title}
             </h3>
             <p className="mt-4 max-w-[18rem] text-base leading-7 text-[color:var(--muted)]">
               {card.summary}
             </p>
-            <span className="mt-10 inline-flex items-center text-sm text-[color:var(--text)]">
+            <span className="mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-[color:var(--accent)] transition-colors">
               See the applications
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                className="transition-transform duration-200 group-hover:translate-x-1"
+              >
+                <path
+                  d="M5.25 3.5L8.75 7L5.25 10.5"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </span>
           </Link>
         ))}

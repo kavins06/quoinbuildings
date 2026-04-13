@@ -22,7 +22,7 @@ export default function ApplicationsPage() {
         diagram={<FieldDiagram className="mx-auto w-full max-w-[34rem]" />}
       />
 
-      <div className="space-y-6">
+      <div className="space-y-8">
         {applicationsContent.groups.map((group, index) => (
           <Reveal key={group.id}>
             <ApplicationGroup group={group} index={index} />
@@ -31,14 +31,14 @@ export default function ApplicationsPage() {
       </div>
 
       <Reveal>
-        <section className="rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface)] px-6 py-12 sm:px-8 lg:px-10">
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-[color:var(--muted)]">
+        <section className="section-dark rounded-[2rem] border border-[color:var(--line-on-dark)] px-6 py-12 sm:px-8 lg:px-10 lg:py-14">
+          <p className="font-mono text-xs uppercase tracking-[0.28em] text-[color:var(--accent-gold)]">
             Closing note
           </p>
-          <h2 className="mt-5 text-balance text-3xl tracking-[-0.05em] text-[color:var(--text)] md:text-4xl">
+          <h2 className="mt-5 text-balance font-serif text-[1.75rem] tracking-[-0.02em] text-[color:var(--text-on-dark)] sm:text-3xl md:text-4xl">
             {applicationsContent.closing.title}
           </h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-[color:var(--muted)]">
+          <p className="mt-5 max-w-3xl text-lg leading-[1.8] text-[color:var(--muted-on-dark)]">
             {applicationsContent.closing.body}
           </p>
         </section>

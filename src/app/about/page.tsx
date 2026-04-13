@@ -63,14 +63,17 @@ export default function AboutPage() {
       </Reveal>
 
       <Reveal>
-        <section className="quoin-border-accent rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface-strong)] px-6 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-[color:var(--muted)]">
+        <section className="section-dark quoin-border-accent rounded-[2rem] border border-[color:var(--line-on-dark)] px-6 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
+          {/* Accent glow */}
+          <div className="pointer-events-none absolute -left-16 -top-16 h-48 w-48 rounded-full bg-[color:var(--accent-gold)] opacity-[0.05] blur-3xl" />
+
+          <p className="font-mono text-xs uppercase tracking-[0.28em] text-[color:var(--accent-gold)]">
             Brand note
           </p>
-          <h2 className="mt-5 text-balance text-3xl tracking-[-0.05em] text-[color:var(--text)] md:text-4xl">
+          <h2 className="mt-5 text-balance font-serif text-[1.75rem] tracking-[-0.02em] text-[color:var(--text-on-dark)] sm:text-3xl md:text-4xl">
             {aboutContent.brandNote.title}
           </h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-[color:var(--muted)]">
+          <p className="mt-5 max-w-3xl text-lg leading-[1.8] text-[color:var(--muted-on-dark)]">
             {aboutContent.brandNote.body}
           </p>
         </section>

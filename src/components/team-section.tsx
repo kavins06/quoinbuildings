@@ -15,7 +15,7 @@ function Initials({ name }: { name: string }) {
     .toUpperCase();
 
   return (
-    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[color:var(--surface-strong)] text-sm font-semibold tracking-[0.1em] text-[color:var(--muted)]">
+    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[color:var(--accent)] to-[color:var(--accent-strong)] text-sm font-semibold tracking-[0.1em] text-white/90">
       {initials}
     </div>
   );
@@ -28,7 +28,7 @@ export function TeamSection({ label, title, members }: TeamSectionProps) {
         <p className="font-mono text-xs uppercase tracking-[0.24em] text-[color:var(--muted)]">
           {label}
         </p>
-        <h2 className="mt-5 text-balance font-sans text-3xl tracking-[-0.05em] text-[color:var(--text)] md:text-4xl">
+        <h2 className="mt-5 text-balance font-serif text-[1.75rem] tracking-[-0.02em] text-[color:var(--text)] sm:text-3xl md:text-4xl">
           {title}
         </h2>
       </div>
@@ -43,16 +43,16 @@ export function TeamSection({ label, title, members }: TeamSectionProps) {
                 <img
                   src={member.image}
                   alt=""
-                  className="h-16 w-16 shrink-0 rounded-full object-cover"
+                  className="h-14 w-14 shrink-0 rounded-xl object-cover"
                 />
               ) : (
                 <Initials name={member.name} />
               )}
               <div>
-                <h3 className="text-lg tracking-[-0.02em] text-[color:var(--text)]">
+                <h3 className="font-serif text-lg tracking-[-0.01em] text-[color:var(--text)]">
                   {member.name}
                 </h3>
-                <p className="mt-1 font-mono text-xs uppercase tracking-[0.16em] text-[color:var(--muted)]">
+                <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.16em] text-[color:var(--accent)]">
                   {member.role}
                 </p>
               </div>

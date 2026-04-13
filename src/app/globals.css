@@ -1,24 +1,34 @@
 @import "@fontsource-variable/manrope/index.css";
 @import "@fontsource/ibm-plex-mono/400.css";
 @import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/instrument-serif/400.css";
 @import "tailwindcss";
 
 :root {
-  --bg: #f0f0ec;
-  --surface: #f8f8f5;
-  --surface-strong: #e8e9e3;
-  --text: #101114;
+  --bg: #edeee9;
+  --surface: #f6f6f2;
+  --surface-strong: #e4e5df;
+  --surface-dark: #1b1f1d;
+  --surface-darker: #12140f;
+  --text: #0e1011;
+  --text-on-dark: #e8e9e3;
   --muted: #4a4e54;
-  --line: #d2d5ce;
+  --muted-on-dark: #8e928a;
+  --line: #cdd0c8;
   --line-strong: #a8a298;
-  --accent: #2d5a4a;
-  --accent-strong: #1e4536;
+  --line-on-dark: rgba(255, 255, 255, 0.1);
+  --accent: #2a5e4c;
+  --accent-strong: #1a4235;
+  --accent-light: rgba(42, 94, 76, 0.08);
   --accent-warm: #b45a3c;
+  --accent-warm-light: rgba(180, 90, 60, 0.07);
+  --accent-gold: #b08d57;
   --steel: #64748b;
 }
 
 @theme inline {
   --font-sans: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", "Georgia", serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
@@ -34,12 +44,14 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at top right, rgba(45, 90, 74, 0.10), transparent 26rem),
-    radial-gradient(circle at bottom left, rgba(17, 17, 17, 0.04), transparent 22rem),
+    radial-gradient(ellipse 80% 50% at 70% 0%, rgba(42, 94, 76, 0.07), transparent),
+    radial-gradient(ellipse 60% 40% at 10% 100%, rgba(17, 17, 17, 0.04), transparent),
+    radial-gradient(ellipse 40% 30% at 50% 50%, rgba(176, 141, 87, 0.03), transparent),
     var(--bg);
   font-family: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Architectural grid pattern */
 body::before {
   content: "";
   position: fixed;
@@ -47,15 +59,28 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(to right, rgba(210, 213, 206, 0.3) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(210, 213, 206, 0.24) 1px, transparent 1px);
+    linear-gradient(to right, rgba(205, 208, 200, 0.28) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(205, 208, 200, 0.22) 1px, transparent 1px);
   background-position: center top;
   background-size: 72px 72px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.32), transparent 80%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.08) 60%, transparent 85%);
+}
+
+/* Subtle grain overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
 }
 
 ::selection {
-  background: rgba(45, 90, 74, 0.2);
+  background: rgba(42, 94, 76, 0.18);
 }
 
 a,
@@ -82,8 +107,10 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  color: color-mix(in srgb, var(--muted) 75%, transparent);
+  color: color-mix(in srgb, var(--muted) 60%, transparent);
 }
+
+/* ───────── Motion ───────── */
 
 @media (prefers-reduced-motion: no-preference) {
   html {
@@ -113,27 +140,56 @@ textarea::placeholder {
 }
 
 @keyframes trace-flow {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: -180;
-  }
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -180; }
 }
 
 @keyframes node-pulse {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.72;
-    transform: scale(1.18);
-  }
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.72; transform: scale(1.18); }
 }
 
-/* Quoin cornerstone motif */
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(2rem) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(1.25rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes draw-line {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Hero stagger animation classes */
+.hero-stagger-1 { animation: fade-up 0.8s ease 0.1s both; }
+.hero-stagger-2 { animation: fade-up 0.8s ease 0.25s both; }
+.hero-stagger-3 { animation: fade-up 0.8s ease 0.4s both; }
+.hero-stagger-4 { animation: fade-up 0.8s ease 0.55s both; }
+
+.hero-diagram-enter {
+  animation: hero-rise 1s ease 0.4s both;
+}
+
+.hero-line {
+  transform-origin: left;
+  animation: draw-line 0.6s ease 0.7s both;
+}
+
+/* ───────── Quoin cornerstone motif ───────── */
 .quoin-corner {
   border-radius: 0.25rem 2rem 2rem 2rem;
   position: relative;
@@ -158,7 +214,7 @@ textarea::placeholder {
   border-top-left-radius: 0.25rem;
 }
 
-/* Scroll reveal */
+/* ───────── Scroll reveal ───────── */
 [data-visible] {
   opacity: 0;
   transform: translateY(1.5rem);
@@ -169,30 +225,63 @@ textarea::placeholder {
   transform: translateY(0);
 }
 
-/* Card hover interaction */
+/* ───────── Card hover interaction ───────── */
 .card-hover {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, color 0.2s ease, background-color 0.2s ease;
 }
 .card-hover:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.06),
+    0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-/* Hero diagram entrance */
-@keyframes hero-rise {
-  from {
-    opacity: 0;
-    transform: translateY(2rem) scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+/* ───────── Section Dark variant ───────── */
+.section-dark {
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+  border-color: var(--line-on-dark);
 }
-.hero-diagram-enter {
-  animation: hero-rise 1s ease 0.3s both;
+.section-dark .text-muted-ref {
+  color: var(--muted-on-dark);
 }
 
+/* ───────── Decorative rule ───────── */
+.decorative-rule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent) 15%,
+    var(--accent-gold) 50%,
+    var(--accent-warm) 85%,
+    transparent
+  );
+  opacity: 0.35;
+}
+
+/* ───────── Button shimmer for primary ───────── */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.12) 45%,
+    rgba(255, 255, 255, 0.12) 55%,
+    transparent 60%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ───────── Reduced motion overrides ───────── */
 @media (prefers-reduced-motion: reduce) {
   [data-visible] {
     opacity: 1;
@@ -202,7 +291,17 @@ textarea::placeholder {
   .card-hover:hover {
     transform: none;
   }
-  .hero-diagram-enter {
+  .hero-diagram-enter,
+  .hero-stagger-1,
+  .hero-stagger-2,
+  .hero-stagger-3,
+  .hero-stagger-4,
+  .hero-line {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .btn-shimmer::after {
     animation: none;
   }
 }

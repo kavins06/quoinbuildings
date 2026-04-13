@@ -30,7 +30,7 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <div className="min-h-screen">
           <SiteHeader />
-          <main className="mx-auto flex w-full flex-col gap-6 px-4 pb-20 lg:px-6 2xl:px-10">
+          <main className="mx-auto flex w-full flex-col gap-8 px-4 pb-24 lg:px-6 2xl:px-10">
             {children}
           </main>
           <SiteFooter />

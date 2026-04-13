@@ -23,26 +23,30 @@ export default function PartnerPage() {
       />
 
       <Reveal>
-        <section className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
+        <section className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
           <div className="rounded-[2rem] border border-[color:var(--line)] px-6 py-10 sm:px-8 sm:py-12">
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-[color:var(--muted)]">
               Who should reach out
             </p>
-            <div className="mt-6 grid gap-5">
+            <div className="mt-6 grid gap-4">
               {partnerContent.audiences.map((audience, index) => (
                 <article
                   key={audience.title}
-                  className="card-hover rounded-[1.5rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-6"
+                  className="card-hover rounded-xl border border-[color:var(--line)] bg-[color:var(--surface)] p-6 transition-colors hover:border-[color:var(--accent)]/30"
                 >
-                  <p className="font-mono text-xs uppercase tracking-[0.22em] text-[color:var(--muted)]">
-                    0{index + 1}
-                  </p>
-                  <h2 className="mt-4 text-2xl tracking-[-0.04em] text-[color:var(--text)]">
-                    {audience.title}
-                  </h2>
-                  <p className="mt-4 text-base leading-7 text-[color:var(--muted)]">
-                    {audience.body}
-                  </p>
+                  <div className="flex items-start gap-4">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[color:var(--accent-light)] font-mono text-xs font-medium text-[color:var(--accent)]">
+                      0{index + 1}
+                    </span>
+                    <div>
+                      <h2 className="font-serif text-xl tracking-[-0.02em] text-[color:var(--text)]">
+                        {audience.title}
+                      </h2>
+                      <p className="mt-3 text-base leading-7 text-[color:var(--muted)]">
+                        {audience.body}
+                      </p>
+                    </div>
+                  </div>
                 </article>
               ))}
             </div>

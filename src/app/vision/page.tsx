@@ -27,6 +27,8 @@ const sectionDiagrams = [
   <EmergingStackDiagram key="emerging" className="h-full min-h-[18rem]" />,
 ];
 
+const sectionTones: Array<"default" | "soft" | "dark"> = ["default", "soft", "default", "soft"];
+
 export default function VisionPage() {
   return (
     <>
@@ -43,7 +45,7 @@ export default function VisionPage() {
             label={section.label}
             title={section.title}
             body={section.body}
-            tone={index % 2 === 1 ? "soft" : "default"}
+            tone={sectionTones[index]}
             reversed={index % 2 === 1}
             quoin={index === 0}
             aside={sectionDiagrams[index]}
