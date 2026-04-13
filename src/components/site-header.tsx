@@ -54,7 +54,7 @@ export function SiteHeader() {
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--text)] bg-[color:var(--surface-strong)] text-[color:var(--text)] lg:hidden"
+          className="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--text)] bg-[color:var(--surface-strong)] text-[color:var(--text)] md:hidden"
           onClick={() => setIsMenuOpen((open) => !open)}
         >
           <svg width="18" height="14" viewBox="0 0 18 14" fill="none" className="text-current">
@@ -90,7 +90,7 @@ export function SiteHeader() {
 
         <nav
           aria-label="Primary"
-          className="ml-auto hidden flex-wrap items-center justify-end gap-1 text-sm lg:flex"
+          className="ml-auto hidden flex-wrap items-center justify-end gap-1 text-sm md:flex"
         >
           {navigationItems.map((item) => {
             const active = isActive(pathname, item.href);
@@ -122,7 +122,7 @@ export function SiteHeader() {
         {isMenuOpen ? (
           <div
             id="mobile-navigation"
-            className="w-full rounded-[1.75rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-4 lg:hidden"
+            className="w-full rounded-[1.75rem] border border-[color:var(--line)] bg-[color:var(--surface)] p-4 md:hidden"
           >
             <nav aria-label="Mobile primary" className="flex flex-col gap-2">
               {navigationItems.map((item) => {
