@@ -15,7 +15,7 @@ export function PartnerCTA({
   secondary,
 }: PartnerCtaProps) {
   return (
-    <section className="relative overflow-hidden rounded-[2rem] border border-[color:var(--line)] bg-[color:var(--surface)] px-6 py-12 sm:px-8 lg:px-10 lg:py-14">
+    <section className="quoin-corner relative overflow-hidden border border-[color:var(--line)] bg-[color:var(--surface)] px-6 py-12 sm:px-8 lg:px-10 lg:py-14">
       <div className="absolute inset-y-6 left-6 right-6 rounded-[1.75rem] border border-[color:rgba(216,210,199,0.55)]" />
       <div className="relative max-w-3xl">
         <p className="font-mono text-xs uppercase tracking-[0.24em] text-[color:var(--muted)]">

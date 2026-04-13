@@ -23,6 +23,13 @@ export type ApplicationGroup = {
   translation: string;
 };
 
+export type TeamMember = {
+  name: string;
+  role: string;
+  bio: string;
+  image?: string;
+};
+
 export const siteMeta = {
   name: "QUOIN",
   title: "QUOIN - Building performance should connect directly to financial performance",
@@ -39,12 +46,6 @@ export const navItems: CtaLink[] = [
   { href: "/partner", label: "Partner" },
 ];
 
-export const footerLinks = [
-  { href: "/", label: "Home" },
-  { href: "/vision", label: "Read the vision" },
-  { href: "/applications", label: "See the applications" },
-  { href: "/partner", label: "Partner with QUOIN" },
-];
 
 export const homeContent = {
   hero: {
@@ -347,3 +348,26 @@ export const partnerContent = {
   note:
     "We are especially interested in partners who think beyond isolated tools and toward foundational building intelligence.",
 };
+
+export const teamContent = {
+  label: "Team",
+  title: "The people building QUOIN.",
+  members: [
+    {
+      name: "Founder Name",
+      role: "Co-Founder & CEO",
+      bio: "Background in commercial real estate and building operations. Focused on making building intelligence more accessible and financially useful.",
+    },
+    {
+      name: "Founder Name",
+      role: "Co-Founder & CTO",
+      bio: "Background in infrastructure software and physical-world data systems. Focused on building the intelligence layer that connects building performance to decisions.",
+    },
+  ] satisfies TeamMember[],
+};
+
+export const credibilitySignals = [
+  "Commercial real estate focus",
+  "Founded by operators and technologists",
+  "Building the intelligence layer",
+];

@@ -28,7 +28,7 @@ export function PageHero({
         home ? "pb-16 pt-12 lg:pb-24 lg:pt-16" : "pb-12 pt-10 lg:pb-16 lg:pt-14"
       }`}
     >
-      <div className="grid gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(24rem,0.95fr)] lg:items-center">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center">
         <div className="max-w-3xl">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-[color:var(--muted)]">
             {eyebrow}
@@ -64,7 +64,7 @@ export function PageHero({
         </div>
 
         {diagram ? (
-          <div className="relative lg:justify-self-end">{diagram}</div>
+          <div className="hero-diagram-enter relative lg:justify-self-center">{diagram}</div>
         ) : null}
       </div>
     </section>

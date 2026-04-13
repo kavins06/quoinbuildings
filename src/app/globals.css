@@ -4,15 +4,17 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f3f4f1;
-  --surface: #fafaf7;
-  --surface-strong: #eef0eb;
+  --bg: #f0f0ec;
+  --surface: #f8f8f5;
+  --surface-strong: #e8e9e3;
   --text: #101114;
-  --muted: #61656b;
-  --line: #d9ddd7;
-  --line-strong: #bcb4a7;
-  --accent: #7d8883;
-  --accent-strong: #68736e;
+  --muted: #4a4e54;
+  --line: #d2d5ce;
+  --line-strong: #a8a298;
+  --accent: #2d5a4a;
+  --accent-strong: #1e4536;
+  --accent-warm: #b45a3c;
+  --steel: #64748b;
 }
 
 @theme inline {
@@ -32,7 +34,7 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at top right, rgba(125, 136, 131, 0.14), transparent 26rem),
+    radial-gradient(circle at top right, rgba(45, 90, 74, 0.10), transparent 26rem),
     radial-gradient(circle at bottom left, rgba(17, 17, 17, 0.04), transparent 22rem),
     var(--bg);
   font-family: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
@@ -45,15 +47,15 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(to right, rgba(217, 221, 215, 0.3) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(217, 221, 215, 0.24) 1px, transparent 1px);
+    linear-gradient(to right, rgba(210, 213, 206, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(210, 213, 206, 0.24) 1px, transparent 1px);
   background-position: center top;
   background-size: 72px 72px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.32), transparent 80%);
 }
 
 ::selection {
-  background: rgba(125, 136, 131, 0.25);
+  background: rgba(45, 90, 74, 0.2);
 }
 
 a,
@@ -128,5 +130,79 @@ textarea::placeholder {
   50% {
     opacity: 0.72;
     transform: scale(1.18);
+  }
+}
+
+/* Quoin cornerstone motif */
+.quoin-corner {
+  border-radius: 0.25rem 2rem 2rem 2rem;
+  position: relative;
+}
+.quoin-corner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-radius: 0 0 0.75rem 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.quoin-border-accent {
+  border-left: 3px solid var(--accent);
+  border-top: 3px solid var(--accent);
+  border-top-left-radius: 0.25rem;
+}
+
+/* Scroll reveal */
+[data-visible] {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card hover interaction */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Hero diagram entrance */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(2rem) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.hero-diagram-enter {
+  animation: hero-rise 1s ease 0.3s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-visible] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card-hover:hover {
+    transform: none;
+  }
+  .hero-diagram-enter {
+    animation: none;
   }
 }

@@ -34,7 +34,7 @@ export function ApplicationPreview({
           <Link
             key={card.title}
             href={card.href}
-            className="group relative rounded-[1.5rem] border border-[color:var(--line)] bg-[color:rgba(255,255,255,0.52)] p-6 transition-colors duration-200 hover:border-[color:var(--line-strong)] hover:bg-white/70"
+            className="card-hover group relative rounded-[1.5rem] border border-[color:var(--line)] bg-[color:rgba(255,255,255,0.52)] p-6 hover:border-[color:var(--line-strong)] hover:bg-white/70"
           >
             <span className="font-mono text-xs uppercase tracking-[0.22em] text-[color:var(--muted)]">
               0{index + 1}

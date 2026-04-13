@@ -25,7 +25,7 @@ export function PrinciplesGrid({
         {items.map((item) => (
           <article
             key={item.title}
-            className="rounded-[1.5rem] border border-[color:var(--line)] bg-[color:rgba(255,255,255,0.46)] p-6"
+            className="card-hover rounded-[1.5rem] border border-[color:var(--line)] bg-[color:rgba(255,255,255,0.46)] p-6"
           >
             <h3 className="text-xl tracking-[-0.03em] text-[color:var(--text)]">
               {item.title}

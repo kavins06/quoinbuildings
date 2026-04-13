@@ -1,14 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { footerLinks, navItems, siteMeta } from "@/content/site";
+import { siteMeta } from "@/content/site";
+
+const footerNav = [
+  { href: "/", label: "Home" },
+  { href: "/vision", label: "Read the vision" },
+  { href: "/applications", label: "See the applications" },
+  { href: "/partner", label: "Partner with QUOIN" },
+];
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-[color:var(--line)]">
-      <div className="mx-auto grid w-full max-w-[92rem] gap-12 px-5 py-16 lg:grid-cols-[minmax(0,1.4fr)_minmax(12rem,0.7fr)_minmax(12rem,0.8fr)] lg:px-8">
+      <div className="mx-auto grid w-full max-w-none gap-12 px-4 py-16 lg:grid-cols-[minmax(0,1.6fr)_minmax(12rem,0.6fr)] lg:px-6">
         <div className="max-w-md">
           <div className="flex items-center gap-4">
             <Image
@@ -37,25 +44,7 @@ export function SiteFooter() {
             Navigate
           </p>
           <ul className="mt-4 space-y-3">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-[color:var(--muted)] transition-colors hover:text-[color:var(--text)]"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <p className="font-mono text-xs uppercase tracking-[0.22em] text-[color:var(--muted)]">
-            Connect
-          </p>
-          <ul className="mt-4 space-y-3">
-            {footerLinks.map((item) => (
+            {footerNav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
@@ -70,12 +59,8 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-[color:var(--line)]">
-        <div className="mx-auto flex w-full max-w-[92rem] flex-col gap-3 px-5 py-5 text-xs text-[color:var(--muted)] lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div className="mx-auto flex w-full max-w-none items-center justify-between px-4 py-5 text-xs text-[color:var(--muted)] lg:px-6">
           <p>{year} QUOIN. All rights reserved.</p>
-          <div className="flex gap-5">
-            <span>Privacy</span>
-            <span>Terms</span>
-          </div>
         </div>
       </div>
     </footer>

@@ -23,8 +23,8 @@ export function SiteHeader() {
   const navigationItems = navItems.slice(0, -1);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[color:var(--line)] bg-[color:rgba(246,243,238,0.88)] backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-[92rem] flex-wrap items-center gap-x-6 gap-y-4 px-5 py-4 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-[color:var(--line)] bg-[color:rgba(240,240,236,0.88)] backdrop-blur-md">
+      <div className="mx-auto flex w-full flex-wrap items-center gap-x-6 gap-y-4 px-4 py-4 lg:px-6 2xl:px-10">
         <Link
           href="/"
           className="group inline-flex items-center gap-3 text-[color:var(--text)]"
@@ -54,7 +54,7 @@ export function SiteHeader() {
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--line)] bg-[color:var(--surface)] text-[color:var(--text)] lg:hidden"
+          className="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--line-strong)] bg-[color:var(--surface-strong)] text-[color:var(--text)] lg:hidden"
           onClick={() => setIsMenuOpen((open) => !open)}
         >
           <span className="relative block h-4 w-4">
