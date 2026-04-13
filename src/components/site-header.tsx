@@ -54,26 +54,38 @@ export function SiteHeader() {
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-          className="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--line-strong)] bg-[color:var(--surface-strong)] text-[color:var(--text)] lg:hidden"
+          className="ml-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:var(--text)] bg-[color:var(--surface-strong)] text-[color:var(--text)] lg:hidden"
           onClick={() => setIsMenuOpen((open) => !open)}
         >
-          <span className="relative block h-4 w-4">
-            <span
-              className={`absolute left-0 top-[2px] h-px w-4 bg-current transition-transform duration-200 ${
-                isMenuOpen ? "translate-y-[5px] rotate-45" : ""
-              }`}
+          <svg width="18" height="14" viewBox="0 0 18 14" fill="none" className="text-current">
+            <rect
+              y={isMenuOpen ? "6" : "0"}
+              width="18"
+              height="2"
+              rx="1"
+              fill="currentColor"
+              className="transition-all duration-200 origin-center"
+              style={isMenuOpen ? { transform: "rotate(45deg)" } : undefined}
             />
-            <span
-              className={`absolute left-0 top-[7px] h-px w-4 bg-current transition-opacity duration-200 ${
-                isMenuOpen ? "opacity-0" : "opacity-100"
-              }`}
+            <rect
+              y="6"
+              width="18"
+              height="2"
+              rx="1"
+              fill="currentColor"
+              className="transition-opacity duration-200"
+              style={{ opacity: isMenuOpen ? 0 : 1 }}
             />
-            <span
-              className={`absolute left-0 top-[12px] h-px w-4 bg-current transition-transform duration-200 ${
-                isMenuOpen ? "-translate-y-[5px] -rotate-45" : ""
-              }`}
+            <rect
+              y={isMenuOpen ? "6" : "12"}
+              width="18"
+              height="2"
+              rx="1"
+              fill="currentColor"
+              className="transition-all duration-200 origin-center"
+              style={isMenuOpen ? { transform: "rotate(-45deg)" } : undefined}
             />
-          </span>
+          </svg>
         </button>
 
         <nav
