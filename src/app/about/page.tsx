@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { FieldDiagram, GapDiagram } from "@/components/architectural-diagrams";
+import { FieldDiagram } from "@/components/architectural-diagrams";
 import { PageHero } from "@/components/page-hero";
 import { PartnerCTA } from "@/components/partner-cta";
 import { PrinciplesGrid } from "@/components/principles-grid";
@@ -12,7 +12,7 @@ import { aboutContent, teamContent } from "@/content/site";
 export const metadata: Metadata = {
   title: "About QUOIN - Why we exist",
   description:
-    "QUOIN is building a foundational layer for building intelligence with a focus on clarity, economics, and broad accessibility.",
+    "QUOIN exists because property management firms deserve AI advisory that understands their world, not generic consulting.",
 };
 
 export default function AboutPage() {
@@ -30,7 +30,7 @@ export default function AboutPage() {
           label={aboutContent.sections[0].label}
           title={aboutContent.sections[0].title}
           body={aboutContent.sections[0].body}
-          aside={<GapDiagram className="min-h-[18rem]" />}
+          aside={<FieldDiagram className="min-h-[18rem]" />}
           quoin
         />
       </Reveal>

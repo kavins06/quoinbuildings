@@ -12,12 +12,12 @@ import { PartnerCTA } from "@/components/partner-cta";
 import { PrinciplesGrid } from "@/components/principles-grid";
 import { Reveal } from "@/components/reveal";
 import { SectionShell } from "@/components/section-shell";
-import { visionContent } from "@/content/site";
+import { whyPMContent } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Vision - The next operating model for buildings | QUOIN",
+  title: "Why Property Management - AI challenges that demand domain expertise | QUOIN",
   description:
-    "Why buildings need a new intelligence layer, and why physical performance should connect directly to financial performance.",
+    "Generic AI advice fails in property management. Tenant data, fair housing, vendor fragmentation, and workforce readiness demand specific expertise.",
 };
 
 const sectionDiagrams = [
@@ -29,17 +29,17 @@ const sectionDiagrams = [
 
 const sectionTones: Array<"default" | "soft" | "dark"> = ["default", "soft", "default", "soft"];
 
-export default function VisionPage() {
+export default function WhyPropertyManagementPage() {
   return (
     <>
       <PageHero
-        eyebrow={visionContent.hero.label}
-        title={visionContent.hero.title}
-        description={visionContent.hero.description}
+        eyebrow={whyPMContent.hero.label}
+        title={whyPMContent.hero.title}
+        description={whyPMContent.hero.description}
         diagram={<FieldDiagram className="mx-auto w-full max-w-[34rem]" />}
       />
 
-      {visionContent.sections.map((section, index) => (
+      {whyPMContent.sections.map((section, index) => (
         <Reveal key={section.title}>
           <SectionShell
             label={section.label}
@@ -55,17 +55,17 @@ export default function VisionPage() {
 
       <Reveal>
         <PrinciplesGrid
-          label="What QUOIN Believes"
-          title="A clear set of principles sits underneath the category."
-          items={visionContent.principles}
+          label="Our Approach"
+          title="Principles that guide every QUOIN engagement."
+          items={whyPMContent.principles}
         />
       </Reveal>
 
       <Reveal>
         <PartnerCTA
-          title={visionContent.cta.title}
-          body={visionContent.cta.body}
-          primary={visionContent.cta.primary}
+          title={whyPMContent.cta.title}
+          body={whyPMContent.cta.body}
+          primary={whyPMContent.cta.primary}
         />
       </Reveal>
     </>

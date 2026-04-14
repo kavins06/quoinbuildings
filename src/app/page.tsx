@@ -15,9 +15,9 @@ import { SectionShell } from "@/components/section-shell";
 import { credibilitySignals, homeContent } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "QUOIN - Building performance should connect directly to financial performance",
+  title: "QUOIN \u2014 AI Implementation & Governance for Property Management",
   description:
-    "QUOIN is building a new intelligence layer for the built environment, connecting physical building performance to cost, risk, and asset value.",
+    "QUOIN helps property management companies implement AI and govern it responsibly \u2014 with the domain expertise that generic consultants lack.",
 };
 
 export default function HomePage() {

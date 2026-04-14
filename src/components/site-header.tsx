@@ -61,7 +61,7 @@ export function SiteHeader() {
               QUOIN
             </span>
             <span className="text-[11px] tracking-wide text-[color:var(--muted)]">
-              Built environment intelligence
+              AI advisory for property management
             </span>
           </span>
         </Link>
@@ -132,8 +132,8 @@ export function SiteHeader() {
           })}
 
           <LinkButton
-            href="/partner"
-            label="Partner"
+            href="/contact"
+            label="Contact"
             variant="primary"
             className="ml-3"
           />
@@ -166,11 +166,11 @@ export function SiteHeader() {
               })}
 
               <Link
-                href="/partner"
+                href="/contact"
                 onClick={() => setIsMenuOpen(false)}
                 className="mt-2 inline-flex min-h-11 w-full items-center justify-center rounded-xl border border-[color:var(--accent)] bg-[color:var(--accent)] px-5 text-sm font-medium tracking-[-0.01em] text-[color:var(--surface)] transition-colors duration-200 hover:border-[color:var(--accent-strong)] hover:bg-[color:var(--accent-strong)]"
               >
-                Partner with QUOIN
+                Contact QUOIN
               </Link>
             </nav>
           </div>

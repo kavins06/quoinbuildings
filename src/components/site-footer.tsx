@@ -5,9 +5,11 @@ import { siteMeta } from "@/content/site";
 
 const footerNav = [
   { href: "/", label: "Home" },
-  { href: "/vision", label: "Read the vision" },
-  { href: "/applications", label: "See the applications" },
-  { href: "/partner", label: "Partner with QUOIN" },
+  { href: "/services", label: "Our services" },
+  { href: "/why-property-management", label: "Why property management" },
+  { href: "/insights", label: "Insights" },
+  { href: "/about", label: "About QUOIN" },
+  { href: "/contact", label: "Get in touch" },
 ];
 
 export function SiteFooter() {
@@ -33,7 +35,7 @@ export function SiteFooter() {
                 QUOIN
               </p>
               <p className="mt-1 text-xs tracking-wide text-[color:var(--muted-on-dark)]">
-                Built environment intelligence
+                AI advisory for property management
               </p>
             </div>
           </div>

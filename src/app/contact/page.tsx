@@ -4,21 +4,21 @@ import { FieldDiagram } from "@/components/architectural-diagrams";
 import { PageHero } from "@/components/page-hero";
 import { PartnerForm } from "@/components/partner-form";
 import { Reveal } from "@/components/reveal";
-import { partnerContent } from "@/content/site";
+import { contactContent } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Partner with QUOIN",
+  title: "Contact QUOIN - Start a Conversation",
   description:
-    "Connect with QUOIN if you are helping shape the future of building intelligence across ownership, operations, technology, or finance.",
+    "Tell us where you are with AI, what's driving the urgency, and what's holding you back. We'll tell you whether we can help.",
 };
 
-export default function PartnerPage() {
+export default function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow={partnerContent.hero.label}
-        title={partnerContent.hero.title}
-        description={partnerContent.hero.description}
+        eyebrow={contactContent.hero.label}
+        title={contactContent.hero.title}
+        description={contactContent.hero.description}
         diagram={<FieldDiagram className="mx-auto w-full max-w-[34rem]" />}
       />
 
@@ -29,7 +29,7 @@ export default function PartnerPage() {
               Who should reach out
             </p>
             <div className="mt-6 grid gap-4">
-              {partnerContent.audiences.map((audience, index) => (
+              {contactContent.audiences.map((audience, index) => (
                 <article
                   key={audience.title}
                   className="card-hover rounded-xl border border-[color:var(--line)] bg-[color:var(--surface)] p-6 transition-colors hover:border-[color:var(--accent)]/30"
@@ -51,7 +51,7 @@ export default function PartnerPage() {
               ))}
             </div>
             <p className="mt-6 max-w-xl text-sm leading-6 text-[color:var(--muted)]">
-              {partnerContent.note}
+              {contactContent.note}
             </p>
           </div>
 

@@ -7,6 +7,8 @@ type PartnerInquiryPayload = {
   organization?: string;
   email?: string;
   role?: string;
+  units?: string;
+  ai_maturity?: string;
   why?: string;
 };
 
@@ -38,9 +40,11 @@ export async function POST(request: Request) {
     const organization = normalize(body.organization);
     const email = normalize(body.email);
     const role = normalize(body.role);
+    const units = normalize(body.units);
+    const ai_maturity = normalize(body.ai_maturity);
     const why = normalize(body.why);
 
-    if (!name || !organization || !email || !role || !why) {
+    if (!name || !organization || !email || !role || !units || !ai_maturity || !why) {
       return NextResponse.json(
         { error: "Please complete all form fields." },
         { status: 400 },
@@ -69,6 +73,8 @@ export async function POST(request: Request) {
       organization,
       email,
       role,
+      units,
+      ai_maturity,
       why,
     };
     const { error } = await supabase.from(tableName).insert(record as never);

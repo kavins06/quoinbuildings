@@ -30,20 +30,30 @@ export type TeamMember = {
   image?: string;
 };
 
+export type InsightsPost = {
+  slug: string;
+  title: string;
+  summary: string;
+  date: string;
+  readTime: string;
+};
+
 export const siteMeta = {
   name: "QUOIN",
-  title: "QUOIN - Building performance should connect directly to financial performance",
+  title: "QUOIN \u2014 AI Implementation & Governance for Property Management",
   description:
-    "QUOIN is building a new intelligence layer for the built environment, connecting physical building performance to cost, risk, and asset value.",
+    "QUOIN helps property management companies implement AI and govern it responsibly \u2014 with the domain expertise that generic consultants lack.",
   footerLine:
-    "Building performance should connect directly to financial performance.",
+    "AI adoption done right. Implementation and governance, together.",
 };
 
 export const navItems: CtaLink[] = [
   { href: "/", label: "Home" },
-  { href: "/vision", label: "Vision" },
-  { href: "/applications", label: "Applications" },
-  { href: "/partner", label: "Partner" },
+  { href: "/services", label: "Services" },
+  { href: "/why-property-management", label: "Why Property Management" },
+  { href: "/insights", label: "Insights" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 
@@ -51,214 +61,211 @@ export const homeContent = {
   hero: {
     eyebrow: "QUOIN",
     title:
-      "Building performance should connect directly to financial performance.",
+      "Your competitors are deploying AI. Fair housing lawsuits are accelerating. You need to move \u2014 but you need to move right.",
     description:
-      "QUOIN is building a new intelligence layer for the built environment, one that links how buildings physically operate to the costs, risks, and value they create.",
-    primaryCta: { href: "/vision", label: "Read the vision" },
-    secondaryCta: { href: "/partner", label: "Partner with QUOIN" },
+      "QUOIN helps property management companies implement AI and govern it responsibly. We combine deep PM domain expertise with structured AI advisory \u2014 so you can adopt with confidence, not just urgency.",
+    primaryCta: { href: "/services", label: "See how we help" },
+    secondaryCta: { href: "/contact", label: "Start a conversation" },
   },
   problem: {
-    label: "Problem",
-    title: "Buildings generate signals. Most owners still cannot use them.",
+    label: "The Gap",
+    title: "72% of real estate firms are increasing AI investment. Only 5% have achieved their objectives.",
     body:
-      "Data exists across equipment, controls, meters, workflows, and physical space. But most buildings are still managed through disconnected systems, fragmented visibility, and reactive decisions.",
+      "The problem isn\u2019t awareness \u2014 every PM executive knows AI matters. The problem is execution. Pilots stall. Tools don\u2019t integrate. Governance doesn\u2019t exist. Teams aren\u2019t ready. The gap between AI ambition and AI results is where most firms are stuck.",
     support:
-      "The result is a gap between what a building is doing physically and what the asset is doing financially.",
+      "Source: PwC Emerging Trends in Real Estate, NAIOP Research 2025",
   },
   whyNow: {
     label: "Why Now",
-    title: "The cost and intelligence curve is changing.",
+    title: "The window for careful, strategic adoption is narrowing.",
     body:
-      "For years, advanced building intelligence was too fragmented, too custom, and too expensive to scale broadly. New approaches in physical-world modeling, better data infrastructure, and more affordable intelligence systems are changing that.",
+      "Competitors are deploying AI leasing assistants. Greystar settled for $7M over AI-driven rent pricing. Harbor Group faced litigation over discriminatory AI screening. The regulatory landscape is shifting. Moving slowly is no longer the safe option \u2014 but moving recklessly is worse.",
     support:
-      "What used to be reserved for premium assets can begin to extend much further across the market.",
+      "Implementation without governance is liability. Governance without implementation is stagnation.",
   },
   layer: {
-    label: "What QUOIN Is Building",
-    title: "A new layer for building intelligence.",
+    label: "How QUOIN Helps",
+    title: "Two tracks. One engagement. No gaps.",
     body:
-      "QUOIN is building a lower-cost way to connect physical building performance to financial outcomes. Not as another isolated point solution, but as a foundational layer that can make building behavior more legible, comparable, and actionable.",
+      "Most firms separate AI implementation from AI governance \u2014 or ignore governance entirely. QUOIN combines both, specifically for property management, so you can adopt AI that works AND holds up to scrutiny.",
     blocks: [
       {
-        title: "Observe",
-        body: "Turn scattered building signals into a coherent operational picture.",
+        title: "Assess",
+        body: "Evaluate your current AI maturity, operational readiness, and risk exposure across your portfolio.",
       },
       {
-        title: "Interpret",
-        body: "Understand how systems, space, and behavior relate to one another.",
+        title: "Implement",
+        body: "Select the right tools, design workflows, and deploy AI that integrates with your PM operations \u2014 not against them.",
       },
       {
-        title: "Translate",
-        body: "Connect physical performance to cost, risk, and asset-level decisions.",
+        title: "Govern",
+        body: "Build the policies, compliance frameworks, and oversight systems that protect you from bias, data, and regulatory risk.",
       },
     ],
   },
   applications: {
-    label: "Applications",
-    title: "One intelligence layer. Multiple outcomes.",
+    label: "Outcomes",
+    title: "One advisory engagement. Multiple results.",
     body:
-      "QUOIN is not being built around a single workflow. The same underlying intelligence can shape decisions across efficiency, risk, and asset performance.",
+      "QUOIN\u2019s work isn\u2019t organized around isolated tools. It\u2019s organized around the outcomes property management executives actually need.",
     cards: [
       {
-        href: "/applications#efficiency",
-        title: "Efficiency",
-        summary: "Reduce waste. Prioritize attention.",
+        href: "/services#implementation",
+        title: "Operational Efficiency",
+        summary: "Reduce costs. Deploy AI that your team actually uses.",
       },
       {
-        href: "/applications#risk",
-        title: "Risk",
-        summary: "See issues earlier. Reduce surprises.",
+        href: "/services#governance",
+        title: "Compliance Confidence",
+        summary: "Govern AI before it governs your risk exposure.",
       },
       {
-        href: "/applications#asset-performance",
-        title: "Asset performance",
-        summary: "Make better long-term decisions.",
+        href: "/services#strategy",
+        title: "Portfolio AI Strategy",
+        summary: "Know where to invest, what to skip, and how to sequence.",
       },
     ],
   },
   conviction: {
-    label: "Conviction",
-    title: "Building intelligence should not be reserved for premium assets.",
+    label: "Point of View",
+    title: "AI in property management should be adopted deliberately \u2014 not reactively.",
     body:
-      "The next operating model for buildings should not depend on bespoke systems, expensive retrofits, or isolated deployments. Intelligence should become a standard layer of the built environment.",
-    support: "QUOIN exists to help make that shift legible.",
+      "Governance shouldn\u2019t be bolted on after an incident. Implementation shouldn\u2019t chase vendor hype. And no PM firm should have to choose between moving fast and moving safely. QUOIN exists because both are possible \u2014 if you have the right partner.",
+    support:
+      "QUOIN exists to make deliberate AI adoption the standard, not the exception.",
   },
   partnerCta: {
-    title: "Help shape what comes next.",
+    title: "Start with a conversation.",
     body:
-      "QUOIN is looking to engage forward-looking owners, operators, technologists, and ecosystem partners who see the future of building intelligence the same way.",
-    primary: { href: "/partner", label: "Partner with QUOIN" },
-    secondary: { href: "/vision", label: "Read the vision" },
+      "Tell us where you are with AI, what\u2019s driving the urgency, and what\u2019s holding you back. We\u2019ll tell you whether we can help \u2014 and what the first step looks like.",
+    primary: { href: "/contact", label: "Get in touch" },
+    secondary: { href: "/services", label: "See our services" },
   },
 };
 
-export const visionContent = {
+export const whyPMContent = {
   hero: {
-    label: "Vision",
-    title: "The next operating model for buildings.",
+    label: "Why Property Management",
+    title: "Generic AI advice fails here. Property management has specific challenges that demand specific expertise.",
     description:
-      "Buildings should be understood as dynamic physical systems whose performance connects directly to economics.",
+      "Tenant data sensitivity. Fair housing compliance. Fragmented vendor ecosystems. Lean operations teams. The AI playbook from other industries doesn\u2019t translate.",
   },
   sections: [
     {
-      label: "Buildings Are Not Static Assets",
-      title: "A building is not just an address or a balance-sheet line.",
+      label: "Tenant Data Sensitivity",
+      title: "Your data isn\u2019t just operational \u2014 it\u2019s personal.",
       body:
-        "It is a living operational system. It consumes energy, degrades over time, responds to occupancy, and creates downstream financial consequences. Yet the way buildings are evaluated often remains far more static than the systems themselves.",
+        "Property management firms handle SSNs, financial records, lease histories, and behavioral data. AI systems that touch this data need governance frameworks that account for tenant privacy, not just operational efficiency.",
     },
     {
-      label: "The Industry Has Data, Not Intelligence",
-      title: "Signals exist. Usable intelligence does not.",
+      label: "Fair Housing & Algorithmic Bias",
+      title: "AI screening tools can create liability your team doesn\u2019t see.",
       body:
-        "Meters, equipment, controls, inspections, and spatial context all generate useful information. But most of that information remains disconnected across tools, vendors, and workflows. The problem is no longer only measurement. It is coherence.",
+        "Tenant screening algorithms, AI leasing assistants, and dynamic pricing tools can introduce discriminatory patterns \u2014 even unintentionally. In 2025 alone, Greystar settled for $7M and Harbor Group faced litigation over AI-driven discrimination. The RETTC governance framework exists but few firms have operationalized it.",
     },
     {
-      label: "Why Legacy Approaches Fell Short",
-      title: "Building intelligence has been too custom, too expensive, and too narrow.",
+      label: "Vendor Fragmentation",
+      title: "15 tools that don\u2019t talk to each other create more work, not less.",
       body:
-        "Historically, meaningful visibility depended on expensive systems, bespoke integrations, and narrow deployments. That limited advanced intelligence to the top end of the market and to isolated use cases.",
+        "The average PM tech stack is deeply fragmented \u2014 Yardi, AppFolio, MRI, plus point solutions for leasing, maintenance, screening, and communications. AI that doesn\u2019t integrate with this reality fails. QUOIN understands the PM tech landscape because we come from it.",
     },
     {
-      label: "Why This Changes Now",
-      title: "A different stack is emerging.",
+      label: "Workforce Readiness",
+      title: "Only 33% of property management staff feel trained on AI.",
       body:
-        "Physical-world modeling, better data infrastructure, and new intelligence methods make it more possible to represent buildings coherently, reason over real conditions, and translate building behavior into action.",
+        "Tools don\u2019t create value \u2014 people using tools create value. QUOIN\u2019s engagements include change management and team enablement because implementation without adoption is waste.",
     },
   ],
   principles: [
     {
-      title: "Buildings should be legible.",
-      body: "Their real operating behavior should be easier to understand.",
+      title: "Start with operations, not technology.",
+      body: "Understand how the building is actually managed before recommending what to automate.",
     },
     {
-      title: "Performance should be financially visible.",
-      body:
-        "What happens physically should not be disconnected from cost, risk, and value.",
+      title: "Governance from day one.",
+      body: "Don\u2019t wait for an incident to build your AI policy framework.",
     },
     {
-      title: "Intelligence should scale.",
-      body: "It should extend beyond bespoke Class A deployments.",
+      title: "Integrate, don\u2019t add.",
+      body: "AI should work within your existing PM tech stack, not alongside it.",
     },
     {
-      title: "One layer should support many outcomes.",
-      body:
-        "Energy, maintenance, sustainability, and risk should not live in isolation.",
+      title: "Measure what matters.",
+      body: "ROI clarity at every stage. No black-box recommendations.",
     },
   ] satisfies Principle[],
   cta: {
-    title: "If this is the direction you see too, let's talk.",
+    title: "If your firm is navigating AI adoption, we should talk.",
     body:
-      "QUOIN is interested in aligned partners who believe buildings should become more legible, financially visible, and easier to act on.",
-    primary: { href: "/partner", label: "Partner with QUOIN" },
+      "QUOIN works with property management companies that want to get AI right \u2014 not just get AI fast.",
+    primary: { href: "/contact", label: "Start a conversation" },
   },
 };
 
-export const applicationsContent = {
+export const servicesContent = {
   hero: {
-    label: "Applications",
-    title: "Where the intelligence shows up.",
+    label: "Services",
+    title: "AI implementation and governance, built for property management.",
     description:
-      "QUOIN is being built as a foundational layer for building intelligence, with practical implications across efficiency, risk, and asset performance.",
+      "QUOIN offers two complementary service tracks that work together \u2014 because implementation without governance is liability, and governance without implementation is stagnation.",
   },
   groups: [
     {
-      id: "efficiency",
-      title: "Efficiency",
-      positioning: "Reduce waste. Focus operational attention where it matters.",
+      id: "implementation",
+      title: "AI Implementation",
+      positioning: "From strategy through deployment \u2014 we help you select, integrate, and operationalize AI across your portfolio.",
       areas: [
-        "Energy optimization",
-        "Maintenance prioritization",
-        "Day-to-day operations",
-        "Operational drift visibility",
+        "AI readiness assessment",
+        "Tool and vendor evaluation",
+        "Workflow design and integration",
+        "Change management and team enablement",
       ],
       questions: [
-        "Where is energy use diverging from expected behavior?",
-        "Which systems deserve attention first?",
-        "Which buildings are drifting operationally?",
+        "Which AI tools actually make sense for a PM firm our size?",
+        "How do we integrate AI with Yardi / AppFolio / MRI without breaking workflows?",
+        "How do we get our team to actually adopt these tools?",
       ],
-      translation: "Lower operating cost and better use of team capacity.",
+      translation: "Lower operating costs, better team productivity, and AI that works with your operations.",
     },
     {
-      id: "risk",
-      title: "Risk",
-      positioning: "See emerging issues earlier and reduce avoidable surprises.",
+      id: "governance",
+      title: "AI Governance",
+      positioning: "Build the policies, oversight, and compliance frameworks that protect your firm \u2014 before you need them.",
       areas: [
-        "Anomaly detection",
-        "Equipment failure risk",
-        "Resilience and downtime exposure",
-        "Insurer-relevant visibility",
+        "AI policy and ethical framework development",
+        "Fair housing and algorithmic bias auditing",
+        "Tenant data privacy and security review",
+        "Vendor AI due diligence",
       ],
       questions: [
-        "Which conditions suggest rising operational risk?",
-        "Where are hidden failures beginning to form?",
-        "Which assets require intervention before disruption occurs?",
+        "Are our AI screening tools exposing us to fair housing liability?",
+        "Do we have a governance framework that satisfies our board and our insurers?",
+        "How should we evaluate AI vendors\u2019 claims about bias and accuracy?",
       ],
-      translation:
-        "Lower exposure, fewer surprises, and better operational resilience.",
+      translation: "Compliance confidence, reduced legal exposure, and a governance framework that scales with your AI adoption.",
     },
     {
-      id: "asset-performance",
-      title: "Asset performance",
-      positioning: "Connect building behavior to long-term value creation.",
+      id: "strategy",
+      title: "Portfolio AI Strategy",
+      positioning: "Know where to invest, what to sequence, and how to measure success across your entire portfolio.",
       areas: [
-        "Sustainability performance",
-        "Capital planning",
-        "Retrofit prioritization",
-        "Portfolio strategy",
+        "Portfolio-wide AI opportunity assessment",
+        "Investment prioritization and ROI modeling",
+        "Multi-year AI roadmap development",
+        "Board and investor communication support",
       ],
       questions: [
-        "Which buildings need action first?",
-        "Where can capital produce the clearest performance lift?",
-        "How should physical performance shape portfolio decisions?",
+        "Where in our portfolio will AI create the most value first?",
+        "How should we phase our AI investment over the next 2-3 years?",
+        "What should I tell my board about our AI strategy?",
       ],
-      translation:
-        "Stronger planning, clearer prioritization, and better long-term asset decisions.",
+      translation: "Clear investment priorities, measurable milestones, and a strategy your board can get behind.",
     },
   ] satisfies ApplicationGroup[],
   closing: {
-    title: "These are not separate products.",
+    title: "These tracks work together.",
     body:
-      "They are different expressions of the same underlying need: a better way to understand how buildings are actually performing.",
+      "Most firms need elements of all three. QUOIN scopes engagements based on where you are, not on what we want to sell.",
   },
 };
 
@@ -267,40 +274,38 @@ export const aboutContent = {
     label: "About",
     title: "Why QUOIN exists.",
     description:
-      "QUOIN exists because building intelligence has been too fragmented, too technical, and too expensive to matter broadly enough.",
+      "QUOIN exists because property management firms deserve AI advisory that understands their world \u2014 not generic consulting that charges enterprise prices for horizontal advice.",
   },
   sections: [
     {
-      label: "The Gap We See",
-      title:
-        "We see a gap between physical reality and financial decision-making.",
+      label: "The Gap We Saw",
+      title: "PM firms were being sold AI by people who had never managed a building.",
       body:
-        "Buildings are managed through partial views. Finance sees one picture. Operations sees another. Technical systems see fragments. QUOIN is being built around the belief that these views should connect.",
+        "Generic AI consultancies don\u2019t understand fair housing risk. Technology vendors sell tools, not strategy. The Big 4 charges $500K+ for advice that doesn\u2019t account for how a 5,000-unit portfolio actually operates. We saw a gap and built a firm to fill it.",
     },
     {
-      label: "The Company We Are Building",
-      title:
-        "We are building a category-defining infrastructure company for building intelligence.",
+      label: "What We\u2019re Building",
+      title: "A category-defining advisory firm for AI in property management.",
       body:
-        "Not another dashboard. Not another isolated optimization tool. A foundational layer that can make building performance more legible and more useful.",
+        "Not another technology vendor. Not a generalist consultancy with a real estate slide deck. A firm built from the ground up to help property management companies implement AI and govern it responsibly.",
     },
   ],
   principles: [
     {
-      title: "Start with the physical building",
-      body: "Reality first, abstractions second.",
+      title: "Domain expertise first",
+      body: "We advise on AI because we understand property management \u2014 not the other way around.",
     },
     {
-      title: "Translate into economics",
-      body: "Performance matters when it informs decisions.",
+      title: "Governance is not optional",
+      body: "Every implementation recommendation comes with governance guidance. They\u2019re inseparable.",
     },
     {
-      title: "Prefer coherence over fragmentation",
-      body: "One layer should support many outcomes.",
+      title: "Outcomes over tools",
+      body: "We don\u2019t sell software. We help you make better decisions about technology.",
     },
     {
-      title: "Design for broad accessibility",
-      body: "Intelligence should extend beyond premium assets.",
+      title: "Accessible to mid-market",
+      body: "Meaningful AI advisory shouldn\u2019t require a Fortune 500 budget.",
     },
   ] satisfies Principle[],
   brandNote: {
@@ -311,63 +316,64 @@ export const aboutContent = {
   cta: {
     title: "Build the category with us.",
     body:
-      "QUOIN is looking for partners who see a foundational opportunity in making building performance more legible and financially useful.",
-    primary: { href: "/partner", label: "Partner with QUOIN" },
+      "QUOIN is looking for property management leaders who want to get AI adoption right. If that\u2019s you, let\u2019s talk.",
+    primary: { href: "/contact", label: "Get in touch" },
   },
 };
 
-export const partnerContent = {
+export const contactContent = {
   hero: {
-    label: "Partner",
-    title: "Partner with QUOIN.",
+    label: "Contact",
+    title: "Start a conversation with QUOIN.",
     description:
-      "We want to work with people and organizations helping shape the next operating model for buildings.",
+      "Tell us where you are with AI, what\u2019s driving the urgency, and what\u2019s holding you back. We\u2019ll tell you whether we can help.",
   },
   audiences: [
     {
-      title: "Owners and operators",
-      body:
-        "Forward-looking teams who want to help define what better building intelligence should look like.",
+      title: "CEOs and COOs",
+      body: "You need an AI strategy your board will support and your team can execute.",
     },
     {
-      title: "Predictive maintenance and service partners",
-      body:
-        "Organizations that can benefit from stronger building context and a more coherent intelligence layer.",
+      title: "CTOs and VPs of Technology",
+      body: "You\u2019ve run pilots that didn\u2019t scale, or you need help evaluating AI vendors for your PM tech stack.",
     },
     {
-      title: "Technology and data partners",
-      body:
-        "Teams working across building systems, sensing, controls, or spatial data.",
+      title: "General Counsel and Risk Officers",
+      body: "You\u2019re concerned about AI bias, tenant data privacy, or fair housing exposure in your current tools.",
     },
     {
-      title: "Capital, insurance, and ecosystem partners",
-      body:
-        "Organizations interested in how building performance connects to financial outcomes.",
+      title: "Portfolio and Asset Managers",
+      body: "You want to understand where AI can create value across your portfolio and how to prioritize investment.",
     },
   ],
   note:
-    "We are especially interested in partners who think beyond isolated tools and toward foundational building intelligence.",
+    "We scope every engagement to your situation. No two PM firms are identical \u2014 and no two QUOIN engagements are either.",
 };
 
 export const teamContent = {
   label: "Team",
-  title: "The people building QUOIN.",
+  title: "The people behind QUOIN.",
   members: [
     {
       name: "Founder Name",
       role: "Co-Founder & CEO",
-      bio: "Background in commercial real estate and building operations. Focused on making building intelligence more accessible and financially useful.",
+      bio: "Background in property management and commercial real estate operations. Focused on making AI advisory accessible and practical for PM firms.",
     },
     {
       name: "Founder Name",
       role: "Co-Founder & CTO",
-      bio: "Background in infrastructure software and physical-world data systems. Focused on building the intelligence layer that connects building performance to decisions.",
+      bio: "Background in infrastructure software and data systems. Focused on helping PM companies navigate AI implementation across fragmented tech stacks.",
     },
   ] satisfies TeamMember[],
 };
 
 export const credibilitySignals = [
-  "Commercial real estate focus",
-  "Founded by operators and technologists",
-  "Building the intelligence layer",
+  "Property management focus",
+  "Implementation + governance",
+  "Built by PM operators",
 ];
+
+// Backward-compatible aliases for renamed exports
+export const visionContent = whyPMContent;
+export const applicationsContent = servicesContent;
+export const partnerContent = contactContent;
