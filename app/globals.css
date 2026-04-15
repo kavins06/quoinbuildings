@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 6%;
+    --card: 40 20% 97%;
+    --card-foreground: 0 0% 6%;
+    --popover: 40 20% 97%;
+    --popover-foreground: 0 0% 6%;
+    --primary: 0 0% 6%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 15% 94%;
+    --secondary-foreground: 0 0% 6%;
+    --muted: 40 15% 94%;
+    --muted-foreground: 0 0% 27%;
+    --accent: 26 29% 61%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 0% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 8% 85%;
+    --input: 30 8% 85%;
+    --ring: 26 29% 61%;
+    --radius: 0rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 0 0% 5%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 94%;
+    --sidebar-accent-foreground: 0 0% 5%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 0 0% 5%;
+  }
+  .theme {
+    --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
+    --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
+    --animate-marquee: marquee var(--duration) infinite linear;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::selection {
+    background-color: hsl(26 29% 61%);
+    color: hsl(0 0% 6%);
+  }
+  h1, h2, h3, blockquote {
+    font-family: var(--font-spectral), Georgia, 'Times New Roman', serif;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@theme inline {
+  @keyframes shimmer-slide {
+  to {
+    transform: translate(calc(100cqw - 100%), 0);
+    }
+  }
+  @keyframes spin-around {
+  0% {
+    transform: translateZ(0) rotate(0);
+    }
+  15%, 35% {
+    transform: translateZ(0) rotate(90deg);
+    }
+  65%, 85% {
+    transform: translateZ(0) rotate(270deg);
+    }
+  100% {
+    transform: translateZ(0) rotate(360deg);
+    }
+  }
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
