@@ -30,6 +30,7 @@ const team = [
     name: "Jonathan Morris",
     role: "Senior Advisor",
     initials: "JM",
+    photo: "/team-jonathan.png",
     short: "$4.7B CRE Transactions \u00b7 Fmr. Dir. Acquisitions, Boston Properties",
     bio: "Jonathan Morris has spent more than 30 years in commercial real estate. As Director of Acquisitions at Boston Properties \u2014 recruited by Ray Ritchey \u2014 he helped build one of the premier office REITs in the country. As CEO of a private office REIT recruited by Brown Brothers Harriman, he led the company through a $240 million IPO. He co-founded LMH Realty Group, building a 1.5 million square foot portfolio valued at $1.5 billion at an average IRR of 44%. Jonathan advises Quoin on real estate strategy, client relationships, and market positioning.",
     credentials: [
@@ -46,6 +47,7 @@ const team = [
     name: "Dr. Cynthia J. Mendoza",
     role: "Senior Advisor",
     initials: "CM",
+    photo: "/team-cynthia.png",
     short: "Former Deputy CIO, US Department of Defense",
     bio: "Dr. Mendoza spent two decades leading complex technology efforts across the Department of Defense and the Intelligence Community. As Deputy CIO of the Department of Defense, she led modernization across the department\u2019s compartmented IT enterprise. As IC Chief Architect at ODNI, she championed the first community-level Reference Architecture Framework. She currently serves as Chief Engineer at BAE Systems, leading engineering decisions for a $1B+ portfolio.",
     credentials: [
