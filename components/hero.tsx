@@ -102,8 +102,8 @@ export function Hero() {
 
           {/* Right: Stats */}
           <div className="grid grid-cols-3 gap-4 lg:flex lg:flex-col lg:gap-6 lg:col-span-4 lg:col-start-9 mt-10 lg:mt-0">
-            <BlurFade delay={1.1} direction="up">
-              <div className="relative overflow-hidden border border-white/20 p-4 lg:p-6 bg-white/5 backdrop-blur-sm">
+            <BlurFade delay={1.1} direction="up" className="h-full">
+              <div className="relative overflow-hidden border border-white/20 p-4 lg:p-6 bg-white/5 backdrop-blur-sm h-full">
                 <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-white mb-1 lg:mb-2">
                   AI Capability
                 </p>
@@ -117,8 +117,8 @@ export function Hero() {
               </div>
             </BlurFade>
 
-            <BlurFade delay={1.3} direction="up">
-              <div className="relative overflow-hidden border border-white/20 p-4 lg:p-6 bg-white/5 backdrop-blur-sm">
+            <BlurFade delay={1.3} direction="up" className="h-full">
+              <div className="relative overflow-hidden border border-white/20 p-4 lg:p-6 bg-white/5 backdrop-blur-sm h-full">
                 <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-white mb-1 lg:mb-2">
                   Industry Gap
                 </p>
@@ -132,8 +132,8 @@ export function Hero() {
               </div>
             </BlurFade>
 
-            <BlurFade delay={1.5} direction="up">
-              <div className="relative overflow-hidden border border-white/20 p-4 lg:p-6 bg-white/5 backdrop-blur-sm">
+            <BlurFade delay={1.5} direction="up" className="h-full">
+              <div className="relative overflow-hidden border border-white/20 p-4 lg:p-6 bg-white/5 backdrop-blur-sm h-full">
                 <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-white mb-1 lg:mb-2">
                   Results In
                 </p>
