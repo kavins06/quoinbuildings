@@ -137,7 +137,7 @@ export function TeamContent() {
                 onClick={() => setSelectedMember(member)}
                 className="group w-full text-left border border-border rounded-sm hover:border-muted-foreground/30 transition-colors duration-300"
               >
-                <div className="h-48 bg-muted flex items-center justify-center">
+                <div className="aspect-square bg-muted flex items-center justify-center">
                   <span className="text-4xl font-extralight text-muted-foreground/60 tracking-wider">
                     {member.initials}
                   </span>
@@ -146,12 +146,9 @@ export function TeamContent() {
                   <p className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground/50 mb-1">
                     {member.role}
                   </p>
-                  <h3 className="text-base font-light tracking-tight text-foreground group-hover:text-muted-foreground transition-colors duration-300 mb-2">
+                  <h3 className="text-base font-light tracking-tight text-foreground group-hover:text-muted-foreground transition-colors duration-300">
                     {member.name}
                   </h3>
-                  <p className="text-[11px] leading-relaxed tracking-[0.05em] text-muted-foreground/50">
-                    {member.short}
-                  </p>
                 </div>
               </button>
             </BlurFade>
