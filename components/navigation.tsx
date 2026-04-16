@@ -49,11 +49,8 @@ export function Navigation() {
           }`}
         >
           <span className="relative h-[34px] w-[34px] md:h-[50px] md:w-[50px] shrink-0">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full">
-              <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="2" fill="hsl(26, 29%, 61%)" fillOpacity="0.08" />
-              <circle cx="50" cy="50" r="35" stroke="currentColor" strokeWidth="1.5" fill="none" />
-              <text x="50" y="58" textAnchor="middle" fill="currentColor" fontSize="36" fontFamily="'Times New Roman', Times, serif" fontWeight="400" letterSpacing="0.02em">Q</text>
-            </svg>
+            <img src="/quoin-logo-dark.svg" alt="" className={`absolute inset-0 h-full w-full transition-opacity duration-500 ${useLightText ? "opacity-100" : "opacity-0"}`} />
+            <img src="/quoin-logo-lite.svg" alt="" className={`absolute inset-0 h-full w-full transition-opacity duration-500 ${useLightText ? "opacity-0" : "opacity-100"}`} />
           </span>
           <span className="font-[family-name:'Times_New_Roman',_Times,_serif]">QUOIN</span>
         </Link>
