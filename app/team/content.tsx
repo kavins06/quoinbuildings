@@ -28,7 +28,7 @@ const team = [
   },
   {
     name: "Jonathan Morris",
-    role: "Senior Advisor",
+    role: "Senior Advisor/Consultant — Real Estate",
     initials: "JM",
     photo: "/team-jonathan.png",
     short: "$4.7B CRE Transactions \u00b7 Fmr. Dir. Acquisitions, Boston Properties",
@@ -45,7 +45,7 @@ const team = [
   },
   {
     name: "Dr. Cynthia J. Mendoza",
-    role: "Senior Advisor",
+    role: "Senior Advisor/Consultant — Governance & Security",
     initials: "CM",
     photo: "/team-cynthia.png",
     short: "Former Deputy CIO, US Department of Defense",
@@ -62,7 +62,7 @@ const team = [
   },
   {
     name: "Ricky Fauntleroy",
-    role: "Consultant",
+    role: "Director, Information Technology",
     initials: "RF",
     photo: "/team-ricky.png",
     short: "Manager IT Consulting Delivery, CGI Federal",
@@ -76,7 +76,7 @@ const team = [
   },
   {
     name: "Brandon Timpane",
-    role: "Consultant",
+    role: "Director, Data Readiness",
     initials: "BT",
     photo: "/team-brandon.png",
     short: "Enterprise Applications & Data \u00b7 German Marshall Fund \u00b7 Georgetown ITM",
