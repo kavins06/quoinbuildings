@@ -78,6 +78,7 @@ const team = [
     name: "Brandon Timpane",
     role: "Consultant",
     initials: "BT",
+    photo: "/team-brandon.png",
     short: "Enterprise Applications & Data \u00b7 German Marshall Fund \u00b7 Georgetown ITM",
     bio: "Brandon brings enterprise application management and data operations experience from the German Marshall Fund of the United States. His work in application training, data operations, and IT management gives him practical understanding of the gap between what a system can do and what staff actually does with it. Brandon supports diagnostic and deployment engagements, focusing on data readiness and application integration.",
     credentials: [
