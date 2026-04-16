@@ -6,7 +6,6 @@ import { WhySection } from "@/components/why-section"
 import { PrinciplesSection } from "@/components/principles-section"
 import { StudioSection } from "@/components/studio-section"
 import { ApproachSection } from "@/components/approach-section"
-import { JournalSection } from "@/components/journal-section"
 import { PerspectivesTeaser } from "@/components/perspectives-teaser"
 import { ContactSection } from "@/components/contact-section"
 
@@ -21,7 +20,6 @@ export default function Page() {
       <PrinciplesSection />
       <StudioSection />
       <ApproachSection />
-      <JournalSection />
       <PerspectivesTeaser />
       <ContactSection />
     </main>
