@@ -87,7 +87,7 @@ export function ApproachSection() {
             startOnView
             className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground"
           >
-            From Diagnostic to Production — With Decision Points at Every Stage
+            From Diagnostic to Production: Decision Points at Every Stage
           </TextAnimate>
         </div>
       </BlurFade>

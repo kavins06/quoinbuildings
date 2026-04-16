@@ -17,7 +17,7 @@ const triggers = [
     number: "02",
     title: "\u201CThe board is asking about AI.\u201D",
     description:
-      "Ownership or the board wants an AI strategy. You need something more than a slide deck and more credible than \u201Cwe are looking into it.\u201D You need a concrete plan with timelines, costs, and risk mitigation \u2014 and ideally someone who can execute it.",
+      "Ownership or the board wants an AI strategy. You need something more than a slide deck and more credible than \u201Cwe are looking into it.\u201D You need a concrete plan with timelines, costs, and risk mitigation \, and ideally someone who can execute it.",
   },
   {
     number: "03",
@@ -79,9 +79,9 @@ export function WhoWeHelpContent() {
                 {[
                   "Manage 2,000 to 50,000 residential, mixed-use, or commercial units",
                   "Operate across multiple properties with regional management layers",
-                  "Have an executive sponsor \u2014 COO, CEO, VP of Operations, or ownership \u2014 who owns the AI question",
+                  "Have an executive sponsor \, COO, CEO, VP of Operations, or ownership \, who owns the AI question",
                   "Are under pressure from ownership, boards, or competitive dynamics to adopt AI but are unsure how to move beyond pilots",
-                  "Have tried at least one of: a point solution vendor, a consulting engagement, or an internal AI initiative \u2014 and are dissatisfied with the results",
+                  "Have tried at least one of: a point solution vendor, a consulting engagement, or an internal AI initiative \, and are dissatisfied with the results",
                   "Need firm-wide capability, not another single-use tool",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
@@ -179,7 +179,7 @@ export function WhoWeHelpContent() {
 
             <p className="mt-12 text-sm leading-[1.85] text-muted-foreground">
               If this sounds like your firm, the first step is a conversation.
-              If it does not, we respect that — and we are happy to point you
+              If it does not, we respect that, and we are happy to point you
               toward alternatives that fit better.
             </p>
           </div>

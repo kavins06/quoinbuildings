@@ -7,7 +7,7 @@ import { TextAnimate } from "@/components/ui/text-animate"
 
 const articles = [
   {
-    title: "Why AI Pilots Are Failing in Property Management\u2014And What to Do About It",
+    title: "Why AI Pilots Are Failing in Property Management: And What to Do About It",
     tag: "Industry Analysis",
   },
   {
@@ -15,7 +15,7 @@ const articles = [
     tag: "Governance",
   },
   {
-    title: "What Property Management Needs from an AI Partner\u2014and Why Vendors Aren\u2019t Enough",
+    title: "What Property Management Needs from an AI Partner, and Why Vendors Aren\u2019t Enough",
     tag: "Point of View",
   },
 ]

@@ -10,18 +10,18 @@ const weeks = [
     number: "01",
     title: "Stakeholder Interviews & Workflow Mapping",
     description:
-      "We meet with your property managers, maintenance coordinators, leasing staff, regional directors, and compliance team. We map how work actually flows \u2014 not the org chart version, the real version.",
+      "We meet with your property managers, maintenance coordinators, leasing staff, regional directors, and compliance team. We map how work actually flows \, not the org chart version, the real version.",
   },
   {
     number: "02",
     title: "Systems & Data Assessment",
     description:
-      "We assess your property management platform \u2014 Yardi, RealPage, AppFolio, or Entrata. Data quality, integration capabilities, API access, and gaps. What your systems can support today and what needs preparation.",
+      "We assess your property management platform \, Yardi, RealPage, AppFolio, or Entrata. Data quality, integration capabilities, API access, and gaps. What your systems can support today and what needs preparation.",
   },
 ]
 
 const deliverables = [
-  "A prioritized implementation roadmap \u2014 not a strategy deck, but a build plan",
+  "A prioritized implementation roadmap \, not a strategy deck, but a build plan",
   "A data and systems readiness assessment",
   "A governance requirements document",
   "A clear recommendation: where to build first, what to prepare, and what to skip",
@@ -49,7 +49,7 @@ export function StudioSection() {
           <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-2xl">
             Every engagement begins the same way. Before we build anything, we spend
             two weeks inside your operations to understand what is real, what is possible,
-            and what is not worth pursuing. The diagnostic is a standalone engagement —
+            and what is not worth pursuing. The diagnostic is a standalone engagement.
             you are not committing to a multi-year contract.
           </p>
         </div>

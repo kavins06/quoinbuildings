@@ -8,7 +8,7 @@ import { TextAnimate } from "@/components/ui/text-animate"
 const articles = [
   {
     date: "April 2026",
-    title: "Why AI Pilots Are Failing in Property Management\u2014And What to Do About It",
+    title: "Why AI Pilots Are Failing in Property Management: And What to Do About It",
     summary:
       "The 95% failure rate for AI pilots is well documented. In property management, the patterns are consistent and the root causes are structural. We break down the three failure modes and what firms can do differently.",
     author: "Kavin Sakthivel",
@@ -24,7 +24,7 @@ const articles = [
   },
   {
     date: "April 2026",
-    title: "What Property Management Needs from an AI Partner\u2014and Why Vendors Aren\u2019t Enough",
+    title: "What Property Management Needs from an AI Partner, and Why Vendors Aren\u2019t Enough",
     summary:
       "The argument for the AI operating partner model versus point solutions, strategy-only consultants, and internal IT teams. Why the existing options all fall short for enterprise property management.",
     author: "Kavin Sakthivel",

@@ -19,7 +19,7 @@ export function ContactSection() {
             </h2>
             <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-md">
               A 30-minute conversation about your operations. No pitch. No pressure.
-              If there is a fit, the next step is a 2-week Executive Diagnostic —
+              If there is a fit, the next step is a 2-week Executive Diagnostic:
               a standalone engagement with clear deliverables and no long-term commitment.
             </p>
             <div className="mt-10 flex flex-col gap-6">

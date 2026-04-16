@@ -51,7 +51,7 @@ const columns = [
       "Production AI systems in your operations",
       "We do, continuously",
       "Built into every deployment from day one",
-      "You have a live AI workflow \u2014 monitored, retrained, and expanding.",
+      "You have a live AI workflow \, monitored, retrained, and expanding.",
     ],
   },
 ]
@@ -161,7 +161,7 @@ export function PrinciplesSection() {
         <div className="mt-12 max-w-2xl">
           <p className="text-sm leading-[1.85] text-muted-foreground">
             We are not a better vendor. We are not a better consultant.
-            We are a different model — one that stays through implementation and stays after it.
+            We are a different model. One that stays through implementation and stays after it.
           </p>
         </div>
       </BlurFade>

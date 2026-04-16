@@ -22,7 +22,7 @@ const services = [
       "Governance scoping with legal and compliance teams",
     ],
     deliverable:
-      "A prioritized implementation roadmap\u2014not a strategy deck, but a build plan.",
+      "A prioritized implementation roadmap, not a strategy deck, but a build plan.",
   },
   {
     number: "02",
@@ -38,7 +38,7 @@ const services = [
       "Vendor management and procurement workflows",
     ],
     deliverable:
-      "Every agent is co-designed with your operations team\u2014so it fits real workflows, not theoretical ones.",
+      "Every agent is co-designed with your operations team, so it fits real workflows, not theoretical ones.",
   },
   {
     number: "03",
@@ -70,7 +70,7 @@ const services = [
       "Monthly reporting on AI performance and ROI",
     ],
     deliverable:
-      "Your dedicated AI operations team\u2014without the cost of building one internally.",
+      "Your dedicated AI operations team, without the cost of building one internally.",
   },
 ]
 
@@ -163,7 +163,7 @@ export function ServicesContent() {
       <PageHeader
         eyebrow="Our Services"
         title="From diagnosis through ongoing operations, we handle every stage of AI adoption."
-        description="Each service is designed for property management firms that are serious about making AI work\u2014not just piloting it."
+        description="Each service is designed for property management firms that are serious about making AI work, not just piloting it."
         backgroundImage="/header-team.jpg"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="pb-4 md:pb-8"

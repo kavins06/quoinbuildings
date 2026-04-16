@@ -83,7 +83,7 @@ const faqs = [
   {
     question: "How much does the diagnostic cost?",
     answer:
-      "Contact us for pricing. We believe in transparency \u2014 the diagnostic is a standalone paid engagement with clearly defined deliverables.",
+      "Contact us for pricing. We believe in transparency \, the diagnostic is a standalone paid engagement with clearly defined deliverables.",
   },
   {
     question: "What systems access do you need?",
@@ -193,7 +193,7 @@ export function ApproachContent() {
     <main>
       <PageHeader
         eyebrow="How Engagements Work"
-        title="From Diagnostic to Production — With Decision Points at Every Stage"
+        title="From Diagnostic to Production: Decision Points at Every Stage"
         description="Every engagement starts with a 2-week diagnostic. What happens after that depends on what we find. You decide at each stage whether to continue."
         backgroundImage="/header-approach.jpg"
         imageGrayscale

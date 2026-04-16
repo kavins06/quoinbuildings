@@ -18,8 +18,8 @@ const team = [
     short: "Georgetown \u00b7 Real Estate & Competitive Intelligence",
     bio: "Kavin founded Quoin after watching the same pattern repeat across commercial real estate firms: significant investment in AI, minimal operational adoption. Trained in civil engineering at PSG College of Technology and sharpened through competitive business intelligence and capital markets at Georgetown University, he approaches the built world from both the ground up and the balance sheet out. At Quoin, Kavin leads client engagements, manages the engineering team, and is the primary point of contact for every diagnostic and deployment.",
     credentials: [
-      "Georgetown University \u2014 M.S., Real Estate, Competitive Business Intelligence",
-      "PSG College of Technology \u2014 B.E., Civil Engineering",
+      "Georgetown University \, M.S., Real Estate, Competitive Business Intelligence",
+      "PSG College of Technology \, B.E., Civil Engineering",
       "President, Georgetown Graduate Student Government",
       "Chair, SABRE",
       "CFA Program Level II",
@@ -28,11 +28,11 @@ const team = [
   },
   {
     name: "Jonathan Morris",
-    role: "Senior Advisor/Consultant — Real Estate",
+    role: "Senior Advisor/Consultant, Real Estate",
     initials: "JM",
     photo: "/team-jonathan.png",
     short: "$4.7B CRE Transactions \u00b7 Fmr. Dir. Acquisitions, Boston Properties",
-    bio: "Jonathan Morris has spent more than 30 years in commercial real estate. As Director of Acquisitions at Boston Properties \u2014 recruited by Ray Ritchey \u2014 he helped build one of the premier office REITs in the country. As CEO of a private office REIT recruited by Brown Brothers Harriman, he led the company through a $240 million IPO. He co-founded LMH Realty Group, building a 1.5 million square foot portfolio valued at $1.5 billion at an average IRR of 44%. Jonathan advises Quoin on real estate strategy, client relationships, and market positioning.",
+    bio: "Jonathan Morris has spent more than 30 years in commercial real estate. As Director of Acquisitions at Boston Properties \, recruited by Ray Ritchey \, he helped build one of the premier office REITs in the country. As CEO of a private office REIT recruited by Brown Brothers Harriman, he led the company through a $240 million IPO. He co-founded LMH Realty Group, building a 1.5 million square foot portfolio valued at $1.5 billion at an average IRR of 44%. Jonathan advises Quoin on real estate strategy, client relationships, and market positioning.",
     credentials: [
       "$4.7B in commercial real estate transactions",
       "Former Director of Acquisitions, Boston Properties (BXP)",
@@ -45,7 +45,7 @@ const team = [
   },
   {
     name: "Dr. Cynthia J. Mendoza",
-    role: "Senior Advisor/Consultant — Governance & Security",
+    role: "Senior Advisor/Consultant, Governance & Security",
     initials: "CM",
     photo: "/team-cynthia.png",
     short: "Former Deputy CIO, US Department of Defense",
@@ -66,11 +66,11 @@ const team = [
     initials: "RF",
     photo: "/team-ricky.png",
     short: "Manager IT Consulting Delivery, CGI Federal",
-    bio: "Ricky brings enterprise IT infrastructure and cybersecurity from the federal sector. As Manager of IT Consulting Delivery at CGI Federal, he manages production delivery of IT services supporting the Social Security Administration. His background spans systems engineering, cybersecurity, and endpoint infrastructure \u2014 the foundation that enterprise AI runs on.",
+    bio: "Ricky brings enterprise IT infrastructure and cybersecurity from the federal sector. As Manager of IT Consulting Delivery at CGI Federal, he manages production delivery of IT services supporting the Social Security Administration. His background spans systems engineering, cybersecurity, and endpoint infrastructure \, the foundation that enterprise AI runs on.",
     credentials: [
-      "Manager, IT Consulting Delivery \u2014 CGI Federal",
-      "Former Microsoft SME/Engineer IV \u2014 Leidos",
-      "Georgetown University SCS \u2014 M.P.S., Cybersecurity Risk Management",
+      "Manager, IT Consulting Delivery \, CGI Federal",
+      "Former Microsoft SME/Engineer IV \, Leidos",
+      "Georgetown University SCS \, M.P.S., Cybersecurity Risk Management",
       "HIPAA Security and Privacy; Cyber Awareness Certified",
     ],
   },
@@ -82,9 +82,9 @@ const team = [
     short: "Enterprise Applications & Data \u00b7 German Marshall Fund \u00b7 Georgetown ITM",
     bio: "Brandon brings enterprise application management and data operations experience from the German Marshall Fund of the United States. His work in application training, data operations, and IT management gives him practical understanding of the gap between what a system can do and what staff actually does with it. Brandon supports diagnostic and deployment engagements, focusing on data readiness and application integration.",
     credentials: [
-      "Enterprise Applications Specialist \u2014 German Marshall Fund of the United States",
-      "Data Annotator \u2014 Enabled Intelligence, Inc.",
-      "Georgetown University SCS \u2014 M.P.S., Information Technology Management",
+      "Enterprise Applications Specialist \, German Marshall Fund of the United States",
+      "Data Annotator \, Enabled Intelligence, Inc.",
+      "Georgetown University SCS \, M.P.S., Information Technology Management",
     ],
   },
 ]
@@ -123,7 +123,7 @@ export function TeamContent() {
         </BlurFade>
       </section>
 
-      {/* Team Members — Card Grid */}
+      {/* Team Members Card Grid */}
       <section className="px-6 py-20 md:px-12 lg:px-20 md:py-28 border-t border-border">
         <BlurFade inView direction="up">
           <div className="mb-16 pb-6 border-b border-border">

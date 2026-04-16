@@ -23,7 +23,7 @@ const pillars = [
     number: "02",
     title: "Data Privacy & Protection",
     description:
-      "Tenant personal data is handled with controls aligned to CCPA and GDPR standards. Privacy is not an afterthought\u2014it is built into the data architecture from day one.",
+      "Tenant personal data is handled with controls aligned to CCPA and GDPR standards. Privacy is not an afterthought. it is built into the data architecture from day one.",
     mechanisms: [
       "Data minimization and purpose limitation principles",
       "Encryption at rest and in transit for all tenant data",
@@ -47,7 +47,7 @@ const pillars = [
     number: "04",
     title: "Algorithmic Bias Monitoring",
     description:
-      "Deployed models are continuously monitored for disparate impact across protected classes. Bias is not a one-time test\u2014it is an ongoing operational concern.",
+      "Deployed models are continuously monitored for disparate impact across protected classes. Bias is not a one-time test. it is an ongoing operational concern.",
     mechanisms: [
       "Statistical monitoring of outcomes by demographic group",
       "Periodic model revalidation against updated data",

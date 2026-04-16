@@ -72,7 +72,7 @@ export function Hero() {
                 Most firms have tried a pilot, bought a point solution, or commissioned
                 a strategy deck. None of it stuck. We exist because the gap between AI
                 investment and operational adoption requires a different kind of
-                partner — one that stays through implementation and beyond.
+                partner. One that stays through implementation and beyond.
               </p>
             </BlurFade>
 
