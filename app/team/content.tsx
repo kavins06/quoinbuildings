@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { X } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
@@ -13,6 +14,7 @@ const team = [
     name: "Kavin Sakthivel",
     role: "Founder & CEO",
     initials: "KS",
+    photo: "/team-kavin.jpg",
     short: "Georgetown \u00b7 Real Estate & Competitive Intelligence",
     bio: "Kavin founded Quoin after watching the same pattern repeat across commercial real estate firms: significant investment in AI, minimal operational adoption. Trained in civil engineering at PSG College of Technology and sharpened through competitive business intelligence and capital markets at Georgetown University, he approaches the built world from both the ground up and the balance sheet out. At Quoin, Kavin leads client engagements, manages the engineering team, and is the primary point of contact for every diagnostic and deployment.",
     credentials: [
@@ -137,10 +139,14 @@ export function TeamContent() {
                 onClick={() => setSelectedMember(member)}
                 className="group w-full text-left border border-border rounded-sm hover:border-muted-foreground/30 transition-colors duration-300"
               >
-                <div className="aspect-square bg-muted flex items-center justify-center">
-                  <span className="text-4xl font-extralight text-muted-foreground/60 tracking-wider">
-                    {member.initials}
-                  </span>
+                <div className="aspect-square bg-muted flex items-center justify-center relative overflow-hidden">
+                  {member.photo ? (
+                    <Image src={member.photo} alt={member.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                  ) : (
+                    <span className="text-4xl font-extralight text-muted-foreground/60 tracking-wider">
+                      {member.initials}
+                    </span>
+                  )}
                 </div>
                 <div className="p-5">
                   <p className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground/50 mb-1">
