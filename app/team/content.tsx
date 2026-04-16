@@ -64,6 +64,7 @@ const team = [
     name: "Ricky Fauntleroy",
     role: "Consultant",
     initials: "RF",
+    photo: "/team-ricky.png",
     short: "Manager IT Consulting Delivery, CGI Federal",
     bio: "Ricky brings enterprise IT infrastructure and cybersecurity from the federal sector. As Manager of IT Consulting Delivery at CGI Federal, he manages production delivery of IT services supporting the Social Security Administration. His background spans systems engineering, cybersecurity, and endpoint infrastructure \u2014 the foundation that enterprise AI runs on.",
     credentials: [
