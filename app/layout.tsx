@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, Spectral, Open_Sans } from 'next/font/google'
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import './globals.css'
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   )
