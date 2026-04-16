@@ -28,7 +28,7 @@ const team = [
   },
   {
     name: "Jonathan Morris",
-    role: "Senior Advisor/Consultant, Real Estate",
+    role: "Senior Advisor, Real Estate",
     initials: "JM",
     photo: "/team-jonathan.png",
     short: "$4.7B CRE Transactions \u00b7 Fmr. Dir. Acquisitions, Boston Properties",
@@ -45,7 +45,7 @@ const team = [
   },
   {
     name: "Dr. Cynthia J. Mendoza",
-    role: "Senior Advisor/Consultant, Governance & Security",
+    role: "Senior Advisor, Governance & Security",
     initials: "CM",
     photo: "/team-cynthia.png",
     short: "Former Deputy CIO, US Department of Defense",
