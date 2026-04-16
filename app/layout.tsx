@@ -16,7 +16,7 @@ const spectral = Spectral({
 })
 
 export const metadata: Metadata = {
-  title: 'Quoin — AI Operating Partner for Property Management',
+  title: 'Quoin | AI Operating Partner for Property Management',
   description: 'Quoin is an AI operating partner for property management firms. We build, deploy, and manage AI agents that integrate with your existing systems and workflows.',
 }
 
