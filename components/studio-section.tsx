@@ -3,92 +3,114 @@
 import Link from "next/link"
 import { BlurFade } from "@/components/ui/blur-fade"
 import { TextAnimate } from "@/components/ui/text-animate"
+import { BorderBeam } from "@/components/ui/border-beam"
 
-const services = [
+const weeks = [
   {
     number: "01",
-    title: "AI Strategy & Diagnostic",
+    title: "Stakeholder Interviews & Workflow Mapping",
     description:
-      "We map your workflows across maintenance, leasing, and tenant communications to identify the highest-ROI automation opportunities.",
+      "We meet with your property managers, maintenance coordinators, leasing staff, regional directors, and compliance team. We map how work actually flows \u2014 not the org chart version, the real version.",
   },
   {
     number: "02",
-    title: "Custom AI Agent Development",
+    title: "Systems & Data Assessment",
     description:
-      "Purpose-built AI agents that integrate with your Yardi, RealPage, or AppFolio platform and are trained on your operational data.",
+      "We assess your property management platform \u2014 Yardi, RealPage, AppFolio, or Entrata. Data quality, integration capabilities, API access, and gaps. What your systems can support today and what needs preparation.",
   },
-  {
-    number: "03",
-    title: "Governance & Compliance Architecture",
-    description:
-      "Fair housing guardrails, tenant data privacy controls, and audit trails built into every deployment from day one.",
-  },
-  {
-    number: "04",
-    title: "Managed AI Operations",
-    description:
-      "Ongoing performance monitoring, model retraining, and workflow expansion so your AI infrastructure evolves with your business.",
-  },
+]
+
+const deliverables = [
+  "A prioritized implementation roadmap \u2014 not a strategy deck, but a build plan",
+  "A data and systems readiness assessment",
+  "A governance requirements document",
+  "A clear recommendation: where to build first, what to prepare, and what to skip",
+  "A decision point: move forward with Quoin, move forward with someone else, or pause",
 ]
 
 export function StudioSection() {
   return (
-    <section id="services" className="px-6 py-28 md:px-12 lg:px-20 md:py-36 bg-foreground text-background">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28">
-        <BlurFade inView direction="up">
-          <div>
-            <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-8">
-              What We Do
-            </p>
-            <TextAnimate
-              as="h2"
-              animation="blurIn"
-              by="word"
-              once
-              startOnView
-              className="text-3xl md:text-4xl lg:text-[2.75rem] font-extralight leading-[1.15] tracking-tight text-balance text-background"
-            >
-              From diagnosis through ongoing operations, we handle every stage of AI adoption
-            </TextAnimate>
-          </div>
-        </BlurFade>
+    <section id="diagnostic" className="px-6 py-28 md:px-12 lg:px-20 md:py-36 bg-foreground text-background">
+      <BlurFade inView direction="up">
+        <div className="mb-16">
+          <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-8">
+            The First Step
+          </p>
+          <TextAnimate
+            as="h2"
+            animation="blurIn"
+            by="word"
+            once
+            startOnView
+            className="text-3xl md:text-4xl lg:text-[2.75rem] font-extralight leading-[1.15] tracking-tight text-balance text-background max-w-3xl"
+          >
+            A 2-Week Executive Diagnostic
+          </TextAnimate>
+          <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-2xl">
+            Every engagement begins the same way. Before we build anything, we spend
+            two weeks inside your operations to understand what is real, what is possible,
+            and what is not worth pursuing. The diagnostic is a standalone engagement —
+            you are not committing to a multi-year contract.
+          </p>
+        </div>
+      </BlurFade>
 
-        <BlurFade inView delay={0.2} direction="up">
-          <div className="flex flex-col justify-end gap-10">
-            <div className="flex flex-col gap-0">
-              {services.map((service, i) => (
-                <BlurFade key={service.number} inView delay={0.3 + i * 0.1} direction="up">
-                  <div className="py-6 border-b border-background/10 last:border-b-0 first:pt-0">
-                    <div className="flex items-start gap-4">
-                      <span className="text-[11px] tracking-[0.15em] text-background/25 mt-1 shrink-0">
-                        ({service.number})
-                      </span>
-                      <div>
-                        <h3 className="text-base md:text-lg font-light tracking-tight text-background mb-2">
-                          {service.title}
-                        </h3>
-                        <p className="text-sm leading-[1.65] text-background/45">
-                          {service.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </BlurFade>
-              ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-px mb-16">
+        {weeks.map((week, i) => (
+          <BlurFade key={week.number} inView delay={i * 0.15} direction="up">
+            <div className="relative overflow-hidden bg-foreground border border-background/10 p-8 md:p-10 h-full">
+              <div className="flex items-start gap-4 mb-6">
+                <span className="text-[11px] tracking-[0.15em] text-background/25 mt-1 shrink-0">
+                  Week {week.number}
+                </span>
+              </div>
+              <h3 className="text-lg md:text-xl font-light tracking-tight text-background mb-4">
+                {week.title}
+              </h3>
+              <p className="text-sm leading-[1.75] text-background/45">
+                {week.description}
+              </p>
+              <BorderBeam size={100} duration={10} delay={i * 3} colorFrom="#b5956b" colorTo="#b5956b00" borderWidth={1} />
             </div>
-
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-3 text-sm tracking-[0.05em] text-background/50 hover:text-background transition-colors duration-300 group"
-            >
-              <span className="border-b border-background/20 pb-0.5 group-hover:border-background/50 transition-colors duration-300">
-                Explore Our Services
-              </span>
-              <span className="text-accent group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
-            </Link>
-          </div>
-        </BlurFade>
+          </BlurFade>
+        ))}
       </div>
+
+      <BlurFade inView delay={0.3} direction="up">
+        <div className="mb-16">
+          <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-6">
+            What You Get
+          </p>
+          <ul className="flex flex-col gap-3">
+            {deliverables.map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <div className="w-1.5 h-px bg-accent/60 mt-2.5 shrink-0" />
+                <span className="text-sm leading-[1.75] text-background/60">
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </BlurFade>
+
+      <BlurFade inView delay={0.4} direction="up">
+        <div className="border-t border-background/10 pt-10">
+          <p className="text-sm leading-[1.85] text-background/50 max-w-2xl mb-8">
+            If the diagnostic reveals that AI is not the right investment for your firm
+            right now, we will tell you. We do not build what should not be built.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-3 text-sm tracking-[0.05em] text-background/50 hover:text-background transition-colors duration-300 group"
+          >
+            <span className="border-b border-background/20 pb-0.5 group-hover:border-background/50 transition-colors duration-300">
+              Explore Partnership
+            </span>
+            <span className="text-accent group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+          </Link>
+        </div>
+      </BlurFade>
     </section>
   )
 }

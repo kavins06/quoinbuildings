@@ -188,7 +188,7 @@ export function GovernanceContent() {
                 background="hsl(26, 29%, 61%)"
                 className="px-10 py-4 text-sm tracking-[0.1em] uppercase font-medium mx-auto"
               >
-                Schedule a Conversation
+                Explore Partnership
               </ShimmerButton>
             </Link>
           </div>

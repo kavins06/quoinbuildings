@@ -5,25 +5,25 @@ import { BlurFade } from "@/components/ui/blur-fade"
 
 const proofItems = [
   {
-    label: "Team Experience",
-    value: "30+ Years CRE Leadership",
-    link: "/about",
-    linkLabel: "Meet the Team",
+    label: "Portfolio Scale",
+    value: "Built for 2,000\u201350,000 Unit Portfolios",
+    link: "/who-we-help",
+    linkLabel: "Who We Help",
   },
   {
     label: "Governance",
-    value: "Fair Housing \u00B7 Data Privacy \u00B7 Audit Trails",
-    link: "/governance",
-    linkLabel: "Our Framework",
-  },
-  {
-    label: "Methodology",
-    value: "Structured 4-Phase \u00B7 90-Day Results",
+    value: "Governance Built Before Deployment",
     link: "/approach",
-    linkLabel: "How We Work",
+    linkLabel: "Our Approach",
   },
   {
-    label: "Location",
+    label: "First Step",
+    value: "2-Week Diagnostic \u00B7 No Lock-in",
+    link: "/approach",
+    linkLabel: "How It Works",
+  },
+  {
+    label: "Headquarters",
     value: "Washington, DC",
     link: "/contact",
     linkLabel: "Get in Touch",

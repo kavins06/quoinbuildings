@@ -27,10 +27,10 @@ export function EditorialBreak() {
             duration={0.8}
             className="text-xl md:text-2xl lg:text-[1.65rem] font-extralight leading-[1.35] tracking-tight text-foreground text-balance"
           >
-            {"\u201CWe exist to close the gap between AI ambition and operational reality in property management.\u201D"}
+            {"\u201CThe firms that succeed with AI are not the ones that bought the best tool. They are the ones that prepared their operations, governed the risk, and stayed with it past the pilot.\u201D"}
           </TextAnimate>
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mt-8">
-            Kavin Sakthivel, Founder
+            Kavin Sakthivel, Founder &amp; CEO
           </p>
         </BlurFade>
       </div>

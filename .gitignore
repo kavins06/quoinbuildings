@@ -10,3 +10,9 @@ node_modules/
 .next/
 .env*.local
 .DS_Store
+dev-server.log
+.mcp.json
+
+# Internal strategy docs
+Quoin-V3-Website-Build-Spec.md
+Quoin-Website-Strategy.md

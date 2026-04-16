@@ -1,39 +1,42 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, X } from "lucide-react"
 import { BlurFade } from "@/components/ui/blur-fade"
 import { TextAnimate } from "@/components/ui/text-animate"
 import { NumberTicker } from "@/components/ui/number-ticker"
 
 const projects = [
   {
-    title: "Fragmented Solutions",
-    category: "Problem",
+    title: "Fragmented Point Solutions",
+    category: "Pattern",
     year: "01",
-    location: "Point tools that don't integrate with your property management platform",
+    location: "Point tools that don\u2019t integrate with your property management platform",
     answer: "We build agents that plug directly into Yardi, RealPage, and AppFolio\u2014your existing stack, not a parallel one.",
+    detail: "You bought a leasing chatbot, a maintenance triage tool, and an analytics dashboard from three different vendors. None of them talk to each other. Your data stays siloed, your staff manages three vendor relationships, and you are no closer to firm-wide AI capability than when you started. The tools work individually. The operation does not improve holistically.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80",
   },
   {
-    title: "No Governance Framework",
-    category: "Problem",
+    title: "Strategy Without Implementation",
+    category: "Pattern",
     year: "02",
-    location: "Legal and compliance block rollout before it reaches operations",
+    location: "The roadmap was delivered. Nothing happened after.",
     answer: "Every engagement includes fair housing guardrails, data privacy controls, and audit trails from day one.",
+    detail: "A consulting firm delivered a roadmap. It was well-researched, well-formatted, and well-received in the board meeting. Then nothing happened. Nobody on the consultant\u2019s team was responsible for building anything, deploying anything, or making anything work in production. The deck sits in a shared drive. The budget cycle resets.",
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
   },
   {
-    title: "No Ownership After Pilot",
-    category: "Problem",
+    title: "No Governance, No Green Light",
+    category: "Pattern",
     year: "03",
-    location: "The consulting engagement ends, the vendor moves on, the system rots",
+    location: "Legal blocked the rollout before it reached operations",
     answer: "We stay as your managed AI operations partner\u2014monitoring, retraining, and expanding long after deployment.",
+    detail: "Legal blocked the rollout because nobody scoped fair housing risk. GDPR and CCPA exposure is unaddressed. There is no audit trail for AI-driven tenant decisions. The pilot stalled not because the technology failed, but because the organization was not ready to govern it.",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&q=80",
   },
 ]
 
-function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
+function ProjectCard({ project, index, onOpenDetail }: { project: typeof projects[0]; index: number; onOpenDetail: () => void }) {
   const [hovered, setHovered] = useState(false)
 
   return (
@@ -42,6 +45,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         className="bg-background group cursor-pointer"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
+        onClick={onOpenDetail}
       >
         <div className="overflow-hidden">
           <img
@@ -87,6 +91,46 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
   )
 }
 
+function DetailModal({ project, onClose }: { project: typeof projects[0] | null; onClose: () => void }) {
+  if (!project) return null
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8" onClick={onClose}>
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div
+        className="relative bg-background max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 md:p-12 animate-in fade-in zoom-in-95 duration-300"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-muted-foreground/50 hover:text-foreground transition-colors"
+        >
+          <X className="h-5 w-5" />
+        </button>
+
+        <span className="text-[11px] tracking-[0.15em] text-muted-foreground/40 block mb-4">
+          ({project.year})
+        </span>
+        <h3 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-6">
+          {project.title}
+        </h3>
+        <div className="w-8 h-px bg-accent/40 mb-6" />
+        <p className="text-sm leading-[1.85] text-muted-foreground mb-8">
+          {project.detail}
+        </p>
+        <div className="border-l-2 border-accent/30 pl-6">
+          <p className="text-[11px] tracking-[0.15em] uppercase text-accent/70 mb-2">
+            How Quoin solves this
+          </p>
+          <p className="text-sm leading-[1.75] text-foreground font-light">
+            {project.answer}
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function StatsClosing() {
   return (
     <div className="mt-20 grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
@@ -118,20 +162,13 @@ function StatsClosing() {
           </div>
         </BlurFade>
       </div>
-      <BlurFade inView delay={0.3} direction="up" className="md:col-span-4 md:col-start-9">
-        <div className="w-10 h-px bg-accent/40 mb-5" />
-        <p className="text-xl md:text-2xl font-extralight tracking-tight text-foreground mb-3">
-          We exist to close that gap.
-        </p>
-        <p className="text-sm leading-[1.75] text-muted-foreground max-w-sm">
-          By embedding with your team, integrating with your systems, building governance in from day one, and staying to operate the infrastructure long-term.
-        </p>
-      </BlurFade>
     </div>
   )
 }
 
 export function ProjectsSection() {
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null)
+
   return (
     <section id="problem" className="px-6 py-28 md:px-12 lg:px-20 md:py-36">
       <BlurFade inView direction="up">
@@ -149,7 +186,7 @@ export function ProjectsSection() {
                 startOnView
                 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground"
               >
-                The Problem
+                Three Patterns We See in Every Stalled AI Initiative
               </TextAnimate>
             </div>
             <span className="text-[11px] tracking-[0.15em] text-muted-foreground/50 mt-4 md:mt-0">
@@ -157,20 +194,31 @@ export function ProjectsSection() {
             </span>
           </div>
           <p className="text-sm leading-[1.75] text-muted-foreground max-w-2xl">
-            Property management firms are investing in AI, but investment is not adoption.
-            Across the industry, pilots launch with ambition and stall before they reach
-            operations. The pattern is consistent, and the root causes are structural.
+            Property management firms are spending on AI. But spending is not adoption.
+            The firms that are stuck are usually in one of three patterns.
           </p>
         </div>
       </BlurFade>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
         {projects.map((project, index) => (
-          <ProjectCard key={project.title} project={project} index={index} />
+          <ProjectCard
+            key={project.title}
+            project={project}
+            index={index}
+            onOpenDetail={() => setSelectedProject(project)}
+          />
         ))}
       </div>
 
       <StatsClosing />
+
+      {selectedProject && (
+        <DetailModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </section>
   )
 }

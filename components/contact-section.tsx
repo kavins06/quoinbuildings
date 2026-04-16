@@ -15,8 +15,13 @@ export function ContactSection() {
               Next Step
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extralight leading-[1.15] tracking-tight text-balance">
-              {"Let\u2019s start with"}<br />a conversation
+              {"\u201CLet\u2019s start with"}<br />{"a conversation.\u201D"}
             </h2>
+            <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-md">
+              A 30-minute conversation about your operations. No pitch. No pressure.
+              If there is a fit, the next step is a 2-week Executive Diagnostic —
+              a standalone engagement with clear deliverables and no long-term commitment.
+            </p>
             <div className="mt-10 flex flex-col gap-6">
               <Link href="/contact">
                 <ShimmerButton
@@ -27,7 +32,7 @@ export function ContactSection() {
                   background="hsl(26, 29%, 61%)"
                   className="px-10 py-4 text-sm tracking-[0.1em] uppercase font-medium"
                 >
-                  Schedule a Conversation
+                  Explore Partnership
                 </ShimmerButton>
               </Link>
               <a
@@ -48,11 +53,10 @@ export function ContactSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
                 <p className="text-[11px] tracking-[0.3em] uppercase text-background/35 mb-5">
-                  Washington, DC
+                  Headquarters
                 </p>
                 <p className="text-sm leading-[1.75] text-background/55">
-                  Washington, DC<br />
-                  Metropolitan Area
+                  Washington, DC
                 </p>
                 <p className="text-sm text-background/55 mt-4">
                   info@quoinbuildings.com
@@ -62,11 +66,21 @@ export function ContactSection() {
                 <p className="text-[11px] tracking-[0.3em] uppercase text-background/35 mb-5">
                   What to Expect
                 </p>
-                <p className="text-sm leading-[1.75] text-background/55">
-                  A 30-minute discovery conversation.<br />
-                  No pitch. No pressure.<br />
-                  We respond within one business day.
-                </p>
+                <div className="flex flex-col gap-3">
+                  {[
+                    "You reach out via form or email.",
+                    "Kavin responds personally within one business day.",
+                    "30-minute conversation: your operations, your challenges, mutual fit.",
+                    "If there is a fit, we scope an Executive Diagnostic.",
+                  ].map((step, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <span className="text-[11px] text-accent/60 mt-0.5 shrink-0">{i + 1}.</span>
+                      <p className="text-sm leading-[1.75] text-background/55">
+                        {step}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

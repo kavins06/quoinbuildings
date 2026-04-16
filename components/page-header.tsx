@@ -2,17 +2,43 @@
 
 import { BlurFade } from "@/components/ui/blur-fade"
 import { TextAnimate } from "@/components/ui/text-animate"
+import { cn } from "@/lib/utils"
 
 interface PageHeaderProps {
   eyebrow: string
   title: string
   description?: string
+  backgroundImage?: string
+  imageGrayscale?: boolean
+  className?: string
+  contentClassName?: string
 }
 
-export function PageHeader({ eyebrow, title, description }: PageHeaderProps) {
+export function PageHeader({
+  eyebrow,
+  title,
+  description,
+  backgroundImage,
+  imageGrayscale,
+  className,
+  contentClassName,
+}: PageHeaderProps) {
   return (
-    <section className="bg-foreground text-background px-6 pt-32 pb-20 md:px-12 lg:px-20 md:pt-40 md:pb-28">
-      <div className="max-w-4xl">
+    <section
+      className={cn(
+        "relative flex h-[45vh] flex-col justify-end overflow-hidden bg-foreground px-6 pt-32 pb-20 text-background md:h-[50vh] md:px-12 md:pt-40 md:pb-28 lg:px-20",
+        className,
+      )}
+    >
+      {backgroundImage && (
+        <img
+          src={backgroundImage}
+          alt=""
+          className={`absolute inset-0 w-full h-full object-cover ${imageGrayscale ? "grayscale" : ""}`}
+        />
+      )}
+      <div className="absolute inset-0 bg-black/50" />
+      <div className={cn("relative z-10 max-w-4xl", contentClassName)}>
         <BlurFade delay={0.2} direction="up">
           <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-6">
             {eyebrow}

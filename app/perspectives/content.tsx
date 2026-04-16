@@ -75,10 +75,31 @@ export function PerspectivesContent() {
   return (
     <main>
       <PageHeader
-        eyebrow="Our Thinking"
-        title="Perspectives"
-        description="Original analysis on AI adoption, governance, and the future of property management technology."
+        eyebrow="Perspectives"
+        title="What We Are Seeing in the Market"
+        description="Original analysis on AI adoption, governance, and operations in property management."
+        backgroundImage="/header-perspectives.jpg"
+        className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
+        contentClassName="pb-4 md:pb-8"
       />
+
+      <section className="px-6 md:px-12 lg:px-20 py-12 border-b border-border">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <p className="text-sm text-muted-foreground">
+            Get future perspectives by email.
+          </p>
+          <div className="flex items-center gap-3">
+            <input
+              type="email"
+              placeholder="your@email.com"
+              className="bg-transparent border border-border px-4 py-2 text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-accent transition-colors duration-200 w-64"
+            />
+            <button className="bg-accent text-accent-foreground px-5 py-2 text-sm tracking-[0.05em] hover:bg-accent/90 transition-colors duration-200">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
 
       <section className="px-6 md:px-12 lg:px-20">
         {articles.map((article, index) => (
@@ -86,9 +107,39 @@ export function PerspectivesContent() {
         ))}
       </section>
 
-      <div className="px-6 py-20 md:px-12 lg:px-20">
-        <div className="w-10 h-px bg-accent/30" />
-      </div>
+      <section className="px-6 md:px-12 lg:px-20 py-16">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <p className="text-lg font-extralight tracking-tight text-foreground">
+            Want to continue this conversation?
+          </p>
+          <a
+            href="/contact"
+            className="text-sm text-accent hover:text-accent/80 tracking-[0.05em] transition-colors duration-200"
+          >
+            Explore Partnership &rarr;
+          </a>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 lg:px-20 py-20 bg-foreground">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <div>
+            <p className="text-[11px] tracking-[0.15em] uppercase text-background/40 mb-4">
+              Next Step
+            </p>
+            <h3 className="text-2xl md:text-3xl font-extralight tracking-tight text-background">
+              Ready to move forward?
+            </h3>
+          </div>
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 text-sm tracking-[0.05em] hover:bg-accent/90 transition-colors duration-200"
+          >
+            Explore Partnership
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+      </section>
     </main>
   )
 }

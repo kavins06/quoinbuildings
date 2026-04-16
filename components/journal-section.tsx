@@ -26,13 +26,18 @@ const entries = [
     title: "Ricky Fauntleroy",
     tag: "Manager IT Consulting Delivery, CGI Federal",
   },
+  {
+    date: "Consultant",
+    title: "Brandon Timpane",
+    tag: "Enterprise Applications & Data \u00B7 German Marshall Fund \u00B7 Georgetown ITM",
+  },
 ]
 
 function JournalEntry({ entry, index }: { entry: typeof entries[0]; index: number }) {
   return (
     <BlurFade inView delay={index * 0.1} direction="up">
       <a
-        href="/leadership"
+        href="/team"
         className="group flex items-start md:items-center justify-between py-7 md:py-8 gap-6"
       >
         <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-10 flex-1">
@@ -70,7 +75,7 @@ export function JournalSection() {
             startOnView
             className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground"
           >
-            Leadership
+            Built by People Who Have Operated at Scale
           </TextAnimate>
         </div>
       </BlurFade>
@@ -84,7 +89,7 @@ export function JournalSection() {
       <BlurFade inView delay={0.4} direction="up">
         <div className="mt-12">
           <Link
-            href="/leadership"
+            href="/team"
             className="inline-flex items-center gap-3 text-sm tracking-[0.05em] text-muted-foreground hover:text-foreground transition-colors duration-300 group"
           >
             <span className="border-b border-accent/30 pb-0.5 group-hover:border-accent transition-colors duration-300">

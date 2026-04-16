@@ -1,16 +1,15 @@
 import Link from "next/link"
 
 const navLinks = [
+  { label: "Who We Help", href: "/who-we-help" },
   { label: "Services", href: "/services" },
   { label: "Approach", href: "/approach" },
-  { label: "About", href: "/about" },
-  { label: "Leadership", href: "/leadership" },
+  { label: "Team", href: "/team" },
   { label: "Perspectives", href: "/perspectives" },
   { label: "Contact", href: "/contact" },
 ]
 
 const trustLinks = [
-  { label: "Governance", href: "/governance" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
   { label: "Accessibility", href: "/accessibility" },
@@ -32,8 +31,15 @@ export function Footer() {
             and managing AI agents with governance built into every engagement.
           </p>
           <p className="text-sm text-muted-foreground/60 mt-4">
-            Washington, DC
+            Headquarters &middot; Washington, DC
           </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 text-sm text-accent hover:text-foreground transition-colors duration-300 mt-5 group"
+          >
+            <span>Explore Partnership</span>
+            <span className="group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+          </Link>
         </div>
 
         <div className="md:col-span-3 md:col-start-6">
@@ -93,10 +99,10 @@ export function Footer() {
 
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between pt-8 border-t border-border gap-4">
         <p className="text-[11px] tracking-[0.1em] text-muted-foreground/50">
-          {"© 2026 Quoin Buildings. All rights reserved."}
+          {"© 2026 Quoin Buildings, LLC. All rights reserved."}
         </p>
         <p className="text-[11px] tracking-[0.1em] text-muted-foreground/50">
-          Washington, DC
+          Headquarters &middot; Washington, DC
         </p>
       </div>
     </footer>

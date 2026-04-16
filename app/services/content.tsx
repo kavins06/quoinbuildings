@@ -1,5 +1,6 @@
 "use client"
 
+import { useRef, useEffect, useState } from "react"
 import Link from "next/link"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
@@ -9,7 +10,8 @@ import { ShimmerButton } from "@/components/ui/shimmer-button"
 const services = [
   {
     number: "01",
-    title: "AI Strategy & Diagnostic",
+    title: "AI Readiness & Strategy",
+    image: "/service-strategy.jpg",
     description:
       "We map your workflows across maintenance, leasing, tenant communications, accounting, and compliance. We assess data readiness across your systems and identify the highest-ROI automation opportunities.",
     activities: [
@@ -25,6 +27,7 @@ const services = [
   {
     number: "02",
     title: "Custom AI Agent Development",
+    image: "/service-ai-dev.jpg",
     description:
       "Purpose-built AI agents for your specific operations. Each agent integrates with your existing property management platform and is trained on your workflows, policies, and data.",
     activities: [
@@ -40,6 +43,7 @@ const services = [
   {
     number: "03",
     title: "Governance & Compliance Architecture",
+    image: "/service-governance.jpg",
     description:
       "Every AI deployment includes a governance framework addressing fair housing compliance, tenant data privacy, audit trails, and algorithmic bias monitoring.",
     activities: [
@@ -55,6 +59,7 @@ const services = [
   {
     number: "04",
     title: "Managed AI Operations",
+    image: "/service-operations.jpg",
     description:
       "We don\u2019t disappear after deployment. We monitor performance, retrain models, expand capabilities, and ensure your AI infrastructure evolves with your business.",
     activities: [
@@ -70,6 +75,25 @@ const services = [
 ]
 
 function ServiceBlock({ service, index }: { service: typeof services[0]; index: number }) {
+  const imgRef = useRef<HTMLDivElement>(null)
+  const [inView, setInView] = useState(false)
+
+  useEffect(() => {
+    const el = imgRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true)
+          observer.unobserve(el)
+        }
+      },
+      { threshold: 0.3 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <BlurFade inView direction="up" delay={0.1}>
       <div className="py-16 md:py-20 border-b border-border last:border-b-0">
@@ -84,6 +108,21 @@ function ServiceBlock({ service, index }: { service: typeof services[0]; index: 
             <p className="text-sm leading-[1.75] text-muted-foreground">
               {service.description}
             </p>
+            {service.image && (
+              <div ref={imgRef} className="mt-8 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  style={{
+                    filter: inView ? "grayscale(0%)" : "grayscale(100%)",
+                    transform: inView ? "scale(1.03)" : "scale(1)",
+                    opacity: inView ? 1 : 0.7,
+                    transition: "filter 2s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1.5s ease-out",
+                  }}
+                  className="w-full h-56 md:h-72 object-cover"
+                />
+              </div>
+            )}
           </div>
 
           <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-8">
@@ -125,6 +164,9 @@ export function ServicesContent() {
         eyebrow="Our Services"
         title="From diagnosis through ongoing operations, we handle every stage of AI adoption."
         description="Each service is designed for property management firms that are serious about making AI work\u2014not just piloting it."
+        backgroundImage="/header-team.jpg"
+        className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
+        contentClassName="pb-4 md:pb-8"
       />
 
       <section className="px-6 md:px-12 lg:px-20">
@@ -153,7 +195,7 @@ export function ServicesContent() {
                 background="hsl(26, 29%, 61%)"
                 className="px-10 py-4 text-sm tracking-[0.1em] uppercase font-medium mx-auto"
               >
-                Schedule a Conversation
+                Explore Partnership
               </ShimmerButton>
             </Link>
           </div>

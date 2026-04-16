@@ -1,13 +1,15 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
+  { label: "Who We Help", href: "/who-we-help" },
   { label: "Services", href: "/services" },
   { label: "Approach", href: "/approach" },
-  { label: "About", href: "/about" },
+  { label: "Team", href: "/team" },
   { label: "Perspectives", href: "/perspectives" },
 ]
 
@@ -16,6 +18,11 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [hidden, setHidden] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const pathname = usePathname()
+  const isHome = pathname === "/"
+
+  // Always use dark text on white background
+  const useLightText = false
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,17 +39,20 @@ export function Navigation() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         hidden && !isOpen ? "-translate-y-full" : "translate-y-0"
-      } ${scrolled ? "bg-background/95 backdrop-blur-md border-b border-border" : "bg-transparent"}`}
+      } bg-background/95 backdrop-blur-md border-b border-border`}
     >
-      <nav className="flex items-center justify-between px-6 py-5 md:px-12 lg:px-20">
+      <nav className="flex items-center justify-between px-4 py-2 md:px-12 md:py-3 lg:px-20">
         <Link
           href="/"
-          className={`flex items-center gap-2.5 text-base font-medium tracking-[0.3em] uppercase transition-colors duration-500 ${
-            scrolled ? "text-foreground" : "text-foreground"
+          className={`flex items-center gap-2 text-lg md:text-xl font-medium tracking-[0.3em] uppercase transition-colors duration-500 ${
+            useLightText ? "text-white" : "text-foreground"
           }`}
         >
-          <img src="/quoin-logo.svg" alt="Quoin logo" className="h-[72px] w-[72px]" />
-          <span className="font-[family-name:var(--font-open-sans)]">QUOIN</span>
+          <span className="relative h-[34px] w-[34px] md:h-[50px] md:w-[50px] shrink-0">
+            <img src="/quoin-logo-dark.svg" alt="" className={`absolute inset-0 h-full w-full transition-opacity duration-500 ${useLightText ? "opacity-100" : "opacity-0"}`} />
+            <img src="/quoin-logo-lite.svg" alt="" className={`absolute inset-0 h-full w-full transition-opacity duration-500 ${useLightText ? "opacity-0" : "opacity-100"}`} />
+          </span>
+          <span className="font-[family-name:'Times_New_Roman',_Times,_serif]">QUOIN</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-10">
@@ -51,8 +61,8 @@ export function Navigation() {
               key={link.label}
               href={link.href}
               className={`text-[11px] tracking-[0.15em] uppercase transition-colors duration-500 hover:opacity-100 ${
-                scrolled
-                  ? "text-muted-foreground hover:text-foreground"
+                useLightText
+                  ? "text-white/60 hover:text-white"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -62,19 +72,19 @@ export function Navigation() {
           <a
             href="/contact"
             className={`text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border transition-all duration-500 ${
-              scrolled
-                ? "border-foreground/20 text-foreground hover:bg-foreground hover:text-background"
+              useLightText
+                ? "border-white/20 text-white hover:bg-white hover:text-black"
                 : "border-foreground/20 text-foreground hover:bg-foreground hover:text-background"
             }`}
           >
-            Schedule a Conversation
+            Explore Partnership
           </a>
         </div>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`md:hidden transition-colors duration-500 ${
-            scrolled || isOpen ? "text-foreground" : "text-foreground"
+            !useLightText || isOpen ? "text-foreground" : "text-white"
           }`}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
@@ -104,7 +114,7 @@ export function Navigation() {
             onClick={() => setIsOpen(false)}
             className="text-sm tracking-[0.15em] uppercase text-foreground border border-foreground/20 px-6 py-3 mt-4 text-center hover:bg-foreground hover:text-background transition-all duration-300"
           >
-            Schedule a Conversation
+            Explore Partnership
           </a>
         </div>
       </div>
