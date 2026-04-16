@@ -49,8 +49,8 @@ export function Navigation() {
           }`}
         >
           <span className="relative h-[34px] w-[34px] md:h-[50px] md:w-[50px] shrink-0">
-            <img src="/quoin-logo-dark.svg" alt="" className={`absolute inset-0 h-full w-full transition-opacity duration-500 ${useLightText ? "opacity-100" : "opacity-0"}`} />
-            <img src="/quoin-logo-lite.svg" alt="" className={`absolute inset-0 h-full w-full transition-opacity duration-500 ${useLightText ? "opacity-0" : "opacity-100"}`} />
+            <img src="/quoin-logo-dark.png" alt="" width={100} height={100} className={`absolute inset-0 h-full w-full transition-opacity duration-500 ${useLightText ? "opacity-100" : "opacity-0"}`} />
+            <img src="/quoin-logo-lite.png" alt="" width={100} height={100} className={`absolute inset-0 h-full w-full transition-opacity duration-500 ${useLightText ? "opacity-0" : "opacity-100"}`} />
           </span>
           <span className="font-[family-name:'Times_New_Roman',_Times,_serif]">QUOIN</span>
         </Link>
