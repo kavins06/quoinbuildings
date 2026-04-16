@@ -348,7 +348,7 @@ const TextAnimateBase = ({
   let segments: string[] = []
   switch (by) {
     case "word":
-      segments = children.split(/(\s+)/)
+      segments = children.split(/\s+/).filter(Boolean)
       break
     case "character":
       segments = children.split("")
@@ -422,19 +422,20 @@ const TextAnimateBase = ({
       >
         {accessible && <span className="sr-only">{children}</span>}
         {segments.map((segment, i) => (
-          <motion.span
-            key={`${by}-${segment}-${i}`}
-            variants={finalVariants.item}
-            custom={i * staggerTimings[by]}
-            className={cn(
-              by === "line" ? "block" : "inline-block whitespace-pre",
-              by === "character" && "",
-              segmentClassName
-            )}
-            aria-hidden={accessible ? true : undefined}
-          >
-            {segment}
-          </motion.span>
+          <span key={`${by}-${segment}-${i}`} aria-hidden={accessible ? true : undefined}>
+            <motion.span
+              variants={finalVariants.item}
+              custom={i * staggerTimings[by]}
+              className={cn(
+                by === "line" ? "block" : "inline-block whitespace-pre",
+                by === "character" && "",
+                segmentClassName
+              )}
+            >
+              {segment}
+            </motion.span>
+            {by === "word" && i < segments.length - 1 ? " " : null}
+          </span>
         ))}
       </MotionComponent>
     </AnimatePresence>
