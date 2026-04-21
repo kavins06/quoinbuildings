@@ -2,48 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 6%;
-    --card: 40 20% 97%;
-    --card-foreground: 0 0% 6%;
-    --popover: 40 20% 97%;
-    --popover-foreground: 0 0% 6%;
-    --primary: 0 0% 6%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 40 15% 94%;
-    --secondary-foreground: 0 0% 6%;
-    --muted: 40 15% 94%;
-    --muted-foreground: 0 0% 27%;
-    --accent: 26 29% 61%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 0% 30%;
+    /* Surfaces */
+    --surface-base: 40 33% 95%;      /* #F7F4EE warm paper */
+    --surface-raised: 0 0% 100%;     /* #FFFFFF */
+    --surface-sunken: 38 28% 91%;    /* #EFEAE1 */
+    --surface-inverse: 0 0% 10%;     /* #1A1A1A */
+
+    /* Text */
+    --text-primary: 0 0% 10%;        /* #1A1A1A */
+    --text-secondary: 0 0% 29%;      /* #4A4A4A */
+    --text-muted: 0 0% 48%;          /* #7A7A7A */
+
+    /* Accent (muted gold) */
+    --accent: 30 39% 47%;            /* #A8804A */
+
+    /* Borders */
+    --border-subtle: 37 25% 86%;     /* #E4DFD4 */
+    --border-strong: 0 0% 10%;       /* #1A1A1A */
+
+    /* shadcn compatibility aliases — map to surface tokens so existing components still render */
+    --background: var(--surface-base);
+    --foreground: var(--text-primary);
+    --card: var(--surface-raised);
+    --card-foreground: var(--text-primary);
+    --popover: var(--surface-raised);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--text-primary);
+    --primary-foreground: var(--surface-base);
+    --secondary: var(--surface-sunken);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--surface-sunken);
+    --muted-foreground: var(--text-secondary);
+    --accent-foreground: var(--surface-base);
+    --destructive: 0 50% 40%;
     --destructive-foreground: 0 0% 100%;
-    --border: 30 8% 85%;
-    --input: 30 8% 85%;
-    --ring: 26 29% 61%;
-    --radius: 0rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 15%;
-    --sidebar-primary: 0 0% 5%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 94%;
-    --sidebar-accent-foreground: 0 0% 5%;
-    --sidebar-border: 0 0% 85%;
-    --sidebar-ring: 0 0% 5%;
-  }
-  .theme {
-    --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
-    --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
-    --animate-marquee: marquee var(--duration) infinite linear;
-    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+    --border: var(--border-subtle);
+    --input: var(--border-subtle);
+    --ring: var(--accent);
+    --radius: 0.125rem; /* 2px */
   }
 }
 
@@ -56,52 +54,54 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-  ::selection {
-    background-color: hsl(26 29% 61%);
-    color: hsl(0 0% 6%);
+    font-family: var(--font-inter), Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
   }
   h1, h2, h3, blockquote {
-    font-family: var(--font-spectral), Georgia, 'Times New Roman', serif;
+    font-family: var(--font-serif), "Source Serif 4", "Source Serif Pro", Georgia, serif;
     font-feature-settings: 'kern' 1, 'liga' 1;
     text-rendering: optimizeLegibility;
+    font-weight: 400;
+  }
+  ::selection {
+    background-color: hsl(var(--surface-inverse));
+    color: hsl(var(--surface-base));
+  }
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
-@theme inline {
-  @keyframes shimmer-slide {
-  to {
-    transform: translate(calc(100cqw - 100%), 0);
-    }
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
-  @keyframes spin-around {
-  0% {
-    transform: translateZ(0) rotate(0);
-    }
-  15%, 35% {
-    transform: translateZ(0) rotate(90deg);
-    }
-  65%, 85% {
-    transform: translateZ(0) rotate(270deg);
-    }
-  100% {
-    transform: translateZ(0) rotate(360deg);
-    }
+  .measure {
+    max-width: 68ch;
   }
-  @keyframes marquee {
-  from {
-    transform: translateX(0);
-    }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-    }
+  .container-shell {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
   }
-  @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-    }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+  @media (min-width: 1024px) {
+    .container-shell {
+      padding-inline: 5rem;
     }
   }
 }

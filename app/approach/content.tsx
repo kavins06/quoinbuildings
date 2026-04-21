@@ -3,8 +3,6 @@
 import Link from "next/link"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
-import { ShimmerButton } from "@/components/ui/shimmer-button"
 import {
   Accordion,
   AccordionContent,
@@ -131,12 +129,12 @@ function PhaseBlock({ phase, index }: { phase: typeof phases[0]; index: number }
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
             <div className="relative z-10 flex flex-col justify-end h-full p-6 md:p-8">
-              <span className="text-[11px] tracking-[0.15em] text-white/40 mb-3">
+              <span className="text-[11px] tracking-[0.15em] text-ink-muted mb-3">
                 ({phase.number})
               </span>
-              <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-2xl md:text-3xl font-extralight tracking-tight text-white">
+              <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-ink-primary">
                 {phase.name}
-              </TextAnimate>
+              </h2>
               <p className="text-[11px] tracking-[0.15em] uppercase text-accent mt-2">
                 {phase.timeline}
               </p>
@@ -212,7 +210,7 @@ export function ApproachContent() {
         <BlurFade inView direction="up">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
-            <p className="text-lg md:text-xl font-extralight leading-[1.6] tracking-tight text-background/80">
+            <p className="text-lg md:text-xl font-normal leading-[1.6] tracking-tight text-background/80">
               Every engagement includes defined exit criteria at each phase. If the data says stop, we stop. You own every deliverable we produce.
             </p>
           </div>
@@ -226,7 +224,7 @@ export function ApproachContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4 text-center">
               Frequently Asked Questions
             </p>
-            <h2 className="text-3xl md:text-4xl font-extralight leading-[1.15] tracking-tight mb-16 text-center">
+            <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-tight mb-16 text-center">
               What to expect
             </h2>
             <Accordion type="single" collapsible className="w-full">
@@ -250,24 +248,18 @@ export function ApproachContent() {
         <BlurFade inView direction="up">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
-            <h2 className="text-3xl md:text-4xl font-extralight leading-[1.15] tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-tight mb-6">
               Ready to see what the diagnostic would reveal for your firm?
             </h2>
             <p className="text-sm leading-[1.85] text-background/45 max-w-lg mx-auto mb-12">
               The first step is a conversation. We will learn about your operations
               and help you understand what the diagnostic would uncover.
             </p>
-            <Link href="/contact">
-              <ShimmerButton
-                borderRadius="0px"
-                shimmerColor="#ffffff"
-                shimmerDuration="4s"
-                shimmerSize="0.03em"
-                background="hsl(26, 29%, 61%)"
-                className="px-10 py-4 text-sm tracking-[0.1em] uppercase font-medium mx-auto"
-              >
-                Explore Partnership
-              </ShimmerButton>
+            <Link
+              href="/contact"
+              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+            >
+              Talk to us
             </Link>
           </div>
         </BlurFade>

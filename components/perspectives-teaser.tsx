@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
 
 const articles = [
   {
@@ -49,16 +48,9 @@ export function PerspectivesTeaser() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
             Our Thinking
           </p>
-          <TextAnimate
-            as="h2"
-            animation="blurIn"
-            by="word"
-            once
-            startOnView
-            className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground"
-          >
+          <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
             Perspectives
-          </TextAnimate>
+          </h2>
         </div>
       </BlurFade>
 

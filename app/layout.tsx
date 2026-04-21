@@ -1,18 +1,23 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Inter, Spectral, Open_Sans } from 'next/font/google'
+import { Inter, Source_Serif_4 } from 'next/font/google'
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const openSans = Open_Sans({ subsets: ['latin'], variable: '--font-open-sans' })
-const spectral = Spectral({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-spectral',
-  weight: ['200', '300', '400', '500'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  weight: ['400', '500'],
   style: 'normal',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -21,7 +26,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0F0F0F',
+  themeColor: '#F7F4EE',
 }
 
 export default function RootLayout({
@@ -30,10 +35,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spectral.variable} ${openSans.variable}`}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
+      <body className="font-sans antialiased bg-background text-foreground">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-surface-raised focus:text-ink-primary focus:px-4 focus:py-2 focus:border focus:border-strong"
+        >
+          Skip to content
+        </a>
         <Navigation />
-        {children}
+        <main id="main" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

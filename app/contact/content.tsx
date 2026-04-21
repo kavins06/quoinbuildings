@@ -30,7 +30,7 @@ export function ContactContent() {
             {submitted ? (
               <div className="py-16">
                 <div className="w-10 h-px bg-accent/40 mb-8" />
-                <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-4">
+                <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-4">
                   Thank you.
                 </h2>
                 <p className="text-sm leading-[1.75] text-muted-foreground">

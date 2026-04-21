@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
 
 const categories = [
   "What they do",
@@ -66,9 +65,9 @@ export function PrinciplesSection() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
             Your Options
           </p>
-          <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+          <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
             You Have Four Options. Here Is What Each One Actually Does.
-          </TextAnimate>
+          </h2>
         </div>
       </BlurFade>
 
@@ -128,7 +127,7 @@ export function PrinciplesSection() {
               className={`shrink-0 text-[10px] tracking-[0.15em] uppercase px-4 py-2 border transition-all duration-300 ${
                 activeTab === index
                   ? col.highlight
-                    ? "border-accent bg-accent text-white"
+                    ? "border-accent bg-accent text-surface-base"
                     : "border-foreground bg-foreground text-background"
                   : "border-border text-muted-foreground"
               }`}

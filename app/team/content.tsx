@@ -6,8 +6,6 @@ import Link from "next/link"
 import { X } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
-import { ShimmerButton } from "@/components/ui/shimmer-button"
 
 const team = [
   {
@@ -110,9 +108,9 @@ export function TeamContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
               Why This Team Exists
             </p>
-            <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+            <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
               Built for this problem
-            </TextAnimate>
+            </h2>
           </div>
         </BlurFade>
 
@@ -130,9 +128,9 @@ export function TeamContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
               The Team
             </p>
-            <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+            <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
               Leadership
-            </TextAnimate>
+            </h2>
           </div>
         </BlurFade>
 
@@ -147,7 +145,7 @@ export function TeamContent() {
                   {member.photo ? (
                     <Image src={member.photo} alt={member.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                   ) : (
-                    <span className="text-4xl font-extralight text-muted-foreground/60 tracking-wider">
+                    <span className="text-4xl font-normal text-muted-foreground/60 tracking-wider">
                       {member.initials}
                     </span>
                   )}
@@ -169,7 +167,7 @@ export function TeamContent() {
       {/* Bio Modal */}
       {selectedMember && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm p-6"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 p-6"
           onClick={() => setSelectedMember(null)}
         >
           <div
@@ -186,7 +184,7 @@ export function TeamContent() {
             <p className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground/50 mb-1">
               {selectedMember.role}
             </p>
-            <h3 className="text-2xl font-extralight tracking-tight text-foreground mb-6">
+            <h3 className="text-2xl font-normal tracking-tight text-foreground mb-6">
               {selectedMember.name}
             </h3>
             <p className="text-sm leading-[1.85] text-muted-foreground mb-8">
@@ -218,7 +216,7 @@ export function TeamContent() {
               <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
                 Governance
               </p>
-              <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground">
+              <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground">
                 Our AI governance framework
               </h2>
             </div>
@@ -236,23 +234,17 @@ export function TeamContent() {
         <BlurFade inView direction="up">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
-            <h2 className="text-3xl md:text-4xl font-extralight leading-[1.15] tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-tight mb-6">
               You are hiring people, not a brand.
             </h2>
             <p className="text-sm leading-[1.85] text-background/45 max-w-lg mx-auto mb-12">
               Start with a conversation. See if the fit is there.
             </p>
-            <Link href="/contact">
-              <ShimmerButton
-                borderRadius="0px"
-                shimmerColor="#ffffff"
-                shimmerDuration="4s"
-                shimmerSize="0.03em"
-                background="hsl(26, 29%, 61%)"
-                className="px-10 py-4 text-sm tracking-[0.1em] uppercase font-medium mx-auto"
-              >
-                Explore Partnership
-              </ShimmerButton>
+            <Link
+              href="/contact"
+              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+            >
+              Talk to us
             </Link>
           </div>
         </BlurFade>

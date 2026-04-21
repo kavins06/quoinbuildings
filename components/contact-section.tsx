@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { ShimmerButton } from "@/components/ui/shimmer-button"
 
 export function ContactSection() {
   return (
@@ -14,7 +13,7 @@ export function ContactSection() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-8">
               Next Step
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extralight leading-[1.15] tracking-tight text-balance">
+            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-normal leading-[1.15] tracking-tight text-balance">
               {"\u201CLet\u2019s start with"}<br />{"a conversation.\u201D"}
             </h2>
             <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-md">
@@ -23,17 +22,11 @@ export function ContactSection() {
               a standalone engagement with clear deliverables and no long-term commitment.
             </p>
             <div className="mt-10 flex flex-col gap-6">
-              <Link href="/contact">
-                <ShimmerButton
-                  borderRadius="0px"
-                  shimmerColor="#ffffff"
-                  shimmerDuration="4s"
-                  shimmerSize="0.03em"
-                  background="hsl(26, 29%, 61%)"
-                  className="px-10 py-4 text-sm tracking-[0.1em] uppercase font-medium"
-                >
-                  Explore Partnership
-                </ShimmerButton>
+              <Link
+                href="/contact"
+                className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+              >
+                Talk to us
               </Link>
               <a
                 href="mailto:info@quoinbuildings.com"

@@ -372,7 +372,7 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-background text-foreground">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-surface-raised focus:text-text-primary focus:px-4 focus:py-2 focus:border focus:border-border-strong"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-surface-raised focus:text-ink-primary focus:px-4 focus:py-2 focus:border focus:border-strong"
         >
           Skip to content
         </a>
@@ -618,7 +618,7 @@ with a bordered anchor (or button, matching the original element type):
 ```tsx
 <a
   href="/contact"
-  className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-border-strong text-text-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+  className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
 >
   Talk to us
 </a>
@@ -757,7 +757,7 @@ export function Navigation() {
   return (
     <header
       className={`sticky top-0 z-50 bg-surface-base ${
-        scrolled ? "border-b border-border-subtle" : "border-b border-transparent"
+        scrolled ? "border-b border-subtle" : "border-b border-transparent"
       } transition-colors duration-150`}
     >
       <nav
@@ -766,7 +766,7 @@ export function Navigation() {
       >
         <Link
           href="/"
-          className="font-serif text-lg md:text-xl text-text-primary"
+          className="font-serif text-lg md:text-xl text-ink-primary"
         >
           QUOIN
         </Link>
@@ -776,14 +776,14 @@ export function Navigation() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-[14px] text-text-secondary hover:text-text-primary hover:underline underline-offset-[6px] decoration-accent decoration-1 transition-colors duration-150"
+              className="text-[14px] text-ink-secondary hover:text-ink-primary hover:underline underline-offset-[6px] decoration-accent decoration-1 transition-colors duration-150"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="/contact"
-            className="inline-block text-[13px] tracking-[0.02em] px-5 py-2.5 border border-border-strong text-text-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+            className="inline-block text-[13px] tracking-[0.02em] px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
           >
             Talk to us
           </Link>
@@ -795,7 +795,7 @@ export function Navigation() {
           aria-controls="mobile-nav"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           onClick={() => setIsOpen((prev) => !prev)}
-          className="md:hidden text-text-primary"
+          className="md:hidden text-ink-primary"
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -804,7 +804,7 @@ export function Navigation() {
       <div
         id="mobile-nav"
         hidden={!isOpen}
-        className="md:hidden bg-surface-base border-t border-border-subtle"
+        className="md:hidden bg-surface-base border-t border-subtle"
       >
         <div className="container-shell flex flex-col py-8 gap-6">
           {navLinks.map((link) => (
@@ -812,7 +812,7 @@ export function Navigation() {
               key={link.label}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-xl text-text-primary"
+              className="text-xl text-ink-primary"
             >
               {link.label}
             </Link>
@@ -820,7 +820,7 @@ export function Navigation() {
           <Link
             href="/contact"
             onClick={() => setIsOpen(false)}
-            className="inline-block text-[13px] tracking-[0.02em] px-5 py-3 mt-4 border border-border-strong text-text-primary text-center"
+            className="inline-block text-[13px] tracking-[0.02em] px-5 py-3 mt-4 border border-strong text-ink-primary text-center"
           >
             Talk to us
           </Link>
@@ -889,20 +889,20 @@ const trustLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-surface-sunken border-t border-border-subtle">
+    <footer className="bg-surface-sunken border-t border-subtle">
       <div className="container-shell py-16 lg:py-24">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div>
             <Link
               href="/"
-              className="font-serif text-xl text-text-primary"
+              className="font-serif text-xl text-ink-primary"
             >
               QUOIN
             </Link>
-            <p className="text-sm text-text-secondary leading-relaxed mt-5 max-w-xs">
+            <p className="text-sm text-ink-secondary leading-relaxed mt-5 max-w-xs">
               AI operating partner for property management firms.
             </p>
-            <p className="text-sm text-text-muted mt-4">
+            <p className="text-sm text-ink-muted mt-4">
               Headquarters &middot; Washington, DC
             </p>
           </div>
@@ -916,7 +916,7 @@ export function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-150"
+                  className="text-sm text-ink-secondary hover:text-ink-primary transition-colors duration-150"
                 >
                   {link.label}
                 </Link>
@@ -933,7 +933,7 @@ export function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-150"
+                  className="text-sm text-ink-secondary hover:text-ink-primary transition-colors duration-150"
                 >
                   {link.label}
                 </Link>
@@ -948,7 +948,7 @@ export function Footer() {
             <div className="flex flex-col gap-3">
               <a
                 href="mailto:info@quoinbuildings.com"
-                className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-150"
+                className="text-sm text-ink-secondary hover:text-ink-primary transition-colors duration-150"
               >
                 info@quoinbuildings.com
               </a>
@@ -956,11 +956,11 @@ export function Footer() {
                 href="https://www.linkedin.com/"
                 rel="noopener"
                 target="_blank"
-                className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-150"
+                className="text-sm text-ink-secondary hover:text-ink-primary transition-colors duration-150"
               >
                 LinkedIn
               </a>
-              <p className="text-sm text-text-muted leading-relaxed mt-2 max-w-xs">
+              <p className="text-sm text-ink-muted leading-relaxed mt-2 max-w-xs">
                 For partnership inquiries, use{" "}
                 <Link href="/contact" className="underline decoration-accent underline-offset-4">
                   Talk to us
@@ -971,11 +971,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between pt-10 mt-12 border-t border-border-subtle gap-3">
-          <p className="text-[12px] text-text-muted">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between pt-10 mt-12 border-t border-subtle gap-3">
+          <p className="text-[12px] text-ink-muted">
             © 2026 Quoin Buildings, LLC. All rights reserved.
           </p>
-          <p className="text-[12px] text-text-muted">
+          <p className="text-[12px] text-ink-muted">
             Headquarters &middot; Washington, DC
           </p>
         </div>
@@ -1032,16 +1032,16 @@ export default function ResponsibleAIPage() {
       <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-accent mb-5">
         Trust &amp; Governance
       </p>
-      <h1 className="font-serif text-4xl md:text-5xl text-text-primary tracking-[-0.01em] leading-[1.1]">
+      <h1 className="font-serif text-4xl md:text-5xl text-ink-primary tracking-[-0.01em] leading-[1.1]">
         Responsible AI
       </h1>
-      <p className="text-lg text-text-secondary leading-relaxed mt-6 measure">
+      <p className="text-lg text-ink-secondary leading-relaxed mt-6 measure">
         Full content coming in a subsequent update. This page will describe how Quoin
         decides what AI to build and deploy, our human-in-the-loop expectations, data
         boundaries with client systems, model-selection transparency, and ongoing
         evaluation practice.
       </p>
-      <p className="text-sm text-text-muted mt-6">
+      <p className="text-sm text-ink-muted mt-6">
         Questions in the meantime: <a className="underline decoration-accent underline-offset-4" href="mailto:ethics@quoinbuildings.com">ethics@quoinbuildings.com</a>
       </p>
     </article>
@@ -1091,15 +1091,15 @@ export default function DataSecurityPage() {
       <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-accent mb-5">
         Trust &amp; Governance
       </p>
-      <h1 className="font-serif text-4xl md:text-5xl text-text-primary tracking-[-0.01em] leading-[1.1]">
+      <h1 className="font-serif text-4xl md:text-5xl text-ink-primary tracking-[-0.01em] leading-[1.1]">
         Data Security
       </h1>
-      <p className="text-lg text-text-secondary leading-relaxed mt-6 measure">
+      <p className="text-lg text-ink-secondary leading-relaxed mt-6 measure">
         Full content coming in a subsequent update. This page will describe our
         data-handling posture at rest and in transit, access control principle, vendor
         review practice, and incident response contact. High-level, not a SOC 2 substitute.
       </p>
-      <p className="text-sm text-text-muted mt-6">
+      <p className="text-sm text-ink-muted mt-6">
         Security questions in the meantime: <a className="underline decoration-accent underline-offset-4" href="mailto:security@quoinbuildings.com">security@quoinbuildings.com</a>
       </p>
     </article>
@@ -1144,10 +1144,10 @@ Apply these exact class substitutions in `components/hero.tsx`:
 | Find | Replace with |
 |------|--------------|
 | `bg-black` | `bg-surface-base` |
-| `text-white` | `text-text-primary` |
-| `text-white/70` | `text-text-secondary` |
-| `text-white/60` | `text-text-secondary` |
-| `border-white/20` | `border-border-subtle` |
+| `text-white` | `text-ink-primary` |
+| `text-white/70` | `text-ink-secondary` |
+| `text-white/60` | `text-ink-secondary` |
+| `border-white/20` | `border-subtle` |
 | `text-[#D4A574]` | `text-accent` |
 | `bg-white/5` | `bg-surface-raised` |
 | `backdrop-blur-sm` | (remove entirely) |

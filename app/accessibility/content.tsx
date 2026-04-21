@@ -45,7 +45,7 @@ export function AccessibilityContent() {
           {sections.map((section, index) => (
             <BlurFade key={section.title} inView direction="up" delay={0.05}>
               <div className="py-8 border-b border-border last:border-b-0">
-                <h2 className="text-lg md:text-xl font-extralight tracking-tight text-foreground mb-4">
+                <h2 className="text-lg md:text-xl font-normal tracking-tight text-foreground mb-4">
                   {section.title}
                 </h2>
                 <p className="text-sm leading-[1.85] text-muted-foreground">

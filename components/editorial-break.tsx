@@ -1,7 +1,6 @@
 "use client"
 
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
 
 export function EditorialBreak() {
   return (
@@ -18,17 +17,9 @@ export function EditorialBreak() {
         </BlurFade>
         <BlurFade inView delay={0.2} direction="up" className="lg:col-span-4 lg:col-start-9">
           <div className="w-10 h-px bg-accent/40 mb-8" />
-          <TextAnimate
-            as="p"
-            animation="blurIn"
-            by="word"
-            once
-            startOnView
-            duration={0.8}
-            className="text-xl md:text-2xl lg:text-[1.65rem] font-extralight leading-[1.35] tracking-tight text-foreground text-balance"
-          >
+          <p className="text-xl md:text-2xl lg:text-[1.65rem] font-normal leading-[1.35] tracking-tight text-foreground text-balance">
             {"\u201CThe firms that succeed with AI are not the ones that bought the best tool. They are the ones that prepared their operations, governed the risk, and stayed with it past the pilot.\u201D"}
-          </TextAnimate>
+          </p>
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mt-8">
             Kavin Sakthivel, Founder &amp; CEO
           </p>
