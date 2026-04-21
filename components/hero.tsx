@@ -11,11 +11,6 @@ import { TextAnimate } from "@/components/ui/text-animate"
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-background pt-24">
-      <img
-        src="/hero-bg.jpg"
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover"
-      />
       <Particles
         className="absolute inset-0 z-0"
         quantity={60}
