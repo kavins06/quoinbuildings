@@ -10,7 +10,7 @@ const projects = [
     category: "Pattern",
     year: "01",
     location: "Point tools that don\u2019t integrate with your property management platform",
-    answer: "We build agents that plug directly into Yardi, RealPage, and AppFolio. your existing stack, not a parallel one.",
+    answer: "We build agents that plug directly into Yardi, RealPage, AppFolio, and Entrata — your existing stack, not a parallel one.",
     detail: "You bought a leasing chatbot, a maintenance triage tool, and an analytics dashboard from three different vendors. None of them talk to each other. Your data stays siloed, your staff manages three vendor relationships, and you are no closer to firm-wide AI capability than when you started. The tools work individually. The operation does not improve holistically.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80",
   },
@@ -19,7 +19,7 @@ const projects = [
     category: "Pattern",
     year: "02",
     location: "The roadmap was delivered. Nothing happened after.",
-    answer: "Every engagement includes fair housing guardrails, data privacy controls, and audit trails from day one.",
+    answer: "We deliver a build, not a deck. Every diagnostic ends with a prioritized roadmap and an engagement to ship the first workflow, not a handoff to someone else.",
     detail: "A consulting firm delivered a roadmap. It was well-researched, well-formatted, and well-received in the board meeting. Then nothing happened. Nobody on the consultant\u2019s team was responsible for building anything, deploying anything, or making anything work in production. The deck sits in a shared drive. The budget cycle resets.",
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
   },
@@ -28,7 +28,7 @@ const projects = [
     category: "Pattern",
     year: "03",
     location: "Legal blocked the rollout before it reached operations",
-    answer: "We stay as your managed AI operations partner: monitoring, retraining, and expanding long after deployment.",
+    answer: "Every engagement includes fair housing guardrails, data privacy controls, and audit trails from day one — informed by two decades of enterprise governance experience.",
     detail: "Legal blocked the rollout because nobody scoped fair housing risk. GDPR and CCPA exposure is unaddressed. There is no audit trail for AI-driven tenant decisions. The pilot stalled not because the technology failed, but because the organization was not ready to govern it.",
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&q=80",
   },
@@ -141,8 +141,8 @@ function StatsClosing() {
             <p className="text-sm leading-[1.75] text-muted-foreground">
               of CRE firms have achieved their AI program goals.
             </p>
-            <p className="text-[11px] tracking-[0.1em] text-muted-foreground/40 mt-1">
-              Commercial Observer, 2025
+            <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-2 italic">
+              <a href="#" className="underline decoration-accent underline-offset-2">Commercial Observer, 2025</a>
             </p>
           </div>
         </BlurFade>
@@ -154,8 +154,8 @@ function StatsClosing() {
             <p className="text-sm leading-[1.75] text-muted-foreground">
               remain unprepared to scale AI beyond pilot stage.
             </p>
-            <p className="text-[11px] tracking-[0.1em] text-muted-foreground/40 mt-1">
-              World Economic Forum, 2026
+            <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-2 italic">
+              <a href="#" className="underline decoration-accent underline-offset-2">World Economic Forum, 2026</a>
             </p>
           </div>
         </BlurFade>
