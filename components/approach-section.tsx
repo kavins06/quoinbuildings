@@ -97,7 +97,7 @@ export function ApproachSection() {
             className="inline-flex items-center gap-3 text-sm tracking-[0.05em] text-muted-foreground hover:text-foreground transition-colors duration-300 group"
           >
             <span className="border-b border-accent/30 pb-0.5 group-hover:border-accent transition-colors duration-300">
-              See Full Engagement Details
+              Read the approach
             </span>
             <span className="text-accent group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
           </Link>

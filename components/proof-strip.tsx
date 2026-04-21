@@ -20,13 +20,13 @@ const proofItems = [
     label: "First Step",
     value: "2-Week Diagnostic \u00B7 No Lock-in",
     link: "/approach",
-    linkLabel: "How It Works",
+    linkLabel: "Read the approach",
   },
   {
     label: "Headquarters",
     value: "Washington, DC",
     link: "/contact",
-    linkLabel: "Get in Touch",
+    linkLabel: "Talk to us",
   },
 ]
 

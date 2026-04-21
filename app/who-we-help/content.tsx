@@ -188,7 +188,7 @@ export function WhoWeHelpContent() {
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
             <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-tight mb-6">
-              Ready to explore if there is a fit?
+              Is there a fit?
             </h2>
             <p className="text-sm leading-[1.85] text-background/45 max-w-lg mx-auto mb-12">
               Start with a conversation. We will discuss your operations,

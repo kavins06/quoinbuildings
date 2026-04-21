@@ -249,7 +249,7 @@ export function ApproachContent() {
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
             <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-tight mb-6">
-              Ready to see what the diagnostic would reveal for your firm?
+              What the diagnostic would reveal for your firm
             </h2>
             <p className="text-sm leading-[1.85] text-background/45 max-w-lg mx-auto mb-12">
               The first step is a conversation. We will learn about your operations

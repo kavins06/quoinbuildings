@@ -109,7 +109,7 @@ export function PerspectivesContent() {
       <section className="px-6 md:px-12 lg:px-20 py-16">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <p className="text-lg font-normal tracking-tight text-foreground">
-            Want to continue this conversation?
+            Want to keep talking?
           </p>
           <a
             href="/contact"
@@ -127,7 +127,7 @@ export function PerspectivesContent() {
               Next Step
             </p>
             <h3 className="text-2xl md:text-3xl font-normal tracking-tight text-background">
-              Ready to move forward?
+              Ready to talk?
             </h3>
           </div>
           <a

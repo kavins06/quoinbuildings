@@ -44,7 +44,7 @@ export function Hero() {
                   href="/services"
                   className="text-[11px] tracking-[0.2em] uppercase text-ink-secondary hover:text-ink-primary transition-colors duration-500"
                 >
-                  See Where AI Delivers First &rarr;
+                  See our services &rarr;
                 </a>
               </div>
             </BlurFade>
