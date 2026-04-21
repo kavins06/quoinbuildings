@@ -87,8 +87,7 @@ export function StudioSection() {
       <BlurFade inView delay={0.4} direction="up">
         <div className="border-t border-background/10 pt-10">
           <p className="text-sm leading-[1.85] text-background/50 max-w-2xl mb-8">
-            If the diagnostic reveals that AI is not the right investment for your firm
-            right now, we will tell you. We do not build what should not be built.
+            If the diagnostic concludes that AI is not the right investment for your firm right now, we will say so. We do not build what should not be built.
           </p>
           <Link
             href="/contact"

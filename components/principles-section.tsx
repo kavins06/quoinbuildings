@@ -159,8 +159,7 @@ export function PrinciplesSection() {
       <BlurFade inView delay={0.3} direction="up">
         <div className="mt-12 max-w-2xl">
           <p className="text-sm leading-[1.85] text-muted-foreground">
-            We are not a better vendor. We are not a better consultant.
-            We are a different model. One that stays through implementation and stays after it.
+            Quoin is a different model: one that builds, deploys, and runs the AI, then stays to improve it.
           </p>
         </div>
       </BlurFade>
