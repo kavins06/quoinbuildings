@@ -100,7 +100,7 @@ function ServiceBlock({ service, index }: { service: typeof services[0]; index: 
             <span className="text-[11px] tracking-[0.15em] text-muted-foreground/40 block mb-4">
               ({service.number})
             </span>
-            <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-4">
+            <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-4">
               {service.title}
             </h2>
             <p className="text-sm leading-[1.75] text-muted-foreground">
@@ -177,7 +177,7 @@ export function ServicesContent() {
         <BlurFade inView direction="up">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
-            <h2 className="text-3xl md:text-4xl font-extralight leading-[1.15] tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-tight mb-6">
               Ready to see what AI can do for your portfolio?
             </h2>
             <p className="text-sm leading-[1.85] text-background/45 max-w-lg mx-auto mb-12">

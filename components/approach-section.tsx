@@ -50,7 +50,7 @@ function PhaseCard({ phase, index }: { phase: typeof phases[0]; index: number })
             {phase.timeline}
           </span>
         </div>
-        <h3 className="text-xl md:text-2xl font-extralight tracking-tight text-foreground mb-5 group-hover:translate-x-1 transition-transform duration-500">
+        <h3 className="text-xl md:text-2xl font-normal tracking-tight text-foreground mb-5 group-hover:translate-x-1 transition-transform duration-500">
           {phase.title}
         </h3>
         <div className="w-8 h-px bg-border mb-5 group-hover:w-12 transition-all duration-500" />
@@ -78,7 +78,7 @@ export function ApproachSection() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
             Our Process
           </p>
-          <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+          <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
             From Diagnostic to Production: Decision Points at Every Stage
           </h2>
         </div>

@@ -48,7 +48,7 @@ export function PerspectivesTeaser() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
             Our Thinking
           </p>
-          <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+          <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
             Perspectives
           </h2>
         </div>

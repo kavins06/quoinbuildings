@@ -51,7 +51,7 @@ function ArticleCard({ article, index }: { article: typeof articles[0]; index: n
           <div className="lg:col-span-9 lg:col-start-4">
             <div className="flex items-start justify-between gap-6">
               <div>
-                <h2 className="text-xl md:text-2xl font-extralight tracking-tight text-foreground group-hover:text-muted-foreground transition-colors duration-300 mb-4">
+                <h2 className="text-xl md:text-2xl font-normal tracking-tight text-foreground group-hover:text-muted-foreground transition-colors duration-300 mb-4">
                   {article.title}
                 </h2>
                 <p className="text-sm leading-[1.75] text-muted-foreground max-w-2xl">
@@ -108,7 +108,7 @@ export function PerspectivesContent() {
 
       <section className="px-6 md:px-12 lg:px-20 py-16">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <p className="text-lg font-extralight tracking-tight text-foreground">
+          <p className="text-lg font-normal tracking-tight text-foreground">
             Want to continue this conversation?
           </p>
           <a
@@ -126,7 +126,7 @@ export function PerspectivesContent() {
             <p className="text-[11px] tracking-[0.15em] uppercase text-background/40 mb-4">
               Next Step
             </p>
-            <h3 className="text-2xl md:text-3xl font-extralight tracking-tight text-background">
+            <h3 className="text-2xl md:text-3xl font-normal tracking-tight text-background">
               Ready to move forward?
             </h3>
           </div>

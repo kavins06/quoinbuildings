@@ -108,7 +108,7 @@ export function TeamContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
               Why This Team Exists
             </p>
-            <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+            <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
               Built for this problem
             </h2>
           </div>
@@ -128,7 +128,7 @@ export function TeamContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
               The Team
             </p>
-            <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+            <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
               Leadership
             </h2>
           </div>
@@ -145,7 +145,7 @@ export function TeamContent() {
                   {member.photo ? (
                     <Image src={member.photo} alt={member.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                   ) : (
-                    <span className="text-4xl font-extralight text-muted-foreground/60 tracking-wider">
+                    <span className="text-4xl font-normal text-muted-foreground/60 tracking-wider">
                       {member.initials}
                     </span>
                   )}
@@ -167,7 +167,7 @@ export function TeamContent() {
       {/* Bio Modal */}
       {selectedMember && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm p-6"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 p-6"
           onClick={() => setSelectedMember(null)}
         >
           <div
@@ -184,7 +184,7 @@ export function TeamContent() {
             <p className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground/50 mb-1">
               {selectedMember.role}
             </p>
-            <h3 className="text-2xl font-extralight tracking-tight text-foreground mb-6">
+            <h3 className="text-2xl font-normal tracking-tight text-foreground mb-6">
               {selectedMember.name}
             </h3>
             <p className="text-sm leading-[1.85] text-muted-foreground mb-8">
@@ -216,7 +216,7 @@ export function TeamContent() {
               <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
                 Governance
               </p>
-              <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground">
+              <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground">
                 Our AI governance framework
               </h2>
             </div>
@@ -234,7 +234,7 @@ export function TeamContent() {
         <BlurFade inView direction="up">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
-            <h2 className="text-3xl md:text-4xl font-extralight leading-[1.15] tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-tight mb-6">
               You are hiring people, not a brand.
             </h2>
             <p className="text-sm leading-[1.85] text-background/45 max-w-lg mx-auto mb-12">

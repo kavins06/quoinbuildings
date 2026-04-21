@@ -10,7 +10,7 @@ export function WhySection() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4">
             Why Quoin Exists
           </p>
-          <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-6">
+          <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-6">
             The industry needs more than another vendor
           </h2>
         </BlurFade>

@@ -70,7 +70,7 @@ export function WhoWeHelpContent() {
               <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4">
                 Ideal Client Profile
               </p>
-              <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-6">
+              <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-6">
                 The firms we work with typically:
               </h2>
               <ul className="flex flex-col gap-4">
@@ -125,7 +125,7 @@ export function WhoWeHelpContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
               Trigger Moments
             </p>
-            <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+            <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
               When Firms Come to Us
             </h2>
           </div>
@@ -138,7 +138,7 @@ export function WhoWeHelpContent() {
                 <span className="text-[11px] tracking-[0.15em] text-muted-foreground/40 block mb-6">
                   ({trigger.number})
                 </span>
-                <h3 className="text-lg md:text-xl font-extralight tracking-tight text-foreground mb-4">
+                <h3 className="text-lg md:text-xl font-normal tracking-tight text-foreground mb-4">
                   {trigger.title}
                 </h3>
                 <div className="w-8 h-px bg-accent/40 mb-4" />
@@ -158,7 +158,7 @@ export function WhoWeHelpContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
               Honest About Fit
             </p>
-            <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-10">
+            <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-10">
               Who This Is Not For
             </h2>
 
@@ -189,7 +189,7 @@ export function WhoWeHelpContent() {
         <BlurFade inView direction="up">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
-            <h2 className="text-3xl md:text-4xl font-extralight leading-[1.15] tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-tight mb-6">
               Ready to explore if there is a fit?
             </h2>
             <p className="text-sm leading-[1.85] text-background/45 max-w-lg mx-auto mb-12">

@@ -13,7 +13,7 @@ export function ContactSection() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-8">
               Next Step
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extralight leading-[1.15] tracking-tight text-balance">
+            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-normal leading-[1.15] tracking-tight text-balance">
               {"\u201CLet\u2019s start with"}<br />{"a conversation.\u201D"}
             </h2>
             <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-md">

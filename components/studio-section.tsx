@@ -34,7 +34,7 @@ export function StudioSection() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-8">
             The First Step
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extralight leading-[1.15] tracking-tight text-balance text-background max-w-3xl">
+          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-normal leading-[1.15] tracking-tight text-balance text-background max-w-3xl">
             A 2-Week Executive Diagnostic
           </h2>
           <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-2xl">

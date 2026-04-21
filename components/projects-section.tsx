@@ -94,7 +94,7 @@ function DetailModal({ project, onClose }: { project: typeof projects[0] | null;
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8" onClick={onClose}>
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/60" />
       <div
         className="relative bg-background max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 md:p-12 animate-in fade-in zoom-in-95 duration-300"
         onClick={(e) => e.stopPropagation()}
@@ -109,7 +109,7 @@ function DetailModal({ project, onClose }: { project: typeof projects[0] | null;
         <span className="text-[11px] tracking-[0.15em] text-muted-foreground/40 block mb-4">
           ({project.year})
         </span>
-        <h3 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-6">
+        <h3 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-6">
           {project.title}
         </h3>
         <div className="w-8 h-px bg-accent/40 mb-6" />
@@ -135,7 +135,7 @@ function StatsClosing() {
       <div className="md:col-span-7 grid grid-cols-2 gap-12">
         <BlurFade inView delay={0} direction="up">
           <div>
-            <p className="text-4xl md:text-5xl font-extralight tracking-tight text-foreground mb-2">
+            <p className="text-4xl md:text-5xl font-normal tracking-tight text-foreground mb-2">
               <span className="inline-block tabular-nums text-foreground tracking-tight">5</span><span className="text-accent">%</span>
             </p>
             <p className="text-sm leading-[1.75] text-muted-foreground">
@@ -148,7 +148,7 @@ function StatsClosing() {
         </BlurFade>
         <BlurFade inView delay={0.15} direction="up">
           <div>
-            <p className="text-4xl md:text-5xl font-extralight tracking-tight text-foreground mb-2">
+            <p className="text-4xl md:text-5xl font-normal tracking-tight text-foreground mb-2">
               <span className="inline-block tabular-nums text-foreground tracking-tight">60</span><span className="text-accent">%+</span>
             </p>
             <p className="text-sm leading-[1.75] text-muted-foreground">
@@ -176,7 +176,7 @@ export function ProjectsSection() {
               <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
                 Understanding the Challenge
               </p>
-              <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+              <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
                 Three Patterns We See in Every Stalled AI Initiative
               </h2>
             </div>

@@ -129,10 +129,10 @@ function PhaseBlock({ phase, index }: { phase: typeof phases[0]; index: number }
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
             <div className="relative z-10 flex flex-col justify-end h-full p-6 md:p-8">
-              <span className="text-[11px] tracking-[0.15em] text-white/40 mb-3">
+              <span className="text-[11px] tracking-[0.15em] text-ink-muted mb-3">
                 ({phase.number})
               </span>
-              <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-white">
+              <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-ink-primary">
                 {phase.name}
               </h2>
               <p className="text-[11px] tracking-[0.15em] uppercase text-accent mt-2">
@@ -210,7 +210,7 @@ export function ApproachContent() {
         <BlurFade inView direction="up">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
-            <p className="text-lg md:text-xl font-extralight leading-[1.6] tracking-tight text-background/80">
+            <p className="text-lg md:text-xl font-normal leading-[1.6] tracking-tight text-background/80">
               Every engagement includes defined exit criteria at each phase. If the data says stop, we stop. You own every deliverable we produce.
             </p>
           </div>
@@ -224,7 +224,7 @@ export function ApproachContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4 text-center">
               Frequently Asked Questions
             </p>
-            <h2 className="text-3xl md:text-4xl font-extralight leading-[1.15] tracking-tight mb-16 text-center">
+            <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-tight mb-16 text-center">
               What to expect
             </h2>
             <Accordion type="single" collapsible className="w-full">
@@ -248,7 +248,7 @@ export function ApproachContent() {
         <BlurFade inView direction="up">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
-            <h2 className="text-3xl md:text-4xl font-extralight leading-[1.15] tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-tight mb-6">
               Ready to see what the diagnostic would reveal for your firm?
             </h2>
             <p className="text-sm leading-[1.85] text-background/45 max-w-lg mx-auto mb-12">
