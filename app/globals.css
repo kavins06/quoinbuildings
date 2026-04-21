@@ -63,11 +63,17 @@
     font-weight: 400;
   }
   ::selection {
-    background-color: hsl(var(--accent));
+    background-color: hsl(var(--surface-inverse));
     color: hsl(var(--surface-base));
   }
   a:focus-visible,
-  button:focus-visible {
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible {
     outline: 2px solid hsl(var(--accent));
     outline-offset: 2px;
   }
