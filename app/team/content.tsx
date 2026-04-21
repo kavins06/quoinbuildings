@@ -240,12 +240,12 @@ export function TeamContent() {
             <p className="text-sm leading-[1.85] text-background/45 max-w-lg mx-auto mb-12">
               Start with a conversation. See if the fit is there.
             </p>
-            <a
+            <Link
               href="/contact"
               className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
             >
               Talk to us
-            </a>
+            </Link>
           </div>
         </BlurFade>
       </section>

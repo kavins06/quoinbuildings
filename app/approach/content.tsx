@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
 import {
@@ -254,12 +255,12 @@ export function ApproachContent() {
               The first step is a conversation. We will learn about your operations
               and help you understand what the diagnostic would uncover.
             </p>
-            <a
+            <Link
               href="/contact"
               className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
             >
               Talk to us
-            </a>
+            </Link>
           </div>
         </BlurFade>
       </section>

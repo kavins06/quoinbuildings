@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useRef, useEffect, useState } from "react"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
@@ -183,12 +184,12 @@ export function ServicesContent() {
               Every engagement starts with a conversation. We will discuss your operations,
               identify the highest-impact opportunities, and determine if there is a fit.
             </p>
-            <a
+            <Link
               href="/contact"
               className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
             >
               Talk to us
-            </a>
+            </Link>
           </div>
         </BlurFade>
       </section>

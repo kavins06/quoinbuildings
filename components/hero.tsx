@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { BlurFade } from "@/components/ui/blur-fade"
 
 export function Hero() {
@@ -15,9 +16,7 @@ export function Hero() {
               <h1 className="text-[clamp(2.25rem,6vw,5.5rem)] font-extralight leading-[1.05] tracking-[-0.03em] text-white">
                 Your AI Operating
                 <br />
-                <span className="text-accent">
-                  <span className="text-[clamp(2.25rem,6vw,5.5rem)] font-extralight leading-[1.05] tracking-[-0.03em] text-accent inline-block">Partner</span>
-                </span>
+                <span className="text-[clamp(2.25rem,6vw,5.5rem)] font-extralight leading-[1.05] tracking-[-0.03em] text-accent inline-block">Partner</span>
               </h1>
             </BlurFade>
 
@@ -41,12 +40,12 @@ export function Hero() {
 
             <BlurFade delay={1.0} direction="up">
               <div className="mt-10 md:mt-12 hidden md:flex items-center gap-6">
-                <a
+                <Link
                   href="/contact"
                   className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
                 >
                   Talk to us
-                </a>
+                </Link>
                 <a
                   href="/services"
                   className="text-[11px] tracking-[0.2em] uppercase text-white/70 hover:text-white transition-colors duration-500"

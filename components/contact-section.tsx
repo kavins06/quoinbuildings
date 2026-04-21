@@ -22,12 +22,12 @@ export function ContactSection() {
               a standalone engagement with clear deliverables and no long-term commitment.
             </p>
             <div className="mt-10 flex flex-col gap-6">
-              <a
+              <Link
                 href="/contact"
                 className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
               >
                 Talk to us
-              </a>
+              </Link>
               <a
                 href="mailto:info@quoinbuildings.com"
                 className="group inline-flex items-center gap-3 text-sm tracking-wide text-background/60 hover:text-background transition-colors duration-500"
