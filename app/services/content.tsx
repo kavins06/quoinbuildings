@@ -1,11 +1,8 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
-import Link from "next/link"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
-import { ShimmerButton } from "@/components/ui/shimmer-button"
 
 const services = [
   {
@@ -102,9 +99,9 @@ function ServiceBlock({ service, index }: { service: typeof services[0]; index: 
             <span className="text-[11px] tracking-[0.15em] text-muted-foreground/40 block mb-4">
               ({service.number})
             </span>
-            <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-4">
+            <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-4">
               {service.title}
-            </TextAnimate>
+            </h2>
             <p className="text-sm leading-[1.75] text-muted-foreground">
               {service.description}
             </p>
@@ -186,18 +183,12 @@ export function ServicesContent() {
               Every engagement starts with a conversation. We will discuss your operations,
               identify the highest-impact opportunities, and determine if there is a fit.
             </p>
-            <Link href="/contact">
-              <ShimmerButton
-                borderRadius="0px"
-                shimmerColor="#ffffff"
-                shimmerDuration="4s"
-                shimmerSize="0.03em"
-                background="hsl(26, 29%, 61%)"
-                className="px-10 py-4 text-sm tracking-[0.1em] uppercase font-medium mx-auto"
-              >
-                Explore Partnership
-              </ShimmerButton>
-            </Link>
+            <a
+              href="/contact"
+              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+            >
+              Talk to us
+            </a>
           </div>
         </BlurFade>
       </section>

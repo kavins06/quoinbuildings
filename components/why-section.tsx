@@ -1,7 +1,6 @@
 "use client"
 
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
 
 export function WhySection() {
   return (
@@ -11,16 +10,9 @@ export function WhySection() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4">
             Why Quoin Exists
           </p>
-          <TextAnimate
-            as="h2"
-            animation="blurIn"
-            by="word"
-            once
-            startOnView
-            className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-6"
-          >
+          <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-6">
             The industry needs more than another vendor
-          </TextAnimate>
+          </h2>
         </BlurFade>
 
         <BlurFade inView delay={0.1} direction="up">

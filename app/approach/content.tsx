@@ -1,10 +1,7 @@
 "use client"
 
-import Link from "next/link"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
-import { ShimmerButton } from "@/components/ui/shimmer-button"
 import {
   Accordion,
   AccordionContent,
@@ -134,9 +131,9 @@ function PhaseBlock({ phase, index }: { phase: typeof phases[0]; index: number }
               <span className="text-[11px] tracking-[0.15em] text-white/40 mb-3">
                 ({phase.number})
               </span>
-              <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-2xl md:text-3xl font-extralight tracking-tight text-white">
+              <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-white">
                 {phase.name}
-              </TextAnimate>
+              </h2>
               <p className="text-[11px] tracking-[0.15em] uppercase text-accent mt-2">
                 {phase.timeline}
               </p>
@@ -257,18 +254,12 @@ export function ApproachContent() {
               The first step is a conversation. We will learn about your operations
               and help you understand what the diagnostic would uncover.
             </p>
-            <Link href="/contact">
-              <ShimmerButton
-                borderRadius="0px"
-                shimmerColor="#ffffff"
-                shimmerDuration="4s"
-                shimmerSize="0.03em"
-                background="hsl(26, 29%, 61%)"
-                className="px-10 py-4 text-sm tracking-[0.1em] uppercase font-medium mx-auto"
-              >
-                Explore Partnership
-              </ShimmerButton>
-            </Link>
+            <a
+              href="/contact"
+              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+            >
+              Talk to us
+            </a>
           </div>
         </BlurFade>
       </section>

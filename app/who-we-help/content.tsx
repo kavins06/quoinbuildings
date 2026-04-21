@@ -1,10 +1,7 @@
 "use client"
 
-import Link from "next/link"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
-import { ShimmerButton } from "@/components/ui/shimmer-button"
 
 const triggers = [
   {
@@ -72,9 +69,9 @@ export function WhoWeHelpContent() {
               <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4">
                 Ideal Client Profile
               </p>
-              <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-6">
+              <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-6">
                 The firms we work with typically:
-              </TextAnimate>
+              </h2>
               <ul className="flex flex-col gap-4">
                 {[
                   "Manage 2,000 to 50,000 residential, mixed-use, or commercial units",
@@ -127,9 +124,9 @@ export function WhoWeHelpContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
               Trigger Moments
             </p>
-            <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+            <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
               When Firms Come to Us
-            </TextAnimate>
+            </h2>
           </div>
         </BlurFade>
 
@@ -160,9 +157,9 @@ export function WhoWeHelpContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
               Honest About Fit
             </p>
-            <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-10">
+            <h2 className="text-2xl md:text-3xl font-extralight tracking-tight text-foreground mb-10">
               Who This Is Not For
-            </TextAnimate>
+            </h2>
 
             <div className="flex flex-col gap-8">
               {notForList.map((item) => (
@@ -198,18 +195,12 @@ export function WhoWeHelpContent() {
               Start with a conversation. We will discuss your operations,
               identify the highest-impact opportunities, and determine if there is a clear path forward.
             </p>
-            <Link href="/contact">
-              <ShimmerButton
-                borderRadius="0px"
-                shimmerColor="#ffffff"
-                shimmerDuration="4s"
-                shimmerSize="0.03em"
-                background="hsl(26, 29%, 61%)"
-                className="px-10 py-4 text-sm tracking-[0.1em] uppercase font-medium mx-auto"
-              >
-                Explore Partnership
-              </ShimmerButton>
-            </Link>
+            <a
+              href="/contact"
+              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+            >
+              Talk to us
+            </a>
           </div>
         </BlurFade>
       </section>

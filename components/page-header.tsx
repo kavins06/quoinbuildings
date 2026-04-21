@@ -1,7 +1,6 @@
 "use client"
 
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
 import { cn } from "@/lib/utils"
 
 interface PageHeaderProps {
@@ -46,16 +45,9 @@ export function PageHeader({
         </BlurFade>
 
         <BlurFade delay={0.4} direction="up" offset={6}>
-          <TextAnimate
-            as="h1"
-            animation="blurIn"
-            by="word"
-            once
-            duration={0.5}
-            className="text-[clamp(2rem,5vw,3.5rem)] font-extralight leading-[1.1] tracking-[-0.02em] text-background text-balance"
-          >
+          <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-extralight leading-[1.1] tracking-[-0.02em] text-background text-balance">
             {title}
-          </TextAnimate>
+          </h1>
         </BlurFade>
 
         {description && (

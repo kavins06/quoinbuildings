@@ -37,7 +37,7 @@ export function Footer() {
             href="/contact"
             className="inline-flex items-center gap-2 text-sm text-accent hover:text-foreground transition-colors duration-300 mt-5 group"
           >
-            <span>Explore Partnership</span>
+            <span>Talk to us</span>
             <span className="group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
           </Link>
         </div>

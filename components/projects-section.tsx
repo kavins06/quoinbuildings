@@ -3,8 +3,6 @@
 import { useState } from "react"
 import { ArrowUpRight, X } from "lucide-react"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
-import { NumberTicker } from "@/components/ui/number-ticker"
 
 const projects = [
   {
@@ -138,7 +136,7 @@ function StatsClosing() {
         <BlurFade inView delay={0} direction="up">
           <div>
             <p className="text-4xl md:text-5xl font-extralight tracking-tight text-foreground mb-2">
-              <NumberTicker value={5} delay={0.3} className="inline-block tabular-nums text-foreground tracking-tight" /><span className="text-accent">%</span>
+              <span className="inline-block tabular-nums text-foreground tracking-tight">5</span><span className="text-accent">%</span>
             </p>
             <p className="text-sm leading-[1.75] text-muted-foreground">
               of CRE firms have achieved their AI program goals.
@@ -151,7 +149,7 @@ function StatsClosing() {
         <BlurFade inView delay={0.15} direction="up">
           <div>
             <p className="text-4xl md:text-5xl font-extralight tracking-tight text-foreground mb-2">
-              <NumberTicker value={60} delay={0.3} className="inline-block tabular-nums text-foreground tracking-tight" /><span className="text-accent">%+</span>
+              <span className="inline-block tabular-nums text-foreground tracking-tight">60</span><span className="text-accent">%+</span>
             </p>
             <p className="text-sm leading-[1.75] text-muted-foreground">
               remain unprepared to scale AI beyond pilot stage.
@@ -178,16 +176,9 @@ export function ProjectsSection() {
               <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
                 Understanding the Challenge
               </p>
-              <TextAnimate
-                as="h2"
-                animation="blurIn"
-                by="word"
-                once
-                startOnView
-                className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground"
-              >
+              <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
                 Three Patterns We See in Every Stalled AI Initiative
-              </TextAnimate>
+              </h2>
             </div>
             <span className="text-[11px] tracking-[0.15em] text-muted-foreground/50 mt-4 md:mt-0">
               (03) Failure Patterns

@@ -77,7 +77,7 @@ export function Navigation() {
                 : "border-foreground/20 text-foreground hover:bg-foreground hover:text-background"
             }`}
           >
-            Explore Partnership
+            Talk to us
           </a>
         </div>
 
@@ -114,7 +114,7 @@ export function Navigation() {
             onClick={() => setIsOpen(false)}
             className="text-sm tracking-[0.15em] uppercase text-foreground border border-foreground/20 px-6 py-3 mt-4 text-center hover:bg-foreground hover:text-background transition-all duration-300"
           >
-            Explore Partnership
+            Talk to us
           </a>
         </div>
       </div>

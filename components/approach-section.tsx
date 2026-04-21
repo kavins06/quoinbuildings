@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
 
 const phases = [
   {
@@ -79,16 +78,9 @@ export function ApproachSection() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
             Our Process
           </p>
-          <TextAnimate
-            as="h2"
-            animation="blurIn"
-            by="word"
-            once
-            startOnView
-            className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground"
-          >
+          <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
             From Diagnostic to Production: Decision Points at Every Stage
-          </TextAnimate>
+          </h2>
         </div>
       </BlurFade>
 

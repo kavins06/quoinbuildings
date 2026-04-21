@@ -6,8 +6,6 @@ import Link from "next/link"
 import { X } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
-import { ShimmerButton } from "@/components/ui/shimmer-button"
 
 const team = [
   {
@@ -110,9 +108,9 @@ export function TeamContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
               Why This Team Exists
             </p>
-            <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+            <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
               Built for this problem
-            </TextAnimate>
+            </h2>
           </div>
         </BlurFade>
 
@@ -130,9 +128,9 @@ export function TeamContent() {
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
               The Team
             </p>
-            <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
+            <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
               Leadership
-            </TextAnimate>
+            </h2>
           </div>
         </BlurFade>
 
@@ -242,18 +240,12 @@ export function TeamContent() {
             <p className="text-sm leading-[1.85] text-background/45 max-w-lg mx-auto mb-12">
               Start with a conversation. See if the fit is there.
             </p>
-            <Link href="/contact">
-              <ShimmerButton
-                borderRadius="0px"
-                shimmerColor="#ffffff"
-                shimmerDuration="4s"
-                shimmerSize="0.03em"
-                background="hsl(26, 29%, 61%)"
-                className="px-10 py-4 text-sm tracking-[0.1em] uppercase font-medium mx-auto"
-              >
-                Explore Partnership
-              </ShimmerButton>
-            </Link>
+            <a
+              href="/contact"
+              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+            >
+              Talk to us
+            </a>
           </div>
         </BlurFade>
       </section>

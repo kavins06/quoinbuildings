@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { ShimmerButton } from "@/components/ui/shimmer-button"
 
 export function ContactSection() {
   return (
@@ -23,18 +22,12 @@ export function ContactSection() {
               a standalone engagement with clear deliverables and no long-term commitment.
             </p>
             <div className="mt-10 flex flex-col gap-6">
-              <Link href="/contact">
-                <ShimmerButton
-                  borderRadius="0px"
-                  shimmerColor="#ffffff"
-                  shimmerDuration="4s"
-                  shimmerSize="0.03em"
-                  background="hsl(26, 29%, 61%)"
-                  className="px-10 py-4 text-sm tracking-[0.1em] uppercase font-medium"
-                >
-                  Explore Partnership
-                </ShimmerButton>
-              </Link>
+              <a
+                href="/contact"
+                className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+              >
+                Talk to us
+              </a>
               <a
                 href="mailto:info@quoinbuildings.com"
                 className="group inline-flex items-center gap-3 text-sm tracking-wide text-background/60 hover:text-background transition-colors duration-500"

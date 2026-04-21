@@ -2,8 +2,6 @@
 
 import Link from "next/link"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
-import { BorderBeam } from "@/components/ui/border-beam"
 
 const weeks = [
   {
@@ -36,16 +34,9 @@ export function StudioSection() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-8">
             The First Step
           </p>
-          <TextAnimate
-            as="h2"
-            animation="blurIn"
-            by="word"
-            once
-            startOnView
-            className="text-3xl md:text-4xl lg:text-[2.75rem] font-extralight leading-[1.15] tracking-tight text-balance text-background max-w-3xl"
-          >
+          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extralight leading-[1.15] tracking-tight text-balance text-background max-w-3xl">
             A 2-Week Executive Diagnostic
-          </TextAnimate>
+          </h2>
           <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-2xl">
             Every engagement begins the same way. Before we build anything, we spend
             two weeks inside your operations to understand what is real, what is possible,
@@ -70,7 +61,6 @@ export function StudioSection() {
               <p className="text-sm leading-[1.75] text-background/45">
                 {week.description}
               </p>
-              <BorderBeam size={100} duration={10} delay={i * 3} colorFrom="#b5956b" colorTo="#b5956b00" borderWidth={1} />
             </div>
           </BlurFade>
         ))}
@@ -105,7 +95,7 @@ export function StudioSection() {
             className="inline-flex items-center gap-3 text-sm tracking-[0.05em] text-background/50 hover:text-background transition-colors duration-300 group"
           >
             <span className="border-b border-background/20 pb-0.5 group-hover:border-background/50 transition-colors duration-300">
-              Explore Partnership
+              Talk to us
             </span>
             <span className="text-accent group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
           </Link>

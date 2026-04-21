@@ -3,7 +3,6 @@
 import { ArrowUpRight } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
 
 const articles = [
   {
@@ -52,9 +51,9 @@ function ArticleCard({ article, index }: { article: typeof articles[0]; index: n
           <div className="lg:col-span-9 lg:col-start-4">
             <div className="flex items-start justify-between gap-6">
               <div>
-                <TextAnimate as="h2" animation="blurIn" by="word" once startOnView className="text-xl md:text-2xl font-extralight tracking-tight text-foreground group-hover:text-muted-foreground transition-colors duration-300 mb-4">
+                <h2 className="text-xl md:text-2xl font-extralight tracking-tight text-foreground group-hover:text-muted-foreground transition-colors duration-300 mb-4">
                   {article.title}
-                </TextAnimate>
+                </h2>
                 <p className="text-sm leading-[1.75] text-muted-foreground max-w-2xl">
                   {article.summary}
                 </p>
@@ -116,7 +115,7 @@ export function PerspectivesContent() {
             href="/contact"
             className="text-sm text-accent hover:text-accent/80 tracking-[0.05em] transition-colors duration-200"
           >
-            Explore Partnership &rarr;
+            Talk to us &rarr;
           </a>
         </div>
       </section>
@@ -135,7 +134,7 @@ export function PerspectivesContent() {
             href="/contact"
             className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 text-sm tracking-[0.05em] hover:bg-accent/90 transition-colors duration-200"
           >
-            Explore Partnership
+            Talk to us
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>

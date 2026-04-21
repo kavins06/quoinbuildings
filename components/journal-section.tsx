@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { TextAnimate } from "@/components/ui/text-animate"
 
 const entries = [
   {
@@ -67,16 +66,9 @@ export function JournalSection() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
             The Team
           </p>
-          <TextAnimate
-            as="h2"
-            animation="blurIn"
-            by="word"
-            once
-            startOnView
-            className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground"
-          >
+          <h2 className="text-3xl md:text-[2.75rem] font-extralight tracking-tight text-foreground">
             Built by People Who Have Operated at Scale
-          </TextAnimate>
+          </h2>
         </div>
       </BlurFade>
 
