@@ -154,12 +154,7 @@ export function GovernanceContent() {
             </div>
             <div className="lg:col-span-6 lg:col-start-7 flex items-end">
               <p className="text-sm leading-[1.85] text-muted-foreground">
-                We are a young firm. We do not yet hold SOC 2 or ISO 27001 certifications.
-                What we do hold is a commitment to building governance into every engagement
-                from day one, informed by leadership with decades of experience in enterprise
-                compliance and security. As our practice grows, we will pursue formal
-                certifications. In the meantime, every engagement includes the governance
-                framework described above.
+                Quoin is a young firm. We do not yet hold SOC 2 or ISO 27001 certifications. We do apply the governance framework above to every engagement, and the framework is informed by senior advisors with decades of enterprise compliance and security experience. We will pursue formal certifications as the firm grows.
               </p>
             </div>
           </div>

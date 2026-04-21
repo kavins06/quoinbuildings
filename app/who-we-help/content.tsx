@@ -176,9 +176,7 @@ export function WhoWeHelpContent() {
             </div>
 
             <p className="mt-12 text-sm leading-[1.85] text-muted-foreground">
-              If this sounds like your firm, the first step is a conversation.
-              If it does not, we respect that, and we are happy to point you
-              toward alternatives that fit better.
+              If this sounds like your firm, the first step is a conversation. If it does not, we can point you toward alternatives.
             </p>
           </div>
         </BlurFade>
