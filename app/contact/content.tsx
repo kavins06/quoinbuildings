@@ -20,7 +20,7 @@ export function ContactContent() {
       <PageHeader
         eyebrow="Next Step"
         title="Let&rsquo;s talk."
-        description="Tell us about your firm and your operations. We will respond within one business day. If there is a fit, the typical next step is a scoping conversation for a 2-week Executive Diagnostic."
+        description="Tell us about your firm. We respond within one business day. If there is a fit, the next step is a scoping call for a 2-week Executive Diagnostic."
         backgroundImage="/header-contact.jpg"
       />
 
@@ -212,7 +212,7 @@ export function ContactContent() {
                   Suggested Participants
                 </p>
                 <p className="text-sm leading-[1.75] text-muted-foreground">
-                  The initial conversation works best with the executive sponsor (COO, CEO, or VP Operations). If your CTO or IT lead is involved in the AI question, they are welcome to join. Keep it to 1&ndash;3 people. This is a conversation, not a presentation.
+                  The first call works best with the executive sponsor — COO, CEO, or VP Operations. If your CTO or IT lead is part of the AI decision, they are welcome. One to three people; no presentation deck needed.
                 </p>
               </div>
             </div>
