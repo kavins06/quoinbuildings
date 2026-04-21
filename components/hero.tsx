@@ -22,19 +22,13 @@ export function Hero() {
 
             <BlurFade delay={0.7} direction="up">
               <p className="mt-8 text-base md:text-lg font-light leading-relaxed text-ink-primary max-w-2xl">
-                Quoin prepares your team, data, and governance for AI.
-                We build the AI for your workflows. We run and improve them over time{" "}
-                <span className="text-accent font-medium">with you</span>
-                .
+                Quoin prepares your team, data, and governance for AI. We build agents for your workflows and operate them alongside you after launch.
               </p>
             </BlurFade>
 
             <BlurFade delay={0.85} direction="up">
               <p className="mt-5 text-sm leading-[1.85] text-ink-primary max-w-2xl">
-                Most firms have tried a pilot, bought a point solution, or commissioned
-                a strategy deck. None of it stuck. We exist because the gap between AI
-                investment and operational adoption requires a different kind of
-                partner. One that stays through implementation and beyond.
+                Pilots, point solutions, and strategy decks have not moved most firms past the AI-investment stage. The gap between investment and operational adoption takes a partner who stays through implementation, governance, and ongoing operations.
               </p>
             </BlurFade>
 
@@ -67,7 +61,10 @@ export function Hero() {
                   <span className="inline-block tabular-nums tracking-tight text-accent">83</span>%
                 </p>
                 <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
-                  AI better than experts in their domain
+                  AI outperforms domain experts on specialized tasks
+                </p>
+                <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-1 italic">
+                  <a href="#" className="underline decoration-accent underline-offset-2">industry research, 2025</a>
                 </p>
               </div>
             </BlurFade>
@@ -81,7 +78,10 @@ export function Hero() {
                   <span className="inline-block tabular-nums tracking-tight text-accent">5</span>%
                 </p>
                 <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
-                  CRE firms achieving AI goals
+                  CRE firms achieving their AI program goals
+                </p>
+                <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-1 italic">
+                  <a href="#" className="underline decoration-accent underline-offset-2">Commercial Observer, 2025</a>
                 </p>
               </div>
             </BlurFade>
@@ -95,7 +95,7 @@ export function Hero() {
                   <span className="inline-block tabular-nums tracking-tight text-accent">8</span> Wks
                 </p>
                 <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
-                  make your firm AI native
+                  First production workflow, typical Quoin engagement
                 </p>
               </div>
             </BlurFade>
