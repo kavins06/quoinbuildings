@@ -44,7 +44,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <Navigation />
-        <main id="main">
+        <main id="main" tabIndex={-1}>
           {children}
         </main>
         <Footer />
