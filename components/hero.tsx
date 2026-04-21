@@ -10,7 +10,7 @@ import { TextAnimate } from "@/components/ui/text-animate"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-background pt-24">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-black pt-24">
       <Particles
         className="absolute inset-0 z-0"
         quantity={60}
