@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView } from "motion/react"
+import { motion, useInView, useReducedMotion } from "motion/react"
 import { useRef, type ReactNode } from "react"
 
 interface BlurFadeProps {
@@ -17,6 +17,11 @@ interface BlurFadeProps {
 export function BlurFade({ children, className }: BlurFadeProps) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-80px" })
+  const shouldReduceMotion = useReducedMotion()
+
+  if (shouldReduceMotion) {
+    return <div ref={ref} className={className}>{children}</div>
+  }
 
   return (
     <motion.div
