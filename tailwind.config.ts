@@ -15,15 +15,14 @@ const config: Config = {
         serif: ['var(--font-serif)', 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'serif'],
       },
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        // Semantic trust-system tokens
         surface: {
           base: 'hsl(var(--surface-base))',
           raised: 'hsl(var(--surface-raised))',
           sunken: 'hsl(var(--surface-sunken))',
           inverse: 'hsl(var(--surface-inverse))',
         },
-        text: {
+        ink: {
           primary: 'hsl(var(--text-primary))',
           secondary: 'hsl(var(--text-secondary))',
           muted: 'hsl(var(--text-muted))',
@@ -32,10 +31,15 @@ const config: Config = {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
         },
-        'border-subtle': 'hsl(var(--border-subtle))',
-        'border-strong': 'hsl(var(--border-strong))',
+        border: {
+          DEFAULT: 'hsl(var(--border))',
+          subtle: 'hsl(var(--border-subtle))',
+          strong: 'hsl(var(--border-strong))',
+        },
 
-        // Preserved for shadcn components still in the tree
+        // shadcn compatibility (unchanged API for existing components)
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
@@ -60,7 +64,6 @@ const config: Config = {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
-        border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
       },
