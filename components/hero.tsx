@@ -64,7 +64,7 @@ export function Hero() {
                   AI outperforms domain experts on specialized tasks
                 </p>
                 <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-1 italic">
-                  <a href="https://techcrunch.com/2026/03/05/openai-launches-gpt-5-4-with-pro-and-thinking-versions/" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">TechCrunch, 2026</a>
+                  <a href="https://techcrunch.com/2026/03/05/openai-launches-gpt-5-4-with-pro-and-thinking-versions/" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">TechCrunch, Mar 2026</a>
                 </p>
               </div>
             </BlurFade>
