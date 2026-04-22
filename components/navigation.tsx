@@ -52,12 +52,6 @@ export function Navigation() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="inline-block text-[13px] tracking-[0.02em] px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
-          >
-            Talk to us
-          </Link>
         </div>
 
         <button
@@ -88,13 +82,6 @@ export function Navigation() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            onClick={() => setIsOpen(false)}
-            className="inline-block text-[13px] tracking-[0.02em] px-5 py-3 mt-4 border border-strong text-ink-primary text-center"
-          >
-            Talk to us
-          </Link>
         </div>
       </div>
     </header>
