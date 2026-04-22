@@ -1,12 +1,26 @@
 "use client"
 
+import type { ReactNode } from "react"
 import Link from "next/link"
 import { BlurFade } from "@/components/ui/blur-fade"
+import { NumberTicker } from "@/components/ui/number-ticker"
 
-const proofItems = [
+interface ProofItem {
+  label: string
+  value: ReactNode
+  link: string
+  linkLabel: string
+}
+
+const proofItems: ProofItem[] = [
   {
     label: "Portfolio Scale",
-    value: "Over 1000 Units or 1 Million Sq. ft.",
+    value: (
+      <>
+        Over <NumberTicker value={1000} /> Units or{" "}
+        <NumberTicker value={1} /> Million Sq. ft.
+      </>
+    ),
     link: "/who-we-help",
     linkLabel: "Who We Help",
   },
@@ -18,7 +32,11 @@ const proofItems = [
   },
   {
     label: "First Step",
-    value: "2-Week Diagnostic · No Lock-in",
+    value: (
+      <>
+        <NumberTicker value={2} />-Week Diagnostic · No Lock-in
+      </>
+    ),
     link: "/approach",
     linkLabel: "Read the approach",
   },
