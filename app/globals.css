@@ -57,7 +57,7 @@
     font-family: var(--font-inter), Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
   }
   h1, h2, h3, blockquote {
-    font-family: var(--font-serif), "Source Serif 4", "Source Serif Pro", Georgia, serif;
+    font-family: var(--font-inter), Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
     font-feature-settings: 'kern' 1, 'liga' 1;
     text-rendering: optimizeLegibility;
     font-weight: 400;

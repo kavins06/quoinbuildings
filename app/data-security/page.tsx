@@ -11,7 +11,7 @@ export default function DataSecurityPage() {
       <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-accent mb-5">
         Trust &amp; Governance
       </p>
-      <h1 className="font-serif text-4xl md:text-5xl text-ink-primary tracking-[-0.01em] leading-[1.1]">
+      <h1 className="text-4xl md:text-5xl text-ink-primary tracking-[-0.01em] leading-[1.1]">
         Data Security
       </h1>
       <p className="text-lg text-ink-secondary leading-relaxed mt-6 measure">
@@ -19,14 +19,14 @@ export default function DataSecurityPage() {
       </p>
 
       <section className="mt-16 measure">
-        <h2 className="font-serif text-2xl text-ink-primary">Data handling</h2>
+        <h2 className="text-2xl text-ink-primary">Data handling</h2>
         <p className="text-base text-ink-secondary leading-relaxed mt-4">
           All client data is encrypted at rest with AES-256 and in transit with TLS 1.3. Operational data — tenant records, lease documents, maintenance tickets, financial reports — lives inside client-controlled environments where possible (your Yardi, RealPage, AppFolio, or Entrata instance; your cloud; your database). Where data must move into a Quoin-managed environment for model training or orchestration, it moves through documented, audited pipelines and is retained only for the duration of the engagement plus a defined windback period.
         </p>
       </section>
 
       <section className="mt-12 measure">
-        <h2 className="font-serif text-2xl text-ink-primary">Access control</h2>
+        <h2 className="text-2xl text-ink-primary">Access control</h2>
         <p className="text-base text-ink-secondary leading-relaxed mt-4">
           Quoin personnel access client systems only under named, time-bound credentials issued through your identity provider (or ours, when we host the environment). Access is role-based, follows least-privilege by default, and is revoked at engagement end or role change. All access is logged.
         </p>
@@ -36,14 +36,14 @@ export default function DataSecurityPage() {
       </section>
 
       <section className="mt-12 measure">
-        <h2 className="font-serif text-2xl text-ink-primary">Vendor review</h2>
+        <h2 className="text-2xl text-ink-primary">Vendor review</h2>
         <p className="text-base text-ink-secondary leading-relaxed mt-4">
           Every third-party service that touches client data — model providers (OpenAI, Anthropic), observability tools, orchestration platforms — is reviewed before it enters an engagement. We check data-processing agreements, data-retention policies, sub-processor lists, and geographic processing. The vendor list for each engagement is documented and shared with the client.
         </p>
       </section>
 
       <section className="mt-12 measure">
-        <h2 className="font-serif text-2xl text-ink-primary">Incident response</h2>
+        <h2 className="text-2xl text-ink-primary">Incident response</h2>
         <p className="text-base text-ink-secondary leading-relaxed mt-4">
           If we detect or are informed of a security incident affecting client data, we notify the client&apos;s designated contact within 24 hours of confirmation, regardless of the severity of the incident or whether we believe the notification threshold has been legally triggered. A written post-incident report follows within 10 business days, detailing what happened, what was affected, what we did, and what we are changing.
         </p>
@@ -53,7 +53,7 @@ export default function DataSecurityPage() {
       </section>
 
       <section className="mt-12 measure">
-        <h2 className="font-serif text-2xl text-ink-primary">What this is not</h2>
+        <h2 className="text-2xl text-ink-primary">What this is not</h2>
         <p className="text-base text-ink-secondary leading-relaxed mt-4">
           This page describes our posture. It is not a SOC 2 report, an ISO 27001 certification, or a penetration-test result. Quoin is a young firm and has not yet undergone those audits; we will pursue them as the firm grows. In the meantime, we are transparent about the practices we have in place and happy to walk any prospective client through them in detail.
         </p>
