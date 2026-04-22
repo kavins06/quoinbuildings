@@ -23,7 +23,7 @@ export function WhySection() {
               have achieved their AI program goals. The gap is not technology. It is approach.
             </p>
             <p className="text-[11px] tracking-[0.02em] text-ink-muted -mt-3 italic">
-              <a href="#" className="underline decoration-accent underline-offset-2">Commercial Observer, 2025</a>
+              <a href="https://www.jll.com/en-us/newsroom/real-estates-ai-reality-check-companies-piloting-only-achieved-all-ai-goals" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">JLL, Oct 2025</a>
             </p>
             <p className="text-sm leading-[1.85] text-muted-foreground">
               Point-solution SaaS vendors sell tools that do not integrate with your property
