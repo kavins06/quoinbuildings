@@ -92,7 +92,7 @@ export function Hero() {
                   Implement In
                 </p>
                 <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight">
-                  <span className="inline-block tabular-nums tracking-tight text-accent">8</span> Wks
+                  <span className="inline-block tabular-nums tracking-tight text-accent">4</span> Wks
                 </p>
                 <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
                   First production workflow, typical Quoin engagement
