@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { BlurFade } from "@/components/ui/blur-fade"
+import { WordRotate } from "@/components/ui/word-rotate"
 
 export function Hero() {
   return (
@@ -16,7 +17,11 @@ export function Hero() {
               <h1 className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.05] tracking-[-0.03em] text-ink-primary">
                 Your AI Operating
                 <br />
-                <span className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.05] tracking-[-0.03em] text-accent inline-block">Partner</span>
+                <WordRotate
+                  words={["Partner", "Infrastructure", "Advantage"]}
+                  duration={2000}
+                  className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.05] tracking-[-0.03em] text-accent"
+                />
               </h1>
             </BlurFade>
 
