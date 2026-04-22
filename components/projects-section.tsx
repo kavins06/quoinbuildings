@@ -9,9 +9,10 @@ const projects = [
     title: "Fragmented Point Solutions",
     category: "Pattern",
     year: "01",
-    location: "Point tools that don\u2019t integrate with your property management platform",
-    answer: "We build agents that plug directly into Yardi, RealPage, AppFolio, and Entrata — your existing stack, not a parallel one.",
-    detail: "You bought a leasing chatbot, a maintenance triage tool, and an analytics dashboard from three different vendors. None of them talk to each other. Your data stays siloed, your staff manages three vendor relationships, and you are no closer to firm-wide AI capability than when you started. The tools work individually. The operation does not improve holistically.",
+    location: "Three vendors. Three dashboards. Zero integration.",
+    answer: "One agent layer across your PMS, your email, and the tools your team already uses.",
+    answerDetail: "Our agents live inside your team’s actual workflow — email, invoices, shared drives — and connect directly to Yardi, RealPage, AppFolio, and Entrata. When an invoice lands in an inbox, the agent reads it, updates the record in your PMS, and flags exceptions to the right person. No new dashboard. No new login. No parallel system to maintain.",
+    detail: "You bought a leasing chatbot, a maintenance triage tool, and an analytics dashboard from three different vendors. None of them talk to each other. Your data stays siloed, your staff manages three vendor relationships, and you’re no closer to firm-wide AI capability than when you started. The tools work individually. The operation doesn’t compound.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80",
   },
   {
@@ -121,7 +122,7 @@ function DetailModal({ project, onClose }: { project: typeof projects[0] | null;
             How Quoin solves this
           </p>
           <p className="text-sm leading-[1.75] text-foreground font-light">
-            {project.answer}
+            {project.answerDetail ?? project.answer}
           </p>
         </div>
       </div>
