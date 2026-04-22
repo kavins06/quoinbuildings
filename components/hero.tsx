@@ -56,7 +56,7 @@ export function Hero() {
           </div>
 
           {/* Right: Stats framed */}
-          <div className="relative overflow-hidden lg:col-span-4 lg:col-start-9 lg:self-stretch mt-10 lg:mt-0 border border-subtle p-4 lg:p-8 flex flex-col justify-center">
+          <div className="relative overflow-hidden lg:col-span-4 lg:col-start-9 lg:self-stretch mt-10 lg:mt-0 -mr-6 md:-mr-12 lg:-mr-20 border border-subtle p-4 lg:p-8 flex flex-col justify-center">
           <img
             src="https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
