@@ -5,7 +5,7 @@
 @layer base {
   :root {
     /* Surfaces */
-    --surface-base: 40 33% 95%;      /* #F7F4EE warm paper */
+    --surface-base: 0 0% 100%;       /* #FFFFFF white */
     --surface-raised: 0 0% 100%;     /* #FFFFFF */
     --surface-sunken: 38 28% 91%;    /* #EFEAE1 */
     --surface-inverse: 0 0% 10%;     /* #1A1A1A */
