@@ -56,8 +56,15 @@ export function Hero() {
           </div>
 
           {/* Right: Stats framed */}
-          <div className="lg:col-span-4 lg:col-start-9 lg:self-stretch mt-10 lg:mt-0 border border-subtle p-4 lg:p-8 flex flex-col justify-center">
-          <div className="grid grid-cols-3 gap-4 lg:flex lg:flex-col lg:gap-6">
+          <div className="relative overflow-hidden lg:col-span-4 lg:col-start-9 lg:self-stretch mt-10 lg:mt-0 border border-subtle p-4 lg:p-8 flex flex-col justify-center">
+          <img
+            src="https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-black/30" aria-hidden="true" />
+          <div className="relative z-10 grid grid-cols-3 gap-4 lg:flex lg:flex-col lg:gap-6">
             <BlurFade delay={1.1} direction="up" className="h-full">
               <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-surface-raised h-full">
                 <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
