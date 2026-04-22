@@ -38,7 +38,7 @@ export function Navigation() {
       >
         <Link
           href="/"
-          className="flex items-center gap-3 font-serif text-lg md:text-xl text-ink-primary"
+          className="flex items-center gap-1.5 font-serif text-lg md:text-xl text-ink-primary"
         >
           <AnimatedLogo size={32} float={false} className="shrink-0" />
           QUOIN
