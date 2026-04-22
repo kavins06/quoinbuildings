@@ -55,8 +55,9 @@ export function Hero() {
             </BlurFade>
           </div>
 
-          {/* Right: Stats */}
-          <div className="grid grid-cols-3 gap-4 lg:flex lg:flex-col lg:gap-6 lg:col-span-4 lg:col-start-9 mt-10 lg:mt-0">
+          {/* Right: Stats framed */}
+          <div className="lg:col-span-4 lg:col-start-9 lg:self-stretch mt-10 lg:mt-0 border border-subtle p-4 lg:p-8 flex flex-col justify-center">
+          <div className="grid grid-cols-3 gap-4 lg:flex lg:flex-col lg:gap-6">
             <BlurFade delay={1.1} direction="up" className="h-full">
               <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-surface-raised h-full">
                 <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
@@ -104,6 +105,7 @@ export function Hero() {
                 </p>
               </div>
             </BlurFade>
+          </div>
           </div>
         </div>
       </div>
