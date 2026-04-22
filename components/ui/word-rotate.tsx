@@ -22,14 +22,29 @@ export function WordRotate({ words, duration = 2000, className }: WordRotateProp
   }, [words.length, duration])
 
   return (
-    <span className="inline-block overflow-hidden align-top">
+    <span className="inline-block align-top">
       <AnimatePresence mode="wait" initial={false}>
         <motion.span
           key={words[index]}
-          initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: "60%" }}
-          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
-          exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: "-60%" }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
+          initial={
+            shouldReduceMotion
+              ? { opacity: 0 }
+              : { opacity: 0, y: 18, filter: "blur(10px)" }
+          }
+          animate={
+            shouldReduceMotion
+              ? { opacity: 1 }
+              : { opacity: 1, y: 0, filter: "blur(0px)" }
+          }
+          exit={
+            shouldReduceMotion
+              ? { opacity: 0 }
+              : { opacity: 0, y: -14, filter: "blur(10px)" }
+          }
+          transition={{
+            duration: 0.55,
+            ease: [0.22, 1, 0.36, 1],
+          }}
           className={cn("inline-block", className)}
         >
           {words[index]}
