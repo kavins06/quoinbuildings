@@ -34,7 +34,7 @@ export function Navigation() {
     >
       <nav
         aria-label="Primary"
-        className="w-full px-6 md:px-12 lg:px-20 flex items-center justify-between h-[60px] md:h-[72px]"
+        className="w-full px-6 md:px-12 lg:px-20 flex items-center justify-between h-[45px] md:h-[54px]"
       >
         <Link
           href="/"
