@@ -22,7 +22,7 @@ const projects = [
     location: "The roadmap was delivered. Nothing happened after.",
     answer: "We deliver a build, not a deck. Every diagnostic ends with a prioritized roadmap and an engagement to ship the first workflow, not a handoff to someone else.",
     detail: "A consulting firm delivered a roadmap. It was well-researched, well-formatted, and well-received in the board meeting. Then nothing happened. Nobody on the consultant\u2019s team was responsible for building anything, deploying anything, or making anything work in production. The deck sits in a shared drive. The budget cycle resets.",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&q=80",
   },
   {
     title: "No Governance, No Green Light",
@@ -31,7 +31,7 @@ const projects = [
     location: "Legal blocked the rollout before it reached operations",
     answer: "Every engagement includes fair housing guardrails, data privacy controls, and audit trails from day one — informed by two decades of enterprise governance experience.",
     detail: "Legal blocked the rollout because nobody scoped fair housing risk. GDPR and CCPA exposure is unaddressed. There is no audit trail for AI-driven tenant decisions. The pilot stalled not because the technology failed, but because the organization was not ready to govern it.",
-    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
   },
 ]
 
