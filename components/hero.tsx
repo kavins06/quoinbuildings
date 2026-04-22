@@ -19,7 +19,7 @@ export function Hero() {
                 <br />
                 <WordRotate
                   words={["Partner", "Infrastructure", "Advantage"]}
-                  duration={4000}
+                  duration={3000}
                   className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.15] tracking-[-0.03em] text-accent"
                 />
               </h1>
