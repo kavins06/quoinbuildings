@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { BlurFade } from "@/components/ui/blur-fade"
+import { NumberTicker } from "@/components/ui/number-ticker"
 import { WordRotate } from "@/components/ui/word-rotate"
 
 export function Hero() {
@@ -71,7 +72,7 @@ export function Hero() {
                   AI Capability
                 </p>
                 <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight">
-                  <span className="inline-block tabular-nums tracking-tight text-accent">83</span>%
+                  <NumberTicker value={83} className="inline-block tracking-tight text-accent" />%
                 </p>
                 <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
                   Of knowledge work tasks where AI output matches or beats a domain expert
@@ -88,7 +89,7 @@ export function Hero() {
                   Industry Gap
                 </p>
                 <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight">
-                  <span className="inline-block tabular-nums tracking-tight text-accent">5</span>%
+                  <NumberTicker value={5} delay={0.2} className="inline-block tracking-tight text-accent" />%
                 </p>
                 <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
                   CRE firms achieving their AI program goals
@@ -105,7 +106,7 @@ export function Hero() {
                   Implement In
                 </p>
                 <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight">
-                  <span className="inline-block tabular-nums tracking-tight text-accent">4</span> Wks
+                  <NumberTicker value={4} delay={0.4} className="inline-block tracking-tight text-accent" /> Wks
                 </p>
                 <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
                   First production workflow, typical Quoin engagement
