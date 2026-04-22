@@ -13,7 +13,65 @@ const steps = [
 ]
 
 export function ContactContent() {
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [company, setCompany] = useState("")
+  const [email, setEmail] = useState("")
+  const [role, setRole] = useState("")
+  const [propertyType, setPropertyType] = useState("")
+  const [portfolioUnits, setPortfolioUnits] = useState("")
+  const [portfolioSqFt, setPortfolioSqFt] = useState("")
+  const [message, setMessage] = useState("")
+  const [hp, setHp] = useState("")
+  const [submitting, setSubmitting] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [submitted, setSubmitted] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    if (submitting) return
+    setSubmitting(true)
+    setErrorMessage(null)
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          company,
+          email,
+          role,
+          propertyType,
+          portfolioUnits,
+          portfolioSqFt,
+          message,
+          _hp: hp,
+        }),
+      })
+
+      const data = (await res.json().catch(() => null)) as
+        | { ok: boolean; error?: string }
+        | null
+
+      if (!res.ok || !data?.ok) {
+        setErrorMessage(
+          data?.error ??
+            "Submission failed. Please email info@quoinbuildings.com.",
+        )
+        setSubmitting(false)
+        return
+      }
+
+      setSubmitted(true)
+    } catch {
+      setErrorMessage(
+        "Submission failed. Please email info@quoinbuildings.com.",
+      )
+      setSubmitting(false)
+    }
+  }
 
   return (
     <main>
@@ -38,13 +96,29 @@ export function ContactContent() {
                 </p>
               </div>
             ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  setSubmitted(true)
-                }}
-                className="flex flex-col gap-8"
-              >
+              <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    left: "-9999px",
+                    width: "1px",
+                    height: "1px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <label>
+                    Do not fill this field
+                    <input
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={hp}
+                      onChange={(e) => setHp(e.target.value)}
+                    />
+                  </label>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="flex flex-col gap-2">
                     <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
@@ -53,6 +127,8 @@ export function ContactContent() {
                     <input
                       type="text"
                       required
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
                       className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 placeholder:text-muted-foreground/30"
                       placeholder="First name"
                     />
@@ -64,6 +140,8 @@ export function ContactContent() {
                     <input
                       type="text"
                       required
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
                       className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 placeholder:text-muted-foreground/30"
                       placeholder="Last name"
                     />
@@ -78,6 +156,8 @@ export function ContactContent() {
                     <input
                       type="text"
                       required
+                      value={company}
+                      onChange={(e) => setCompany(e.target.value)}
                       className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 placeholder:text-muted-foreground/30"
                       placeholder="Company name"
                     />
@@ -89,6 +169,8 @@ export function ContactContent() {
                     <input
                       type="email"
                       required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 placeholder:text-muted-foreground/30"
                       placeholder="email@company.com"
                     />
@@ -98,17 +180,20 @@ export function ContactContent() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="flex flex-col gap-2">
                     <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      Portfolio Size
+                      Your Role
                       <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
                     </label>
                     <select
+                      value={role}
+                      onChange={(e) => setRole(e.target.value)}
                       className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
                     >
-                      <option value="">Select a range</option>
-                      <option value="1000-5000">1,000&ndash;5,000 units</option>
-                      <option value="5000-15000">5,000&ndash;15,000 units</option>
-                      <option value="15000-50000">15,000&ndash;50,000 units</option>
-                      <option value="50000+">50,000+ units</option>
+                      <option value="">Select your role</option>
+                      <option value="ceo-owner">CEO/Owner</option>
+                      <option value="coo-vp-operations">COO/VP Operations</option>
+                      <option value="cto-vp-technology">CTO/VP Technology</option>
+                      <option value="cfo-vp-finance">CFO/VP Finance</option>
+                      <option value="other">Other</option>
                     </select>
                   </div>
                   <div className="flex flex-col gap-2">
@@ -117,6 +202,8 @@ export function ContactContent() {
                       <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
                     </label>
                     <select
+                      value={propertyType}
+                      onChange={(e) => setPropertyType(e.target.value)}
                       className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
                     >
                       <option value="">Select type</option>
@@ -128,21 +215,41 @@ export function ContactContent() {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-2">
-                  <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                    Your Role
-                    <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
-                  </label>
-                  <select
-                    className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
-                  >
-                    <option value="">Select your role</option>
-                    <option value="ceo-owner">CEO/Owner</option>
-                    <option value="coo-vp-operations">COO/VP Operations</option>
-                    <option value="cto-vp-technology">CTO/VP Technology</option>
-                    <option value="cfo-vp-finance">CFO/VP Finance</option>
-                    <option value="other">Other</option>
-                  </select>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
+                      Portfolio Size &mdash; Units
+                      <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
+                    </label>
+                    <select
+                      value={portfolioUnits}
+                      onChange={(e) => setPortfolioUnits(e.target.value)}
+                      className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
+                    >
+                      <option value="">Select a range</option>
+                      <option value="1000-5000">1,000&ndash;5,000 units</option>
+                      <option value="5000-15000">5,000&ndash;15,000 units</option>
+                      <option value="15000-50000">15,000&ndash;50,000 units</option>
+                      <option value="50000+">50,000+ units</option>
+                    </select>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
+                      Portfolio Size &mdash; Sq Ft
+                      <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
+                    </label>
+                    <select
+                      value={portfolioSqFt}
+                      onChange={(e) => setPortfolioSqFt(e.target.value)}
+                      className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
+                    >
+                      <option value="">Select a range</option>
+                      <option value="under-500k">Under 500,000 sq ft</option>
+                      <option value="500k-2m">500,000&ndash;2M sq ft</option>
+                      <option value="2m-10m">2M&ndash;10M sq ft</option>
+                      <option value="10m+">10M+ sq ft</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div className="flex flex-col gap-2">
@@ -151,6 +258,9 @@ export function ContactContent() {
                   </label>
                   <textarea
                     rows={4}
+                    required
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 resize-none placeholder:text-muted-foreground/30"
                     placeholder="What prompted you to reach out?"
                   />
@@ -158,10 +268,18 @@ export function ContactContent() {
 
                 <button
                   type="submit"
-                  className="self-start mt-4 px-10 py-4 bg-foreground text-background text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-foreground/90 transition-colors duration-300"
+                  disabled={submitting}
+                  className="self-start mt-4 px-10 py-4 bg-foreground text-background text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-foreground/90 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Submit
+                  {submitting ? "Sending…" : "Submit"}
                 </button>
+
+                {errorMessage && (
+                  <p className="text-[11px] leading-relaxed text-red-600/90 mt-1" role="alert">
+                    {errorMessage}
+                  </p>
+                )}
+
                 <p className="text-[11px] leading-relaxed text-muted-foreground/50 mt-2">
                   Your information is handled in accordance with our{" "}
                   <Link href="/privacy" className="text-muted-foreground/70 underline underline-offset-2 hover:text-foreground transition-colors duration-300">
