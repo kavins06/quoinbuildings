@@ -23,10 +23,10 @@ const proofItems = [
     linkLabel: "Read the approach",
   },
   {
-    label: "Headquarters",
-    value: "Washington, DC",
-    link: "/contact",
-    linkLabel: "Talk to us",
+    label: "Integrations",
+    value: "Built for your specific workflow",
+    link: "/services",
+    linkLabel: "See services",
   },
 ]
 
