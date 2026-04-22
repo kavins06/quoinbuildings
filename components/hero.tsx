@@ -89,7 +89,7 @@ export function Hero() {
             <BlurFade delay={1.5} direction="up" className="h-full">
               <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-surface-raised h-full">
                 <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
-                  Results In
+                  Implement In
                 </p>
                 <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight">
                   <span className="inline-block tabular-nums tracking-tight text-accent">8</span> Wks
