@@ -44,7 +44,7 @@ export function PageHeader({
         </BlurFade>
 
         <BlurFade delay={0.4} direction="up" offset={6}>
-          <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-normal leading-[1.1] tracking-[-0.02em] text-ink-primary text-balance">
+          <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white text-balance">
             {title}
           </h1>
         </BlurFade>
