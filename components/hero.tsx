@@ -61,7 +61,7 @@ export function Hero() {
                   <span className="inline-block tabular-nums tracking-tight text-accent">83</span>%
                 </p>
                 <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
-                  AI outperforms domain experts on specialized tasks
+                  Of knowledge work tasks where AI output matches or beats a domain expert
                 </p>
                 <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-1 italic">
                   <a href="https://techcrunch.com/2026/03/05/openai-launches-gpt-5-4-with-pro-and-thinking-versions/" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">TechCrunch, Mar 2026</a>
