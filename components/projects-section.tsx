@@ -26,12 +26,13 @@ const projects = [
     image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&q=80",
   },
   {
-    title: "No Governance, No Green Light",
+    title: "No Governance, No Scale",
     category: "Pattern",
     year: "03",
-    location: "Legal blocked the rollout before it reached operations",
-    answer: "Every engagement includes fair housing guardrails, data privacy controls, and audit trails from day one — informed by two decades of enterprise governance experience.",
-    detail: "Legal blocked the rollout because nobody scoped fair housing risk. GDPR and CCPA exposure is unaddressed. There is no audit trail for AI-driven tenant decisions. The pilot stalled not because the technology failed, but because the organization was not ready to govern it.",
+    location: "Pilots ship. Deployments stall. Nothing compounds.",
+    answer: "We build the AI operating model underneath the workflows — standards, ownership, and review patterns that let the next ten deployments ship in weeks, not quarters.",
+    answerDetail: "Every engagement ships with the operating model, not just the workflow. We define how AI systems are owned, monitored, reviewed, and retired inside your organization — with the fair housing, data privacy, and audit requirements of your industry built into the pattern, not bolted on afterward. The first workflow proves the system works. The operating model is what lets the next one ship in a fraction of the time, and the tenth one ship without needing the original team in the room. Two decades of enterprise governance experience, applied to a category that most firms are still learning to build for.",
+    detail: "Your team demoed three promising AI workflows this year. None of them reached production. Each one hit the same wall: no one could say who owned the model, how it would be monitored, what the review pattern looked like, or how the organization would know it was working. So every initiative gets re-litigated from scratch. The firms pulling ahead in your category aren’t the ones with the best models — they’re the ones that built the operating system for deploying them.",
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
   },
 ]
