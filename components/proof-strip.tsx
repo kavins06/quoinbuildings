@@ -21,8 +21,8 @@ const proofItems: ProofItem[] = [
   {
     label: "Governance",
     value: "Governance Built Before Deployment",
-    link: "/approach",
-    linkLabel: "Our Approach",
+    link: "/governance",
+    linkLabel: "See framework",
   },
   {
     label: "First Step",
