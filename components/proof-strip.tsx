@@ -6,7 +6,7 @@ import { BlurFade } from "@/components/ui/blur-fade"
 const proofItems = [
   {
     label: "Portfolio Scale",
-    value: "1000+ Unit or 1M Sq.ft.+ Portfolios",
+    value: "Over 1000 Units or 1 Million Sq. ft.",
     link: "/who-we-help",
     linkLabel: "Who We Help",
   },
