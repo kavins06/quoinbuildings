@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import { AnimatedLogo } from "@/components/ui/animated-logo"
 
 const navLinks = [
   { label: "Who We Help", href: "/who-we-help" },
@@ -37,8 +38,9 @@ export function Navigation() {
       >
         <Link
           href="/"
-          className="font-serif text-lg md:text-xl text-ink-primary"
+          className="flex items-center gap-3 font-serif text-lg md:text-xl text-ink-primary"
         >
+          <AnimatedLogo size={32} float={false} className="shrink-0" />
           QUOIN
         </Link>
 
