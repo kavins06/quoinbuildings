@@ -6,7 +6,7 @@ import { WordRotate } from "@/components/ui/word-rotate"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-surface-base pt-24">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-surface-base py-24">
 
       <div className="relative z-10 px-6 md:px-12 lg:px-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-center">
