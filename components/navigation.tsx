@@ -33,7 +33,7 @@ export function Navigation() {
     >
       <nav
         aria-label="Primary"
-        className="container-shell flex items-center justify-between h-[60px] md:h-[72px]"
+        className="w-full px-6 md:px-12 lg:px-20 flex items-center justify-between h-[60px] md:h-[72px]"
       >
         <Link
           href="/"
@@ -71,7 +71,7 @@ export function Navigation() {
         hidden={!isOpen}
         className="md:hidden bg-surface-base border-t border-subtle"
       >
-        <div className="container-shell flex flex-col py-8 gap-6">
+        <div className="w-full px-6 md:px-12 lg:px-20 flex flex-col py-8 gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.label}
