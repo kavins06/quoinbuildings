@@ -1,13 +1,12 @@
 "use client"
 
-import type { ReactNode } from "react"
 import Link from "next/link"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { NumberTicker } from "@/components/ui/number-ticker"
+import { TextAnimate } from "@/components/ui/text-animate"
 
 interface ProofItem {
   label: string
-  value: ReactNode
+  value: string
   link: string
   linkLabel: string
 }
@@ -15,12 +14,7 @@ interface ProofItem {
 const proofItems: ProofItem[] = [
   {
     label: "Portfolio Scale",
-    value: (
-      <>
-        Over <NumberTicker value={1000} /> Units or{" "}
-        <NumberTicker value={1} /> Million Sq. ft.
-      </>
-    ),
+    value: "Over 1,000 Units or 1 Million Sq. ft.",
     link: "/who-we-help",
     linkLabel: "Who We Help",
   },
@@ -32,11 +26,7 @@ const proofItems: ProofItem[] = [
   },
   {
     label: "First Step",
-    value: (
-      <>
-        <NumberTicker value={2} />-Week Diagnostic · No Lock-in
-      </>
-    ),
+    value: "2-Week Diagnostic · No Lock-in",
     link: "/approach",
     linkLabel: "Read the approach",
   },
@@ -53,14 +43,19 @@ export function ProofStrip() {
     <section className="bg-secondary px-6 py-10 md:px-12 lg:px-20 md:py-14">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
         {proofItems.map((item, index) => (
-          <BlurFade key={item.label} inView direction="up" delay={index * 0.1}>
-            <div>
+          <div key={item.label}>
+            <BlurFade inView direction="up" delay={index * 0.1}>
               <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-2">
                 {item.label}
               </p>
-              <p className="text-sm font-light text-foreground leading-[1.5] mb-3">
-                {item.value}
-              </p>
+            </BlurFade>
+            <TextAnimate
+              delay={index * 0.1}
+              className="text-sm font-light text-foreground leading-[1.5] mb-3"
+            >
+              {item.value}
+            </TextAnimate>
+            <BlurFade inView direction="up" delay={index * 0.1 + 0.05}>
               <Link
                 href={item.link}
                 className="inline-flex items-center gap-2 text-[11px] tracking-[0.1em] text-muted-foreground/60 hover:text-foreground transition-colors duration-300 group"
@@ -68,8 +63,8 @@ export function ProofStrip() {
                 <span>{item.linkLabel}</span>
                 <span className="text-accent group-hover:translate-x-0.5 transition-transform duration-300">&rarr;</span>
               </Link>
-            </div>
-          </BlurFade>
+            </BlurFade>
+          </div>
         ))}
       </div>
     </section>
