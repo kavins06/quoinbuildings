@@ -131,41 +131,6 @@ function DetailModal({ project, onClose }: { project: typeof projects[0] | null;
   )
 }
 
-function StatsClosing() {
-  return (
-    <div className="mt-20 grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
-      <div className="md:col-span-7 grid grid-cols-2 gap-12">
-        <BlurFade inView delay={0} direction="up">
-          <div>
-            <p className="text-4xl md:text-5xl font-normal tracking-tight text-foreground mb-2">
-              <span className="inline-block tabular-nums text-foreground tracking-tight">5</span><span className="text-accent">%</span>
-            </p>
-            <p className="text-sm leading-[1.75] text-muted-foreground">
-              of CRE firms have achieved their AI program goals.
-            </p>
-            <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-2 italic">
-              <a href="https://www.jll.com/en-us/newsroom/real-estates-ai-reality-check-companies-piloting-only-achieved-all-ai-goals" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">JLL, Oct 2025</a>
-            </p>
-          </div>
-        </BlurFade>
-        <BlurFade inView delay={0.15} direction="up">
-          <div>
-            <p className="text-4xl md:text-5xl font-normal tracking-tight text-foreground mb-2">
-              <span className="inline-block tabular-nums text-foreground tracking-tight">60</span><span className="text-accent">%+</span>
-            </p>
-            <p className="text-sm leading-[1.75] text-muted-foreground">
-              remain unprepared to scale AI beyond pilot stage.
-            </p>
-            <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-2 italic">
-              <a href="#" className="underline decoration-accent underline-offset-2">World Economic Forum, 2026</a>
-            </p>
-          </div>
-        </BlurFade>
-      </div>
-    </div>
-  )
-}
-
 export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null)
 
@@ -203,8 +168,6 @@ export function ProjectsSection() {
           />
         ))}
       </div>
-
-      <StatsClosing />
 
       {selectedProject && (
         <DetailModal
