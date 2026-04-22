@@ -41,7 +41,7 @@ Vercel Project Settings (user action): add `APPS_SCRIPT_CONTACT_URL` to Producti
   In row 1, type these exact column headers (tab between cells):
 
   ```
-  Timestamp	First Name	Last Name	Company	Email	Portfolio Size	Property Type	Role	Message
+  Timestamp	First Name	Last Name	Company	Email	Your Role	Property Type	Portfolio Size (Units)	Portfolio Size (Sq Ft)	Message
   ```
 
   Bold the header row (Format → Text → Bold) for readability. No other formatting needed.
@@ -80,9 +80,10 @@ Vercel Project Settings (user action): add `APPS_SCRIPT_CONTACT_URL` to Producti
         data.lastName || '',
         data.company || '',
         data.email || '',
-        data.portfolioSize || '',
-        data.propertyType || '',
         data.role || '',
+        data.propertyType || '',
+        data.portfolioUnits || '',
+        data.portfolioSqFt || '',
         data.message || ''
       ]);
 
@@ -92,8 +93,9 @@ Vercel Project Settings (user action): add `APPS_SCRIPT_CONTACT_URL` to Producti
         `Company: ${data.company || ''}`,
         `Email:   ${data.email || ''}`,
         `Role:    ${data.role || '—'}`,
-        `Portfolio Size: ${data.portfolioSize || '—'}`,
-        `Property Type:  ${data.propertyType || '—'}`,
+        `Property Type:      ${data.propertyType || '—'}`,
+        `Portfolio (Units):  ${data.portfolioUnits || '—'}`,
+        `Portfolio (Sq Ft):  ${data.portfolioSqFt || '—'}`,
         '',
         'Message:',
         data.message || '(none)',
@@ -211,9 +213,10 @@ Vercel Project Settings (user action): add `APPS_SCRIPT_CONTACT_URL` to Producti
     lastName?: string
     company?: string
     email?: string
-    portfolioSize?: string
-    propertyType?: string
     role?: string
+    propertyType?: string
+    portfolioUnits?: string
+    portfolioSqFt?: string
     message?: string
     _hp?: string
   }
@@ -271,9 +274,10 @@ Vercel Project Settings (user action): add `APPS_SCRIPT_CONTACT_URL` to Producti
           lastName: body.lastName,
           company: body.company,
           email: body.email,
-          portfolioSize: body.portfolioSize ?? "",
-          propertyType: body.propertyType ?? "",
           role: body.role ?? "",
+          propertyType: body.propertyType ?? "",
+          portfolioUnits: body.portfolioUnits ?? "",
+          portfolioSqFt: body.portfolioSqFt ?? "",
           message: body.message,
         }),
         signal: controller.signal,
@@ -354,9 +358,10 @@ Vercel Project Settings (user action): add `APPS_SCRIPT_CONTACT_URL` to Producti
     const [lastName, setLastName] = useState("")
     const [company, setCompany] = useState("")
     const [email, setEmail] = useState("")
-    const [portfolioSize, setPortfolioSize] = useState("")
-    const [propertyType, setPropertyType] = useState("")
     const [role, setRole] = useState("")
+    const [propertyType, setPropertyType] = useState("")
+    const [portfolioUnits, setPortfolioUnits] = useState("")
+    const [portfolioSqFt, setPortfolioSqFt] = useState("")
     const [message, setMessage] = useState("")
     const [hp, setHp] = useState("")
     const [submitting, setSubmitting] = useState(false)
@@ -378,9 +383,10 @@ Vercel Project Settings (user action): add `APPS_SCRIPT_CONTACT_URL` to Producti
             lastName,
             company,
             email,
-            portfolioSize,
-            propertyType,
             role,
+            propertyType,
+            portfolioUnits,
+            portfolioSqFt,
             message,
             _hp: hp,
           }),
@@ -515,19 +521,20 @@ Vercel Project Settings (user action): add `APPS_SCRIPT_CONTACT_URL` to Producti
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="flex flex-col gap-2">
                       <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                        Portfolio Size
+                        Your Role
                         <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
                       </label>
                       <select
-                        value={portfolioSize}
-                        onChange={(e) => setPortfolioSize(e.target.value)}
+                        value={role}
+                        onChange={(e) => setRole(e.target.value)}
                         className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
                       >
-                        <option value="">Select a range</option>
-                        <option value="1000-5000">1,000&ndash;5,000 units</option>
-                        <option value="5000-15000">5,000&ndash;15,000 units</option>
-                        <option value="15000-50000">15,000&ndash;50,000 units</option>
-                        <option value="50000+">50,000+ units</option>
+                        <option value="">Select your role</option>
+                        <option value="ceo-owner">CEO/Owner</option>
+                        <option value="coo-vp-operations">COO/VP Operations</option>
+                        <option value="cto-vp-technology">CTO/VP Technology</option>
+                        <option value="cfo-vp-finance">CFO/VP Finance</option>
+                        <option value="other">Other</option>
                       </select>
                     </div>
                     <div className="flex flex-col gap-2">
@@ -549,23 +556,41 @@ Vercel Project Settings (user action): add `APPS_SCRIPT_CONTACT_URL` to Producti
                     </div>
                   </div>
 
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      Your Role
-                      <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
-                    </label>
-                    <select
-                      value={role}
-                      onChange={(e) => setRole(e.target.value)}
-                      className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
-                    >
-                      <option value="">Select your role</option>
-                      <option value="ceo-owner">CEO/Owner</option>
-                      <option value="coo-vp-operations">COO/VP Operations</option>
-                      <option value="cto-vp-technology">CTO/VP Technology</option>
-                      <option value="cfo-vp-finance">CFO/VP Finance</option>
-                      <option value="other">Other</option>
-                    </select>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="flex flex-col gap-2">
+                      <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
+                        Portfolio Size — Units
+                        <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
+                      </label>
+                      <select
+                        value={portfolioUnits}
+                        onChange={(e) => setPortfolioUnits(e.target.value)}
+                        className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
+                      >
+                        <option value="">Select a range</option>
+                        <option value="1000-5000">1,000&ndash;5,000 units</option>
+                        <option value="5000-15000">5,000&ndash;15,000 units</option>
+                        <option value="15000-50000">15,000&ndash;50,000 units</option>
+                        <option value="50000+">50,000+ units</option>
+                      </select>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
+                        Portfolio Size — Sq Ft
+                        <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
+                      </label>
+                      <select
+                        value={portfolioSqFt}
+                        onChange={(e) => setPortfolioSqFt(e.target.value)}
+                        className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
+                      >
+                        <option value="">Select a range</option>
+                        <option value="under-500k">Under 500,000 sq ft</option>
+                        <option value="500k-2m">500,000&ndash;2M sq ft</option>
+                        <option value="2m-10m">2M&ndash;10M sq ft</option>
+                        <option value="10m+">10M+ sq ft</option>
+                      </select>
+                    </div>
                   </div>
 
                   <div className="flex flex-col gap-2">

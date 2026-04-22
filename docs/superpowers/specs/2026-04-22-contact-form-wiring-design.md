@@ -65,10 +65,13 @@ A Google Sheet in `kavins@quoinbuildings.com`'s Drive named **"Quoin — Contact
 | Last Name | `lastName` |
 | Company | `company` |
 | Email | `email` |
-| Portfolio Size | `portfolioSize` |
+| Your Role | `role` |
 | Property Type | `propertyType` |
-| Role | `role` |
+| Portfolio Size (Units) | `portfolioUnits` |
+| Portfolio Size (Sq Ft) | `portfolioSqFt` |
 | Message | `message` |
+
+**Portfolio Size change (2026-04-22):** Split into two independent optional dropdowns so firms managing commercial space by square footage and firms managing residential units can each use the metric that fits them. Either or both fields can be populated per submission.
 
 ### 5.2 Apps Script (bound to the Sheet)
 
@@ -105,15 +108,16 @@ A Google Sheet in `kavins@quoinbuildings.com`'s Drive named **"Quoin — Contact
 
 ```ts
 {
-  firstName: string;      // required
-  lastName: string;       // required
-  company: string;        // required
-  email: string;          // required
-  portfolioSize?: string; // optional select
-  propertyType?: string;  // optional select
-  role?: string;          // optional select
-  message: string;        // required (was optional in prior form; making required)
-  _hp?: string;           // honeypot — must be empty
+  firstName: string;        // required
+  lastName: string;         // required
+  company: string;          // required
+  email: string;            // required
+  role?: string;            // optional select
+  propertyType?: string;    // optional select
+  portfolioUnits?: string;  // optional select (unit-count ranges)
+  portfolioSqFt?: string;   // optional select (square-footage ranges)
+  message: string;          // required (was optional in prior form; making required)
+  _hp?: string;             // honeypot — must be empty
 }
 ```
 
