@@ -66,7 +66,7 @@ export function Hero() {
           <div className="pointer-events-none absolute inset-0 bg-black/30" aria-hidden="true" />
           <div className="relative z-10 grid grid-cols-3 gap-4 lg:flex lg:flex-col lg:gap-6">
             <BlurFade delay={1.1} direction="up" className="h-full">
-              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-surface-raised h-full">
+              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-white/50 h-full">
                 <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
                   AI Capability
                 </p>
@@ -83,7 +83,7 @@ export function Hero() {
             </BlurFade>
 
             <BlurFade delay={1.3} direction="up" className="h-full">
-              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-surface-raised h-full">
+              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-white/50 h-full">
                 <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
                   Industry Gap
                 </p>
@@ -100,7 +100,7 @@ export function Hero() {
             </BlurFade>
 
             <BlurFade delay={1.5} direction="up" className="h-full">
-              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-surface-raised h-full">
+              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-white/50 h-full">
                 <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
                   Implement In
                 </p>
