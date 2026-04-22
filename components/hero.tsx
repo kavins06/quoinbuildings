@@ -28,7 +28,7 @@ export function Hero() {
 
             <BlurFade delay={0.7} direction="up">
               <p className="mt-8 text-base md:text-lg font-light leading-relaxed text-ink-primary max-w-2xl md:max-w-3xl">
-                Quoin prepares your property management team, data, and governance for AI. We build agents for your workflows and operate them alongside you after launch.
+                Quoin prepares your property management teams, data, and governance for AI. We build agents for your workflows and operate them alongside you after launch.
               </p>
             </BlurFade>
 
