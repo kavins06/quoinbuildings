@@ -28,7 +28,7 @@ const proofItems: ProofItem[] = [
     label: "First Step",
     value: "2-Week Diagnostic · No Lock-in",
     link: "/approach",
-    linkLabel: "Read the approach",
+    linkLabel: "See Approach",
   },
   {
     label: "Integrations",
