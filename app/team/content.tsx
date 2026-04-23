@@ -12,51 +12,33 @@ const team = [
     name: "Kavin Sakthivel",
     role: "Founder & CEO",
     initials: "KS",
-    photo: "/team-kavin.jpg",
+    photo: "/team-kavin.png",
     short: "Georgetown \u00b7 Real Estate & Competitive Intelligence",
-    bio: "Kavin founded Quoin after watching the same pattern repeat across commercial real estate firms: significant investment in AI, minimal operational adoption. Trained in civil engineering at PSG College of Technology and sharpened through competitive business intelligence and capital markets at Georgetown University, he approaches the built world from both the ground up and the balance sheet out. At Quoin, Kavin leads client engagements, manages the engineering team, and is the primary point of contact for every diagnostic and deployment.",
-    credentials: [
-      "Georgetown University \, M.S., Real Estate, Competitive Business Intelligence",
-      "PSG College of Technology \, B.E., Civil Engineering",
-      "President, Georgetown Graduate Student Government",
-      "Chair, SABRE",
-      "CFA Program Level II",
-      "Real Estate Financial Modeling Certification",
-    ],
+    bio: "Kavin founded Quoin after several years of research at the frontier of spatial and physical intelligence in AI, convinced that deploying AI inside property management operations is the most durable lever for reducing the long-term cost of housing. He began his career in India managing infrastructure projects as a civil engineer, then moved into real estate market analysis and commercial mortgage banking before building enterprise-grade AI platforms for the real estate industry. Kavin holds a Bachelor of Engineering in Civil Engineering from PSG College of Technology \, one of India's premier engineering institutions \, a Master's in Real Estate from Georgetown University, and a graduate certificate in Competitive Intelligence; he has also passed CFA Level II. At Quoin, Kavin partners directly with every client as the primary point of contact from the first diagnostic through long-term operations, while setting the firm's strategic direction and personally leading its engineering team.",
   },
   {
     name: "Jonathan Morris",
-    role: "Senior Advisor, Real Estate",
+    role: "Advisor, Real Estate",
     initials: "JM",
     photo: "/team-jonathan.png",
     short: "$4.7B CRE Transactions \u00b7 Fmr. Dir. Acquisitions, Boston Properties",
-    bio: "Jonathan Morris has spent more than 30 years in commercial real estate. As Director of Acquisitions at Boston Properties \, recruited by Ray Ritchey \, he helped build one of the premier office REITs in the country. As CEO of a private office REIT recruited by Brown Brothers Harriman, he led the company through a $240 million IPO. He co-founded LMH Realty Group, building a 1.5 million square foot portfolio valued at $1.5 billion at an average IRR of 44%. Jonathan advises Quoin on real estate strategy, client relationships, and market positioning.",
-    credentials: [
-      "$4.7B in commercial real estate transactions",
-      "Former Director of Acquisitions, Boston Properties (BXP)",
-      "Former CEO, Private Office REIT (Brown Brothers Harriman)",
-      "Co-Founder & Managing Principal, LMH Realty Group",
-      "Founder & CEO, REIT Academy",
-      "Senior Research Advisor, Hoya Capital",
-      "Georgetown University REIT Faculty",
-    ],
+    bio: "Jonathan Morris has spent more than three decades in commercial real estate and has closed over $4.7 billion in transactions across the capital stack. Recruited by Ray Ritchey to Boston Properties (BXP), he served as Director of Acquisitions and helped build one of the country's premier office REITs. He was later recruited by Brown Brothers Harriman to lead a private office REIT as CEO, taking the company through a $240 million IPO. He went on to co-found LMH Realty Group as Managing Principal, assembling a 1.5 million square foot portfolio valued at $1.5 billion at an average IRR of 44%. Today he is the Founder and CEO of REIT Academy, a Senior Research Advisor at Hoya Capital, and a member of Georgetown University's REIT faculty. At Quoin, Jonathan works one-on-one with clients on real estate strategy and market positioning, and helps shape the firm's own direction in the commercial real estate industry.",
   },
   {
     name: "Dr. Cynthia J. Mendoza",
-    role: "Senior Advisor, Governance & Security",
+    role: "Advisor, Governance & Security",
     initials: "CM",
     photo: "/team-cynthia.png",
     short: "Former Deputy CIO, US Department of Defense",
-    bio: "Dr. Mendoza spent two decades leading complex technology efforts across the Department of Defense and the Intelligence Community. As Deputy CIO of the Department of Defense, she led modernization across the department\u2019s compartmented IT enterprise. As IC Chief Architect at ODNI, she championed the first community-level Reference Architecture Framework. She currently serves as Chief Engineer at BAE Systems, leading engineering decisions for a $1B+ portfolio.",
-    credentials: [
-      "Former Deputy CIO, U.S. Department of Defense",
-      "Former CTO, U.S. Department of State",
-      "Former Acting Deputy CIO & IC Chief Architect, ODNI",
-      "Chief Engineer, BAE Systems ($1B+ IC portfolio)",
-      "Board Member, Intelligence and National Security Alliance",
-      "Adjunct Instructor, Georgetown University",
-      "Ph.D.; DAWIA Level Three; PMP",
-    ],
+    bio: "Dr. Cynthia Mendoza has spent two decades leading complex technology efforts across the U.S. Department of Defense and the Intelligence Community. As Deputy CIO of the Department of Defense, she led modernization across the department's compartmented IT enterprise; as CTO of the U.S. Department of State, she set the technology direction for the nation's diplomatic platform; and as Acting Deputy CIO and IC Chief Architect at ODNI, she championed the first community-level Reference Architecture Framework. She currently serves as Chief Engineer at BAE Systems, leading engineering decisions for a $1B+ Intelligence Community portfolio, sits on the board of the Intelligence and National Security Alliance, and teaches as an adjunct instructor at Georgetown University. She holds a Ph.D. and carries DAWIA Level Three and PMP certifications. At Quoin, Dr. Mendoza advises individual clients on governance, security architecture, and enterprise modernization, and establishes the governance and security standards the firm itself operates by.",
+  },
+  {
+    name: "Rohith Roshan",
+    role: "Director, Artificial Intelligence",
+    initials: "RR",
+    photo: "/team-rohith.jpeg",
+    short: "Agentic AI \u00b7 Physics-Informed Neural Networks \u00b7 Applied Research",
+    bio: "Rohith Roshan leads Quoin's artificial intelligence work, setting research direction and owning the design, evaluation, and deployment of the agents we build for clients. Trained as an electrical engineer, he specializes in agentic frameworks and physics-informed neural networks, building production AI systems capable of handling mission-grade workloads. Before moving full-time into AI engineering in 2024, he spent nearly a year as a Real Estate Rental Manager at Arun Realty, which gave him direct operational context for the property management workflows Quoin automates. Alongside his applied work, Rohith has conducted multi-year independent research at the foundations of AI and information theory \u2014 including investigations framing reality as a binary tree of events rather than stochastic processes, and earlier work on the effects of perception and consciousness on subjective reality. He holds a Bachelor of Engineering in Electrical Engineering. At Quoin, Rohith designs and evaluates the AI delivered on every client engagement and owns the firm's AI stack end-to-end \u2014 from model selection and evaluation to agent architecture and the physics-informed modeling that keeps our systems at the frontier.",
   },
   {
     name: "Ricky Fauntleroy",
@@ -64,26 +46,15 @@ const team = [
     initials: "RF",
     photo: "/team-ricky.png",
     short: "Manager IT Consulting Delivery, CGI Federal",
-    bio: "Ricky brings enterprise IT infrastructure and cybersecurity from the federal sector. As Manager of IT Consulting Delivery at CGI Federal, he manages production delivery of IT services supporting the Social Security Administration. His background spans systems engineering, cybersecurity, and endpoint infrastructure \, the foundation that enterprise AI runs on.",
-    credentials: [
-      "Manager, IT Consulting Delivery \, CGI Federal",
-      "Former Microsoft SME/Engineer IV \, Leidos",
-      "Georgetown University SCS \, M.P.S., Cybersecurity Risk Management",
-      "HIPAA Security and Privacy; Cyber Awareness Certified",
-    ],
+    bio: "Ricky Fauntleroy brings enterprise IT infrastructure and cybersecurity experience from the federal sector. As Manager of IT Consulting Delivery at CGI Federal, he oversees production delivery of IT services supporting the Social Security Administration. Earlier in his career, he served as a Microsoft Subject Matter Expert and Engineer IV at Leidos, leading systems engineering and endpoint infrastructure work on mission-critical federal programs. He holds a Master of Professional Studies in Cybersecurity Risk Management from Georgetown University's School of Continuing Studies and is certified in HIPAA Security and Privacy and Cyber Awareness. At Quoin, Ricky builds and secures the information technology, cybersecurity, and endpoint infrastructure for each client deployment and for the firm itself \u2014 the foundation enterprise AI runs on.",
   },
   {
     name: "Brandon Timpane",
-    role: "Director, Data Readiness",
+    role: "Independent Consultant, Data Readiness",
     initials: "BT",
     photo: "/team-brandon.png",
     short: "Enterprise Applications & Data \u00b7 German Marshall Fund \u00b7 Georgetown ITM",
-    bio: "Brandon brings enterprise application management and data operations experience from the German Marshall Fund of the United States. His work in application training, data operations, and IT management gives him practical understanding of the gap between what a system can do and what staff actually does with it. Brandon supports diagnostic and deployment engagements, focusing on data readiness and application integration.",
-    credentials: [
-      "Enterprise Applications Specialist \, German Marshall Fund of the United States",
-      "Data Annotator \, Enabled Intelligence, Inc.",
-      "Georgetown University SCS \, M.P.S., Information Technology Management",
-    ],
+    bio: "Brandon Timpane brings enterprise application management and data operations experience from the German Marshall Fund of the United States, where he serves as an Enterprise Applications Specialist leading application training, data operations, and IT management. Earlier in his career, he worked as a Data Annotator at Enabled Intelligence, Inc., developing a practical understanding of the gap between what a system is capable of and what users actually do with it. He holds a Master of Professional Studies in Information Technology Management from Georgetown University's School of Continuing Studies. At Quoin, Brandon embeds with client teams on diagnostic and deployment engagements, focusing on data readiness and application integration, and contributes to the firm's broader data practice.",
   },
 ]
 
@@ -194,38 +165,40 @@ export function TeamContent() {
               {selectedMember.bio}
             </p>
 
-            <div>
-              <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4">
-                Credentials
-              </p>
-              <ul className="space-y-2">
-                {selectedMember.credentials.map((cred, i) => (
-                  <li key={i} className="text-sm leading-relaxed text-muted-foreground flex items-start gap-2">
-                    <span className="text-accent mt-1 shrink-0">&bull;</span>
-                    {cred}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {selectedMember.credentials && selectedMember.credentials.length > 0 && (
+              <div>
+                <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4">
+                  Credentials
+                </p>
+                <ul className="space-y-2">
+                  {selectedMember.credentials.map((cred, i) => (
+                    <li key={i} className="text-sm leading-relaxed text-muted-foreground flex items-start gap-2">
+                      <span className="text-accent mt-1 shrink-0">&bull;</span>
+                      {cred}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       )}
 
-      {/* Governance */}
+      {/* Engineering */}
       <BlurFade inView direction="up">
         <section className="px-6 py-16 md:px-12 lg:px-20 md:py-20 border-t border-border">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="lg:col-span-5">
               <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
-                Governance
+                Engineering
               </p>
               <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground">
-                Our AI governance framework
+                The engineering bench behind every deployment
               </h2>
             </div>
             <div className="lg:col-span-6 lg:col-start-7 flex flex-col justify-end">
               <p className="text-sm leading-[1.85] text-muted-foreground">
-                Every engagement includes governance architecture designed to support fair housing compliance, data privacy (GDPR, CCPA, state-level), algorithmic bias monitoring, and full audit accountability. Governance is built before deployment, not added after.
+                The people profiled above set direction and lead engagements. Standing behind them is a broader team of AI, data, infrastructure, and security engineers who design, build, deploy, and operate the systems we put into production for clients. Every engagement is staffed with a dedicated, cross-functional squad drawn from this bench and embedded with your team &mdash; the leadership you see here stays on, and the engineering depth scales with the work.
               </p>
             </div>
           </div>
@@ -238,14 +211,14 @@ export function TeamContent() {
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
             <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-tight mb-6">
-              Hiring people, not a brand
+              The people you&rsquo;ll actually work with
             </h2>
             <p className="text-sm leading-[1.85] text-background/45 max-w-lg mx-auto mb-12">
-              Start with a conversation. See if the fit is there.
+              Start with a conversation. Meet the team that would lead your engagement.
             </p>
             <Link
               href="/contact"
-              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 bg-white text-black hover:bg-white/90 transition-colors duration-150"
             >
               Talk to us
             </Link>

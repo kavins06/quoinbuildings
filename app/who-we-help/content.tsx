@@ -57,7 +57,7 @@ export function WhoWeHelpContent() {
         eyebrow="Who We Help"
         title="AI Adoption and Operations for Mid-Market Property Management Firms"
         description="We work with firms large enough to have multi-property operational complexity and too lean to build a dedicated internal AI team."
-        backgroundImage="/header-who-we-help.jpg"
+        backgroundImage="https://images.unsplash.com/photo-1613575831056-0acd5da8f085?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="pb-4 md:pb-8"
       />
@@ -196,7 +196,7 @@ export function WhoWeHelpContent() {
             </p>
             <Link
               href="/contact"
-              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 bg-white text-black hover:bg-white/90 transition-colors duration-150"
             >
               Talk to us
             </Link>

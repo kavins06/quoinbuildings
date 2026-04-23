@@ -194,7 +194,6 @@ export function ApproachContent() {
         title="From Diagnostic to Production: Decision Points at Every Stage"
         description="Every engagement starts with a 2-week diagnostic. What happens after that depends on what we find. You decide at each stage whether to continue."
         backgroundImage="/header-approach.jpg"
-        imageGrayscale
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="pb-4 md:pb-8"
       />
@@ -257,7 +256,7 @@ export function ApproachContent() {
             </p>
             <Link
               href="/contact"
-              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 bg-white text-black hover:bg-white/90 transition-colors duration-150"
             >
               Talk to us
             </Link>

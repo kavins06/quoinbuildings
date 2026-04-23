@@ -112,6 +112,9 @@ export function GovernanceContent() {
         eyebrow="AI Governance"
         title="Responsible AI is not optional in property management."
         description="Every AI system that touches tenant data, screening decisions, or financial reporting requires a governance framework. This is ours."
+        backgroundImage="https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
+        contentClassName="pb-4 md:pb-8"
       />
 
       <section className="px-6 py-20 md:px-12 lg:px-20 md:py-28">
@@ -174,7 +177,7 @@ export function GovernanceContent() {
             </p>
             <Link
               href="/contact"
-              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 bg-white text-black hover:bg-white/90 transition-colors duration-150"
             >
               Talk to us
             </Link>

@@ -42,7 +42,7 @@ export function Hero() {
               <div className="mt-10 md:mt-12 hidden md:flex items-center gap-6">
                 <Link
                   href="/contact"
-                  className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 border border-strong text-ink-primary hover:bg-surface-inverse hover:text-surface-base transition-colors duration-150"
+                  className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 bg-white text-black hover:bg-white/90 transition-colors duration-150"
                 >
                   Talk to us
                 </Link>
