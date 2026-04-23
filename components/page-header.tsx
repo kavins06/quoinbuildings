@@ -38,7 +38,12 @@ export function PageHeader({
       )}
       <div className={cn("relative z-10 max-w-4xl", contentClassName)}>
         <BlurFade delay={0.2} direction="up">
-          <p className="text-[11px] tracking-[0.3em] uppercase text-ink-muted mb-6">
+          <p
+            className={cn(
+              "text-[11px] tracking-[0.3em] uppercase mb-6",
+              backgroundImage ? "text-white/75" : "text-ink-muted",
+            )}
+          >
             {eyebrow}
           </p>
         </BlurFade>
@@ -51,7 +56,12 @@ export function PageHeader({
 
         {description && (
           <BlurFade delay={0.6} direction="up">
-            <p className="mt-6 text-base font-light leading-relaxed text-ink-secondary max-w-2xl">
+            <p
+              className={cn(
+                "mt-6 text-base font-light leading-relaxed max-w-2xl",
+                backgroundImage ? "text-white/85" : "text-ink-secondary",
+              )}
+            >
               {description}
             </p>
           </BlurFade>
