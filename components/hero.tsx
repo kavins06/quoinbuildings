@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { Highlighter } from "@/components/ui/highlighter"
 import { NumberTicker } from "@/components/ui/number-ticker"
 import { WordRotate } from "@/components/ui/word-rotate"
 
@@ -29,7 +28,7 @@ export function Hero() {
 
             <BlurFade delay={0.7} direction="up">
               <p className="mt-8 text-base md:text-lg font-light leading-relaxed text-ink-primary max-w-2xl md:max-w-3xl">
-                We help enterprise <Highlighter delay={0.3}>property management companies</Highlighter> turn AI into governed operating layer across leasing, maintenance, resident service, reporting, and compliance improving NOI while reducing legal, security, and property-level execution risk.
+                We help enterprise property management companies turn AI into governed operating layer across leasing, maintenance, resident service, reporting, and compliance improving NOI while reducing legal, security, and property-level execution risk.
               </p>
             </BlurFade>
 
