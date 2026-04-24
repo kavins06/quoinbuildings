@@ -89,9 +89,6 @@ export function TeamContent() {
           <p className="text-sm leading-[1.85] text-muted-foreground max-w-4xl">
             Property management AI requires three things most teams do not have in one place: operational knowledge of how property management actually runs, the engineering to build and deploy production AI, and governance experience that satisfies legal, compliance, and regulatory requirements.
           </p>
-          <p className="text-sm leading-[1.85] text-muted-foreground max-w-4xl">
-            Jonathan brings 30 years of CRE operating experience. Cynthia brings two decades of enterprise technology governance from the Department of Defense and Intelligence Community. The engineering team brings production AI development.
-          </p>
         </BlurFade>
       </section>
 
