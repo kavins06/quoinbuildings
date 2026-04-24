@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
+import { SparklesText } from "@/components/ui/sparkles-text"
 
 interface WordRotateProps {
   words: string[]
@@ -47,7 +48,7 @@ export function WordRotate({ words, duration = 2000, className }: WordRotateProp
           }}
           className={cn("inline-block", className)}
         >
-          {words[index]}
+          <SparklesText>{words[index]}</SparklesText>
         </motion.span>
       </AnimatePresence>
     </span>

@@ -90,12 +90,17 @@ const config: Config = {
           '50%': { backgroundPosition: '100% 50%' },
           '100%': { backgroundPosition: '0% 50%' },
         },
+        sparkle: {
+          '0%, 100%': { opacity: '0', transform: 'scale(0)' },
+          '50%': { opacity: '1', transform: 'scale(1)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-rise': 'fade-rise 400ms ease-out',
         aurora: 'aurora 10s ease infinite',
+        sparkle: 'sparkle 2s ease-in-out infinite',
       },
     },
   },
