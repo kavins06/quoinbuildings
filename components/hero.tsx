@@ -28,7 +28,7 @@ export function Hero() {
 
             <BlurFade delay={0.7} direction="up">
               <p className="mt-8 text-base md:text-lg font-light leading-relaxed text-ink-primary max-w-2xl md:max-w-3xl">
-                We help enterprise property management companies safely deploy AI into leasing, maintenance, resident service, reporting, and compliance workflows improving operating capacity and NOI without adding unmanaged legal, security, or property-level execution risk.
+                We help enterprise property management companies turn AI into governed operating layer across leasing, maintenance, resident service, reporting, and compliance improving NOI while reducing legal, security, and property-level execution risk.
               </p>
             </BlurFade>
 
