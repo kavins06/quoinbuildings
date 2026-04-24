@@ -72,13 +72,13 @@ export function Hero() {
                   AI Capability
                 </p>
                 <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight">
-                  <NumberTicker value={83} className="inline-block tracking-tight text-accent" />%
+                  <NumberTicker value={85.9} decimalPlaces={1} className="inline-block tracking-tight text-accent" />%
                 </p>
                 <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
                   Of knowledge work tasks where AI output matches or beats a domain expert
                 </p>
                 <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-1 italic">
-                  <a href="https://techcrunch.com/2026/03/05/openai-launches-gpt-5-4-with-pro-and-thinking-versions/" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">TechCrunch, Mar 2026</a>
+                  <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">OpenAI, Apr 2026</a>
                 </p>
               </div>
             </BlurFade>
