@@ -12,7 +12,7 @@ const logos = [
   { src: "/logos/nar.svg", alt: "National Association of Realtors" },
   { src: "/logos/newpoint.svg", alt: "NewPoint Real Estate Capital" },
   { src: "/logos/gmf.svg", alt: "German Marshall Fund of the United States" },
-  { src: "/logos/enabled-intelligence.svg", alt: "Enabled Intelligence" },
+  { src: "/logos/enabled-intelligence.png", alt: "Enabled Intelligence" },
 ]
 
 export function EditorialBreak() {
