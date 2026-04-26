@@ -35,9 +35,6 @@ export function Footer() {
             <p className="text-sm text-ink-secondary leading-relaxed mt-5 max-w-xs">
               Your AI Operating Partner
             </p>
-            <p className="text-sm text-ink-muted mt-4">
-              Headquarters &middot; Washington, DC
-            </p>
           </div>
 
           <div>
@@ -105,12 +102,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between pt-5 mt-6 border-t border-subtle gap-3">
+        <div className="pt-5 mt-6 border-t border-subtle">
           <p className="text-[12px] text-ink-muted">
             © 2026 Quoin Buildings, LLC. All rights reserved.
-          </p>
-          <p className="text-[12px] text-ink-muted">
-            Headquarters &middot; Washington, DC
           </p>
         </div>
       </div>

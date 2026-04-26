@@ -338,9 +338,6 @@ export function ContactContent() {
                 >
                   kavins@quoinbuildings.com
                 </a>
-                <p className="text-sm text-muted-foreground mt-3">
-                  Washington, DC
-                </p>
               </div>
 
               <div>

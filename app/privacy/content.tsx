@@ -43,7 +43,7 @@ const sections = [
   {
     title: "Contact",
     content:
-      "If you have questions about this privacy policy or our data practices, contact us at kavins@quoinbuildings.com. Quoin Buildings, Washington, DC.",
+      "If you have questions about this privacy policy or our data practices, contact us at kavins@quoinbuildings.com.",
   },
 ]
 

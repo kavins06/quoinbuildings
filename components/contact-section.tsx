@@ -48,12 +48,9 @@ export function ContactSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
                 <p className="text-[11px] tracking-[0.3em] uppercase text-background/35 mb-5">
-                  Headquarters
+                  Direct
                 </p>
-                <p className="text-sm leading-[1.75] text-background/55">
-                  Washington, DC
-                </p>
-                <p className="text-sm text-background/55 mt-4">
+                <p className="text-sm text-background/55">
                   kavins@quoinbuildings.com
                 </p>
               </div>
