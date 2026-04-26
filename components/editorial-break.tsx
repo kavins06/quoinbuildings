@@ -31,7 +31,7 @@ export function EditorialBreak() {
           <div className="hidden md:flex flex-col gap-6">
             <DraggableMarquee duration={55}>
               {logos.slice(0, 6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-8 h-28 shrink-0">
+                <div key={logo.alt} className="flex flex-col items-center justify-start mx-8 h-28 shrink-0">
                   <img
                     src={logo.src}
                     alt={logo.alt}
@@ -48,7 +48,7 @@ export function EditorialBreak() {
             </DraggableMarquee>
             <DraggableMarquee duration={55} reverse>
               {logos.slice(6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-8 h-28 shrink-0">
+                <div key={logo.alt} className="flex flex-col items-center justify-start mx-8 h-28 shrink-0">
                   <img
                     src={logo.src}
                     alt={logo.alt}
@@ -69,7 +69,7 @@ export function EditorialBreak() {
           <div className="md:hidden flex flex-col gap-4">
             <DraggableMarquee duration={40}>
               {logos.slice(0, 6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-5 h-16 shrink-0">
+                <div key={logo.alt} className="flex flex-col items-center justify-start mx-5 h-16 shrink-0">
                   <img src={logo.src} alt={logo.alt} draggable={false} className="h-7 w-auto object-contain opacity-90 select-none pointer-events-none" />
                   {logo.label && (
                     <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
@@ -81,7 +81,7 @@ export function EditorialBreak() {
             </DraggableMarquee>
             <DraggableMarquee duration={40} reverse>
               {logos.slice(6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-5 h-16 shrink-0">
+                <div key={logo.alt} className="flex flex-col items-center justify-start mx-5 h-16 shrink-0">
                   <img src={logo.src} alt={logo.alt} draggable={false} className="h-7 w-auto object-contain opacity-90 select-none pointer-events-none" />
                   {logo.label && (
                     <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
