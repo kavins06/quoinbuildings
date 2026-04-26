@@ -363,8 +363,7 @@ export function ContactContent() {
                   Suggested Participants
                 </p>
                 <p className="text-sm leading-[1.75] text-muted-foreground">
-                  The first call works best with the executive sponsor — COO, CEO, or VP Operations. If your CTO or IT lead is part of the AI decision, they are welcome. One to three people; no presentation deck needed.
-                </p>
+                  The first call works best with the executive sponsor — COO, CEO, or VP Operations. If your CTO or IT lead is part of the AI decision, they are welcome.                </p>
               </div>
             </div>
           </BlurFade>
