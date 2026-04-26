@@ -129,10 +129,10 @@ function PhaseBlock({ phase, index }: { phase: typeof phases[0]; index: number }
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
             <div className="relative z-10 flex flex-col justify-end h-full p-6 md:p-8">
-              <span className="text-[11px] tracking-[0.15em] text-ink-muted mb-3">
+              <span className="text-[11px] tracking-[0.15em] text-white/70 mb-3">
                 ({phase.number})
               </span>
-              <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-ink-primary">
+              <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
                 {phase.name}
               </h2>
               <p className="text-[11px] tracking-[0.15em] uppercase text-accent mt-2">
