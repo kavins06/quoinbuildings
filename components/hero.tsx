@@ -29,7 +29,7 @@ export function Hero() {
 
             <BlurFade delay={0.7} direction="up">
               <p className="mt-8 text-base md:text-lg font-light leading-relaxed text-ink-primary max-w-2xl md:max-w-3xl">
-                We help enterprise <AuroraText className="font-medium">property management companies</AuroraText> turn AI into governed operating layer across leasing, maintenance, resident service, reporting, and compliance improving NOI while reducing legal, security, and property-level execution risk.
+                Quoin helps enterprise <AuroraText className="font-medium">Property &amp; Asset Management Companies</AuroraText> turn AI into governed operating layer across leasing, maintenance, resident service, reporting, compliance and internal ops. Improving NOI while reducing legal, security, and property-level execution risk.
               </p>
             </BlurFade>
 
