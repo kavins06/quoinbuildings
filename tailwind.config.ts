@@ -13,6 +13,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
         serif: ['var(--font-serif)', 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'serif'],
+        display: ['var(--font-display)', 'Newsreader', 'Source Serif 4', 'Georgia', 'serif'],
       },
       colors: {
         // Semantic trust-system tokens

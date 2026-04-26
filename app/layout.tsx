@@ -1,6 +1,6 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Inter, Source_Serif_4 } from 'next/font/google'
+import { Inter, Source_Serif_4, Newsreader } from 'next/font/google'
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { CookieBanner } from "@/components/cookie-banner"
@@ -21,6 +21,14 @@ const sourceSerif = Source_Serif_4({
   display: 'swap',
 })
 
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['400', '500', '600'],
+  style: 'normal',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   title: 'Quoin | AI Operating Partner for Property Management',
   description: 'Quoin is an AI operating partner for property management firms. We build, deploy, and manage AI agents that integrate with your existing systems and workflows.',
@@ -36,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable} ${newsreader.variable}`}>
       <body className="font-sans antialiased bg-background text-foreground">
         <a
           href="#main"
