@@ -54,7 +54,7 @@ const quoin = {
     "Production AI systems in your operations",
     "We do, continuously",
     "Built into every deployment from day one",
-    "You have a live AI workflow, monitored, retrained, and expanding.",
+    "You have an AI operating layer with workflow, monitored, retrained, and expanding.",
   ],
 }
 
