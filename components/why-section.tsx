@@ -4,7 +4,7 @@ import { BlurFade } from "@/components/ui/blur-fade"
 
 export function WhySection() {
   return (
-    <section className="px-6 py-20 md:px-12 lg:px-20 md:py-28">
+    <section className="px-6 py-10 md:px-12 lg:px-20 md:py-14">
       <div className="max-w-3xl">
         <BlurFade inView direction="up">
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4">
