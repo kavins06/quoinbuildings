@@ -1,6 +1,7 @@
 "use client"
 
 import { BlurFade } from "@/components/ui/blur-fade"
+import { Marquee } from "@/components/ui/marquee"
 
 const logos = [
   { src: "/logos/georgetown.svg", alt: "Georgetown University" },
@@ -22,15 +23,19 @@ export function EditorialBreak() {
         <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/60 mb-10 text-center">
           Experience From
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-8 gap-y-12 items-center justify-items-center max-w-6xl mx-auto">
-          {logos.map((logo) => (
-            <img
-              key={logo.alt}
-              src={logo.src}
-              alt={logo.alt}
-              className="h-12 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
-            />
-          ))}
+        <div className="relative max-w-6xl mx-auto">
+          <Marquee pauseOnHover className="[--duration:50s] [--gap:4rem]">
+            {logos.map((logo) => (
+              <img
+                key={logo.alt}
+                src={logo.src}
+                alt={logo.alt}
+                className="h-12 md:h-16 w-auto object-contain mx-8 opacity-90 hover:opacity-100 transition-opacity duration-500"
+              />
+            ))}
+          </Marquee>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent" />
         </div>
       </BlurFade>
 
