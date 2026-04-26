@@ -74,9 +74,9 @@ export function Navigation() {
       <div
         id="mobile-nav"
         hidden={!isOpen}
-        className="md:hidden bg-surface-base border-t border-subtle"
+        className="md:hidden absolute top-full inset-x-0 bg-surface-base/85 backdrop-blur-md border-t border-subtle shadow-lg"
       >
-        <div className="w-full px-6 md:px-12 lg:px-20 flex flex-col py-8 gap-6">
+        <div className="w-full px-6 flex flex-col py-8 gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.label}
