@@ -18,7 +18,7 @@ export function EditorialBreak() {
         <BlurFade inView delay={0.2} direction="up" className="lg:col-span-4 lg:col-start-9">
           <div className="w-10 h-px bg-accent/40 mb-8" />
           <p className="text-xl md:text-2xl lg:text-[1.65rem] font-normal leading-[1.35] tracking-tight text-foreground text-balance">
-            {"\u201CThe firms that succeed will with AI revolution are not the ones that bought the best tool. They are the ones that integrate all workflow through an Intelligence layer, governe the risk, and train the employees for future.\u201D"}
+            {"\u201CThe firms that will succeed in the AI revolution are not the ones that buy the best tools. They are the ones that integrate all workflows through an intelligence layer, govern the risk, and train their employees for the future.\u201D"}
           </p>
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mt-8">
             Kavin Sakthivel, Founder &amp; CEO
