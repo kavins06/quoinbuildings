@@ -22,7 +22,7 @@ export function EditorialBreak() {
   return (
     <section className="px-6 md:px-12 lg:px-20 pt-4 pb-12 md:pt-6 md:pb-16">
       <BlurFade inView direction="up">
-        <h2 className="font-serif text-3xl md:text-[2.5rem] font-normal tracking-tight mb-12 text-center">
+        <h2 className="font-serif text-lg md:text-2xl font-normal tracking-tight mb-8 text-center">
           <AuroraText>Expertise from</AuroraText>
         </h2>
         <div className="relative max-w-6xl mx-auto">
@@ -30,11 +30,11 @@ export function EditorialBreak() {
           <div className="hidden md:flex flex-col gap-6">
             <Marquee pauseOnHover className="[--duration:55s] [--gap:4rem]">
               {logos.slice(0, 6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-10 h-32">
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-8 h-24">
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
+                    className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
                   />
                   {logo.label && (
                     <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
@@ -46,11 +46,11 @@ export function EditorialBreak() {
             </Marquee>
             <Marquee reverse pauseOnHover className="[--duration:55s] [--gap:4rem]">
               {logos.slice(6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-10 h-32">
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-8 h-24">
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
+                    className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
                   />
                   {logo.label && (
                     <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
@@ -66,8 +66,8 @@ export function EditorialBreak() {
           <div className="md:hidden flex flex-col gap-4">
             <Marquee pauseOnHover className="[--duration:40s] [--gap:2.5rem]">
               {logos.slice(0, 6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-6 h-16">
-                  <img src={logo.src} alt={logo.alt} className="h-10 w-auto object-contain opacity-90" />
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-5 h-12">
+                  <img src={logo.src} alt={logo.alt} className="h-7 w-auto object-contain opacity-90" />
                   {logo.label && (
                     <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
                       {logo.label}
@@ -78,8 +78,8 @@ export function EditorialBreak() {
             </Marquee>
             <Marquee reverse pauseOnHover className="[--duration:40s] [--gap:2.5rem]">
               {logos.slice(6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-6 h-16">
-                  <img src={logo.src} alt={logo.alt} className="h-10 w-auto object-contain opacity-90" />
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-5 h-12">
+                  <img src={logo.src} alt={logo.alt} className="h-7 w-auto object-contain opacity-90" />
                   {logo.label && (
                     <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
                       {logo.label}
