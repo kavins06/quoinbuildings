@@ -88,14 +88,29 @@ export function ContactContent() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
           <BlurFade inView direction="up" className="lg:col-span-7">
             {submitted ? (
-              <div className="py-16">
-                <div className="w-10 h-px bg-accent/40 mb-8" />
-                <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-4">
-                  Thank you.
+              <div className="py-8">
+                <div className="w-10 h-px bg-accent/40 mb-6" />
+                <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-3">
+                  Thanks — pick a time.
                 </h2>
-                <p className="text-sm leading-[1.75] text-muted-foreground">
-                  We will be in touch within one business day.
+                <p className="text-sm leading-[1.75] text-muted-foreground mb-8">
+                  Grab a 30-minute slot below. You&rsquo;ll get a calendar invite and a Meet link.
                 </p>
+                {process.env.NEXT_PUBLIC_BOOKING_URL ? (
+                  <div className="border border-border rounded-sm overflow-hidden bg-background">
+                    <iframe
+                      src={process.env.NEXT_PUBLIC_BOOKING_URL}
+                      title="Book a 30-minute call"
+                      className="w-full"
+                      style={{ height: "720px", border: 0 }}
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <p className="text-sm text-muted-foreground">
+                    We&rsquo;ll email you a booking link within one business day.
+                  </p>
+                )}
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-8">
