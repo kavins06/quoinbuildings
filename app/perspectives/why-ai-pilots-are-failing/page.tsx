@@ -40,62 +40,50 @@ export default function ArticlePage() {
         <div className="prose-content flex flex-col gap-4 text-[15px] md:text-base leading-[1.7] text-foreground/80">
           <p>
             AI pilots in property management are rarely failing because the
-            technology cannot work.
-          </p>
-          <p>
-            They are failing because most pilots are designed around tools, not
-            workflows.
+            technology cannot work. They are failing because most pilots are
+            designed around tools, not workflows.
           </p>
           <p>
             A property management company buys access to an AI chatbot, tests a
             maintenance summarizer, experiments with leasing email automation,
-            or asks a model to draft resident notices. The demo looks
-            promising. The team sees flashes of value. Then the pilot stalls.
-          </p>
-          <p>Why?</p>
-          <p>
-            Because property management is not a collection of isolated tasks.
-            It is an operating system of handoffs: residents, leasing agents,
-            maintenance coordinators, vendors, accountants, regional managers,
-            owners, compliance teams, and property management software all
-            moving imperfect information through time-sensitive workflows.
+            or asks a model to draft resident notices. The demo looks promising.
+            The team sees flashes of value. Then the pilot stalls.
           </p>
           <p>
-            AI only creates leverage when it is embedded into that operating
-            system.
+            Why? Because property management is not a collection of isolated
+            tasks. It is an operating system of handoffs: residents, leasing
+            agents, maintenance coordinators, vendors, accountants, regional
+            managers, owners, compliance teams, and property management
+            software all moving imperfect information through time-sensitive
+            workflows. AI only creates leverage when it is embedded into that
+            operating system.
           </p>
 
           <H2>The Pilot Problem: AI Is Being Tested in the Wrong Layer</H2>
-          <p>Most AI pilots start with the question: “What can this tool do?”</p>
-          <p>That is the wrong starting point.</p>
           <p>
-            The better question is: “Where does our operation repeatedly lose
-            time, margin, or service quality because humans are forced to
-            interpret messy information and decide what happens next?”
+            Most AI pilots start with the question: “What can this tool do?”
+            That is the wrong starting point. The better question is: “Where
+            does our operation repeatedly lose time, margin, or service
+            quality because humans are forced to interpret messy information
+            and decide what happens next?” That is where AI belongs.
           </p>
-          <p>That is where AI belongs.</p>
           <p>
             In property management, the biggest inefficiencies are rarely
             simple writing tasks. They are judgment-heavy coordination
-            problems:
-          </p>
-          <p>
-            A resident submits a vague maintenance request: “Water under sink
-            again.” Someone has to determine urgency, ask follow-up questions,
-            check warranty status, assign the right vendor, verify access
-            instructions, update the resident, and make sure the work order
-            does not disappear.
+            problems. A resident submits a vague maintenance request — “Water
+            under sink again” — and someone has to determine urgency, ask
+            follow-up questions, check warranty status, assign the right
+            vendor, verify access instructions, update the resident, and make
+            sure the work order does not disappear.
           </p>
           <p>
             A leasing prospect asks five questions across three channels.
             Someone has to identify intent, confirm availability, answer
             accurately based on property rules, push toward a tour, and log
-            the interaction correctly.
-          </p>
-          <p>
-            An owner asks why repairs are elevated this month. Someone has to
-            connect invoices, work orders, unit history, vendor notes, and
-            budget variance into a coherent explanation.
+            the interaction correctly. An owner asks why repairs are elevated
+            this month — someone has to connect invoices, work orders, unit
+            history, vendor notes, and budget variance into a coherent
+            explanation.
           </p>
           <p>
             These are not “AI writing assistant” problems. They are workflow
@@ -108,47 +96,39 @@ export default function ArticlePage() {
           <p>
             Property management runs on systems: PMS, CRM, maintenance
             platforms, accounting software, resident portals, call centers,
-            email, spreadsheets, and shared drives.
+            email, spreadsheets, and shared drives. If AI cannot read from or
+            write back to the relevant system, it becomes another place
+            employees have to check — and that kills adoption.
           </p>
-          <p>
-            If AI cannot read from or write back to the relevant system, it
-            becomes another place employees have to check.
-          </p>
-          <p>That kills adoption.</p>
           <p>
             A maintenance coordinator will not copy work order notes into an
             AI tool, ask for a summary, then manually update the PMS. A
             leasing agent will not trust an AI assistant if pricing,
             concessions, availability, pet rules, and tour schedules are
-            outdated.
-          </p>
-          <p>
-            AI that sits outside the workflow becomes novelty. AI inside the
-            workflow becomes infrastructure.
+            outdated. AI that sits outside the workflow becomes novelty. AI
+            inside the workflow becomes infrastructure.
           </p>
 
           <H3>2. The workflow owner is unclear</H3>
           <p>
             Many pilots are sponsored by leadership, evaluated by IT, tested
-            by onsite teams, and judged by finance.
-          </p>
-          <p>That sounds collaborative. In practice, it creates a vacuum.</p>
-          <p>Nobody owns the operational redesign.</p>
-          <p>
-            For example, if AI triages maintenance requests, who decides the
-            escalation rules? Who approves the emergency criteria? Who
-            monitors false positives? Who updates the logic when vendor
-            coverage changes? Who reviews resident complaints?
+            by onsite teams, and judged by finance. That sounds collaborative.
+            In practice, it creates a vacuum: nobody owns the operational
+            redesign.
           </p>
           <p>
-            Without a workflow owner, the pilot becomes a technology trial
-            instead of an operational change.
+            If AI triages maintenance requests, who decides the escalation
+            rules? Who approves the emergency criteria? Who monitors false
+            positives? Who updates the logic when vendor coverage changes?
+            Who reviews resident complaints? Without a workflow owner, the
+            pilot becomes a technology trial instead of an operational
+            change.
           </p>
 
           <H3>3. Success metrics are too soft</H3>
-          <p>“Improved efficiency” is not a metric.</p>
           <p>
-            A useful AI pilot should target measurable operating outcomes:
+            “Improved efficiency” is not a metric. A useful AI pilot should
+            target measurable operating outcomes:
           </p>
           <Bullets>
             <li>Response time reduced from 6 hours to 30 minutes.</li>
@@ -177,49 +157,40 @@ export default function ArticlePage() {
           <p>
             Property management is full of risk: fair housing, habitability,
             privacy, lease compliance, security deposits, rent collection,
-            insurance, vendor liability.
-          </p>
-          <p>Operators are right to be cautious.</p>
-          <p>
+            insurance, vendor liability. Operators are right to be cautious.
             AI pilots fail when teams are told, “Just use it,” without clear
-            boundaries. Staff need to know what AI can do, what it cannot do,
-            when humans must review, and what gets logged.
+            boundaries — staff need to know what AI can do, what it cannot
+            do, when humans must review, and what gets logged.
           </p>
           <p>
-            For example, AI can draft a response to a reasonable
-            accommodation request, but it should not independently make the
-            decision. AI can identify a potentially urgent maintenance issue,
-            but emergency escalation rules need human-approved thresholds. AI
-            can summarize delinquency history, but payment plan communication
-            must follow company policy and applicable law.
+            AI can draft a response to a reasonable accommodation request, but
+            it should not independently make the decision. AI can identify a
+            potentially urgent maintenance issue, but emergency escalation
+            rules need human-approved thresholds. AI can summarize delinquency
+            history, but payment plan communication must follow company
+            policy and applicable law. Adoption increases when AI is
+            controlled, auditable, and specific.
           </p>
-          <p>Adoption increases when AI is controlled, auditable, and specific.</p>
 
           <H3>5. The pilot ignores frontline behavior</H3>
           <p>
-            A regional manager may love the dashboard. The onsite team may see
-            extra work.
-          </p>
-          <p>That gap kills pilots.</p>
-          <p>
-            If AI adds steps, requires duplicate entry, interrupts established
-            routines, or produces outputs that employees have to heavily
-            correct, the team will quietly stop using it.
-          </p>
-          <p>
-            The best AI deployments reduce cognitive load. They do not ask
-            already-stretched teams to become prompt engineers.
+            A regional manager may love the dashboard while the onsite team
+            sees only extra work — and that gap kills pilots. If AI adds
+            steps, requires duplicate entry, interrupts established routines,
+            or produces outputs that employees have to heavily correct, the
+            team will quietly stop using it. The best AI deployments reduce
+            cognitive load; they do not ask already-stretched teams to become
+            prompt engineers.
           </p>
 
           <H2>What to Do Instead</H2>
 
           <H3>Start with one high-friction workflow</H3>
-          <p>Do not pilot “AI for property management.”</p>
           <p>
-            Pilot AI for a specific workflow with visible pain and measurable
-            throughput.
+            Do not pilot “AI for property management.” Pilot AI for a specific
+            workflow with visible pain and measurable throughput. Strong
+            candidates include:
           </p>
-          <p>Strong candidates include:</p>
           <Bullets>
             <li>Maintenance request intake and triage.</li>
             <li>Leasing lead response and qualification.</li>
@@ -252,57 +223,48 @@ export default function ArticlePage() {
           </p>
 
           <H3>Build around human-in-the-loop execution</H3>
-          <p>The goal is not full autonomy on day one.</p>
-          <p>A better model is controlled acceleration.</p>
           <p>
-            In maintenance, AI can classify the issue, detect emergency
-            language, ask the resident for photos, suggest the trade
-            category, draft vendor instructions, and prepare the resident
-            update. A coordinator reviews and approves.
+            The goal is not full autonomy on day one. A better model is
+            controlled acceleration. In maintenance, AI can classify the
+            issue, detect emergency language, ask the resident for photos,
+            suggest the trade category, draft vendor instructions, and
+            prepare the resident update — a coordinator reviews and approves.
           </p>
           <p>
-            In leasing, AI can answer property-specific questions, qualify the
-            prospect, recommend available units, and schedule tours within
-            approved parameters. Human agents handle edge cases and
-            high-intent conversations.
+            In leasing, AI can answer property-specific questions, qualify
+            the prospect, recommend available units, and schedule tours
+            within approved parameters; human agents handle edge cases and
+            high-intent conversations. In accounting, AI can flag invoice
+            anomalies, match invoices to work orders, and suggest GL codes —
+            the accounting team approves exceptions. This is where trust
+            compounds.
           </p>
-          <p>
-            In accounting, AI can flag invoice anomalies, match invoices to
-            work orders, and suggest GL codes. The accounting team approves
-            exceptions.
-          </p>
-          <p>This is where trust compounds.</p>
 
           <H3>Create an operating scorecard</H3>
-          <p>Every AI pilot should have a before-and-after scorecard.</p>
           <p>
-            Track speed, accuracy, adoption, exceptions, resident impact,
-            staff time, and financial outcome. Also track failure modes:
-            incorrect responses, bad routing, missing context, compliance
-            concerns, and employee overrides.
-          </p>
-          <p>
-            The override data is especially valuable. It shows where the AI
-            needs better context, better rules, or a narrower role.
+            Every AI pilot should have a before-and-after scorecard. Track
+            speed, accuracy, adoption, exceptions, resident impact, staff
+            time, and financial outcome. Also track failure modes: incorrect
+            responses, bad routing, missing context, compliance concerns,
+            and employee overrides. The override data is especially valuable
+            — it shows where the AI needs better context, better rules, or
+            a narrower role.
           </p>
 
           <H3>Treat AI as an operating capability, not a feature</H3>
           <p>
             The companies that win with AI will not be the ones running the
             most experiments. They will be the ones turning repeatable
-            workflows into faster, cleaner, more measurable systems.
+            workflows into faster, cleaner, more measurable systems. That
+            requires process ownership, data access, integrations, controls,
+            and frontline adoption.
           </p>
           <p>
-            That requires process ownership, data access, integrations,
-            controls, and frontline adoption.
-          </p>
-          <p>AI pilots fail when they are built to impress.</p>
-          <p>They work when they are built to remove operational drag.</p>
-          <p>
-            For property management firms, the opportunity is not replacing
-            people. It is giving teams the context, speed, and consistency
-            they need to manage more doors without letting service quality
-            break.
+            AI pilots fail when they are built to impress. They work when they
+            are built to remove operational drag. For property management
+            firms, the opportunity is not replacing people — it is giving
+            teams the context, speed, and consistency they need to manage
+            more doors without letting service quality break.
           </p>
         </div>
       </article>
