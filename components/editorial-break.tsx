@@ -23,18 +23,14 @@ export function EditorialBreak() {
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/60 mb-8">
             Experience From
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 items-center">
+          <div className="flex flex-wrap items-center gap-x-10 gap-y-10">
             {logos.map((logo) => (
-              <div
+              <img
                 key={logo.alt}
-                className="flex items-center justify-center h-16 md:h-20"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="max-h-full max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
-                />
-              </div>
+                src={logo.src}
+                alt={logo.alt}
+                className="h-10 md:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
+              />
             ))}
           </div>
         </BlurFade>
