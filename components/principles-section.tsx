@@ -149,50 +149,43 @@ export function PrinciplesSection() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
-          {/* Other column */}
-          <div className="border border-border bg-background/50 p-4">
-            <p className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground/60 mb-1">
-              Them
-            </p>
-            <h3 className="text-sm font-light tracking-tight mb-5 text-muted-foreground">
-              {other.name}
-            </h3>
-            <div className="flex flex-col gap-5">
-              {categories.map((cat, catIndex) => (
-                <div key={cat}>
-                  <p className="text-[9px] tracking-[0.2em] uppercase text-muted-foreground/40 mb-1">
-                    {cat}
-                  </p>
-                  <p className="text-[13px] leading-[1.6] text-muted-foreground">
-                    {other.values[catIndex]}
-                  </p>
-                </div>
-              ))}
+        <div className="border border-border bg-background/30 overflow-hidden">
+          {/* Header row */}
+          <div className="grid grid-cols-2 border-b border-border">
+            <div className="p-3">
+              <p className="text-[9px] tracking-[0.2em] uppercase text-muted-foreground/60 mb-0.5">
+                Them
+              </p>
+              <p className="text-[13px] font-light tracking-tight text-muted-foreground leading-tight">
+                {other.name}
+              </p>
+            </div>
+            <div className="p-3 bg-accent/5 border-l-2 border-accent/40">
+              <p className="text-[9px] tracking-[0.2em] uppercase text-accent/80 mb-0.5">
+                Us
+              </p>
+              <p className="text-[13px] font-medium tracking-tight text-accent leading-tight">
+                {quoin.name}
+              </p>
             </div>
           </div>
 
-          {/* Quoin column */}
-          <div className="border-2 border-accent/40 bg-accent/5 p-4 relative">
-            <p className="text-[10px] tracking-[0.2em] uppercase text-accent/80 mb-1">
-              Us
-            </p>
-            <h3 className="text-sm font-medium tracking-tight mb-5 text-accent">
-              {quoin.name}
-            </h3>
-            <div className="flex flex-col gap-5">
-              {categories.map((cat, catIndex) => (
-                <div key={cat}>
-                  <p className="text-[9px] tracking-[0.2em] uppercase text-muted-foreground/50 mb-1">
-                    {cat}
-                  </p>
-                  <p className="text-[13px] leading-[1.6] text-foreground">
-                    {quoin.values[catIndex]}
-                  </p>
-                </div>
-              ))}
+          {/* Comparison rows: category label spans, then 2 cells aligned */}
+          {categories.map((cat, catIndex) => (
+            <div key={cat} className="border-b border-border/50 last:border-b-0">
+              <p className="px-3 pt-3 pb-1 text-[9px] tracking-[0.2em] uppercase text-muted-foreground/50">
+                {cat}
+              </p>
+              <div className="grid grid-cols-2">
+                <p className="px-3 pb-3 text-[12px] leading-[1.5] text-muted-foreground">
+                  {other.values[catIndex]}
+                </p>
+                <p className="px-3 pb-3 text-[12px] leading-[1.5] text-foreground bg-accent/5 border-l-2 border-accent/40">
+                  {quoin.values[catIndex]}
+                </p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
 
