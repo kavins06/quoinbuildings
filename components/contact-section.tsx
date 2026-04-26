@@ -17,9 +17,10 @@ export function ContactSection() {
               {"\u201CLet\u2019s start with"}<br />{"a conversation.\u201D"}
             </h2>
             <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-md">
-              A 30-minute conversation about your operations. No pitch. No pressure.
-              If there is a fit, the next step is a 2-week Executive Diagnostic:
-              a standalone engagement with clear deliverables and no long-term commitment.
+              A 1-hour conversation about your operations. No pitch. No pressure.
+              Submit the form and book directly on Kavin&rsquo;s calendar. If there is a fit,
+              the next step is a 2-week Executive Diagnostic — a standalone engagement
+              with clear deliverables and no long-term commitment.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
               <Link
@@ -62,10 +63,10 @@ export function ContactSection() {
                 </p>
                 <div className="flex flex-col gap-3">
                   {[
-                    "You reach out via form or email.",
-                    "Kavin responds personally within one business day.",
-                    "30-minute conversation: your operations, your challenges, mutual fit.",
-                    "If there is a fit, we scope an Executive Diagnostic.",
+                    "Tell us about your firm using the form.",
+                    "Pick a time on Kavin's calendar — same screen, no waiting.",
+                    "1-hour conversation: your operations, your challenges, mutual fit.",
+                    "If there is a fit, we scope a 2-week Executive Diagnostic.",
                   ].map((step, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <span className="text-[11px] text-accent/60 mt-0.5 shrink-0">{i + 1}.</span>

@@ -6,10 +6,10 @@ import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
 
 const steps = [
-  { number: "01", text: "You submit the form or email us." },
-  { number: "02", text: "Kavin responds personally within one business day." },
-  { number: "03", text: "30-minute conversation: your operations, your challenges, mutual fit." },
-  { number: "04", text: "If there is a fit, we scope an Executive Diagnostic." },
+  { number: "01", text: "Tell us about your firm using the form." },
+  { number: "02", text: "Pick a time on Kavin's calendar — same screen, no waiting." },
+  { number: "03", text: "1-hour conversation: your operations, your challenges, mutual fit." },
+  { number: "04", text: "If there is a fit, we scope a 2-week Executive Diagnostic." },
 ]
 
 export function ContactContent() {
@@ -78,7 +78,7 @@ export function ContactContent() {
       <PageHeader
         eyebrow="Next Step"
         title="Let&rsquo;s talk."
-        description="Tell us about your firm. We respond within one business day. If there is a fit, the next step is a scoping call for a 2-week Executive Diagnostic."
+        description="Tell us about your firm, then book a 1-hour call directly on Kavin's calendar. If there is a fit, the next step is a 2-week Executive Diagnostic."
         backgroundImage="https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="pb-4 md:pb-8"
@@ -94,23 +94,29 @@ export function ContactContent() {
                   Thanks — pick a time.
                 </h2>
                 <p className="text-sm leading-[1.75] text-muted-foreground mb-8">
-                  Grab a 30-minute slot below. You&rsquo;ll get a calendar invite and a Meet link.
+                  Grab a 1-hour slot below. You&rsquo;ll get a calendar invite and a Google Meet link.
                 </p>
-                {process.env.NEXT_PUBLIC_BOOKING_URL ? (
-                  <div className="border border-border rounded-sm overflow-hidden bg-background">
-                    <iframe
-                      src={process.env.NEXT_PUBLIC_BOOKING_URL}
-                      title="Book a 30-minute call"
-                      className="w-full"
-                      style={{ height: "720px", border: 0 }}
-                      loading="lazy"
-                    />
-                  </div>
-                ) : (
-                  <p className="text-sm text-muted-foreground">
-                    We&rsquo;ll email you a booking link within one business day.
-                  </p>
-                )}
+                <div className="border border-border rounded-sm overflow-hidden bg-background">
+                  <iframe
+                    src={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.app.google/aJBszTpjD5icj7bZ8"}
+                    title="Book a 1-hour call"
+                    className="w-full"
+                    style={{ height: "780px", border: 0 }}
+                    loading="lazy"
+                  />
+                </div>
+                <p className="mt-4 text-[12px] text-muted-foreground/70">
+                  Calendar not loading?{" "}
+                  <a
+                    href={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.app.google/aJBszTpjD5icj7bZ8"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-2 hover:text-foreground"
+                  >
+                    Open the booking page in a new tab
+                  </a>
+                  .
+                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-8">
