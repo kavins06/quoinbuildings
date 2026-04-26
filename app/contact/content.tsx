@@ -58,7 +58,7 @@ export function ContactContent() {
       if (!res.ok || !data?.ok) {
         setErrorMessage(
           data?.error ??
-            "Submission failed. Please email info@quoinbuildings.com.",
+            "Submission failed. Please email kavins@quoinbuildings.com.",
         )
         setSubmitting(false)
         return
@@ -67,7 +67,7 @@ export function ContactContent() {
       setSubmitted(true)
     } catch {
       setErrorMessage(
-        "Submission failed. Please email info@quoinbuildings.com.",
+        "Submission failed. Please email kavins@quoinbuildings.com.",
       )
       setSubmitting(false)
     }
@@ -299,10 +299,10 @@ export function ContactContent() {
                   Direct
                 </p>
                 <a
-                  href="mailto:info@quoinbuildings.com"
+                  href="mailto:kavins@quoinbuildings.com"
                   className="text-sm text-foreground/70 hover:text-foreground transition-colors duration-300 border-b border-border pb-0.5"
                 >
-                  info@quoinbuildings.com
+                  kavins@quoinbuildings.com
                 </a>
                 <p className="text-sm text-muted-foreground mt-3">
                   Washington, DC

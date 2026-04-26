@@ -79,10 +79,10 @@ export function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:info@quoinbuildings.com"
+                href="mailto:kavins@quoinbuildings.com"
                 className="text-sm text-ink-secondary hover:text-ink-primary transition-colors duration-150"
               >
-                info@quoinbuildings.com
+                kavins@quoinbuildings.com
               </a>
               <a
                 href="https://www.linkedin.com/"

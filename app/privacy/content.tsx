@@ -28,7 +28,7 @@ const sections = [
   {
     title: "Your Rights",
     content:
-      "You may request access to, correction of, or deletion of your personal information by contacting us at info@quoinbuildings.com. California residents have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information is collected, the right to request deletion, and the right to opt out of the sale of personal information. We do not sell personal information.",
+      "You may request access to, correction of, or deletion of your personal information by contacting us at kavins@quoinbuildings.com. California residents have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information is collected, the right to request deletion, and the right to opt out of the sale of personal information. We do not sell personal information.",
   },
   {
     title: "Security",
@@ -43,7 +43,7 @@ const sections = [
   {
     title: "Contact",
     content:
-      "If you have questions about this privacy policy or our data practices, contact us at info@quoinbuildings.com. Quoin Buildings, Washington, DC.",
+      "If you have questions about this privacy policy or our data practices, contact us at kavins@quoinbuildings.com. Quoin Buildings, Washington, DC.",
   },
 ]
 

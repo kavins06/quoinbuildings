@@ -42,7 +42,7 @@ const sections = [
   {
     title: "Contact",
     content:
-      "If you have questions about these Terms of Service, contact us at info@quoinbuildings.com. Quoin Buildings, Washington, DC.",
+      "If you have questions about these Terms of Service, contact us at kavins@quoinbuildings.com. Quoin Buildings, Washington, DC.",
   },
 ]
 

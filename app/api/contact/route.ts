@@ -80,7 +80,7 @@ export async function POST(request: Request) {
 
     if (!upstream.ok) {
       return NextResponse.json(
-        { ok: false, error: "Submission failed. Please email info@quoinbuildings.com." },
+        { ok: false, error: "Submission failed. Please email kavins@quoinbuildings.com." },
         { status: 502 },
       )
     }
@@ -88,7 +88,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true })
   } catch {
     return NextResponse.json(
-      { ok: false, error: "Submission failed. Please email info@quoinbuildings.com." },
+      { ok: false, error: "Submission failed. Please email kavins@quoinbuildings.com." },
       { status: 502 },
     )
   } finally {

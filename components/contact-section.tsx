@@ -30,11 +30,11 @@ export function ContactSection() {
                 <ArrowUpRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
               </Link>
               <a
-                href="mailto:info@quoinbuildings.com"
+                href="mailto:kavins@quoinbuildings.com"
                 className="group inline-flex items-center gap-2 text-sm tracking-wide text-background/60 hover:text-background transition-colors duration-500"
               >
                 <span className="border-b border-background/20 pb-0.5 group-hover:border-background/60 transition-colors duration-500">
-                  info@quoinbuildings.com
+                  kavins@quoinbuildings.com
                 </span>
                 <ArrowUpRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
               </a>
@@ -53,7 +53,7 @@ export function ContactSection() {
                   Washington, DC
                 </p>
                 <p className="text-sm text-background/55 mt-4">
-                  info@quoinbuildings.com
+                  kavins@quoinbuildings.com
                 </p>
               </div>
               <div>
