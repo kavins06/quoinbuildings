@@ -65,13 +65,13 @@ export function PrinciplesSection() {
   const other = others[activeOther]
 
   return (
-    <section className="px-6 py-20 md:px-12 lg:px-20 md:py-28 bg-secondary">
+    <section className="px-6 py-12 md:px-12 lg:px-20 md:py-16 bg-secondary">
       <BlurFade inView direction="up">
-        <div className="mb-16">
-          <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
+        <div className="mb-8 md:mb-10">
+          <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-2">
             Quoin vs. the alternatives
           </p>
-          <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
+          <h2 className="text-2xl md:text-[2.25rem] font-normal tracking-tight text-foreground">
             Compare what each option actually delivers.
           </h2>
         </div>
@@ -83,11 +83,11 @@ export function PrinciplesSection() {
           <table className="w-full border-collapse">
             <thead>
               <tr>
-                <th className="text-left p-4 text-[11px] tracking-[0.15em] uppercase text-muted-foreground/50 w-[160px]" />
+                <th className="text-left px-3 py-2.5 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/50 w-[140px]" />
                 {columns.map((col) => (
                   <th
                     key={col.name}
-                    className={`text-left p-4 text-sm font-medium tracking-tight ${
+                    className={`text-left px-3 py-2.5 text-[13px] font-medium tracking-tight ${
                       col.highlight
                         ? "text-accent border-b-2 border-accent bg-accent/5"
                         : "text-muted-foreground border-b border-border"
@@ -106,13 +106,13 @@ export function PrinciplesSection() {
             <tbody>
               {categories.map((cat, catIndex) => (
                 <tr key={cat} className="border-b border-border/50">
-                  <td className="p-4 text-[11px] tracking-[0.15em] uppercase text-muted-foreground/50 align-top">
+                  <td className="px-3 py-3 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/50 align-top">
                     {cat}
                   </td>
                   {columns.map((col) => (
                     <td
                       key={col.name}
-                      className={`p-4 text-sm leading-[1.75] align-top ${
+                      className={`px-3 py-3 text-[13px] leading-[1.55] align-top ${
                         col.highlight
                           ? "text-foreground font-normal bg-accent/5 border-l border-accent/20"
                           : "text-muted-foreground"
@@ -190,8 +190,8 @@ export function PrinciplesSection() {
       </div>
 
       <BlurFade inView delay={0.3} direction="up">
-        <div className="mt-12 max-w-2xl">
-          <p className="text-sm leading-[1.85] text-muted-foreground">
+        <div className="mt-8 md:mt-10 max-w-2xl">
+          <p className="text-[13px] leading-[1.7] text-muted-foreground">
             Quoin is a different model: one that builds, deploys, and runs the AI, then stays to improve it.
           </p>
         </div>
