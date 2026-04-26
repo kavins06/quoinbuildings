@@ -15,14 +15,26 @@ export function CookieBanner() {
     try {
       const existing = localStorage.getItem(STORAGE_KEY)
       if (!existing) {
-        // Slight delay so it doesn't pop in during initial paint
         const t = setTimeout(() => setVisible(true), 600)
         return () => clearTimeout(t)
       }
     } catch {
-      // localStorage unavailable; default to showing
       setVisible(true)
     }
+  }, [])
+
+  // Allow other parts of the site to re-open the banner
+  useEffect(() => {
+    const open = () => {
+      try {
+        localStorage.removeItem(STORAGE_KEY)
+      } catch {
+        // ignore
+      }
+      setVisible(true)
+    }
+    window.addEventListener("quoin:open-cookie-banner", open)
+    return () => window.removeEventListener("quoin:open-cookie-banner", open)
   }, [])
 
   const decide = (choice: Choice) => {

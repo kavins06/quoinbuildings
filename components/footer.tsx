@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { CookiePreferencesLink } from "@/components/cookie-preferences-link"
 
 const companyLinks = [
   { label: "Who We Help", href: "/who-we-help" },
@@ -70,6 +71,7 @@ export function Footer() {
                   {link.label}
                 </Link>
               ))}
+              <CookiePreferencesLink />
             </div>
           </div>
 
