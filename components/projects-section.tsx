@@ -136,7 +136,7 @@ export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null)
 
   return (
-    <section id="problem" className="px-6 py-28 md:px-12 lg:px-20 md:py-36">
+    <section id="problem" className="px-6 py-14 md:px-12 lg:px-20 md:py-20">
       <BlurFade inView direction="up">
         <div className="mb-20 pb-6 border-b border-border">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-6">
