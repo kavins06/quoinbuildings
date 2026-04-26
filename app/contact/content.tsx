@@ -290,7 +290,7 @@ export function ContactContent() {
 
                 <div className="flex flex-col gap-2">
                   <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                    How can we help?
+                    What is your expected outcome of this call?
                   </label>
                   <textarea
                     rows={4}
