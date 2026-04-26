@@ -98,7 +98,7 @@ export function WhoWeHelpContent() {
               </p>
               <ul className="flex flex-col gap-4">
                 {[
-                  { label: "Primary platform", value: "Yardi Voyager, RealPage, AppFolio, or Entrata" },
+                  { label: "Primary platform", value: "Any modern property management or asset management system" },
                   { label: "Supporting systems", value: "Accounting, CRM, maintenance portals, tenant communication platforms" },
                   { label: "Data state", value: "Typically fragmented across systems, inconsistent across properties, and underprepared for AI workloads" },
                   { label: "IT team", value: "Exists but focused on infrastructure and support, not AI development" },
