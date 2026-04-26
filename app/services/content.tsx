@@ -123,7 +123,7 @@ function ServiceBlock({ service, index }: { service: typeof services[0]; index: 
             )}
           </div>
 
-          <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-8">
+          <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-8 lg:mt-24">
             <div>
               <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4">
                 Key Activities
