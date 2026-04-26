@@ -61,7 +61,7 @@ export function ContactSection() {
                 <div className="flex flex-col gap-3">
                   {[
                     "Tell us about your firm using the form.",
-                    "Pick a time on Kavin's calendar — same screen, no waiting.",
+                    "Pick a time on the same page.",
                     "1-hour conversation: your operations, your challenges, mutual fit.",
                     "If there is a fit, we scope a 2-week Executive Diagnostic.",
                   ].map((step, i) => (
