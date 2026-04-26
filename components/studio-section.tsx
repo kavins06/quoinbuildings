@@ -8,57 +8,57 @@ const weeks = [
     number: "01",
     title: "Stakeholder Interviews & Workflow Mapping",
     description:
-      "We meet with your property managers, maintenance coordinators, leasing staff, regional directors, and compliance team. We map how work actually flows \, not the org chart version, the real version.",
+      "Property managers, leasing, maintenance, and compliance — how work actually flows.",
   },
   {
     number: "02",
     title: "Systems & Data Assessment",
     description:
-      "We assess your property management platform \, Yardi, RealPage, AppFolio, or Entrata. Data quality, integration capabilities, API access, and gaps. What your systems can support today and what needs preparation.",
+      "Yardi, RealPage, AppFolio, or Entrata. Data quality, integrations, gaps.",
   },
 ]
 
 const deliverables = [
-  "A prioritized implementation roadmap \, not a strategy deck, but a build plan",
-  "A data and systems readiness assessment",
-  "A governance requirements document",
-  "A clear recommendation: where to build first, what to prepare, and what to skip",
-  "A decision point: move forward with Quoin, move forward with someone else, or pause",
+  "Prioritized implementation roadmap — a build plan, not a deck",
+  "Data and systems readiness assessment",
+  "Governance requirements document",
+  "Clear recommendation: where to build first, what to skip",
+  "Decision point: move forward with us, with someone else, or pause",
 ]
 
 export function StudioSection() {
   return (
-    <section id="diagnostic" className="px-6 py-28 md:px-12 lg:px-20 md:py-36 bg-foreground text-background">
+    <section
+      id="diagnostic"
+      className="px-6 py-14 md:px-12 lg:px-20 md:py-20 bg-foreground text-background"
+    >
       <BlurFade inView direction="up">
-        <div className="mb-16">
-          <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-8">
+        <div className="mb-10 md:mb-12 max-w-3xl">
+          <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-4">
             The First Step
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-normal leading-[1.15] tracking-tight text-balance text-background max-w-3xl">
+          <h2 className="text-2xl md:text-[2.25rem] font-normal leading-[1.2] tracking-tight text-background">
             A 2-Week Executive Diagnostic
           </h2>
-          <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-2xl">
-            Every engagement begins the same way. Before we build anything, we spend
-            two weeks inside your operations to understand what is real, what is possible,
-            and what is not worth pursuing. The diagnostic is a standalone engagement.
-            you are not committing to a multi-year contract.
+          <p className="mt-4 text-sm leading-[1.7] text-background/55">
+            Two weeks inside your operations to understand what is real, what is
+            possible, and what is not worth pursuing. Standalone — no multi-year
+            commitment.
           </p>
         </div>
       </BlurFade>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-px mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-px mb-10 md:mb-12">
         {weeks.map((week, i) => (
-          <BlurFade key={week.number} inView delay={i * 0.15} direction="up">
-            <div className="relative overflow-hidden bg-foreground border border-background/10 p-8 md:p-10 h-full">
-              <div className="flex items-start gap-4 mb-6">
-                <span className="text-[11px] tracking-[0.15em] text-background/25 mt-1 shrink-0">
-                  Week {week.number}
-                </span>
-              </div>
-              <h3 className="text-lg md:text-xl font-light tracking-tight text-background mb-4">
+          <BlurFade key={week.number} inView delay={i * 0.1} direction="up">
+            <div className="bg-foreground border border-background/10 p-5 md:p-6 h-full">
+              <span className="text-[10px] tracking-[0.15em] text-background/30 uppercase">
+                Week {week.number}
+              </span>
+              <h3 className="mt-2 text-base md:text-lg font-light tracking-tight text-background">
                 {week.title}
               </h3>
-              <p className="text-sm leading-[1.75] text-background/45">
+              <p className="mt-2 text-[13px] leading-[1.65] text-background/50">
                 {week.description}
               </p>
             </div>
@@ -66,16 +66,16 @@ export function StudioSection() {
         ))}
       </div>
 
-      <BlurFade inView delay={0.3} direction="up">
-        <div className="mb-16">
-          <p className="text-[11px] tracking-[0.3em] uppercase text-background/40 mb-6">
+      <BlurFade inView delay={0.2} direction="up">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-6 mb-10 md:mb-12">
+          <p className="text-[11px] tracking-[0.3em] uppercase text-background/40">
             What You Get
           </p>
-          <ul className="flex flex-col gap-3">
+          <ul className="md:col-span-2 grid grid-cols-1 gap-2">
             {deliverables.map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <div className="w-1.5 h-px bg-accent/60 mt-2.5 shrink-0" />
-                <span className="text-sm leading-[1.75] text-background/60">
+                <span className="text-[13px] leading-[1.6] text-background/65">
                   {item}
                 </span>
               </li>
@@ -84,19 +84,21 @@ export function StudioSection() {
         </div>
       </BlurFade>
 
-      <BlurFade inView delay={0.4} direction="up">
-        <div className="border-t border-background/10 pt-10">
-          <p className="text-sm leading-[1.85] text-background/50 max-w-2xl mb-8">
-            If the diagnostic concludes that AI is not the right investment for your firm right now, we will say so. We do not build what should not be built.
+      <BlurFade inView delay={0.3} direction="up">
+        <div className="border-t border-background/10 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <p className="text-[13px] leading-[1.6] text-background/55 max-w-2xl">
+            If AI is not the right investment for your firm right now, we will say so.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 text-sm tracking-[0.05em] text-background/50 hover:text-background transition-colors duration-300 group"
+            className="inline-flex items-center gap-3 text-sm tracking-[0.05em] text-background/60 hover:text-background transition-colors duration-300 group shrink-0"
           >
             <span className="border-b border-background/20 pb-0.5 group-hover:border-background/50 transition-colors duration-300">
               Talk to us
             </span>
-            <span className="text-accent group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+            <span className="text-accent group-hover:translate-x-1 transition-transform duration-300">
+              &rarr;
+            </span>
           </Link>
         </div>
       </BlurFade>
