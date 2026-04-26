@@ -33,7 +33,7 @@ export function Footer() {
               QUOIN
             </Link>
             <p className="text-sm text-ink-secondary leading-relaxed mt-5 max-w-xs">
-              AI operating partner for property management firms.
+              Your AI Operating Partner
             </p>
             <p className="text-sm text-ink-muted mt-4">
               Headquarters &middot; Washington, DC
