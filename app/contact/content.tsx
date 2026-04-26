@@ -8,7 +8,7 @@ import { BlurFade } from "@/components/ui/blur-fade"
 
 const steps = [
   { number: "01", text: "Tell us about your firm using the form." },
-  { number: "02", text: "Pick a time on Kavin's calendar — same screen, no waiting." },
+  { number: "02", text: "Pick a time on the same page." },
   { number: "03", text: "1-hour conversation: your operations, your challenges, mutual fit." },
   { number: "04", text: "If there is a fit, we scope a 2-week Executive Diagnostic." },
 ]
