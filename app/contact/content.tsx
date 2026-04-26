@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { ChevronDown } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
 
@@ -206,35 +207,41 @@ export function ContactContent() {
                       Your Role
                       <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
                     </label>
-                    <select
-                      value={role}
-                      onChange={(e) => setRole(e.target.value)}
-                      className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
-                    >
-                      <option value="">Select your role</option>
-                      <option value="ceo-owner">CEO/Owner</option>
-                      <option value="coo-vp-operations">COO/VP Operations</option>
-                      <option value="cto-vp-technology">CTO/VP Technology</option>
-                      <option value="cfo-vp-finance">CFO/VP Finance</option>
-                      <option value="other">Other</option>
-                    </select>
+                    <div className="relative">
+                      <select
+                        value={role}
+                        onChange={(e) => setRole(e.target.value)}
+                        className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${role ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
+                      >
+                        <option value="">Select your role</option>
+                        <option value="ceo-owner">CEO/Owner</option>
+                        <option value="coo-vp-operations">COO/VP Operations</option>
+                        <option value="cto-vp-technology">CTO/VP Technology</option>
+                        <option value="cfo-vp-finance">CFO/VP Finance</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
+                    </div>
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
                       Property Type
                       <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
                     </label>
-                    <select
-                      value={propertyType}
-                      onChange={(e) => setPropertyType(e.target.value)}
-                      className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
-                    >
-                      <option value="">Select type</option>
-                      <option value="residential">Residential</option>
-                      <option value="commercial">Commercial</option>
-                      <option value="mixed-use">Mixed-Use</option>
-                      <option value="other">Other</option>
-                    </select>
+                    <div className="relative">
+                      <select
+                        value={propertyType}
+                        onChange={(e) => setPropertyType(e.target.value)}
+                        className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${propertyType ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
+                      >
+                        <option value="">Select type</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="mixed-use">Mixed-Use</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
+                    </div>
                   </div>
                 </div>
 
@@ -244,34 +251,40 @@ export function ContactContent() {
                       Portfolio Size &mdash; Units
                       <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
                     </label>
-                    <select
-                      value={portfolioUnits}
-                      onChange={(e) => setPortfolioUnits(e.target.value)}
-                      className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
-                    >
-                      <option value="">Select a range</option>
-                      <option value="1000-5000">1,000&ndash;5,000 units</option>
-                      <option value="5000-15000">5,000&ndash;15,000 units</option>
-                      <option value="15000-50000">15,000&ndash;50,000 units</option>
-                      <option value="50000+">50,000+ units</option>
-                    </select>
+                    <div className="relative">
+                      <select
+                        value={portfolioUnits}
+                        onChange={(e) => setPortfolioUnits(e.target.value)}
+                        className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${portfolioUnits ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
+                      >
+                        <option value="">Select a range</option>
+                        <option value="1000-5000">1,000&ndash;5,000 units</option>
+                        <option value="5000-15000">5,000&ndash;15,000 units</option>
+                        <option value="15000-50000">15,000&ndash;50,000 units</option>
+                        <option value="50000+">50,000+ units</option>
+                      </select>
+                      <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
+                    </div>
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
                       Portfolio Size &mdash; Sq Ft
                       <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
                     </label>
-                    <select
-                      value={portfolioSqFt}
-                      onChange={(e) => setPortfolioSqFt(e.target.value)}
-                      className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer"
-                    >
-                      <option value="">Select a range</option>
-                      <option value="under-500k">Under 500,000 sq ft</option>
-                      <option value="500k-2m">500,000&ndash;2M sq ft</option>
-                      <option value="2m-10m">2M&ndash;10M sq ft</option>
-                      <option value="10m+">10M+ sq ft</option>
-                    </select>
+                    <div className="relative">
+                      <select
+                        value={portfolioSqFt}
+                        onChange={(e) => setPortfolioSqFt(e.target.value)}
+                        className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${portfolioSqFt ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
+                      >
+                        <option value="">Select a range</option>
+                        <option value="under-500k">Under 500,000 sq ft</option>
+                        <option value="500k-2m">500,000&ndash;2M sq ft</option>
+                        <option value="2m-10m">2M&ndash;10M sq ft</option>
+                        <option value="10m+">10M+ sq ft</option>
+                      </select>
+                      <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
+                    </div>
                   </div>
                 </div>
 
