@@ -28,7 +28,7 @@ export function WhySection() {
               the gap between AI ambition and operational reality.
             </p>
             <p className="text-sm leading-[1.85] text-muted-foreground">
-              Quoin is that option. We embed with your teams and build AI agents on a shared
+              So, we started Quoin. We embed with your teams and build AI agents on a shared
               intelligence layer that unifies your PMS, accounting, leases, and work orders.
               Property managers gets hours of work done in minutes. Asset managers drill from portfolio to
               root cause. Both sides decide on evidence, at a fraction of the time.
