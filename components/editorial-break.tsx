@@ -20,7 +20,7 @@ const logos = [
 
 export function EditorialBreak() {
   return (
-    <section className="px-6 md:px-12 lg:px-20 pt-0 pb-12 md:pb-16 -mt-16 md:-mt-24">
+    <section className="px-6 md:px-12 lg:px-20 pt-4 pb-12 md:pt-6 md:pb-16">
       <BlurFade inView direction="up">
         <h2 className="font-serif text-3xl md:text-[2.5rem] font-normal tracking-tight mb-12 text-center">
           <AuroraText>Expertise from</AuroraText>
