@@ -225,7 +225,7 @@ export function ContactContent() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      Property Type
+                      Portfolio Type
                       <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
                     </label>
                     <div className="relative">
