@@ -8,7 +8,7 @@ const logos = [
   { src: "/logos/georgetown.svg", alt: "Georgetown University" },
   { src: "/logos/dept-of-war.svg", alt: "U.S. Department of War", label: "Department of War" },
   { src: "/logos/dept-of-state.svg", alt: "U.S. Department of State", label: "Department of State" },
-  { src: "/logos/odni.svg", alt: "Office of the Director of National Intelligence", label: "Director of\nNational Intelligence" },
+  { src: "/logos/odni.svg", alt: "Office of the Director of National Intelligence", label: "Office of Director of\nNational Intelligence" },
   { src: "/logos/nga.svg", alt: "National Geospatial-Intelligence Agency", label: "National Geospatial-\nIntelligence Agency" },
   { src: "/logos/leidos.svg", alt: "Leidos" },
   { src: "/logos/cgi.svg", alt: "CGI Federal", label: "CGI Federal" },
