@@ -11,7 +11,7 @@ const services = [
     title: "AI Readiness & Strategy",
     image: "/service-strategy.jpg",
     description:
-      "We map your workflows across maintenance, leasing, tenant communications, accounting, and compliance. We assess data readiness across your systems and identify the highest-ROI automation opportunities.",
+      "We map your workflows across maintenance, leasing, tenant communications, accounting, reporting and compliance. We assess data readiness across your systems and identify the highest-ROI automation opportunities.",
     activities: [
       "Workflow mapping across all operational areas",
       "Data quality assessment across Yardi, RealPage, AppFolio, Entrata",
