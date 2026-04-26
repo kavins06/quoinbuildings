@@ -87,14 +87,14 @@ export function Footer() {
                 kavins@quoinbuildings.com
               </a>
               <a
-                href="https://www.linkedin.com/"
+                href="https://linkedin.com/company/quoinbuildings"
                 rel="noopener"
                 target="_blank"
                 className="text-sm text-ink-secondary hover:text-ink-primary transition-colors duration-150"
               >
                 LinkedIn
               </a>
-              <p className="text-sm text-ink-muted leading-relaxed mt-2 max-w-xs">
+              <p className="text-sm text-ink-muted leading-relaxed mt-2 md:whitespace-nowrap">
                 For partnership inquiries, use{" "}
                 <Link href="/contact" className="underline decoration-accent underline-offset-4">
                   Talk to us
