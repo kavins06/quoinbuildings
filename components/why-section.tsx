@@ -18,21 +18,24 @@ export function WhySection() {
         <BlurFade inView delay={0.1} direction="up">
           <div className="flex flex-col gap-5">
             <p className="text-sm leading-[1.85] text-muted-foreground">
-              Property management firms are investing in AI, but the investments are not
+              Property and asset management teams are investing in AI, but the investments are not
               translating into operational results. Only 5% of commercial real estate firms
-              have achieved their AI program goals. The gap is not technology. It is approach.
+              have achieved their AI program goals. The gap is not technology. It is execution.
             </p>
             <p className="text-[11px] tracking-[0.02em] text-ink-muted -mt-3 italic">
               <a href="https://www.jll.com/en-us/newsroom/real-estates-ai-reality-check-companies-piloting-only-achieved-all-ai-goals" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">JLL, Oct 2025</a>
             </p>
             <p className="text-sm leading-[1.85] text-muted-foreground">
-              Point-solution SaaS vendors sell tools that do not integrate with your property
-              management platform. Strategy consultants deliver decks and leave. Internal IT
-              teams lack the specialized AI expertise to build, govern, and operate agents at
-              scale. None of these options close the gap between AI ambition and operational reality.
+              Point-solution SaaS vendors sell tools that do not integrate with your platform.
+              Strategy consultants deliver decks and leave. Internal IT teams lack the specialized
+              expertise to build, govern, and operate agents at scale. None of these options close
+              the gap between AI ambition and operational reality.
             </p>
             <p className="text-sm leading-[1.85] text-muted-foreground">
-              Quoin is that option. We embed with your operations team, build AI agents that integrate with your existing systems, apply governance from day one, and run the infrastructure as a long-term partner.
+              Quoin is that option. We embed with your teams and build AI agents on a shared
+              intelligence layer that unifies your PMS, accounting, leases, and work orders.
+              Property managers get answers in minutes. Asset managers drill from portfolio to
+              root cause. Both sides decide on evidence, at a fraction of the time.
             </p>
           </div>
         </BlurFade>
