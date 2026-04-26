@@ -24,18 +24,46 @@ export function EditorialBreak() {
           Experience From
         </p>
         <div className="relative max-w-6xl mx-auto">
-          <Marquee pauseOnHover className="[--duration:50s] [--gap:4rem]">
-            {logos.map((logo) => (
-              <img
-                key={logo.alt}
-                src={logo.src}
-                alt={logo.alt}
-                className="h-12 md:h-16 w-auto object-contain mx-8 opacity-90 hover:opacity-100 transition-opacity duration-500"
-              />
-            ))}
-          </Marquee>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent" />
+          {/* Desktop: single row */}
+          <div className="hidden md:block">
+            <Marquee pauseOnHover className="[--duration:50s] [--gap:4rem]">
+              {logos.map((logo) => (
+                <img
+                  key={logo.alt}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-16 w-auto object-contain mx-8 opacity-90 hover:opacity-100 transition-opacity duration-500"
+                />
+              ))}
+            </Marquee>
+          </div>
+
+          {/* Mobile: two rows, second reversed */}
+          <div className="md:hidden flex flex-col gap-4">
+            <Marquee pauseOnHover className="[--duration:40s] [--gap:2.5rem]">
+              {logos.slice(0, 5).map((logo) => (
+                <img
+                  key={logo.alt}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-12 w-auto object-contain mx-6 opacity-90"
+                />
+              ))}
+            </Marquee>
+            <Marquee reverse pauseOnHover className="[--duration:40s] [--gap:2.5rem]">
+              {logos.slice(5).map((logo) => (
+                <img
+                  key={logo.alt}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-12 w-auto object-contain mx-6 opacity-90"
+                />
+              ))}
+            </Marquee>
+          </div>
+
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24 bg-gradient-to-r from-background to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-24 bg-gradient-to-l from-background to-transparent" />
         </div>
       </BlurFade>
 
