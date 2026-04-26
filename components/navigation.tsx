@@ -29,9 +29,11 @@ export function Navigation() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-surface-base ${
-        scrolled ? "border-b border-subtle" : "border-b border-transparent"
-      } transition-colors duration-150`}
+      className={`sticky top-0 z-50 ${
+        scrolled
+          ? "bg-surface-base/70 backdrop-blur-md border-b border-subtle"
+          : "bg-surface-base border-b border-transparent"
+      } transition-[background-color,backdrop-filter,border-color] duration-200`}
     >
       <nav
         aria-label="Primary"
