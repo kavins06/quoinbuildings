@@ -29,7 +29,7 @@ export function EditorialBreak() {
                 key={logo.alt}
                 src={logo.src}
                 alt={logo.alt}
-                className="h-10 md:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
+                className="h-14 md:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
               />
             ))}
           </div>
