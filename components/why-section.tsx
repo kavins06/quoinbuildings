@@ -19,8 +19,7 @@ export function WhySection() {
           <div className="flex flex-col gap-5">
             <p className="text-sm leading-[1.85] text-muted-foreground">
               Property and asset management teams are investing in AI, but the investments are not
-              translating into operational results. Only 5% of commercial real estate firms
-              have achieved their AI program goals. The gap is not technology. It is execution.
+              translating into operational results. The gap is not technology. It is execution.
             </p>
             <p className="text-sm leading-[1.85] text-muted-foreground">
               Point-solution SaaS vendors sell tools that do not integrate with your platform.
