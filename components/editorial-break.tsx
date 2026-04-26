@@ -8,8 +8,8 @@ const logos = [
   { src: "/logos/georgetown.svg", alt: "Georgetown University" },
   { src: "/logos/dept-of-war.svg", alt: "U.S. Department of War", label: "Department of War" },
   { src: "/logos/dept-of-state.svg", alt: "U.S. Department of State", label: "Department of State" },
-  { src: "/logos/odni.svg", alt: "Office of the Director of National Intelligence", label: "Director of National Intelligence" },
-  { src: "/logos/nga.svg", alt: "National Geospatial-Intelligence Agency", label: "National Geospatial-Intelligence Agency" },
+  { src: "/logos/odni.svg", alt: "Office of the Director of National Intelligence", label: "Director of\nNational Intelligence" },
+  { src: "/logos/nga.svg", alt: "National Geospatial-Intelligence Agency", label: "National Geospatial-\nIntelligence Agency" },
   { src: "/logos/leidos.svg", alt: "Leidos" },
   { src: "/logos/cgi.svg", alt: "CGI Federal", label: "CGI Federal" },
   { src: "/logos/nar.svg", alt: "National Association of Realtors" },
@@ -37,7 +37,7 @@ export function EditorialBreak() {
                     className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
                   />
                   {logo.label && (
-                    <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
+                    <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight">
                       {logo.label}
                     </p>
                   )}
@@ -53,7 +53,7 @@ export function EditorialBreak() {
                     className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
                   />
                   {logo.label && (
-                    <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
+                    <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight">
                       {logo.label}
                     </p>
                   )}
@@ -69,7 +69,7 @@ export function EditorialBreak() {
                 <div key={logo.alt} className="flex flex-col items-center justify-end mx-5 h-12">
                   <img src={logo.src} alt={logo.alt} className="h-7 w-auto object-contain opacity-90" />
                   {logo.label && (
-                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
+                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight">
                       {logo.label}
                     </p>
                   )}
@@ -81,7 +81,7 @@ export function EditorialBreak() {
                 <div key={logo.alt} className="flex flex-col items-center justify-end mx-5 h-12">
                   <img src={logo.src} alt={logo.alt} className="h-7 w-auto object-contain opacity-90" />
                   {logo.label && (
-                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
+                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight">
                       {logo.label}
                     </p>
                   )}
