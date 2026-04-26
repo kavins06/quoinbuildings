@@ -13,11 +13,11 @@ export default function ArticlePage() {
   return (
     <main className="bg-background">
       {/* Header */}
-      <header className="px-6 md:px-12 lg:px-20 pt-20 md:pt-28 pb-10 md:pb-16 border-b border-subtle">
+      <header className="px-6 md:px-12 lg:px-20 pt-10 md:pt-14 pb-6 md:pb-8 border-b border-subtle">
         <div className="max-w-3xl">
           <Link
             href="/perspectives"
-            className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-200 mb-10"
+            className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-200 mb-5"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
             Back to Perspectives
@@ -36,8 +36,8 @@ export default function ArticlePage() {
       </header>
 
       {/* Body */}
-      <article className="px-6 md:px-12 lg:px-20 py-14 md:py-20">
-        <div className="max-w-3xl prose-content flex flex-col gap-6 text-[15px] md:text-base leading-[1.85] text-foreground/80">
+      <article className="px-6 md:px-12 lg:px-20 py-8 md:py-12">
+        <div className="max-w-3xl prose-content flex flex-col gap-4 text-[15px] md:text-base leading-[1.7] text-foreground/80">
           <p>
             AI pilots in property management are rarely failing because the
             technology cannot work.
@@ -308,7 +308,7 @@ export default function ArticlePage() {
       </article>
 
       {/* CTA */}
-      <section className="px-6 md:px-12 lg:px-20 py-14 md:py-20 bg-foreground">
+      <section className="px-6 md:px-12 lg:px-20 py-10 md:py-14 bg-foreground">
         <div className="max-w-3xl mx-auto text-center">
           <div className="w-10 h-px bg-accent/40 mx-auto mb-8" />
           <h2 className="font-serif text-2xl md:text-3xl font-normal tracking-tight text-background mb-4">
@@ -333,7 +333,7 @@ export default function ArticlePage() {
 
 function H2({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="font-serif text-2xl md:text-[1.75rem] font-normal tracking-tight text-foreground mt-8 mb-1">
+    <h2 className="font-serif text-2xl md:text-[1.75rem] font-normal tracking-tight text-foreground mt-6 mb-0">
       {children}
     </h2>
   )
@@ -341,7 +341,7 @@ function H2({ children }: { children: React.ReactNode }) {
 
 function H3({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="text-lg md:text-xl font-medium tracking-tight text-foreground mt-6 mb-1">
+    <h3 className="text-lg md:text-xl font-medium tracking-tight text-foreground mt-4 mb-0">
       {children}
     </h3>
   )
