@@ -66,7 +66,7 @@ export function Hero() {
                 <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
                   AI Capability
                 </p>
-                <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight">
+                <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight whitespace-nowrap">
                   <NumberTicker value={85.9} decimalPlaces={1} className="inline-block tracking-tight text-accent" />%
                 </p>
                 <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
