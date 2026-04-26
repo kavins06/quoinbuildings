@@ -152,7 +152,7 @@ export function GovernanceContent() {
                 Our Commitment
               </p>
               <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground">
-                Honest about where we are
+                Built to enterprise standards
               </h2>
             </div>
             <div className="lg:col-span-6 lg:col-start-7 flex items-end">
