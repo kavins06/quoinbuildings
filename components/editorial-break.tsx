@@ -23,7 +23,7 @@ export function EditorialBreak() {
   return (
     <section className="px-6 md:px-12 lg:px-20 pt-4 pb-12 md:pt-6 md:pb-16 -mt-4 md:mt-0">
       <BlurFade inView direction="up">
-        <h2 className="font-serif text-lg md:text-2xl font-normal uppercase tracking-[0.15em] mb-8 md:mb-12 md:-mt-6 text-center">
+        <h2 className="font-serif text-[11px] md:text-sm font-normal uppercase tracking-[0.2em] mb-8 md:mb-12 md:-mt-6 text-center">
           <AuroraText>Expertise from</AuroraText>
         </h2>
         <div className="relative max-w-6xl mx-auto">
