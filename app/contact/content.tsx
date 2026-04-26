@@ -80,7 +80,7 @@ export function ContactContent() {
         eyebrow="Next Step"
         title="Let&rsquo;s talk."
         description="Tell us about your firm, then book a 1-hour call directly on Kavin's calendar. If there is a fit, the next step is a 2-week Executive Diagnostic."
-        backgroundImage="https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        backgroundImage="/header-services.jpg"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="pb-4 md:pb-8"
       />
