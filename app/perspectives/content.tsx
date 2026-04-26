@@ -1,10 +1,20 @@
 "use client"
 
+import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
 
-const articles = [
+type Article = {
+  date: string
+  title: string
+  summary: string
+  author: string
+  tag: string
+  href?: string
+}
+
+const articles: Article[] = [
   {
     date: "April 2026",
     title: "Why AI Pilots Are Failing in Property Management: And What to Do About It",
@@ -12,6 +22,7 @@ const articles = [
       "The 95% failure rate for AI pilots is well documented. In property management, the patterns are consistent and the root causes are structural. We break down the three failure modes and what firms can do differently.",
     author: "Kavin Sakthivel",
     tag: "Industry Analysis",
+    href: "/perspectives/why-ai-pilots-are-failing",
   },
   {
     date: "April 2026",
@@ -31,38 +42,56 @@ const articles = [
   },
 ]
 
-function ArticleCard({ article, index }: { article: typeof articles[0]; index: number }) {
+function ArticleCard({ article, index }: { article: Article; index: number }) {
+  const inner = (
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16">
+      <div className="lg:col-span-2">
+        <p className="text-[11px] tracking-[0.15em] text-ink-muted tabular-nums">
+          {article.date}
+        </p>
+        <p className="text-[11px] tracking-[0.15em] uppercase text-accent mt-2">
+          {article.tag}
+        </p>
+      </div>
+
+      <div className="lg:col-span-9 lg:col-start-4">
+        <h2 className="text-xl md:text-2xl font-normal tracking-tight text-ink-primary mb-4 group-hover:text-accent transition-colors duration-200">
+          {article.title}
+        </h2>
+        <p className="text-sm leading-[1.75] text-ink-secondary max-w-2xl">
+          {article.summary}
+        </p>
+        <p className="text-[11px] tracking-[0.15em] text-ink-muted mt-4">
+          By {article.author}
+        </p>
+        {article.href ? (
+          <p className="inline-flex items-center gap-2 text-[12px] tracking-[0.15em] uppercase text-accent mt-4 group-hover:gap-3 transition-all duration-200">
+            Read article
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </p>
+        ) : (
+          <p className="text-[12px] text-ink-muted mt-2 italic">
+            Full piece coming soon.
+          </p>
+        )}
+      </div>
+    </div>
+  )
+
   return (
     <BlurFade inView direction="up" delay={index * 0.1}>
-      <div className="block py-12 md:py-16 border-b border-subtle last:border-b-0">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16">
-          <div className="lg:col-span-2">
-            <p className="text-[11px] tracking-[0.15em] text-ink-muted tabular-nums">
-              {article.date}
-            </p>
-            <p className="text-[11px] tracking-[0.15em] uppercase text-accent mt-2">
-              {article.tag}
-            </p>
-          </div>
-
-          <div className="lg:col-span-9 lg:col-start-4">
-            <div>
-              <h2 className="text-xl md:text-2xl font-normal tracking-tight text-ink-primary mb-4">
-                {article.title}
-              </h2>
-              <p className="text-sm leading-[1.75] text-ink-secondary max-w-2xl">
-                {article.summary}
-              </p>
-              <p className="text-[11px] tracking-[0.15em] text-ink-muted mt-4">
-                By {article.author}
-              </p>
-              <p className="text-[12px] text-ink-muted mt-2 italic">
-                Full piece coming soon.
-              </p>
-            </div>
-          </div>
+      {article.href ? (
+        <Link
+          href={article.href}
+          className="group block py-12 md:py-16 border-b border-subtle last:border-b-0"
+        >
+          {inner}
+        </Link>
+      ) : (
+        <div className="group block py-12 md:py-16 border-b border-subtle last:border-b-0">
+          {inner}
         </div>
-      </div>
+      )}
     </BlurFade>
   )
 }
