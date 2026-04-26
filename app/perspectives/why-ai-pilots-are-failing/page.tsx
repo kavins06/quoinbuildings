@@ -25,7 +25,7 @@ export default function ArticlePage() {
           <p className="text-[11px] tracking-[0.2em] uppercase text-accent mb-4">
             Industry Analysis &middot; April 2026
           </p>
-          <h1 className="font-serif text-3xl md:text-5xl font-normal leading-[1.1] tracking-tight text-foreground mb-6">
+          <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-normal leading-[1.1] tracking-[-0.02em] text-foreground mb-6 text-balance">
             Why AI Pilots Are Failing in Property Management and What to Do
             About It
           </h1>
@@ -274,7 +274,7 @@ export default function ArticlePage() {
       <section className="px-6 md:px-12 lg:px-20 py-10 md:py-14 bg-foreground">
         <div className="max-w-3xl mx-auto text-center">
           <div className="w-10 h-px bg-accent/40 mx-auto mb-8" />
-          <h2 className="font-serif text-2xl md:text-3xl font-normal tracking-tight text-background mb-4">
+          <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-background mb-4">
             Want to talk about your AI pilots?
           </h2>
           <p className="text-sm leading-[1.7] text-background/55 mb-8 max-w-xl mx-auto">
@@ -296,7 +296,7 @@ export default function ArticlePage() {
 
 function H2({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="font-serif text-2xl md:text-[1.75rem] font-normal tracking-tight text-foreground mt-6 mb-0">
+    <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mt-6 mb-0">
       {children}
     </h2>
   )
@@ -304,7 +304,7 @@ function H2({ children }: { children: React.ReactNode }) {
 
 function H3({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="text-lg md:text-xl font-medium tracking-tight text-foreground mt-4 mb-0">
+    <h3 className="text-lg md:text-xl font-normal tracking-tight text-foreground mt-4 mb-0">
       {children}
     </h3>
   )
