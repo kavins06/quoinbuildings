@@ -22,9 +22,6 @@ export function WhySection() {
               translating into operational results. Only 5% of commercial real estate firms
               have achieved their AI program goals. The gap is not technology. It is execution.
             </p>
-            <p className="text-[11px] tracking-[0.02em] text-ink-muted -mt-3 italic">
-              <a href="https://www.jll.com/en-us/newsroom/real-estates-ai-reality-check-companies-piloting-only-achieved-all-ai-goals" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">JLL, Oct 2025</a>
-            </p>
             <p className="text-sm leading-[1.85] text-muted-foreground">
               Point-solution SaaS vendors sell tools that do not integrate with your platform.
               Strategy consultants deliver decks and leave. Internal IT teams lack the specialized
@@ -34,7 +31,7 @@ export function WhySection() {
             <p className="text-sm leading-[1.85] text-muted-foreground">
               Quoin is that option. We embed with your teams and build AI agents on a shared
               intelligence layer that unifies your PMS, accounting, leases, and work orders.
-              Property managers get answers in minutes. Asset managers drill from portfolio to
+              Property managers gets hours of work done in minutes. Asset managers drill from portfolio to
               root cause. Both sides decide on evidence, at a fraction of the time.
             </p>
           </div>
