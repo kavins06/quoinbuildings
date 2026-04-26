@@ -19,10 +19,10 @@ export function WhySection() {
           <div className="flex flex-col gap-5">
             <p className="text-sm leading-[1.85] text-muted-foreground">
               Property and asset management teams are investing in AI, but the investments are not
-              translating into operational results. The gap is not technology. It is execution &amp; integration.
+              translating into operational results that move the bottom line significantly. The gap is not technology. It is execution &amp; integration.
             </p>
             <p className="text-sm leading-[1.85] text-muted-foreground">
-              Point-solution SaaS vendors sell tools that do not integrate with your platform.
+              Point-solution SaaS vendors sell tools that do not integrate with rest of your workflows.
               Strategy consultants deliver decks and leave. Internal IT teams lack the specialized
               expertise to build, govern, and operate agents at scale. None of these options close
               the gap between AI ambition and operational reality.
