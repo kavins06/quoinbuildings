@@ -162,7 +162,7 @@ export function ServicesContent() {
         eyebrow="Our Services"
         title="From diagnosis through ongoing operations, we handle every stage of AI adoption."
         description="Each service is designed for property management firms that are serious about making AI work, not just piloting it."
-        backgroundImage="/header-team.jpg"
+        backgroundImage="https://images.unsplash.com/photo-1613575831056-0acd5da8f085?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="pb-4 md:pb-8"
       />
