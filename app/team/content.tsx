@@ -12,7 +12,7 @@ const team = [
     name: "Kavin Sakthivel",
     role: "CEO & Chief Engineer",
     initials: "KS",
-    photo: "/team-kavin.png",
+    photo: "/team-kavin.jpeg",
     short: "Georgetown \u00b7 Real Estate & Competitive Intelligence",
     bio: "Kavin founded Quoin after several years of research at the frontier of spatial and physical intelligence in AI, convinced that deploying AI inside property management operations is the most durable lever for reducing the long-term cost of housing. He began his career in India managing infrastructure projects as a civil engineer, then moved into real estate market analysis and commercial mortgage banking before building enterprise-grade AI platforms for the real estate industry. Kavin holds a Bachelor of Engineering in Civil Engineering from PSG College of Technology \, one of India's premier engineering institutions \, a Master's in Real Estate from Georgetown University, and a graduate certificate in Competitive Intelligence; he has also passed CFA Level II. At Quoin, Kavin partners directly with every client as the primary point of contact from the first diagnostic through long-term operations, while setting the firm's strategic direction and personally leading its engineering team.",
   },
