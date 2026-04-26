@@ -4,7 +4,7 @@ import { ArrowUpRight, ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
   title:
-    "Why AI Pilots Are Failing in Property Management — and What to Do About It | Quoin",
+    "Why AI Pilots Are Failing in Property Management and What to Do About It | Quoin",
   description:
     "Most AI pilots in property management fail because they are designed around tools, not workflows. Here is the structural break-down and what firms can do differently.",
 }
@@ -26,7 +26,7 @@ export default function ArticlePage() {
             Industry Analysis &middot; April 2026
           </p>
           <h1 className="font-serif text-3xl md:text-5xl font-normal leading-[1.1] tracking-tight text-foreground mb-6">
-            Why AI Pilots Are Failing in Property Management — and What to Do
+            Why AI Pilots Are Failing in Property Management and What to Do
             About It
           </h1>
           <p className="text-[13px] tracking-[0.1em] uppercase text-muted-foreground/70">
@@ -70,8 +70,9 @@ export default function ArticlePage() {
           <p>
             In property management, the biggest inefficiencies are rarely
             simple writing tasks. They are judgment-heavy coordination
-            problems. A resident submits a vague maintenance request — “Water
-            under sink again” — and someone has to determine urgency, ask
+            problems. A resident submits a vague maintenance request,
+            “Water under sink again,” and someone has to determine urgency,
+            ask
             follow-up questions, check warranty status, assign the right
             vendor, verify access instructions, update the resident, and make
             sure the work order does not disappear.
@@ -81,7 +82,7 @@ export default function ArticlePage() {
             Someone has to identify intent, confirm availability, answer
             accurately based on property rules, push toward a tour, and log
             the interaction correctly. An owner asks why repairs are elevated
-            this month — someone has to connect invoices, work orders, unit
+            this month, and someone has to connect invoices, work orders, unit
             history, vendor notes, and budget variance into a coherent
             explanation.
           </p>
@@ -98,7 +99,7 @@ export default function ArticlePage() {
             platforms, accounting software, resident portals, call centers,
             email, spreadsheets, and shared drives. If AI cannot read from or
             write back to the relevant system, it becomes another place
-            employees have to check — and that kills adoption.
+            employees have to check, and that kills adoption.
           </p>
           <p>
             A maintenance coordinator will not copy work order notes into an
@@ -159,7 +160,7 @@ export default function ArticlePage() {
             privacy, lease compliance, security deposits, rent collection,
             insurance, vendor liability. Operators are right to be cautious.
             AI pilots fail when teams are told, “Just use it,” without clear
-            boundaries — staff need to know what AI can do, what it cannot
+            boundaries. Staff need to know what AI can do, what it cannot
             do, when humans must review, and what gets logged.
           </p>
           <p>
@@ -175,7 +176,7 @@ export default function ArticlePage() {
           <H3>5. The pilot ignores frontline behavior</H3>
           <p>
             A regional manager may love the dashboard while the onsite team
-            sees only extra work — and that gap kills pilots. If AI adds
+            sees only extra work, and that gap kills pilots. If AI adds
             steps, requires duplicate entry, interrupts established routines,
             or produces outputs that employees have to heavily correct, the
             team will quietly stop using it. The best AI deployments reduce
@@ -228,15 +229,15 @@ export default function ArticlePage() {
             controlled acceleration. In maintenance, AI can classify the
             issue, detect emergency language, ask the resident for photos,
             suggest the trade category, draft vendor instructions, and
-            prepare the resident update — a coordinator reviews and approves.
+            prepare the resident update. A coordinator reviews and approves.
           </p>
           <p>
             In leasing, AI can answer property-specific questions, qualify
             the prospect, recommend available units, and schedule tours
             within approved parameters; human agents handle edge cases and
             high-intent conversations. In accounting, AI can flag invoice
-            anomalies, match invoices to work orders, and suggest GL codes —
-            the accounting team approves exceptions. This is where trust
+            anomalies, match invoices to work orders, and suggest GL codes.
+            The accounting team approves exceptions. This is where trust
             compounds.
           </p>
 
@@ -246,9 +247,9 @@ export default function ArticlePage() {
             speed, accuracy, adoption, exceptions, resident impact, staff
             time, and financial outcome. Also track failure modes: incorrect
             responses, bad routing, missing context, compliance concerns,
-            and employee overrides. The override data is especially valuable
-            — it shows where the AI needs better context, better rules, or
-            a narrower role.
+            and employee overrides. The override data is especially valuable.
+            It shows where the AI needs better context, better rules, or a
+            narrower role.
           </p>
 
           <H3>Treat AI as an operating capability, not a feature</H3>
@@ -262,7 +263,7 @@ export default function ArticlePage() {
           <p>
             AI pilots fail when they are built to impress. They work when they
             are built to remove operational drag. For property management
-            firms, the opportunity is not replacing people — it is giving
+            firms, the opportunity is not replacing people. It is giving
             teams the context, speed, and consistency they need to manage
             more doors without letting service quality break.
           </p>
