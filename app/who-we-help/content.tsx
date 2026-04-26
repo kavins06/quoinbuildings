@@ -126,7 +126,7 @@ export function WhoWeHelpContent() {
               Trigger Moments
             </p>
             <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
-              When Firms Come to Us
+              What Firm&rsquo;s are experiencing
             </h2>
           </div>
         </BlurFade>
