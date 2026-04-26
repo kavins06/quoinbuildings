@@ -56,44 +56,47 @@ export function CookieBanner() {
           role="dialog"
           aria-live="polite"
           aria-label="Cookie consent"
-          initial={{ opacity: 0, y: 32, scale: 0.985 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 16, scale: 0.99 }}
+          initial={{ y: "100%" }}
+          animate={{ y: 0 }}
+          exit={{ y: "100%" }}
           transition={{
-            duration: 0.55,
+            duration: 0.6,
             ease: [0.22, 1, 0.36, 1],
-            opacity: { duration: 0.4 },
           }}
-          className="fixed bottom-4 left-4 right-4 md:left-6 md:right-auto md:bottom-6 md:max-w-md z-[60]"
+          className="fixed bottom-0 inset-x-0 z-[60]"
         >
-          <div className="bg-background/95 backdrop-blur-md text-foreground border border-border shadow-[0_20px_60px_-20px_rgba(0,0,0,0.18),0_8px_24px_-12px_rgba(0,0,0,0.10)] p-5 md:p-6 rounded-sm">
-            <p className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground/60 mb-3">
-              Cookies
-            </p>
-            <p className="text-[13px] leading-[1.7] text-foreground/80 mb-5">
-              We use a small number of cookies to keep the site secure, remember
-              your preferences, and understand which pages are useful. See our{" "}
-              <Link
-                href="/privacy"
-                className="underline underline-offset-2 decoration-accent hover:text-foreground"
-              >
-                Privacy Policy
-              </Link>{" "}
-              for details.
-            </p>
-            <div className="flex flex-wrap items-center gap-3">
-              <button
-                onClick={() => decide("accepted")}
-                className="text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 bg-foreground text-background hover:bg-foreground/90 transition-colors duration-200 rounded-sm"
-              >
-                Accept all
-              </button>
-              <button
-                onClick={() => decide("rejected")}
-                className="text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 border border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground transition-colors duration-200 rounded-sm"
-              >
-                Reject non-essential
-              </button>
+          <div className="bg-background/95 backdrop-blur-md text-foreground border-t border-border shadow-[0_-12px_40px_-20px_rgba(0,0,0,0.18)]">
+            <div className="container-shell py-5 md:py-6 flex flex-col md:flex-row md:items-center gap-5 md:gap-10">
+              <div className="flex-1 min-w-0">
+                <p className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground/60 mb-2">
+                  Cookies
+                </p>
+                <p className="text-[13px] leading-[1.6] text-foreground/80 max-w-3xl">
+                  We use a small number of cookies to keep the site secure, remember
+                  your preferences, and understand which pages are useful. See our{" "}
+                  <Link
+                    href="/privacy"
+                    className="underline underline-offset-2 decoration-accent hover:text-foreground"
+                  >
+                    Privacy Policy
+                  </Link>{" "}
+                  for details.
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-3 shrink-0">
+                <button
+                  onClick={() => decide("rejected")}
+                  className="text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 border border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground transition-colors duration-200 rounded-sm"
+                >
+                  Reject non-essential
+                </button>
+                <button
+                  onClick={() => decide("accepted")}
+                  className="text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 bg-foreground text-background hover:bg-foreground/90 transition-colors duration-200 rounded-sm"
+                >
+                  Accept all
+                </button>
+              </div>
             </div>
           </div>
         </motion.div>
