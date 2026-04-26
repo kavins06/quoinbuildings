@@ -2,6 +2,7 @@
 
 import { BlurFade } from "@/components/ui/blur-fade"
 import { Marquee } from "@/components/ui/marquee"
+import { AuroraText } from "@/components/ui/aurora-text"
 
 const logos = [
   { src: "/logos/georgetown.svg", alt: "Georgetown University" },
@@ -21,8 +22,8 @@ export function EditorialBreak() {
   return (
     <section className="px-6 md:px-12 lg:px-20 pt-0 pb-12 md:pb-16 -mt-16 md:-mt-24">
       <BlurFade inView direction="up">
-        <h2 className="font-serif italic text-2xl md:text-3xl font-normal tracking-tight text-muted-foreground mb-12 text-center">
-          Expertise from
+        <h2 className="font-serif text-3xl md:text-[2.5rem] font-normal tracking-tight mb-12 text-center">
+          <AuroraText>Expertise from</AuroraText>
         </h2>
         <div className="relative max-w-6xl mx-auto">
           {/* Desktop: two rows, second reversed */}
