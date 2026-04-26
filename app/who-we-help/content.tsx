@@ -42,7 +42,7 @@ const notForList = [
   },
   {
     text: "Firms managing fewer than 1,000 units.",
-    note: "The operational complexity and data volume that justify this engagement typically start around 2,000 units.",
+    note: "The operational complexity and data volume that justify this engagement typically start around 1,000 units.",
   },
   {
     text: "Firms that need a solution deployed in under 30 days.",
