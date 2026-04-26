@@ -28,11 +28,11 @@ export function EditorialBreak() {
           <div className="hidden md:flex flex-col gap-6">
             <Marquee pauseOnHover className="[--duration:55s] [--gap:4rem]">
               {logos.slice(0, 5).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-8 h-20">
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-10 h-32">
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-14 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
+                    className="h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
                   />
                   {logo.label && (
                     <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
@@ -44,11 +44,11 @@ export function EditorialBreak() {
             </Marquee>
             <Marquee reverse pauseOnHover className="[--duration:55s] [--gap:4rem]">
               {logos.slice(5).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-8 h-20">
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-10 h-32">
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-14 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
+                    className="h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
                   />
                   {logo.label && (
                     <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
