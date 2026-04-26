@@ -74,7 +74,7 @@ export function PerspectivesContent() {
         eyebrow="Perspectives"
         title="What We Are Seeing in the Market"
         description="Original analysis on AI adoption, governance, and operations in property management."
-        backgroundImage="https://images.unsplash.com/photo-1598646506899-ac6be1000c2f?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.1.0"
+        backgroundImage="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="pb-4 md:pb-8"
       />
