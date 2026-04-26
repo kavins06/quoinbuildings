@@ -5,15 +5,15 @@ import { Marquee } from "@/components/ui/marquee"
 
 const logos = [
   { src: "/logos/georgetown.svg", alt: "Georgetown University" },
-  { src: "/logos/dept-of-war.svg", alt: "U.S. Department of War" },
-  { src: "/logos/dept-of-state.svg", alt: "U.S. Department of State" },
-  { src: "/logos/odni.svg", alt: "Office of the Director of National Intelligence" },
-  { src: "/logos/leidos.svg", alt: "Leidos" },
-  { src: "/logos/cgi.svg", alt: "CGI Federal" },
+  { src: "/logos/dept-of-war.svg", alt: "U.S. Department of War", label: "Dept. of War" },
+  { src: "/logos/dept-of-state.svg", alt: "U.S. Department of State", label: "Dept. of State" },
+  { src: "/logos/odni.svg", alt: "Office of the Director of National Intelligence", label: "ODNI" },
+  { src: "/logos/leidos.svg", alt: "Leidos", label: "Leidos" },
+  { src: "/logos/cgi.svg", alt: "CGI Federal", label: "CGI Federal" },
   { src: "/logos/nar.svg", alt: "National Association of Realtors" },
   { src: "/logos/newpoint.svg", alt: "NewPoint Real Estate Capital" },
-  { src: "/logos/gmf.svg", alt: "German Marshall Fund of the United States" },
-  { src: "/logos/enabled-intelligence.png", alt: "Enabled Intelligence" },
+  { src: "/logos/gmf.svg", alt: "German Marshall Fund", label: "German Marshall Fund" },
+  { src: "/logos/enabled-intelligence.png", alt: "Enabled Intelligence", label: "Enabled Intelligence" },
 ]
 
 export function EditorialBreak() {
@@ -28,12 +28,18 @@ export function EditorialBreak() {
           <div className="hidden md:block">
             <Marquee pauseOnHover className="[--duration:50s] [--gap:4rem]">
               {logos.map((logo) => (
-                <img
-                  key={logo.alt}
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-16 w-auto object-contain mx-8 opacity-90 hover:opacity-100 transition-opacity duration-500"
-                />
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-8 h-20">
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-14 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
+                  />
+                  {logo.label && (
+                    <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
+                      {logo.label}
+                    </p>
+                  )}
+                </div>
               ))}
             </Marquee>
           </div>
@@ -42,22 +48,26 @@ export function EditorialBreak() {
           <div className="md:hidden flex flex-col gap-4">
             <Marquee pauseOnHover className="[--duration:40s] [--gap:2.5rem]">
               {logos.slice(0, 5).map((logo) => (
-                <img
-                  key={logo.alt}
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-12 w-auto object-contain mx-6 opacity-90"
-                />
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-6 h-16">
+                  <img src={logo.src} alt={logo.alt} className="h-10 w-auto object-contain opacity-90" />
+                  {logo.label && (
+                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
+                      {logo.label}
+                    </p>
+                  )}
+                </div>
               ))}
             </Marquee>
             <Marquee reverse pauseOnHover className="[--duration:40s] [--gap:2.5rem]">
               {logos.slice(5).map((logo) => (
-                <img
-                  key={logo.alt}
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-12 w-auto object-contain mx-6 opacity-90"
-                />
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-6 h-16">
+                  <img src={logo.src} alt={logo.alt} className="h-10 w-auto object-contain opacity-90" />
+                  {logo.label && (
+                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-nowrap">
+                      {logo.label}
+                    </p>
+                  )}
+                </div>
               ))}
             </Marquee>
           </div>
