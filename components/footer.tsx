@@ -23,8 +23,8 @@ const trustLinks = [
 export function Footer() {
   return (
     <footer className="bg-surface-sunken border-t border-subtle">
-      <div className="container-shell py-16 lg:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+      <div className="container-shell py-8 lg:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-8">
           <div>
             <Link
               href="/"
@@ -105,7 +105,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between pt-10 mt-12 border-t border-subtle gap-3">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between pt-5 mt-6 border-t border-subtle gap-3">
           <p className="text-[12px] text-ink-muted">
             © 2026 Quoin Buildings, LLC. All rights reserved.
           </p>
