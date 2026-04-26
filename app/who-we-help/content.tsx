@@ -55,7 +55,7 @@ export function WhoWeHelpContent() {
     <main>
       <PageHeader
         eyebrow="Who We Help"
-        title="AI Adoption and Operations for Mid-Market Property Management Firms"
+        title="AI Adoption and Operations for Enterprise Property & Asset Management Firms"
         description="We work with firms large enough to have multi-property operational complexity and too lean to build a dedicated internal AI team."
         backgroundImage="https://images.unsplash.com/photo-1613575831056-0acd5da8f085?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
