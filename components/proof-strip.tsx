@@ -13,7 +13,7 @@ interface ProofItem {
 
 const proofItems: ProofItem[] = [
   {
-    label: "Portfolio Scale",
+    label: "Built for Portfolio",
     value: "Over 1,000 Units or 1 Million Sq. ft.",
     link: "/who-we-help",
     linkLabel: "Who We Help",
