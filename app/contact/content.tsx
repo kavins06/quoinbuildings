@@ -278,9 +278,9 @@ export function ContactContent() {
                         className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${portfolioSqFt ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
                       >
                         <option value="">Select a range</option>
-                        <option value="under-500k">Under 500,000 sq ft</option>
-                        <option value="500k-2m">500,000&ndash;2M sq ft</option>
-                        <option value="2m-10m">2M&ndash;10M sq ft</option>
+                        <option value="1m-2m">1M&ndash;2M sq ft</option>
+                        <option value="2m-5m">2M&ndash;5M sq ft</option>
+                        <option value="5m-10m">5M&ndash;10M sq ft</option>
                         <option value="10m+">10M+ sq ft</option>
                       </select>
                       <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
