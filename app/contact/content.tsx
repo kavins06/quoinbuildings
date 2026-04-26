@@ -298,7 +298,7 @@ export function ContactContent() {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 resize-none placeholder:text-muted-foreground/30"
-                    placeholder="What prompted you to reach out?"
+                    placeholder="e.g., understand if AI can fix our maintenance backlog"
                   />
                 </div>
 
