@@ -11,9 +11,10 @@ const categories = [
   "After 6 months",
 ]
 
-const columns = [
+const others = [
   {
     name: "Point Solution Vendors",
+    short: "Vendors",
     values: [
       "Sell one tool for one workflow",
       "A product you configure",
@@ -24,9 +25,10 @@ const columns = [
   },
   {
     name: "Strategy Consultants",
+    short: "Consultants",
     values: [
       "Define AI strategy, deliver a roadmap",
-      "A deck you implement (or don\u2019t)",
+      "A deck you implement (or don’t)",
       "You do, after the engagement ends",
       "Mentioned in the deck, not implemented",
       "You have a roadmap. Maybe someone started.",
@@ -34,6 +36,7 @@ const columns = [
   },
   {
     name: "Your Internal IT Team",
+    short: "Internal IT",
     values: [
       "Support existing systems and infrastructure",
       "Support tickets and integrations",
@@ -42,36 +45,39 @@ const columns = [
       "You have a pilot. Maybe it is still running.",
     ],
   },
-  {
-    name: "Quoin",
-    highlight: true,
-    values: [
-      "Prepare operations, build AI workflows, set governance, deploy, and run ongoing",
-      "Production AI systems in your operations",
-      "We do, continuously",
-      "Built into every deployment from day one",
-      "You have a live AI workflow \, monitored, retrained, and expanding.",
-    ],
-  },
 ]
 
+const quoin = {
+  name: "Quoin",
+  values: [
+    "Prepare operations, build AI workflows, set governance, deploy, and run ongoing",
+    "Production AI systems in your operations",
+    "We do, continuously",
+    "Built into every deployment from day one",
+    "You have a live AI workflow, monitored, retrained, and expanding.",
+  ],
+}
+
+const columns = [...others, { ...quoin, highlight: true } as typeof others[number] & { highlight: boolean }]
+
 export function PrinciplesSection() {
-  const [activeTab, setActiveTab] = useState(3) // Default to Quoin on mobile
+  const [activeOther, setActiveOther] = useState(0)
+  const other = others[activeOther]
 
   return (
     <section className="px-6 py-20 md:px-12 lg:px-20 md:py-28 bg-secondary">
       <BlurFade inView direction="up">
         <div className="mb-16">
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
-            Your Options
+            Quoin vs. the alternatives
           </p>
           <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
-            You Have Four Options. Here Is What Each One Actually Does.
+            Compare what each option actually delivers.
           </h2>
         </div>
       </BlurFade>
 
-      {/* Desktop: Full Table */}
+      {/* Desktop: Full table with Quoin column visually separated */}
       <BlurFade inView delay={0.15} direction="up">
         <div className="hidden lg:block overflow-x-auto">
           <table className="w-full border-collapse">
@@ -83,11 +89,16 @@ export function PrinciplesSection() {
                     key={col.name}
                     className={`text-left p-4 text-sm font-medium tracking-tight ${
                       col.highlight
-                        ? "text-accent border-b-2 border-accent"
-                        : "text-foreground border-b border-border"
+                        ? "text-accent border-b-2 border-accent bg-accent/5"
+                        : "text-muted-foreground border-b border-border"
                     }`}
                   >
-                    {col.name}
+                    {col.highlight && (
+                      <span className="block text-[10px] tracking-[0.2em] uppercase text-accent/70 mb-1">
+                        Quoin
+                      </span>
+                    )}
+                    {col.highlight ? "What we do" : col.name}
                   </th>
                 ))}
               </tr>
@@ -103,7 +114,7 @@ export function PrinciplesSection() {
                       key={col.name}
                       className={`p-4 text-sm leading-[1.75] align-top ${
                         col.highlight
-                          ? "text-foreground font-light bg-accent/5"
+                          ? "text-foreground font-normal bg-accent/5 border-l border-accent/20"
                           : "text-muted-foreground"
                       }`}
                     >
@@ -117,41 +128,70 @@ export function PrinciplesSection() {
         </div>
       </BlurFade>
 
-      {/* Mobile: Card-based with tabs */}
+      {/* Mobile: side-by-side compare (Other vs Quoin) */}
       <div className="lg:hidden">
+        <p className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground/60 mb-3">
+          Compare Quoin against
+        </p>
         <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
-          {columns.map((col, index) => (
+          {others.map((col, index) => (
             <button
               key={col.name}
-              onClick={() => setActiveTab(index)}
+              onClick={() => setActiveOther(index)}
               className={`shrink-0 text-[10px] tracking-[0.15em] uppercase px-4 py-2 border transition-all duration-300 ${
-                activeTab === index
-                  ? col.highlight
-                    ? "border-accent bg-accent text-surface-base"
-                    : "border-foreground bg-foreground text-background"
+                activeOther === index
+                  ? "border-foreground bg-foreground text-background"
                   : "border-border text-muted-foreground"
               }`}
             >
-              {col.name}
+              {col.short}
             </button>
           ))}
         </div>
 
-        <div className={`border p-6 ${columns[activeTab].highlight ? "border-accent/30 bg-accent/5" : "border-border"}`}>
-          <h3 className={`text-lg font-light tracking-tight mb-6 ${columns[activeTab].highlight ? "text-accent" : "text-foreground"}`}>
-            {columns[activeTab].name}
-          </h3>
-          <div className="flex flex-col gap-5">
-            {categories.map((cat, catIndex) => (
-              <div key={cat}>
-                <p className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground/50 mb-1">
-                  {cat}
-                </p>
-                <p className={`text-sm leading-[1.75] ${columns[activeTab].highlight ? "text-foreground" : "text-muted-foreground"}`}>
-                  {columns[activeTab].values[catIndex]}
-                </p>
-              </div>
-            ))}
+        <div className="grid grid-cols-2 gap-3">
+          {/* Other column */}
+          <div className="border border-border bg-background/50 p-4">
+            <p className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground/60 mb-1">
+              Them
+            </p>
+            <h3 className="text-sm font-light tracking-tight mb-5 text-muted-foreground">
+              {other.name}
+            </h3>
+            <div className="flex flex-col gap-5">
+              {categories.map((cat, catIndex) => (
+                <div key={cat}>
+                  <p className="text-[9px] tracking-[0.2em] uppercase text-muted-foreground/40 mb-1">
+                    {cat}
+                  </p>
+                  <p className="text-[13px] leading-[1.6] text-muted-foreground">
+                    {other.values[catIndex]}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Quoin column */}
+          <div className="border-2 border-accent/40 bg-accent/5 p-4 relative">
+            <p className="text-[10px] tracking-[0.2em] uppercase text-accent/80 mb-1">
+              Us
+            </p>
+            <h3 className="text-sm font-medium tracking-tight mb-5 text-accent">
+              {quoin.name}
+            </h3>
+            <div className="flex flex-col gap-5">
+              {categories.map((cat, catIndex) => (
+                <div key={cat}>
+                  <p className="text-[9px] tracking-[0.2em] uppercase text-muted-foreground/50 mb-1">
+                    {cat}
+                  </p>
+                  <p className="text-[13px] leading-[1.6] text-foreground">
+                    {quoin.values[catIndex]}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
