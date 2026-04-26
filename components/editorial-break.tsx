@@ -21,7 +21,7 @@ export function EditorialBreak() {
     <section className="px-6 md:px-12 lg:px-20 py-16 md:py-24">
       <BlurFade inView direction="up">
         <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/60 mb-10 text-center">
-          Experience From
+          Expertise from
         </p>
         <div className="relative max-w-6xl mx-auto">
           {/* Desktop: two rows, second reversed */}
