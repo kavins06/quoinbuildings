@@ -14,7 +14,7 @@ export default function ArticlePage() {
     <main className="bg-background">
       {/* Header */}
       <header className="px-6 md:px-12 lg:px-20 pt-10 md:pt-14 pb-6 md:pb-8 border-b border-subtle">
-        <div className="max-w-3xl">
+        <div>
           <Link
             href="/perspectives"
             className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-200 mb-5"
@@ -37,7 +37,7 @@ export default function ArticlePage() {
 
       {/* Body */}
       <article className="px-6 md:px-12 lg:px-20 py-8 md:py-12">
-        <div className="max-w-3xl prose-content flex flex-col gap-4 text-[15px] md:text-base leading-[1.7] text-foreground/80">
+        <div className="prose-content flex flex-col gap-4 text-[15px] md:text-base leading-[1.7] text-foreground/80">
           <p>
             AI pilots in property management are rarely failing because the
             technology cannot work.
