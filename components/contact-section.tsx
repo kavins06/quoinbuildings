@@ -21,16 +21,17 @@ export function ContactSection() {
               If there is a fit, the next step is a 2-week Executive Diagnostic:
               a standalone engagement with clear deliverables and no long-term commitment.
             </p>
-            <div className="mt-10 flex flex-col gap-6">
+            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
               <Link
                 href="/contact"
-                className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 bg-white text-black hover:bg-white/90 transition-colors duration-150"
+                className="group inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase px-6 py-3 bg-accent text-background hover:bg-accent/90 transition-colors duration-200 rounded-sm"
               >
-                Talk to us
+                <span>Talk to us</span>
+                <ArrowUpRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
               </Link>
               <a
                 href="mailto:info@quoinbuildings.com"
-                className="group inline-flex items-center gap-3 text-sm tracking-wide text-background/60 hover:text-background transition-colors duration-500"
+                className="group inline-flex items-center gap-2 text-sm tracking-wide text-background/60 hover:text-background transition-colors duration-500"
               >
                 <span className="border-b border-background/20 pb-0.5 group-hover:border-background/60 transition-colors duration-500">
                   info@quoinbuildings.com
