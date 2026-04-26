@@ -10,7 +10,7 @@ import { BlurFade } from "@/components/ui/blur-fade"
 const team = [
   {
     name: "Kavin Sakthivel",
-    role: "Founder & CEO",
+    role: "CEO & Chief Engineer",
     initials: "KS",
     photo: "/team-kavin.png",
     short: "Georgetown \u00b7 Real Estate & Competitive Intelligence",
