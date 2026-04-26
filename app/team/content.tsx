@@ -37,7 +37,7 @@ const team = [
     name: "Rohith Roshan",
     role: "Director, Artificial Intelligence",
     initials: "RR",
-    photo: "/team-rohith.jpeg",
+    photo: "/team-rohith.png",
     short: "Agentic AI \u00b7 Physics-Informed Neural Networks \u00b7 Applied Research",
     bio: "Rohith Roshan leads Quoin's artificial intelligence work, setting research direction and owning the design, evaluation, and deployment of the agents we build for clients. Trained as an electrical engineer, he specializes in agentic frameworks and physics-informed neural networks, building production AI systems capable of handling mission-grade workloads. Before moving full-time into AI engineering in 2024, he spent nearly a year as a Real Estate Rental Manager at Arun Realty, which gave him direct operational context for the property management workflows Quoin automates. Alongside his applied work, Rohith has conducted multi-year independent research at the foundations of AI and information theory \u2014 including investigations framing reality as a binary tree of events rather than stochastic processes, and earlier work on the effects of perception and consciousness on subjective reality. He holds a Bachelor of Engineering in Electrical Engineering. At Quoin, Rohith designs and evaluates the AI delivered on every client engagement and owns the firm's AI stack end-to-end \u2014 from model selection and evaluation to agent architecture and the physics-informed modeling that keeps our systems at the frontier.",
   },
