@@ -126,7 +126,7 @@ export function ContactContent() {
                 </p>
                 <div className="border border-border rounded-sm overflow-hidden bg-background">
                   <iframe
-                    src={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.app.google/aJBszTpjD5icj7bZ8"}
+                    src={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.google.com/calendar/appointments/schedules/AcZssZ00JrZ1C4N98WsTIZ5ic1XOdDAIkwe1JhRhPy15f7PTAMtoJKshGXM5qaRYIoL2jcc1OoNamnaX?gv=true"}
                     title="Book a 1-hour call"
                     className="w-full"
                     style={{ height: "780px", border: 0 }}
@@ -144,7 +144,7 @@ export function ContactContent() {
                   <p className="text-[12px] text-muted-foreground/70">
                     Calendar not loading?{" "}
                     <a
-                      href={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.app.google/aJBszTpjD5icj7bZ8"}
+                      href={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.google.com/calendar/appointments/schedules/AcZssZ00JrZ1C4N98WsTIZ5ic1XOdDAIkwe1JhRhPy15f7PTAMtoJKshGXM5qaRYIoL2jcc1OoNamnaX?gv=true"}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline underline-offset-2 hover:text-foreground"
