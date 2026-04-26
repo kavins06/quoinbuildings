@@ -2,6 +2,7 @@
 
 import { BlurFade } from "@/components/ui/blur-fade"
 import { Marquee } from "@/components/ui/marquee"
+import { DraggableMarquee } from "@/components/ui/draggable-marquee"
 import { AuroraText } from "@/components/ui/aurora-text"
 
 const logos = [
@@ -28,66 +29,68 @@ export function EditorialBreak() {
         <div className="relative max-w-6xl mx-auto">
           {/* Desktop: two rows, second reversed */}
           <div className="hidden md:flex flex-col gap-6">
-            <Marquee pauseOnHover className="[--duration:55s] [--gap:4rem]">
+            <DraggableMarquee duration={55}>
               {logos.slice(0, 6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-8 h-24">
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-8 h-24 shrink-0">
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
+                    draggable={false}
+                    className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
                   />
                   {logo.label && (
-                    <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight">
+                    <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
                       {logo.label}
                     </p>
                   )}
                 </div>
               ))}
-            </Marquee>
-            <Marquee reverse pauseOnHover className="[--duration:55s] [--gap:4rem]">
+            </DraggableMarquee>
+            <DraggableMarquee duration={55} reverse>
               {logos.slice(6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-8 h-24">
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-8 h-24 shrink-0">
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
+                    draggable={false}
+                    className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
                   />
                   {logo.label && (
-                    <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight">
+                    <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
                       {logo.label}
                     </p>
                   )}
                 </div>
               ))}
-            </Marquee>
+            </DraggableMarquee>
           </div>
 
           {/* Mobile: two rows, second reversed */}
           <div className="md:hidden flex flex-col gap-4">
-            <Marquee pauseOnHover className="[--duration:40s] [--gap:2.5rem]">
+            <DraggableMarquee duration={40}>
               {logos.slice(0, 6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-5 h-12">
-                  <img src={logo.src} alt={logo.alt} className="h-7 w-auto object-contain opacity-90" />
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-5 h-12 shrink-0">
+                  <img src={logo.src} alt={logo.alt} draggable={false} className="h-7 w-auto object-contain opacity-90 select-none pointer-events-none" />
                   {logo.label && (
-                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight">
+                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
                       {logo.label}
                     </p>
                   )}
                 </div>
               ))}
-            </Marquee>
-            <Marquee reverse pauseOnHover className="[--duration:40s] [--gap:2.5rem]">
+            </DraggableMarquee>
+            <DraggableMarquee duration={40} reverse>
               {logos.slice(6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-end mx-5 h-12">
-                  <img src={logo.src} alt={logo.alt} className="h-7 w-auto object-contain opacity-90" />
+                <div key={logo.alt} className="flex flex-col items-center justify-end mx-5 h-12 shrink-0">
+                  <img src={logo.src} alt={logo.alt} draggable={false} className="h-7 w-auto object-contain opacity-90 select-none pointer-events-none" />
                   {logo.label && (
-                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight">
+                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
                       {logo.label}
                     </p>
                   )}
                 </div>
               ))}
-            </Marquee>
+            </DraggableMarquee>
           </div>
 
           <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24 bg-gradient-to-r from-background to-transparent" />
