@@ -17,6 +17,7 @@ const team = [
     bio: "Kavin founded Quoin after several years of research at the frontier of spatial and physical intelligence in AI, convinced that deploying AI inside property management operations is the most durable lever for reducing the long-term cost of housing. He began his career in India managing infrastructure projects as a civil engineer, then moved into real estate market analysis and commercial mortgage banking before building enterprise-grade AI platforms for the real estate industry. Kavin holds a Bachelor of Engineering in Civil Engineering from PSG College of Technology \, one of India's premier engineering institutions \, a Master's in Real Estate from Georgetown University, and a graduate certificate in Competitive Intelligence; he has also passed CFA Level II. At Quoin, Kavin partners directly with every client as the primary point of contact from the first diagnostic through long-term operations, while setting the firm's strategic direction and personally leading its engineering team.",
   },
   {
+    hidden: true,
     name: "Jonathan Morris",
     role: "Advisor, Real Estate",
     initials: "JM",
@@ -106,7 +107,7 @@ export function TeamContent() {
         </BlurFade>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {team.map((member, index) => (
+          {team.filter((m) => !(m as { hidden?: boolean }).hidden).map((member, index) => (
             <BlurFade key={member.name} inView delay={index * 0.1} direction="up">
               <button
                 onClick={() => setSelectedMember(member)}
