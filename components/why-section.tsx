@@ -22,12 +22,6 @@ export function WhySection() {
               translating into operational results that move the bottom line significantly. The gap is not technology. It is execution &amp; integration.
             </p>
             <p className="text-sm leading-[1.85] text-muted-foreground">
-              Point-solution SaaS vendors sell tools that do not integrate with rest of your workflows.
-              Strategy consultants deliver decks and leave. Internal IT teams lack the specialized
-              expertise to build, govern, and operate agents at scale. None of these options close
-              the gap between AI ambition and operational reality.
-            </p>
-            <p className="text-sm leading-[1.85] text-muted-foreground">
               So, we started Quoin. We embed with your teams and build AI agents on a shared
               intelligence layer that unifies your PMS, accounting, leases, and work orders.
               Property managers gets hours of work done in minutes. Asset managers drill from portfolio to
