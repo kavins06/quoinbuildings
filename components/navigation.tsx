@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 import { AnimatedLogo } from "@/components/ui/animated-logo"
 
 const navLinks = [
@@ -71,24 +72,49 @@ export function Navigation() {
         </button>
       </nav>
 
-      <div
-        id="mobile-nav"
-        hidden={!isOpen}
-        className="md:hidden absolute top-full inset-x-0 bg-surface-base/85 backdrop-blur-md border-t border-subtle shadow-lg"
-      >
-        <div className="w-full px-6 flex flex-col py-8 gap-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-xl text-ink-primary"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            id="mobile-nav"
+            key="mobile-nav"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden absolute top-full inset-x-0 bg-surface-base/85 backdrop-blur-md border-t border-subtle shadow-lg overflow-hidden"
+          >
+            <motion.div
+              className="w-full px-6 flex flex-col py-8 gap-6"
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={{
+                open: { transition: { staggerChildren: 0.04, delayChildren: 0.05 } },
+                closed: { transition: { staggerChildren: 0.02, staggerDirection: -1 } },
+              }}
             >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </div>
+              {navLinks.map((link) => (
+                <motion.div
+                  key={link.label}
+                  variants={{
+                    open: { opacity: 1, y: 0 },
+                    closed: { opacity: 0, y: -6 },
+                  }}
+                  transition={{ duration: 0.18, ease: "easeOut" }}
+                >
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-xl text-ink-primary"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 }
