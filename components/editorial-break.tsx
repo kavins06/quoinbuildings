@@ -32,7 +32,7 @@ export function EditorialBreak() {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="max-h-full max-w-full object-contain grayscale opacity-60 hover:opacity-90 hover:grayscale-0 transition-all duration-500"
+                  className="max-h-full max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
                 />
               </div>
             ))}
