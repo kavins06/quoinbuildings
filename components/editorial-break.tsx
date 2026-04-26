@@ -8,6 +8,7 @@ const logos = [
   { src: "/logos/dept-of-war.svg", alt: "U.S. Department of War", label: "Dept. of War" },
   { src: "/logos/dept-of-state.svg", alt: "U.S. Department of State", label: "Dept. of State" },
   { src: "/logos/odni.svg", alt: "Office of the Director of National Intelligence", label: "ODNI" },
+  { src: "/logos/nga.svg", alt: "National Geospatial-Intelligence Agency", label: "NGA" },
   { src: "/logos/leidos.svg", alt: "Leidos" },
   { src: "/logos/cgi.svg", alt: "CGI Federal", label: "CGI Federal" },
   { src: "/logos/nar.svg", alt: "National Association of Realtors" },
@@ -27,7 +28,7 @@ export function EditorialBreak() {
           {/* Desktop: two rows, second reversed */}
           <div className="hidden md:flex flex-col gap-6">
             <Marquee pauseOnHover className="[--duration:55s] [--gap:4rem]">
-              {logos.slice(0, 5).map((logo) => (
+              {logos.slice(0, 6).map((logo) => (
                 <div key={logo.alt} className="flex flex-col items-center justify-end mx-10 h-32">
                   <img
                     src={logo.src}
@@ -43,7 +44,7 @@ export function EditorialBreak() {
               ))}
             </Marquee>
             <Marquee reverse pauseOnHover className="[--duration:55s] [--gap:4rem]">
-              {logos.slice(5).map((logo) => (
+              {logos.slice(6).map((logo) => (
                 <div key={logo.alt} className="flex flex-col items-center justify-end mx-10 h-32">
                   <img
                     src={logo.src}
@@ -63,7 +64,7 @@ export function EditorialBreak() {
           {/* Mobile: two rows, second reversed */}
           <div className="md:hidden flex flex-col gap-4">
             <Marquee pauseOnHover className="[--duration:40s] [--gap:2.5rem]">
-              {logos.slice(0, 5).map((logo) => (
+              {logos.slice(0, 6).map((logo) => (
                 <div key={logo.alt} className="flex flex-col items-center justify-end mx-6 h-16">
                   <img src={logo.src} alt={logo.alt} className="h-10 w-auto object-contain opacity-90" />
                   {logo.label && (
@@ -75,7 +76,7 @@ export function EditorialBreak() {
               ))}
             </Marquee>
             <Marquee reverse pauseOnHover className="[--duration:40s] [--gap:2.5rem]">
-              {logos.slice(5).map((logo) => (
+              {logos.slice(6).map((logo) => (
                 <div key={logo.alt} className="flex flex-col items-center justify-end mx-6 h-16">
                   <img src={logo.src} alt={logo.alt} className="h-10 w-auto object-contain opacity-90" />
                   {logo.label && (
