@@ -19,7 +19,7 @@ const logos = [
 
 export function EditorialBreak() {
   return (
-    <section className="px-6 md:px-12 lg:px-20 py-16 md:py-24">
+    <section className="px-6 md:px-12 lg:px-20 py-8 md:py-12">
       <BlurFade inView direction="up">
         <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/60 mb-10 text-center">
           Expertise from
