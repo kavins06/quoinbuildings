@@ -95,7 +95,7 @@ function ServiceBlock({ service, index }: { service: typeof services[0]; index: 
   return (
     <BlurFade inView direction="up" delay={0.1}>
       <div className="py-16 md:py-20 border-b border-border last:border-b-0">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 lg:items-center">
           <div className="lg:col-span-5">
             <span className="text-[11px] tracking-[0.15em] text-muted-foreground/40 block mb-4">
               ({service.number})
