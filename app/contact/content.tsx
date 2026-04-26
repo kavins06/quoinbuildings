@@ -27,6 +27,7 @@ export function ContactContent() {
   const [submitting, setSubmitting] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [submitted, setSubmitted] = useState(false)
+  const [bookingConfirmed, setBookingConfirmed] = useState(false)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -88,7 +89,33 @@ export function ContactContent() {
       <section className="px-6 py-20 md:px-12 lg:px-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
           <BlurFade inView direction="up" className="lg:col-span-7">
-            {submitted ? (
+            {bookingConfirmed ? (
+              <div className="py-12">
+                <div className="w-10 h-px bg-accent/40 mb-6" />
+                <p className="text-[11px] tracking-[0.3em] uppercase text-accent mb-4">
+                  You&rsquo;re booked
+                </p>
+                <h2 className="text-3xl md:text-[2.5rem] font-normal tracking-tight text-foreground mb-5">
+                  Thank you — talk soon.
+                </h2>
+                <p className="text-sm leading-[1.85] text-muted-foreground max-w-md">
+                  Your call is on Kavin&rsquo;s calendar. A confirmation email
+                  with the Google Meet link should be in your inbox in the next
+                  few minutes.
+                </p>
+                <p className="text-sm leading-[1.85] text-muted-foreground max-w-md mt-3">
+                  Need to reschedule? Use the link in the calendar invite, or
+                  email{" "}
+                  <a
+                    href="mailto:kavins@quoinbuildings.com"
+                    className="underline underline-offset-2 decoration-accent hover:text-foreground"
+                  >
+                    kavins@quoinbuildings.com
+                  </a>
+                  .
+                </p>
+              </div>
+            ) : submitted ? (
               <div className="py-8">
                 <div className="w-10 h-px bg-accent/40 mb-6" />
                 <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-3">
@@ -106,18 +133,27 @@ export function ContactContent() {
                     loading="lazy"
                   />
                 </div>
-                <p className="mt-4 text-[12px] text-muted-foreground/70">
-                  Calendar not loading?{" "}
-                  <a
-                    href={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.app.google/aJBszTpjD5icj7bZ8"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline underline-offset-2 hover:text-foreground"
+                <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+                  <button
+                    type="button"
+                    onClick={() => setBookingConfirmed(true)}
+                    className="self-start inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 bg-accent text-background hover:bg-accent/90 transition-colors duration-200 rounded-sm"
                   >
-                    Open the booking page in a new tab
-                  </a>
-                  .
-                </p>
+                    I&rsquo;ve booked my call
+                  </button>
+                  <p className="text-[12px] text-muted-foreground/70">
+                    Calendar not loading?{" "}
+                    <a
+                      href={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.app.google/aJBszTpjD5icj7bZ8"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 hover:text-foreground"
+                    >
+                      Open in a new tab
+                    </a>
+                    .
+                  </p>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-8">
