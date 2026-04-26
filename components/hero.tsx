@@ -16,13 +16,13 @@ export function Hero() {
           <div className="lg:col-span-7">
 
             <BlurFade delay={0.5} direction="up" offset={8}>
-              <h1 className="font-display text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.05] tracking-[-0.015em] text-ink-primary">
+              <h1 className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.15] tracking-[-0.03em] text-ink-primary">
                 Your AI Operating
                 <br />
                 <WordRotate
                   words={["Partner", "Infrastructure", "Advantage"]}
                   duration={3000}
-                  className="font-display text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.05] tracking-[-0.015em] text-accent"
+                  className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.15] tracking-[-0.03em] text-accent"
                 />
               </h1>
             </BlurFade>
