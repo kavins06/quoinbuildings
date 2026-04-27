@@ -163,21 +163,6 @@ export function TeamContent() {
               {selectedMember.bio}
             </p>
 
-            {selectedMember.credentials && selectedMember.credentials.length > 0 && (
-              <div>
-                <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4">
-                  Credentials
-                </p>
-                <ul className="space-y-2">
-                  {selectedMember.credentials.map((cred, i) => (
-                    <li key={i} className="text-sm leading-relaxed text-muted-foreground flex items-start gap-2">
-                      <span className="text-accent mt-1 shrink-0">&bull;</span>
-                      {cred}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </div>
         </div>
       )}

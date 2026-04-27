@@ -58,7 +58,8 @@ const quoin = {
   ],
 }
 
-const columns = [...others, { ...quoin, highlight: true } as typeof others[number] & { highlight: boolean }]
+type Column = { name: string; short?: string; values: string[]; highlight?: boolean }
+const columns: Column[] = [...others, { ...quoin, highlight: true }]
 
 export function PrinciplesSection() {
   const [activeOther, setActiveOther] = useState(0)
