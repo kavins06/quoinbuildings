@@ -96,7 +96,7 @@ export function ContactContent() {
                   You&rsquo;re booked
                 </p>
                 <h2 className="text-3xl md:text-[2.5rem] font-normal tracking-tight text-foreground mb-5">
-                  Thank you — talk soon.
+                  Thank you. Talk soon.
                 </h2>
                 <p className="text-sm leading-[1.85] text-muted-foreground max-w-md">
                   Your call is on Kavin&rsquo;s calendar. A confirmation email
@@ -119,7 +119,7 @@ export function ContactContent() {
               <div className="py-8">
                 <div className="w-10 h-px bg-accent/40 mb-6" />
                 <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-3">
-                  Thanks — pick a time.
+                  Thanks. Pick a time.
                 </h2>
                 <p className="text-sm leading-[1.75] text-muted-foreground mb-8">
                   Grab a 1-hour slot below. You&rsquo;ll get a calendar invite and a Google Meet link.
@@ -399,7 +399,7 @@ export function ContactContent() {
                   Suggested Participants
                 </p>
                 <p className="text-sm leading-[1.75] text-muted-foreground">
-                  The first call works best with the executive sponsor — COO, CEO, or VP Operations. If your CTO or IT lead is part of the AI decision, they are welcome.                </p>
+                  The first call works best with the executive sponsor: COO, CEO, or VP Operations. If your CTO or IT lead is part of the AI decision, they are welcome.                </p>
               </div>
             </div>
           </BlurFade>

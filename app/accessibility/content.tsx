@@ -27,7 +27,7 @@ export function AccessibilityContent() {
             <li>A skip-to-content link, available as the first focusable element on every page.</li>
             <li>Visible focus indicators on every interactive element (2 px accent outline, 2 px offset).</li>
             <li>Color contrast verified at WCAG AA or better for body text and UI.</li>
-            <li><code>prefers-reduced-motion</code> is respected — scroll-entry fade animations are disabled for visitors who request reduced motion.</li>
+            <li><code>prefers-reduced-motion</code> is respected. Scroll-entry fade animations are disabled for visitors who request reduced motion.</li>
             <li>Responsive layouts from 320 px through 1440 px; zoom to 200&nbsp;% supported without loss of content.</li>
             <li>Meaningful images have descriptive <code>alt</code> text; decorative images are marked as such.</li>
             <li>Form fields have visible labels (not placeholder-only) and clear validation messages.</li>
@@ -39,7 +39,7 @@ export function AccessibilityContent() {
           <h2 className="text-2xl text-ink-primary">Known gaps</h2>
           <p className="text-base text-ink-secondary leading-relaxed mt-4">As of April 2026:</p>
           <ul className="list-disc pl-6 mt-4 space-y-2 text-base text-ink-secondary leading-relaxed">
-            <li>No automated accessibility regression tests in CI yet — we run manual audits with axe DevTools and VoiceOver/NVDA before each deploy.</li>
+            <li>No automated accessibility regression tests in CI yet. We run manual audits with axe DevTools and VoiceOver/NVDA before each deploy.</li>
             <li>Some third-party content (e.g., embedded LinkedIn links) inherits the accessibility posture of the source site, which we do not control.</li>
           </ul>
           <p className="text-base text-ink-secondary leading-relaxed mt-4">
@@ -50,7 +50,7 @@ export function AccessibilityContent() {
         <section className="mt-12 measure">
           <h2 className="text-2xl text-ink-primary">If you hit a barrier</h2>
           <p className="text-base text-ink-secondary leading-relaxed mt-4">
-            Email <a className="underline decoration-accent underline-offset-4" href="mailto:accessibility@quoinbuildings.com">accessibility@quoinbuildings.com</a>. Tell us what you were trying to do and what went wrong — a page URL and a short description are enough. We will acknowledge within two business days and tell you when we expect to have it fixed.
+            Email <a className="underline decoration-accent underline-offset-4" href="mailto:accessibility@quoinbuildings.com">accessibility@quoinbuildings.com</a>. Tell us what you were trying to do and what went wrong. A page URL and a short description are enough. We will acknowledge within two business days and tell you when we expect to have it fixed.
           </p>
           <p className="text-base text-ink-secondary leading-relaxed mt-4">
             If you need the content of this site in a different format (larger text, plain document, a phone call), ask at the same address.

@@ -21,7 +21,7 @@ export default function DataSecurityPage() {
       <section className="mt-16 measure">
         <h2 className="text-2xl text-ink-primary">Data handling</h2>
         <p className="text-base text-ink-secondary leading-relaxed mt-4">
-          All client data is encrypted at rest with AES-256 and in transit with TLS 1.3. Operational data — tenant records, lease documents, maintenance tickets, financial reports — lives inside client-controlled environments where possible (your Yardi, RealPage, AppFolio, or Entrata instance; your cloud; your database). Where data must move into a Quoin-managed environment for model training or orchestration, it moves through documented, audited pipelines and is retained only for the duration of the engagement plus a defined windback period.
+          All client data is encrypted at rest with AES-256 and in transit with TLS 1.3. Operational data (tenant records, lease documents, maintenance tickets, financial reports) lives inside client-controlled environments where possible (your Yardi, RealPage, AppFolio, or Entrata instance; your cloud; your database). Where data must move into a Quoin-managed environment for model training or orchestration, it moves through documented, audited pipelines and is retained only for the duration of the engagement plus a defined windback period.
         </p>
       </section>
 
@@ -38,7 +38,7 @@ export default function DataSecurityPage() {
       <section className="mt-12 measure">
         <h2 className="text-2xl text-ink-primary">Vendor review</h2>
         <p className="text-base text-ink-secondary leading-relaxed mt-4">
-          Every third-party service that touches client data — model providers (OpenAI, Anthropic), observability tools, orchestration platforms — is reviewed before it enters an engagement. We check data-processing agreements, data-retention policies, sub-processor lists, and geographic processing. The vendor list for each engagement is documented and shared with the client.
+          Every third-party service that touches client data, including model providers (OpenAI, Anthropic), observability tools, and orchestration platforms, is reviewed before it enters an engagement. We check data-processing agreements, data-retention policies, sub-processor lists, and geographic processing. The vendor list for each engagement is documented and shared with the client.
         </p>
       </section>
 

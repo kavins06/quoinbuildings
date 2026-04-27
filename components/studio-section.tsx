@@ -8,7 +8,7 @@ const weeks = [
     number: "01",
     title: "Stakeholder Interviews & Workflow Mapping",
     description:
-      "Property managers, leasing, maintenance, and compliance — how work actually flows.",
+      "Property managers, leasing, maintenance, and compliance. How work actually flows.",
   },
   {
     number: "02",
@@ -19,7 +19,7 @@ const weeks = [
 ]
 
 const deliverables = [
-  "Prioritized implementation roadmap — a build plan, not a deck",
+  "Prioritized implementation roadmap: a build plan, not a deck",
   "Data and systems readiness assessment",
   "Governance requirements document",
   "Clear recommendation: where to build first, what to skip",
@@ -42,7 +42,7 @@ export function StudioSection() {
           </h2>
           <p className="mt-4 text-sm leading-[1.7] text-background/55">
             Two weeks inside your operations to understand what is real, what is
-            possible, and what is not worth pursuing. Standalone — no multi-year
+            possible, and what is not worth pursuing. Standalone. No multi-year
             commitment.
           </p>
         </div>

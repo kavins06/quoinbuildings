@@ -21,7 +21,7 @@ export default function ResponsibleAIPage() {
       <section className="mt-16 measure">
         <h2 className="text-2xl text-ink-primary">What we will and will not build</h2>
         <p className="text-base text-ink-secondary leading-relaxed mt-4">
-          We work on operational AI: leasing triage, maintenance routing, rent-roll reconciliation, document abstraction, tenant communications. We do not build AI that makes final tenant selection decisions, final credit decisions, or any decision that materially affects a household&apos;s ability to secure housing. AI assists — a person decides.
+          We work on operational AI: leasing triage, maintenance routing, rent-roll reconciliation, document abstraction, tenant communications. We do not build AI that makes final tenant selection decisions, final credit decisions, or any decision that materially affects a household&apos;s ability to secure housing. AI assists. A person decides.
         </p>
       </section>
 

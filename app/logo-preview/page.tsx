@@ -10,7 +10,7 @@ export default function LogoPreviewPage() {
   return (
     <main className="min-h-[calc(100vh-72px)] flex flex-col items-center justify-center gap-12 px-6 py-16">
       <p className="text-[11px] tracking-[0.3em] uppercase text-ink-muted">
-        Logo — animation preview
+        Logo animation preview
       </p>
 
       <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">

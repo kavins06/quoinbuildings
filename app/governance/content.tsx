@@ -157,7 +157,7 @@ export function GovernanceContent() {
             </div>
             <div className="lg:col-span-6 lg:col-start-7 flex items-end">
               <p className="text-sm leading-[1.85] text-muted-foreground">
-                Every system we build is engineered to meet enterprise compliance and security standards from day one — SOC 2, ISO 27001, GDPR, CCPA, and fair housing requirements are designed into the architecture, not bolted on. The framework is informed by senior advisors with decades of enterprise compliance, governance, and security experience across the U.S. Department of War, the U.S. Department of State, ODNI, and BAE Systems.
+                Every system we build is engineered to meet enterprise compliance and security standards from day one. SOC 2, ISO 27001, GDPR, CCPA, and fair housing requirements are designed into the architecture, not bolted on. The framework is informed by senior advisors with decades of enterprise compliance, governance, and security experience across the U.S. Department of War, the U.S. Department of State, ODNI, and BAE Systems.
               </p>
             </div>
           </div>

@@ -19,7 +19,7 @@ export function ContactSection() {
             <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-md">
               A 1-hour conversation about your operations. No pitch. No pressure.
               Submit the form and book directly on Kavin&rsquo;s calendar. If there is a fit,
-              the next step is a 2-week Executive Diagnostic — a standalone engagement
+              the next step is a 2-week Executive Diagnostic, a standalone engagement
               with clear deliverables and no long-term commitment.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">

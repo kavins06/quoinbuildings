@@ -7,3 +7,186 @@
 
 [1m[33mwarn[39m[22m - The class `duration-[800ms]` is ambiguous and matches multiple utilities.
 [1m[33mwarn[39m[22m - If this is content and not a class, replace it with `duration-&lsqb;800ms&rsqb;` to silence this warning.
+
+[1m[33mwarn[39m[22m - The class `duration-[800ms]` is ambiguous and matches multiple utilities.
+[1m[33mwarn[39m[22m - If this is content and not a class, replace it with `duration-&lsqb;800ms&rsqb;` to silence this warning.
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'],
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: Newsreader is not defined
+    at module evaluation (app\layout.tsx:24:20)
+    at module evaluation (C:\Website for Quoin\.next\dev\server\chunks\ssr\[root-of-the-server]__eed34e9f._.js:14:47)
+  22 | })
+  23 |
+> 24 | const newsreader = Newsreader({
+     |                    ^
+  25 |   subsets: ['latin'],
+  26 |   variable: '--font-display',
+  27 |   weight: ['400', '500', '600'], {
+  page: '/'
+}
+⨯ ReferenceError: newsreader is not defined
+    at RootLayout (app\layout.tsx:38:77)
+  36 | }>) {
+  37 |   return (
+> 38 |     <html lang="en" className={`${inter.variable} ${sourceSerif.variable} ${newsreader.variable}`}>
+     |                                                                             ^
+  39 |       <body className="font-sans antialiased bg-background text-foreground">
+  40 |         <a
+  41 |           href="#main" {
+  digest: '2294505110'
+}
+
+[1m[33mwarn[39m[22m - The class `duration-[800ms]` is ambiguous and matches multiple utilities.
+[1m[33mwarn[39m[22m - If this is content and not a class, replace it with `duration-&lsqb;800ms&rsqb;` to silence this warning.
