@@ -10,7 +10,9 @@ node_modules/
 .next/
 .env*.local
 .DS_Store
-dev-server.log
+Thumbs.db
+desktop.ini
+*.log
 .mcp.json
 .vscode/
 tsconfig.tsbuildinfo
@@ -26,3 +28,6 @@ frontend_trust_design_skill.md
 
 # Source assets (processed versions in public/)
 Headshots/
+/Logo.png
+/Quoin Logo *.svg
+/logo-background.html
