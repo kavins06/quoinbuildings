@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { ArrowUpRight, X } from "lucide-react"
 import { BlurFade } from "@/components/ui/blur-fade"
 
@@ -48,11 +49,13 @@ function ProjectCard({ project, index, onOpenDetail }: { project: typeof project
         onMouseLeave={() => setHovered(false)}
         onClick={onOpenDetail}
       >
-        <div className="overflow-hidden">
-          <img
+        <div className="overflow-hidden relative w-full aspect-[4/3]">
+          <Image
             src={project.image || "/placeholder.svg"}
             alt={`${project.title} - ${project.category}`}
-            className={`w-full aspect-[4/3] object-cover transition-all duration-[800ms] ease-out ${
+            fill
+            sizes="(min-width: 1024px) 33vw, 100vw"
+            className={`object-cover transition-all duration-[800ms] ease-out ${
               hovered ? "scale-[1.04]" : "scale-100"
             }`}
           />

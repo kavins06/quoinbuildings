@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { useRef, useEffect, useState } from "react"
 import { PageHeader } from "@/components/page-header"
@@ -107,17 +108,19 @@ function ServiceBlock({ service, index }: { service: typeof services[0]; index: 
               {service.description}
             </p>
             {service.image && (
-              <div ref={imgRef} className="mt-8 overflow-hidden">
-                <img
+              <div ref={imgRef} className="mt-8 overflow-hidden relative w-full h-56 md:h-72">
+                <Image
                   src={service.image}
                   alt={service.title}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                   style={{
                     filter: inView ? "grayscale(0%)" : "grayscale(100%)",
                     transform: inView ? "scale(1.03)" : "scale(1)",
                     opacity: inView ? 1 : 0.7,
                     transition: "filter 2s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1.5s ease-out",
                   }}
-                  className="w-full h-56 md:h-72 object-cover"
+                  className="object-cover"
                 />
               </div>
             )}

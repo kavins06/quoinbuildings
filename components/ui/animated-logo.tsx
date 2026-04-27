@@ -1,7 +1,10 @@
 "use client"
 
+import Image from "next/image"
 import { motion, useReducedMotion } from "motion/react"
 import { cn } from "@/lib/utils"
+
+const MotionImage = motion.create(Image)
 
 interface AnimatedLogoProps {
   src?: string
@@ -22,7 +25,7 @@ export function AnimatedLogo({
 
   if (shouldReduceMotion) {
     return (
-      <img
+      <Image
         src={src}
         alt={alt}
         width={size}
@@ -41,7 +44,7 @@ export function AnimatedLogo({
       animate={{ opacity: 1, scale: 1, filter: "blur(0px)", rotate: 0 }}
       transition={{ duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
     >
-      <motion.img
+      <MotionImage
         src={src}
         alt={alt}
         width={size}

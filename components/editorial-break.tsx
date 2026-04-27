@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { BlurFade } from "@/components/ui/blur-fade"
 import { Marquee } from "@/components/ui/marquee"
 import { DraggableMarquee } from "@/components/ui/draggable-marquee"
@@ -32,9 +33,11 @@ export function EditorialBreak() {
             <DraggableMarquee duration={55}>
               {logos.slice(0, 6).map((logo) => (
                 <div key={logo.alt} className="flex flex-col items-center justify-start mx-8 h-28 shrink-0">
-                  <img
+                  <Image
                     src={logo.src}
                     alt={logo.alt}
+                    width={160}
+                    height={64}
                     draggable={false}
                     className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
                   />
@@ -49,9 +52,11 @@ export function EditorialBreak() {
             <DraggableMarquee duration={55} reverse>
               {logos.slice(6).map((logo) => (
                 <div key={logo.alt} className="flex flex-col items-center justify-start mx-8 h-28 shrink-0">
-                  <img
+                  <Image
                     src={logo.src}
                     alt={logo.alt}
+                    width={160}
+                    height={64}
                     draggable={false}
                     className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
                   />
@@ -70,7 +75,7 @@ export function EditorialBreak() {
             <DraggableMarquee duration={40}>
               {logos.slice(0, 6).map((logo) => (
                 <div key={logo.alt} className="flex flex-col items-center justify-start mx-5 h-16 shrink-0">
-                  <img src={logo.src} alt={logo.alt} draggable={false} className="h-7 w-auto object-contain opacity-90 select-none pointer-events-none" />
+                  <Image src={logo.src} alt={logo.alt} width={80} height={28} draggable={false} className="h-7 w-auto object-contain opacity-90 select-none pointer-events-none" />
                   {logo.label && (
                     <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
                       {logo.label}
@@ -82,7 +87,7 @@ export function EditorialBreak() {
             <DraggableMarquee duration={40} reverse>
               {logos.slice(6).map((logo) => (
                 <div key={logo.alt} className="flex flex-col items-center justify-start mx-5 h-16 shrink-0">
-                  <img src={logo.src} alt={logo.alt} draggable={false} className="h-7 w-auto object-contain opacity-90 select-none pointer-events-none" />
+                  <Image src={logo.src} alt={logo.alt} width={80} height={28} draggable={false} className="h-7 w-auto object-contain opacity-90 select-none pointer-events-none" />
                   {logo.label && (
                     <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
                       {logo.label}

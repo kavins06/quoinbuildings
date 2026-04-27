@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
@@ -121,10 +122,12 @@ function PhaseBlock({ phase, index }: { phase: typeof phases[0]; index: number }
         <div className="lg:col-span-5">
           <div className="group relative overflow-hidden h-64 md:h-80 lg:h-full lg:min-h-[320px]">
             {phase.image && (
-              <img
+              <Image
                 src={phase.image}
                 alt={phase.name}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />

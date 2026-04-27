@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { BlurFade } from "@/components/ui/blur-fade"
 import { cn } from "@/lib/utils"
 
@@ -30,10 +31,13 @@ export function PageHeader({
       )}
     >
       {backgroundImage && (
-        <img
+        <Image
           src={backgroundImage}
           alt=""
-          className={`absolute inset-0 w-full h-full object-cover ${imageGrayscale ? "grayscale" : ""}`}
+          fill
+          priority
+          sizes="100vw"
+          className={`object-cover ${imageGrayscale ? "grayscale" : ""}`}
         />
       )}
       <div className={cn("relative z-10 max-w-4xl", contentClassName)}>
