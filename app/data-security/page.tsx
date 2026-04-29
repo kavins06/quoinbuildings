@@ -1,13 +1,20 @@
 import type { Metadata } from "next"
+import { PageStructuredData } from "@/components/page-structured-data"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Data Security | Quoin",
-  description: "Quoin's data-handling posture: access control, vendor review, incident response.",
-}
+export const metadata: Metadata = createPageMetadata({
+  title: "Data Security",
+  description:
+    "Quoin's data-handling posture for AI operations: access control, vendor review, encryption, and incident response.",
+  path: "/data-security",
+  keywords: ["AI data security real estate", "property management data security", "AI vendor review"],
+})
 
 export default function DataSecurityPage() {
   return (
-    <article className="container-shell py-24 lg:py-32">
+    <>
+      <PageStructuredData name="Data Security" path="/data-security" />
+      <article className="container-shell py-24 lg:py-32">
       <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-accent mb-5">
         Trust &amp; Governance
       </p>
@@ -62,6 +69,7 @@ export default function DataSecurityPage() {
       <p className="text-sm text-ink-muted mt-16">
         Security questions: <a className="underline decoration-accent underline-offset-4" href="mailto:security@quoinbuildings.com">security@quoinbuildings.com</a>
       </p>
-    </article>
+      </article>
+    </>
   )
 }

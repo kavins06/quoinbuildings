@@ -3,27 +3,15 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { BlurFade } from "@/components/ui/blur-fade"
+import { perspectiveArticles } from "@/lib/seo-pages"
 
-const articles = [
-  {
-    title: "Why AI Pilots Are Failing in Property Management: And What to Do About It",
-    tag: "Industry Analysis",
-  },
-  {
-    title: "The Governance Gap: Why Property Management Firms Can\u2019t Scale AI",
-    tag: "Governance",
-  },
-  {
-    title: "What Property Management Needs from an AI Partner, and Why Vendors Aren\u2019t Enough",
-    tag: "Point of View",
-  },
-]
+const articles = perspectiveArticles.slice(0, 4)
 
 function ArticleLink({ article, index }: { article: typeof articles[0]; index: number }) {
   return (
     <BlurFade inView delay={index * 0.1} direction="up">
       <Link
-        href="/perspectives"
+        href={article.href}
         className="group flex items-start md:items-center justify-between py-7 md:py-8 gap-6"
       >
         <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-10 flex-1">

@@ -1,17 +1,43 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowUpRight, ArrowLeft } from "lucide-react"
+import { JsonLd } from "@/components/json-ld"
+import { articleJsonLd, breadcrumbJsonLd, createPageMetadata } from "@/lib/seo"
+import { perspectiveArticlesBySlug } from "@/lib/seo-pages"
 
-export const metadata: Metadata = {
-  title:
-    "Why AI Pilots Are Failing in Property Management and What to Do About It | Quoin",
-  description:
-    "Most AI pilots in property management fail because they are designed around tools, not workflows. Here is the structural break-down and what firms can do differently.",
-}
+const article = perspectiveArticlesBySlug["why-ai-pilots-are-failing"]
+
+export const metadata: Metadata = createPageMetadata({
+  title: article.metaTitle,
+  description: article.description,
+  path: article.href,
+  image: "/header-perspectives.jpg",
+  keywords: [
+    "why AI pilots fail",
+    "AI pilots property management",
+    "property management AI adoption",
+    "real estate AI workflows",
+  ],
+})
 
 export default function ArticlePage() {
   return (
     <main className="bg-background">
+      <JsonLd
+        data={[
+          articleJsonLd({
+            title: article.title,
+            description: article.description,
+            path: article.href,
+            datePublished: article.isoDate,
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Perspectives", path: "/perspectives" },
+            { name: article.title, path: article.href },
+          ]),
+        ]}
+      />
       {/* Header */}
       <header className="px-6 md:px-12 lg:px-20 pt-10 md:pt-14 pb-6 md:pb-8 border-b border-subtle">
         <div>

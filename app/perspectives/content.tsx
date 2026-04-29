@@ -4,45 +4,9 @@ import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
+import { perspectiveArticles, type PerspectiveArticle } from "@/lib/seo-pages"
 
-type Article = {
-  date: string
-  title: string
-  summary: string
-  author: string
-  tag: string
-  href?: string
-}
-
-const articles: Article[] = [
-  {
-    date: "April 2026",
-    title: "Why AI Pilots Are Failing in Property Management: And What to Do About It",
-    summary:
-      "The 95% failure rate for AI pilots is well documented. In property management, the patterns are consistent and the root causes are structural. We break down the three failure modes and what firms can do differently.",
-    author: "Kavin Sakthivel",
-    tag: "Industry Analysis",
-    href: "/perspectives/why-ai-pilots-are-failing",
-  },
-  {
-    date: "April 2026",
-    title: "The Governance Gap: Why Property Management Firms Can\u2019t Scale AI",
-    summary:
-      "Fair housing risk in AI-driven tenant screening. Tenant data privacy exposure. The absence of governance frameworks. Why compliance is the most underestimated barrier to AI adoption in CRE.",
-    author: "Kavin Sakthivel",
-    tag: "Governance",
-  },
-  {
-    date: "April 2026",
-    title: "What Property Management Needs from an AI Partner, and Why Vendors Aren\u2019t Enough",
-    summary:
-      "The argument for the AI operating partner model versus point solutions, strategy-only consultants, and internal IT teams. Why the existing options all fall short for enterprise property management.",
-    author: "Kavin Sakthivel",
-    tag: "Point of View",
-  },
-]
-
-function ArticleCard({ article, index }: { article: Article; index: number }) {
+function ArticleCard({ article, index }: { article: PerspectiveArticle; index: number }) {
   const inner = (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16">
       <div className="lg:col-span-2">
@@ -64,34 +28,22 @@ function ArticleCard({ article, index }: { article: Article; index: number }) {
         <p className="text-[11px] tracking-[0.15em] text-ink-muted mt-4">
           By {article.author}
         </p>
-        {article.href ? (
-          <p className="inline-flex items-center gap-2 text-[12px] tracking-[0.15em] uppercase text-accent mt-4 group-hover:gap-3 transition-all duration-200">
-            Read article
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </p>
-        ) : (
-          <p className="text-[12px] text-ink-muted mt-2 italic">
-            Full piece coming soon.
-          </p>
-        )}
+        <p className="inline-flex items-center gap-2 text-[12px] tracking-[0.15em] uppercase text-accent mt-4 group-hover:gap-3 transition-all duration-200">
+          Read article
+          <ArrowUpRight className="h-3.5 w-3.5" />
+        </p>
       </div>
     </div>
   )
 
   return (
     <BlurFade inView direction="up" delay={index * 0.1}>
-      {article.href ? (
-        <Link
-          href={article.href}
-          className="group block py-12 md:py-16 border-b border-subtle last:border-b-0"
-        >
-          {inner}
-        </Link>
-      ) : (
-        <div className="group block py-12 md:py-16 border-b border-subtle last:border-b-0">
-          {inner}
-        </div>
-      )}
+      <Link
+        href={article.href}
+        className="group block py-12 md:py-16 border-b border-subtle last:border-b-0"
+      >
+        {inner}
+      </Link>
     </BlurFade>
   )
 }
@@ -109,7 +61,7 @@ export function PerspectivesContent() {
       />
 
       <section className="px-6 md:px-12 lg:px-20">
-        {articles.map((article, index) => (
+        {perspectiveArticles.map((article, index) => (
           <ArticleCard key={article.title} article={article} index={index} />
         ))}
       </section>

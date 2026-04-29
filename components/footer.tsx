@@ -9,6 +9,14 @@ const companyLinks = [
   { label: "Perspectives", href: "/perspectives" },
 ]
 
+const solutionLinks = [
+  { label: "AI for Property Management", href: "/ai-for-property-management" },
+  { label: "AI for Asset Management", href: "/ai-for-asset-management" },
+  { label: "Managed AI Operations", href: "/managed-ai-operations" },
+  { label: "AI Readiness", href: "/ai-readiness-property-management" },
+  { label: "AI Governance", href: "/ai-governance-property-management" },
+]
+
 const trustLinks = [
   { label: "Governance", href: "/governance" },
   { label: "Methodology", href: "/approach#methodology" },
@@ -24,7 +32,7 @@ export function Footer() {
   return (
     <footer className="bg-surface-sunken border-t border-subtle">
       <div className="container-shell py-8 lg:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-8">
           <div>
             <Link
               href="/"
@@ -43,6 +51,23 @@ export function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               {companyLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm text-ink-secondary hover:text-ink-primary transition-colors duration-150"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-accent mb-5">
+              AI Solutions
+            </p>
+            <div className="flex flex-col gap-3">
+              {solutionLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
