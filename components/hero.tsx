@@ -17,7 +17,7 @@ export function Hero() {
           <div className="lg:col-span-7">
             <BlurFade delay={0.35} direction="up" offset={6}>
               <p className="mb-5 text-[11px] uppercase tracking-[0.3em] text-accent">
-                AI for Property &amp; Asset Management Firms
+                THE MISSING INTELLIGENCE LAYER IS HERE
               </p>
             </BlurFade>
 
