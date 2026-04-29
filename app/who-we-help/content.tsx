@@ -55,11 +55,11 @@ export function WhoWeHelpContent() {
     <main>
       <PageHeader
         eyebrow="Who We Help"
-        title="AI Adoption and Operations for Enterprise Property & Asset Management Firms"
+        title="AI Adoption and Operations for Property & Asset Management Firms"
         description="We work with firms large enough to have multi-property operational complexity and too lean to build a dedicated internal AI team."
         backgroundImage="/header-team.jpg"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
-        contentClassName="pb-4 md:pb-8"
+        contentClassName="max-w-6xl pb-4 md:pb-8"
       />
 
       {/* Ideal Client Profile */}
