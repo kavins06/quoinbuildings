@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: siteName,
   title: {
-    default: "Quoin | AI Operating Partner for Property Management",
+    default: "Quoin | Your AI Operating Partner",
     template: "%s | Quoin",
   },
   description: defaultDescription,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Quoin | AI Operating Partner for Property Management",
+    title: "Quoin | Your AI Operating Partner",
     description: defaultDescription,
     url: siteUrl,
     siteName,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quoin | AI Operating Partner for Property Management",
+    title: "Quoin | Your AI Operating Partner",
     description: defaultDescription,
     images: ["/hero-bg.jpg"],
   },
