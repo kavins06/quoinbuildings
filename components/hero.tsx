@@ -15,6 +15,11 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-center">
           {/* Left: Main content */}
           <div className="lg:col-span-7">
+            <BlurFade delay={0.35} direction="up" offset={6}>
+              <p className="mb-5 text-[11px] uppercase tracking-[0.3em] text-accent">
+                AI for Property &amp; Asset Management Firms
+              </p>
+            </BlurFade>
 
             <BlurFade delay={0.5} direction="up" offset={8}>
               <h1 className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.15] tracking-[-0.03em] text-ink-primary">
@@ -30,7 +35,7 @@ export function Hero() {
 
             <BlurFade delay={0.7} direction="up">
               <p className="mt-8 text-base md:text-lg font-light leading-relaxed text-ink-primary max-w-2xl md:max-w-3xl">
-                Quoin helps enterprise <AuroraText className="font-medium">Property &amp; Asset Management Companies</AuroraText> turn AI into governed operating layer across leasing, maintenance, resident service, reporting, compliance and internal ops. Improving NOI while reducing legal, security, and property-level execution risk.
+                Quoin helps enterprise <AuroraText className="font-medium">Property &amp; Asset Management Companies</AuroraText> turn AI into a governed operating layer across leasing, maintenance, resident service, reporting, compliance, and internal operations. Improving NOI while reducing legal, security, and property-level execution risk.
               </p>
             </BlurFade>
 

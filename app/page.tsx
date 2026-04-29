@@ -12,9 +12,9 @@ import { ContactSection } from "@/components/contact-section"
 import { createPageMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Quoin | AI Operating Partner for Property Management",
+  title: "Quoin | AI for Property Management and Asset Management",
   description:
-    "Quoin is an AI operating partner for property and asset management firms. We build, deploy, govern, and manage AI agents inside real estate operations.",
+    "Quoin helps property and asset management firms adopt AI through governed agents for leasing, maintenance, resident communication, reporting, compliance, and operations.",
   path: "/",
   image: "/hero-bg.jpg",
   keywords: [
