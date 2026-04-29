@@ -13,6 +13,9 @@ export const publicRoutes = [
   { path: "/approach", priority: 0.8, changeFrequency: "monthly" },
   { path: "/governance", priority: 0.8, changeFrequency: "monthly" },
   { path: "/ai-for-property-management", priority: 0.95, changeFrequency: "monthly" },
+  { path: "/ai-maintenance-triage-property-management", priority: 0.88, changeFrequency: "monthly" },
+  { path: "/ai-leasing-automation-property-management", priority: 0.88, changeFrequency: "monthly" },
+  { path: "/property-management-ai-software-vs-operating-partner", priority: 0.85, changeFrequency: "monthly" },
   { path: "/ai-for-asset-management", priority: 0.95, changeFrequency: "monthly" },
   { path: "/managed-ai-operations", priority: 0.9, changeFrequency: "monthly" },
   { path: "/ai-readiness-property-management", priority: 0.9, changeFrequency: "monthly" },
@@ -185,6 +188,21 @@ export function serviceJsonLd(input: {
       audienceType:
         input.audience ?? "Executives at property management and asset management firms",
     },
+  }
+}
+
+export function faqJsonLd(items: Array<{ question: string; answer: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   }
 }
 

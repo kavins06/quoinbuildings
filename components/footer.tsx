@@ -11,6 +11,9 @@ const companyLinks = [
 
 const solutionLinks = [
   { label: "AI for Property Management", href: "/ai-for-property-management" },
+  { label: "Maintenance Triage AI", href: "/ai-maintenance-triage-property-management" },
+  { label: "Leasing Automation AI", href: "/ai-leasing-automation-property-management" },
+  { label: "AI Software vs Partner", href: "/property-management-ai-software-vs-operating-partner" },
   { label: "AI for Asset Management", href: "/ai-for-asset-management" },
   { label: "Managed AI Operations", href: "/managed-ai-operations" },
   { label: "AI Readiness", href: "/ai-readiness-property-management" },

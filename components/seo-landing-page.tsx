@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { JsonLd } from "@/components/json-ld"
 import { coreResourceLinks, type SeoLandingPage } from "@/lib/seo-pages"
-import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/seo"
+import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/seo"
 
 function BulletList({ items }: { items: string[] }) {
   return (
@@ -33,6 +33,7 @@ export function SeoLandingPage({ page }: { page: SeoLandingPage }) {
             { name: "Home", path: "/" },
             { name: page.title, path: page.path },
           ]),
+          ...(page.faq ? [faqJsonLd(page.faq)] : []),
         ]}
       />
 
@@ -67,6 +68,31 @@ export function SeoLandingPage({ page }: { page: SeoLandingPage }) {
           </div>
         </div>
       </section>
+
+      {page.useCases && (
+        <section className="px-6 pb-20 md:px-12 md:pb-28 lg:px-20">
+          <div className="mb-12 max-w-3xl">
+            <p className="mb-3 text-[11px] uppercase tracking-[0.3em] text-muted-foreground/50">
+              High-Intent Use Cases
+            </p>
+            <h2 className="text-3xl font-normal tracking-tight text-foreground md:text-[2.75rem]">
+              Where executives usually see the first operating leverage
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {page.useCases.map((useCase) => (
+              <div key={useCase.title} className="border-l-2 border-border pl-6">
+                <h3 className="mb-3 text-lg font-normal tracking-tight text-foreground">
+                  {useCase.title}
+                </h3>
+                <p className="text-sm leading-[1.75] text-muted-foreground">
+                  {useCase.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="bg-secondary px-6 py-20 md:px-12 md:py-28 lg:px-20">
         <div className="mb-12 max-w-3xl">
@@ -119,6 +145,63 @@ export function SeoLandingPage({ page }: { page: SeoLandingPage }) {
           ))}
         </div>
       </section>
+
+      {page.supportingLinks && (
+        <section className="px-6 py-20 md:px-12 md:py-28 lg:px-20">
+          <div className="mb-12 max-w-3xl">
+            <p className="mb-3 text-[11px] uppercase tracking-[0.3em] text-muted-foreground/50">
+              Topic Cluster
+            </p>
+            <h2 className="text-3xl font-normal tracking-tight text-foreground md:text-[2.75rem]">
+              Go deeper on the workflows behind the search
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-3">
+            {page.supportingLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="group bg-background p-6 transition-colors duration-200 hover:bg-secondary"
+              >
+                <div className="mb-4 flex items-start justify-between gap-4">
+                  <h3 className="text-base font-normal tracking-tight text-foreground">
+                    {link.label}
+                  </h3>
+                  <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground/40 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
+                </div>
+                <p className="text-sm leading-[1.75] text-muted-foreground">
+                  {link.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {page.faq && (
+        <section className="bg-secondary px-6 py-20 md:px-12 md:py-28 lg:px-20">
+          <div className="mb-12 max-w-3xl">
+            <p className="mb-3 text-[11px] uppercase tracking-[0.3em] text-muted-foreground/50">
+              FAQ
+            </p>
+            <h2 className="text-3xl font-normal tracking-tight text-foreground md:text-[2.75rem]">
+              Questions executives ask before adopting AI
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {page.faq.map((item) => (
+              <div key={item.question}>
+                <h3 className="mb-3 text-lg font-normal tracking-tight text-foreground">
+                  {item.question}
+                </h3>
+                <p className="text-sm leading-[1.75] text-muted-foreground">
+                  {item.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="bg-foreground px-6 py-28 text-background md:px-12 md:py-36 lg:px-20">
         <div className="mx-auto max-w-2xl text-center">

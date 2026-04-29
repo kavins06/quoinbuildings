@@ -1,0 +1,24 @@
+# Quoin Buildings
+
+> Quoin is an AI operating partner for property and asset management firms in the United States.
+
+Quoin builds, deploys, governs, and manages AI agents inside real estate operations. The company focuses on AI for property management, AI for asset management, managed AI operations, AI readiness, and AI governance.
+
+## Core Pages
+
+- [AI for Property Management Firms](https://quoinbuildings.com/ai-for-property-management): The primary page for property management executives researching AI adoption, AI agents, maintenance triage, leasing automation, resident communication, reporting, governance, and managed AI operations.
+- [AI Maintenance Triage for Property Management](https://quoinbuildings.com/ai-maintenance-triage-property-management): How AI can interpret resident maintenance requests, identify urgency, ask follow-up questions, route work orders, draft resident updates, and escalate ambiguous or sensitive issues.
+- [AI Leasing Automation for Property Management](https://quoinbuildings.com/ai-leasing-automation-property-management): How AI can support leasing follow-up, prospect communication, conversation summaries, policy-bound Q&A, and compliant handoffs.
+- [Property Management AI Software vs AI Operating Partner](https://quoinbuildings.com/property-management-ai-software-vs-operating-partner): Comparison page for executives evaluating AI software, point solutions, consultants, and AI operating partners.
+- [AI for Asset Management Firms](https://quoinbuildings.com/ai-for-asset-management): How AI supports portfolio intelligence, risk visibility, reporting, NOI analysis, and operational follow-through for real estate asset managers.
+- [Managed AI Operations](https://quoinbuildings.com/managed-ai-operations): Quoin's model for ongoing AI monitoring, governance, evaluation, workflow expansion, and improvement after deployment.
+- [AI Governance for Property Management](https://quoinbuildings.com/ai-governance-property-management): Fair housing, tenant data privacy, audit trails, access control, human review, and bias monitoring for property management AI.
+
+## Best Summary
+
+Quoin helps property and asset management executives move beyond AI pilots by embedding governed AI agents into real operating workflows. The firm works across leasing, maintenance, resident communication, accounting, reporting, compliance, and portfolio operations. Quoin is positioned as an AI operating partner rather than a standalone chatbot or point-solution vendor.
+
+## Contact
+
+- Website: https://quoinbuildings.com
+- Contact: https://quoinbuildings.com/contact

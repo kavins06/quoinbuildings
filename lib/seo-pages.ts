@@ -11,11 +11,18 @@ export type SeoLandingPage = {
   whoThisIsFor: string[]
   problemsSolved: string[]
   howQuoinHelps: string[]
+  useCases?: Array<{ title: string; description: string }>
+  faq?: Array<{ question: string; answer: string }>
+  supportingLinks?: Array<{ label: string; href: string; description: string }>
   serviceType: string
   backgroundImage: string
 }
 
 export const coreResourceLinks = [
+  { label: "AI for Property Management", href: "/ai-for-property-management" },
+  { label: "Maintenance Triage AI", href: "/ai-maintenance-triage-property-management" },
+  { label: "Leasing Automation AI", href: "/ai-leasing-automation-property-management" },
+  { label: "AI Operating Partner", href: "/property-management-ai-software-vs-operating-partner" },
   { label: "Services", href: "/services" },
   { label: "Who We Help", href: "/who-we-help" },
   { label: "Governance", href: "/governance" },
@@ -42,7 +49,7 @@ export const seoLandingPages = {
     eyebrow: "Property Management AI",
     directAnswerTitle: "What is AI for property management?",
     directAnswer:
-      "AI for property management is the use of agentic systems to interpret operational requests, route work, draft communications, reconcile data, and surface exceptions across the portfolio. It creates value when it is embedded into workflows and governed by human review, data controls, and clear escalation rules.",
+      "AI for property management is the use of governed AI agents to support property operations such as maintenance triage, leasing follow-up, resident communication, accounting reconciliation, reporting, and portfolio exception management. It works best when AI is embedded into existing workflows, connected to property systems, and monitored with human review, audit trails, data controls, and clear escalation rules.",
     whoThisIsFor: [
       "CEOs, COOs, owners, and portfolio leaders responsible for operating performance.",
       "Firms managing multi-property portfolios with leasing, maintenance, accounting, and resident communication complexity.",
@@ -60,8 +67,336 @@ export const seoLandingPages = {
       "Build governance, audit trails, access control, and escalation rules into the operating model.",
       "Operate and improve the AI layer after launch so it evolves with the portfolio.",
     ],
+    useCases: [
+      {
+        title: "Maintenance triage and work order routing",
+        description:
+          "AI interprets resident requests, identifies urgency, asks follow-up questions, drafts updates, and routes work to the right internal team or vendor with human escalation for ambiguous cases.",
+      },
+      {
+        title: "Leasing follow-up and prospect communication",
+        description:
+          "AI helps leasing teams respond faster, summarize prospect intent, draft compliant follow-up, and keep handoffs visible across CRM, email, and property management systems.",
+      },
+      {
+        title: "Resident communication and policy support",
+        description:
+          "AI drafts consistent resident-facing responses while keeping sensitive, consequential, or policy-bound communication inside human review.",
+      },
+      {
+        title: "Reporting, reconciliation, and exception surfacing",
+        description:
+          "AI reviews fragmented operational data, flags inconsistencies, drafts variance explanations, and helps executives see where property-level issues need attention.",
+      },
+    ],
+    faq: [
+      {
+        question: "What is AI for property management?",
+        answer:
+          "AI for property management uses governed AI agents to support leasing, maintenance, resident communication, reporting, accounting, and portfolio workflows. The goal is not a standalone chatbot; it is an operating layer that helps work move through the firm more reliably.",
+      },
+      {
+        question: "How can AI help property management companies?",
+        answer:
+          "AI can help property management companies triage maintenance requests, draft resident responses, summarize leasing conversations, reconcile operational data, surface exceptions, and reduce manual coordination across systems.",
+      },
+      {
+        question: "Should property management firms buy AI software or build custom AI workflows?",
+        answer:
+          "Point software can solve narrow tasks, but firms with multi-property complexity often need custom workflows, integrations, governance, and ongoing operations. Quoin focuses on the operating layer that connects AI to how work actually happens.",
+      },
+      {
+        question: "What property management systems can AI work with?",
+        answer:
+          "AI workflows can be designed around property management systems such as Yardi, RealPage, AppFolio, Entrata, MRI, Rent Manager, Buildium, supporting CRMs, accounting systems, portals, documents, email, and spreadsheets, depending on access and data readiness.",
+      },
+    ],
+    supportingLinks: [
+      {
+        label: "AI maintenance triage for property management",
+        href: "/ai-maintenance-triage-property-management",
+        description: "A deeper look at using AI to interpret, route, and govern maintenance requests.",
+      },
+      {
+        label: "AI leasing automation for property management",
+        href: "/ai-leasing-automation-property-management",
+        description: "How AI can help leasing teams respond faster without creating compliance risk.",
+      },
+      {
+        label: "Property management AI software vs AI operating partner",
+        href: "/property-management-ai-software-vs-operating-partner",
+        description: "Why broad adoption often needs an operating model, not another disconnected tool.",
+      },
+    ],
     serviceType: "AI adoption and managed AI operations for property management firms",
     backgroundImage: "/header-who-we-help.jpg",
+  },
+  maintenanceTriage: {
+    key: "maintenanceTriage",
+    path: "/ai-maintenance-triage-property-management",
+    title: "AI Maintenance Triage for Property Management",
+    metaTitle: "AI Maintenance Triage for Property Management",
+    description:
+      "AI maintenance triage for property management firms that need faster work order routing, resident updates, vendor coordination, and human escalation.",
+    keywords: [
+      "AI maintenance triage property management",
+      "property management maintenance AI",
+      "AI work order routing",
+      "maintenance request automation",
+      "AI for property maintenance",
+    ],
+    eyebrow: "Maintenance AI",
+    directAnswerTitle: "What is AI maintenance triage in property management?",
+    directAnswer:
+      "AI maintenance triage in property management uses AI agents to interpret resident requests, identify urgency, ask follow-up questions, classify the issue, draft resident updates, and route work to the right team or vendor. It should include human escalation for urgent, ambiguous, safety-sensitive, or policy-bound requests.",
+    whoThisIsFor: [
+      "Executives and operations leaders managing high maintenance volume across multiple properties.",
+      "Firms where requests arrive through portals, phone calls, text messages, email, and onsite staff.",
+      "Teams that need faster routing without losing control over resident experience, safety, or vendor accountability.",
+    ],
+    problemsSolved: [
+      "Residents submit vague or incomplete maintenance requests that need interpretation before dispatch.",
+      "Maintenance coordinators lose time categorizing issues, checking access notes, and repeating follow-up questions.",
+      "Vendor assignment depends on local knowledge that is not consistently captured in the system.",
+      "Urgent, ambiguous, or repeated issues can be mishandled if AI is deployed without escalation rules.",
+    ],
+    howQuoinHelps: [
+      "Map the complete maintenance intake and dispatch workflow before automation.",
+      "Design triage agents with categories, urgency rules, follow-up prompts, vendor logic, and escalation paths.",
+      "Connect the workflow to property systems and communication channels where access is available.",
+      "Monitor accuracy, escalation rate, resident communication quality, and operational exceptions after launch.",
+    ],
+    useCases: [
+      {
+        title: "Resident request interpretation",
+        description:
+          "AI converts vague resident language into structured maintenance categories, urgency levels, access needs, and follow-up questions.",
+      },
+      {
+        title: "Work order routing",
+        description:
+          "AI helps route requests to onsite teams, maintenance coordinators, or vendors based on issue type, property rules, and escalation thresholds.",
+      },
+      {
+        title: "Resident status updates",
+        description:
+          "AI drafts clear updates while human review remains available for sensitive, repeated, urgent, or disputed requests.",
+      },
+      {
+        title: "Exception monitoring",
+        description:
+          "AI surfaces unresolved requests, repeated issues, missing vendor updates, and patterns that should reach regional or executive attention.",
+      },
+    ],
+    faq: [
+      {
+        question: "Can AI triage maintenance requests for property managers?",
+        answer:
+          "Yes. AI can help classify maintenance requests, identify urgency, ask follow-up questions, draft updates, and route work orders. It should be designed with human escalation for urgent, ambiguous, safety-sensitive, or tenant-impacting issues.",
+      },
+      {
+        question: "Does AI replace maintenance coordinators?",
+        answer:
+          "No. The best use of AI is to reduce repetitive intake, routing, and communication work so coordinators can focus on exceptions, vendor performance, resident experience, and operational judgment.",
+      },
+      {
+        question: "What makes maintenance AI risky?",
+        answer:
+          "Maintenance AI becomes risky when it force-routes ambiguous requests, misses urgency, ignores access instructions, or communicates with residents without review in sensitive situations. Governance and escalation rules are essential.",
+      },
+    ],
+    supportingLinks: [
+      {
+        label: "AI for property management",
+        href: "/ai-for-property-management",
+        description: "The broader operating model for AI across leasing, maintenance, reporting, and communication.",
+      },
+      {
+        label: "AI governance for property management",
+        href: "/ai-governance-property-management",
+        description: "The guardrails needed before AI touches tenant-facing workflows.",
+      },
+    ],
+    serviceType: "AI maintenance triage for property management firms",
+    backgroundImage: "/service-ai-dev.jpg",
+  },
+  leasingAutomation: {
+    key: "leasingAutomation",
+    path: "/ai-leasing-automation-property-management",
+    title: "AI Leasing Automation for Property Management",
+    metaTitle: "AI Leasing Automation for Property Management",
+    description:
+      "AI leasing automation for property management teams that need faster prospect follow-up, cleaner handoffs, and compliant resident-facing workflows.",
+    keywords: [
+      "AI leasing automation property management",
+      "property management leasing AI",
+      "AI leasing assistant",
+      "AI prospect follow up property management",
+      "AI for leasing teams",
+    ],
+    eyebrow: "Leasing AI",
+    directAnswerTitle: "What is AI leasing automation for property management?",
+    directAnswer:
+      "AI leasing automation helps property management teams respond to prospects, summarize intent, draft follow-up, answer policy-bound questions, and keep leasing handoffs visible. It should support leasing teams without making final tenant decisions or creating fair housing risk.",
+    whoThisIsFor: [
+      "Executives and leasing leaders responsible for speed-to-lead, occupancy, and consistent follow-up.",
+      "Property management firms where leasing activity spans email, phone, CRM, property systems, and onsite teams.",
+      "Teams that need AI support without letting unsupervised models make tenant-facing or screening-adjacent decisions.",
+    ],
+    problemsSolved: [
+      "Prospects go cold because leasing teams cannot respond quickly and consistently across channels.",
+      "Important details from calls, emails, and tours do not always reach the next person in the workflow.",
+      "Leasing teams need help drafting responses while staying within fair housing and company policy boundaries.",
+      "Point tools can create fragmented communication if they are not integrated into the operating workflow.",
+    ],
+    howQuoinHelps: [
+      "Map leasing intake, response, follow-up, tour, application, and handoff workflows.",
+      "Design AI assistants that draft, summarize, and route work while preserving human control.",
+      "Build compliance-aware review rules for sensitive, policy-bound, and tenant-facing communication.",
+      "Measure adoption through response time, follow-up consistency, handoff quality, and exception handling.",
+    ],
+    useCases: [
+      {
+        title: "Prospect follow-up",
+        description:
+          "AI drafts timely responses and follow-up messages using approved property, pricing, availability, and policy context.",
+      },
+      {
+        title: "Conversation summaries",
+        description:
+          "AI summarizes prospect needs, objections, urgency, and next steps so leasing teams do not lose context between channels.",
+      },
+      {
+        title: "Policy-bound Q&A",
+        description:
+          "AI can help answer approved questions while escalating sensitive, uncertain, or fair-housing-adjacent topics to people.",
+      },
+      {
+        title: "CRM and workflow handoffs",
+        description:
+          "AI keeps next actions visible across leasing staff, regional managers, and supporting systems.",
+      },
+    ],
+    faq: [
+      {
+        question: "Can AI automate leasing follow-up?",
+        answer:
+          "AI can draft and prioritize leasing follow-up, summarize prospect intent, and help teams respond faster. Final judgment and sensitive tenant-facing decisions should stay with trained staff.",
+      },
+      {
+        question: "Is AI leasing automation safe for fair housing?",
+        answer:
+          "It can be safer when designed with approved language, escalation rules, audit trails, and human review. It is risky when a generic chatbot answers sensitive questions without governance.",
+      },
+      {
+        question: "What should leasing AI connect to?",
+        answer:
+          "Leasing AI may need context from CRM, availability, pricing, property policies, email, call notes, tour scheduling, and the property management system, depending on data access and governance.",
+      },
+    ],
+    supportingLinks: [
+      {
+        label: "AI for property management",
+        href: "/ai-for-property-management",
+        description: "How leasing automation fits into a broader AI operating model.",
+      },
+      {
+        label: "AI governance for property management",
+        href: "/ai-governance-property-management",
+        description: "Governance for fair housing, privacy, audit trails, and human review.",
+      },
+    ],
+    serviceType: "AI leasing automation for property management firms",
+    backgroundImage: "/service-strategy.jpg",
+  },
+  softwareVsPartner: {
+    key: "softwareVsPartner",
+    path: "/property-management-ai-software-vs-operating-partner",
+    title: "Property Management AI Software vs AI Operating Partner",
+    metaTitle: "Property Management AI Software vs AI Operating Partner",
+    description:
+      "A comparison for property management executives evaluating AI software, point solutions, consultants, and AI operating partners.",
+    keywords: [
+      "property management AI software",
+      "AI operating partner property management",
+      "property management AI vendor",
+      "AI software vs AI partner",
+      "managed AI operations property management",
+    ],
+    eyebrow: "AI Buying Guide",
+    directAnswerTitle: "Should property management firms buy AI software or use an AI operating partner?",
+    directAnswer:
+      "Property management AI software can be useful for narrow tasks, but firms with multi-property complexity often need workflow design, integration, governance, deployment, monitoring, and ongoing improvement. An AI operating partner owns that operating layer so AI becomes capability, not another tool to manage.",
+    whoThisIsFor: [
+      "Executives comparing AI vendors, point solutions, consultants, and custom implementation partners.",
+      "Firms that have already tested AI tools but struggled to scale them across properties and teams.",
+      "Organizations that need accountability for adoption, governance, and performance after launch.",
+    ],
+    problemsSolved: [
+      "Point solutions automate isolated tasks but leave workflow design and integration to the operator.",
+      "Strategy-only consultants can clarify priorities without building or operating the systems.",
+      "Internal IT teams may not have bandwidth for AI product operations, model evaluation, and workflow ownership.",
+      "Executives need one accountable path from diagnosis to production and ongoing improvement.",
+    ],
+    howQuoinHelps: [
+      "Evaluate when a point solution is enough and when custom operating workflows are needed.",
+      "Design the AI layer around business workflows instead of vendor feature lists.",
+      "Coordinate operations, IT, legal, compliance, and executive sponsors through implementation.",
+      "Operate the AI systems after launch with monitoring, reporting, governance, and iteration.",
+    ],
+    useCases: [
+      {
+        title: "Vendor evaluation",
+        description:
+          "Quoin helps determine whether existing software can solve the problem or whether the workflow needs custom integration and operations.",
+      },
+      {
+        title: "Workflow ownership",
+        description:
+          "The operating partner model assigns accountability for design, deployment, adoption, governance, and measurement.",
+      },
+      {
+        title: "Governed deployment",
+        description:
+          "AI moves into production with escalation rules, audit trails, access controls, and measurement routines.",
+      },
+      {
+        title: "Ongoing improvement",
+        description:
+          "AI systems are reviewed and improved as property systems, policies, portfolios, and team needs change.",
+      },
+    ],
+    faq: [
+      {
+        question: "What is a property management AI operating partner?",
+        answer:
+          "A property management AI operating partner helps design, build, govern, deploy, monitor, and improve AI workflows across the firm, instead of selling only a standalone software tool.",
+      },
+      {
+        question: "When is AI software enough?",
+        answer:
+          "AI software may be enough when the need is narrow, low-risk, and contained. Firms with cross-system workflows, compliance risk, fragmented data, or multi-property complexity usually need a broader operating model.",
+      },
+      {
+        question: "How is Quoin different from an AI chatbot vendor?",
+        answer:
+          "Quoin focuses on workflow design, custom agents, governance, integration, and ongoing AI operations for property and asset management firms rather than only providing a chatbot interface.",
+      },
+    ],
+    supportingLinks: [
+      {
+        label: "Managed AI operations",
+        href: "/managed-ai-operations",
+        description: "The ongoing operating model behind production AI adoption.",
+      },
+      {
+        label: "AI readiness assessment",
+        href: "/ai-readiness-property-management",
+        description: "How to identify the right AI workflow before committing to a build or vendor.",
+      },
+    ],
+    serviceType: "AI operating partner advisory for property management firms",
+    backgroundImage: "/approach-design.jpg",
   },
   assetManagement: {
     key: "assetManagement",
@@ -97,6 +432,18 @@ export const seoLandingPages = {
       "Design agent workflows for variance analysis, reporting, risk surfacing, document abstraction, and follow-up tracking.",
       "Connect asset-management questions to the operational systems and workflows that answer them.",
       "Maintain governance so AI supports strategy without creating uncontrolled decision risk.",
+    ],
+    faq: [
+      {
+        question: "How is AI for asset management different from AI for property management?",
+        answer:
+          "Property management AI usually supports operating workflows such as leasing, maintenance, and resident communication. Asset management AI focuses on portfolio intelligence, risk visibility, reporting, NOI movement, and follow-through across assets.",
+      },
+      {
+        question: "Can AI help real estate asset managers with reporting?",
+        answer:
+          "Yes. AI can help summarize operating signals, draft variance explanations, surface risks, organize document inputs, and track follow-up, provided the underlying data sources and governance are clear.",
+      },
     ],
     serviceType: "AI adoption and managed AI operations for real estate asset management firms",
     backgroundImage: "/header-services.jpg",
@@ -136,6 +483,18 @@ export const seoLandingPages = {
       "Coordinate with operations, IT, legal, compliance, and executive sponsors.",
       "Keep AI systems aligned with changing portfolios, policies, vendors, and business priorities.",
     ],
+    faq: [
+      {
+        question: "What is managed AI operations?",
+        answer:
+          "Managed AI operations is the ongoing monitoring, governance, evaluation, workflow expansion, and improvement of AI systems after deployment.",
+      },
+      {
+        question: "Why do real estate firms need managed AI operations?",
+        answer:
+          "Real estate workflows change as portfolios, teams, policies, and systems change. Managed AI operations keeps agents accurate, governed, measurable, and aligned with the business after launch.",
+      },
+    ],
     serviceType: "Managed AI operations for real estate firms",
     backgroundImage: "/approach-operate.jpg",
   },
@@ -174,6 +533,18 @@ export const seoLandingPages = {
       "Prioritize use cases by value, feasibility, risk, and executive urgency.",
       "Deliver a buildable roadmap with governance requirements and operating ownership defined.",
     ],
+    faq: [
+      {
+        question: "What does AI readiness mean for property management?",
+        answer:
+          "AI readiness means the firm has identified the right workflows, data access, system constraints, governance rules, executive sponsorship, and operating owner for AI deployment.",
+      },
+      {
+        question: "What should an AI implementation roadmap include?",
+        answer:
+          "A practical roadmap should identify priority workflows, required data and integrations, governance requirements, launch sequence, success metrics, and ownership after deployment.",
+      },
+    ],
     serviceType: "AI readiness assessment for property management firms",
     backgroundImage: "/approach-discover.jpg",
   },
@@ -211,6 +582,18 @@ export const seoLandingPages = {
       "Build human-in-the-loop rules for consequential tenant, vendor, and financial workflows.",
       "Implement audit trails, access control, bias monitoring, and model-evaluation routines.",
       "Keep governance active after deployment through monitoring, reporting, and remediation workflows.",
+    ],
+    faq: [
+      {
+        question: "Why is AI governance important in property management?",
+        answer:
+          "Property management involves tenant-facing, financial, privacy, and fair housing-sensitive workflows. Governance defines where AI can act, when humans must review, and how decisions are logged.",
+      },
+      {
+        question: "What should property management AI governance include?",
+        answer:
+          "It should include data access limits, audit trails, human review thresholds, bias monitoring, escalation rules, model evaluation, and documentation for each workflow.",
+      },
     ],
     serviceType: "AI governance for property management firms",
     backgroundImage: "/header-approach.jpg",
