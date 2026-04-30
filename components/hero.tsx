@@ -15,7 +15,7 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-center">
           {/* Left: Main content */}
           <div className="lg:col-span-7">
-            <BlurFade delay={0.35} direction="up" offset={6}>
+            <BlurFade delay={0.35} direction="up" offset={6} className="hidden md:block">
               <p className="mb-5 text-[11px] uppercase tracking-[0.3em] text-accent">
                 THE MISSING INTELLIGENCE LAYER IS HERE
               </p>
