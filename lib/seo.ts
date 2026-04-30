@@ -34,7 +34,7 @@ export const publicRoutes = [
     changeFrequency: "monthly",
   },
   {
-    path: "/perspectives/property-management-ai-vs-asset-management-ai",
+    path: "/perspectives/the-real-time-loop-asset-manager-ai",
     priority: 0.8,
     changeFrequency: "monthly",
   },

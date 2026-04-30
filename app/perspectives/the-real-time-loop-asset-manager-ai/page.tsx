@@ -3,7 +3,7 @@ import { PerspectiveArticlePage } from "@/components/perspective-article-page"
 import { createPageMetadata } from "@/lib/seo"
 import { perspectiveArticlesBySlug } from "@/lib/seo-pages"
 
-const article = perspectiveArticlesBySlug["property-management-ai-vs-asset-management-ai"]
+const article = perspectiveArticlesBySlug["the-real-time-loop-asset-manager-ai"]
 
 export const metadata: Metadata = createPageMetadata({
   title: article.metaTitle,
@@ -11,13 +11,14 @@ export const metadata: Metadata = createPageMetadata({
   path: article.href,
   image: "/header-perspectives.jpg",
   keywords: [
-    "property management AI",
     "asset management AI",
-    "AI for asset management firms",
-    "real estate AI adoption",
+    "AI for REITs",
+    "real-time portfolio intelligence",
+    "property and asset management AI integration",
+    "AI architecture commercial real estate",
   ],
 })
 
-export default function PropertyVsAssetAIArticlePage() {
+export default function RealTimeLoopArticlePage() {
   return <PerspectiveArticlePage article={article} />
 }
