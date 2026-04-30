@@ -155,10 +155,6 @@ export function ProjectsSection() {
               (03) Failure Patterns
             </span>
           </div>
-          <p className="text-sm leading-[1.75] text-muted-foreground max-w-2xl">
-            Property and asset management firms are spending on AI. But spending is not adoption.
-            The firms that are stuck are usually in one of three patterns.
-          </p>
         </div>
       </BlurFade>
 
