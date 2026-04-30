@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   keywords: [
     "AI for property management",
     "AI for asset management",
+    "AI for REITs",
     "managed AI operations",
-    "property management AI",
-    "AI governance property management",
+    "AI governance real estate",
     "real estate AI operations",
   ],
   authors: [{ name: "Quoin Buildings, LLC", url: siteUrl }],

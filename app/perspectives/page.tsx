@@ -4,12 +4,17 @@ import { PerspectivesContent } from "./content"
 import { createPageMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Perspectives on Property Management AI",
+  title: "Perspectives on Property and Asset Management AI",
   description:
     "Original perspectives on AI adoption, governance, managed AI operations, and the future of property and asset management technology.",
   path: "/perspectives",
   image: "/header-perspectives.jpg",
-  keywords: ["property management AI insights", "AI governance real estate", "AI adoption property management"],
+  keywords: [
+    "real estate AI insights",
+    "property management AI",
+    "asset management AI",
+    "AI governance real estate",
+  ],
 })
 
 export default function PerspectivesPage() {

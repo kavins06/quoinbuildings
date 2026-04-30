@@ -19,7 +19,7 @@ const phases = [
     description:
       "We embed with your leadership and operations team to map workflows, assess data readiness, scope governance requirements, and build a prioritized roadmap. This is a standalone engagement. No long-term commitment required.",
     activities: [
-      "Workflow mapping across leasing, maintenance, and resident operations",
+      "Workflow mapping across operating workflows (leasing, maintenance, resident operations) and portfolio workflows (reporting, variance analysis, investor communications)",
       "Data quality and readiness assessment",
       "Governance and compliance scoping",
       "Prioritized AI roadmap with ROI projections",
@@ -35,7 +35,7 @@ const phases = [
     description:
       "We build and deploy the highest-ROI use case identified in the diagnostic. The agent is trained on your data, tested against edge cases, and validated by your operations team. Governance framework is established before go-live.",
     activities: [
-      "Agent architecture and integration with your property management platform",
+      "Agent architecture and integration with your property or asset management platform",
       "Training on your operational data, policies, and workflows",
       "Edge case testing and iterative validation with your operations team",
       "Governance framework established before go-live",
@@ -52,7 +52,7 @@ const phases = [
       "Staged rollout across properties with hands-on training for staff. Performance dashboards are established and monitored. Expansion to additional properties happens only after metrics confirm the deployment is working.",
     activities: [
       "Staged deployment starting with pilot properties",
-      "Hands-on training sessions for property managers and staff",
+      "Hands-on training sessions for operating teams, asset management teams, and staff",
       "Performance dashboard setup and ongoing monitoring",
       "Expansion only after metrics confirm success",
     ],
@@ -102,7 +102,7 @@ const faqs = [
   {
     question: "How do you handle tenant data privacy?",
     answer:
-      "Every engagement includes a governance framework addressing GDPR, CCPA, state-level privacy regulations, and fair housing compliance. Data isolation between properties is standard. Audit trails are built into every system.",
+      "Every engagement includes a governance framework addressing GDPR, CCPA, state-level privacy regulations, and anti-discrimination compliance. Data isolation between properties and portfolios is standard. Audit trails are built into every system.",
   },
   {
     question: "What if the diagnostic shows AI is not worth pursuing?",

@@ -4,12 +4,17 @@ import { ServicesContent } from "./content"
 import { breadcrumbJsonLd, createPageMetadata, serviceJsonLd } from "@/lib/seo"
 
 export const metadata: Metadata = createPageMetadata({
-  title: "AI Services for Property Management",
+  title: "AI Services for Property and Asset Management",
   description:
     "AI strategy, custom agent development, governance architecture, and managed operations for property and asset management firms.",
   path: "/services",
   image: "/header-services.jpg",
-  keywords: ["AI services property management", "custom AI agents real estate", "managed AI operations"],
+  keywords: [
+    "AI services property management",
+    "AI services asset management",
+    "custom AI workflows real estate",
+    "managed AI operations",
+  ],
 })
 
 export default function ServicesPage() {
@@ -38,7 +43,7 @@ export default function ServicesPage() {
           serviceJsonLd({
             name: "Governance & Compliance Architecture",
             description:
-              "AI governance architecture for fair housing, data privacy, audit trails, access control, and bias monitoring.",
+              "AI governance architecture for anti-discrimination compliance, data privacy, audit trails, access control, and bias monitoring.",
             path: "/services",
             serviceType: "AI governance and compliance architecture",
           }),

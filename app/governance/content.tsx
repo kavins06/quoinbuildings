@@ -7,26 +7,26 @@ import { BlurFade } from "@/components/ui/blur-fade"
 const pillars = [
   {
     number: "01",
-    title: "Fair Housing Compliance",
+    title: "Anti-Discrimination Compliance",
     description:
-      "Every AI system that influences tenant screening, application processing, or housing decisions includes explicit fair housing guardrails. We do not deploy AI into housing decisions without them.",
+      "Every AI system that influences screening, application processing, or consequential decisions includes explicit anti-discrimination guardrails. We do not deploy AI into decisions affecting protected classes without them.",
     mechanisms: [
       "Pre-deployment bias testing across protected classes",
       "Decision explanation requirements for adverse actions",
       "Human-in-the-loop review for consequential decisions",
-      "Regular audit of screening outcomes for disparate impact",
+      "Regular audit of decision outcomes for disparate impact",
     ],
   },
   {
     number: "02",
     title: "Data Privacy & Protection",
     description:
-      "Tenant personal data is handled with controls aligned to CCPA and GDPR standards. Privacy is not an afterthought. it is built into the data architecture from day one.",
+      "Resident personal data, investor data, and other personally identifiable information are handled with controls aligned to CCPA and GDPR standards. Privacy is not an afterthought; it is built into the data architecture from day one.",
     mechanisms: [
       "Data minimization and purpose limitation principles",
-      "Encryption at rest and in transit for all tenant data",
+      "Encryption at rest and in transit for all sensitive data",
       "Defined data retention and deletion policies",
-      "Tenant rights workflows for access, correction, and deletion requests",
+      "Data subject rights workflows for access, correction, and deletion requests",
     ],
   },
   {
@@ -110,8 +110,8 @@ export function GovernanceContent() {
     <main>
       <PageHeader
         eyebrow="AI Governance"
-        title="Responsible AI is not optional in property management."
-        description="Every AI system that touches tenant data, screening decisions, or financial reporting requires a governance framework. This is ours."
+        title="Responsible AI is not optional in real estate."
+        description="Every AI system that touches resident data, screening decisions, financial reporting, or investor communications requires a governance framework. This is ours."
         backgroundImage="https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="pb-4 md:pb-8"
@@ -157,7 +157,7 @@ export function GovernanceContent() {
             </div>
             <div className="lg:col-span-6 lg:col-start-7 flex items-end">
               <p className="text-sm leading-[1.85] text-muted-foreground">
-                Every system we build is engineered to meet enterprise compliance and security standards from day one. SOC 2, ISO 27001, GDPR, CCPA, and fair housing requirements are designed into the architecture, not bolted on. The framework is informed by senior advisors with decades of enterprise compliance, governance, and security experience across the U.S. Department of War, the U.S. Department of State, ODNI, and BAE Systems.
+                Every system we build is engineered to meet enterprise compliance and security standards from day one. SOC 2, ISO 27001, GDPR, CCPA, and anti-discrimination requirements are designed into the architecture, not bolted on. The framework is informed by senior advisors with decades of enterprise compliance, governance, and security experience across the U.S. Department of War, the U.S. Department of State, ODNI, and BAE Systems.
               </p>
             </div>
           </div>

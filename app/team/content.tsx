@@ -88,7 +88,7 @@ export function TeamContent() {
 
         <BlurFade inView delay={0.1} direction="up">
           <p className="text-sm leading-[1.85] text-muted-foreground max-w-4xl">
-            Property management AI requires three things most teams do not have in one place: operational knowledge of how property management actually runs, the engineering to build and deploy production AI, and governance experience that satisfies legal, compliance, and regulatory requirements.
+            Real estate AI requires three things most teams do not have in one place: operational knowledge of how property and asset management actually run, the engineering to build and deploy production AI, and governance experience that satisfies legal, compliance, and regulatory requirements.
           </p>
         </BlurFade>
       </section>

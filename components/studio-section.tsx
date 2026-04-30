@@ -8,7 +8,7 @@ const weeks = [
     number: "01",
     title: "Stakeholder Interviews & Workflow Mapping",
     description:
-      "Property managers, leasing, maintenance, and compliance. How work actually flows.",
+      "Operations, leasing, maintenance, asset management, and compliance. How work actually flows.",
   },
   {
     number: "02",

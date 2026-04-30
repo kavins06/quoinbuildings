@@ -20,9 +20,11 @@ export type SeoLandingPage = {
 
 export const coreResourceLinks = [
   { label: "AI for Property Management", href: "/ai-for-property-management" },
-  { label: "Maintenance Triage AI", href: "/ai-maintenance-triage-property-management" },
-  { label: "Leasing Automation AI", href: "/ai-leasing-automation-property-management" },
+  { label: "AI for Asset Management", href: "/ai-for-asset-management" },
+  { label: "Managed AI Operations", href: "/managed-ai-operations" },
   { label: "AI Operating Partner", href: "/property-management-ai-software-vs-operating-partner" },
+  { label: "Maintenance Triage", href: "/ai-maintenance-triage-property-management" },
+  { label: "Leasing Automation", href: "/ai-leasing-automation-property-management" },
   { label: "Services", href: "/services" },
   { label: "Who We Help", href: "/who-we-help" },
   { label: "Governance", href: "/governance" },
@@ -38,7 +40,7 @@ export const seoLandingPages = {
     title: "AI for Property Management Firms",
     metaTitle: "AI for Property Management Firms",
     description:
-      "AI for property management firms that need governed automation across leasing, maintenance, resident communication, accounting, and portfolio workflows.",
+      "Quoin works with property and asset management firms. This page covers AI on the property management side: governed automation across leasing, maintenance, resident communication, accounting, and portfolio workflows.",
     keywords: [
       "AI for property management",
       "property management AI",
@@ -49,7 +51,7 @@ export const seoLandingPages = {
     eyebrow: "Property Management AI",
     directAnswerTitle: "What is AI for property management?",
     directAnswer:
-      "AI for property management is the use of governed AI agents to support property operations such as maintenance triage, leasing follow-up, resident communication, accounting reconciliation, reporting, and portfolio exception management. It works best when AI is embedded into existing workflows, connected to property systems, and monitored with human review, audit trails, data controls, and clear escalation rules.",
+      "Quoin partners with property and asset management firms. On the property management side, AI means governed AI agents that support property operations such as maintenance triage, leasing follow-up, resident communication, accounting reconciliation, reporting, and portfolio exception management. It works best when AI is embedded into existing workflows, connected to property systems, and monitored with human review, audit trails, data controls, and clear escalation rules.",
     whoThisIsFor: [
       "CEOs, COOs, owners, and portfolio leaders responsible for operating performance.",
       "Firms managing multi-property portfolios with leasing, maintenance, accounting, and resident communication complexity.",
@@ -137,7 +139,7 @@ export const seoLandingPages = {
     title: "AI Maintenance Triage for Property Management",
     metaTitle: "AI Maintenance Triage for Property Management",
     description:
-      "AI maintenance triage for property management firms that need faster work order routing, resident updates, vendor coordination, and human escalation.",
+      "Quoin partners with property and asset management firms. This page covers AI maintenance triage for property managers: faster work order routing, resident updates, vendor coordination, and human escalation.",
     keywords: [
       "AI maintenance triage property management",
       "property management maintenance AI",
@@ -212,7 +214,7 @@ export const seoLandingPages = {
         description: "The broader operating model for AI across leasing, maintenance, reporting, and communication.",
       },
       {
-        label: "AI governance for property management",
+        label: "AI governance for property and asset management",
         href: "/ai-governance-property-management",
         description: "The guardrails needed before AI touches tenant-facing workflows.",
       },
@@ -226,7 +228,7 @@ export const seoLandingPages = {
     title: "AI Leasing Automation for Property Management",
     metaTitle: "AI Leasing Automation for Property Management",
     description:
-      "AI leasing automation for property management teams that need faster prospect follow-up, cleaner handoffs, and compliant resident-facing workflows.",
+      "Quoin partners with property and asset management firms. This page covers AI leasing automation for property managers: faster prospect follow-up, cleaner handoffs, and compliant resident-facing workflows.",
     keywords: [
       "AI leasing automation property management",
       "property management leasing AI",
@@ -301,9 +303,9 @@ export const seoLandingPages = {
         description: "How leasing automation fits into a broader AI operating model.",
       },
       {
-        label: "AI governance for property management",
+        label: "AI governance for property and asset management",
         href: "/ai-governance-property-management",
-        description: "Governance for fair housing, privacy, audit trails, and human review.",
+        description: "Governance for anti-discrimination compliance, privacy, audit trails, and human review.",
       },
     ],
     serviceType: "AI leasing automation for property management firms",
@@ -315,7 +317,7 @@ export const seoLandingPages = {
     title: "Property Management AI Software vs AI Operating Partner",
     metaTitle: "Property Management AI Software vs AI Operating Partner",
     description:
-      "A comparison for property management executives evaluating AI software, point solutions, consultants, and AI operating partners.",
+      "A comparison for property and asset management executives evaluating AI software, point solutions, consultants, and AI operating partners.",
     keywords: [
       "property management AI software",
       "AI operating partner property management",
@@ -326,10 +328,10 @@ export const seoLandingPages = {
     eyebrow: "AI Buying Guide",
     directAnswerTitle: "Should property management firms buy AI software or use an AI operating partner?",
     directAnswer:
-      "Property management AI software can be useful for narrow tasks, but firms with multi-property complexity often need workflow design, integration, governance, deployment, monitoring, and ongoing improvement. An AI operating partner owns that operating layer so AI becomes capability, not another tool to manage.",
+      "AI software can be useful for narrow tasks, but property and asset management firms with multi-property or multi-portfolio complexity often need workflow design, integration, governance, deployment, monitoring, and ongoing improvement. An AI operating partner owns that operating layer so AI becomes capability, not another tool to manage.",
     whoThisIsFor: [
-      "Executives comparing AI vendors, point solutions, consultants, and custom implementation partners.",
-      "Firms that have already tested AI tools but struggled to scale them across properties and teams.",
+      "Property and asset management executives comparing AI vendors, point solutions, consultants, and custom implementation partners.",
+      "Firms that have already tested AI tools but struggled to scale them across properties, portfolios, and teams.",
       "Organizations that need accountability for adoption, governance, and performance after launch.",
     ],
     problemsSolved: [
@@ -501,43 +503,44 @@ export const seoLandingPages = {
   readiness: {
     key: "readiness",
     path: "/ai-readiness-property-management",
-    title: "AI Readiness Assessment for Property Management",
-    metaTitle: "AI Readiness Assessment for Property Management",
+    title: "AI Readiness Assessment for Property and Asset Management",
+    metaTitle: "AI Readiness Assessment for Property and Asset Management",
     description:
-      "AI readiness assessment for property management firms: workflow mapping, data readiness, governance readiness, and a practical implementation roadmap.",
+      "AI readiness assessment for property and asset management firms: workflow mapping, data readiness, governance readiness, and a practical implementation roadmap.",
     keywords: [
       "AI readiness assessment property management",
+      "AI readiness assessment asset management",
       "AI implementation roadmap real estate operators",
-      "property management AI readiness",
-      "AI adoption roadmap property management",
+      "AI adoption roadmap real estate",
       "real estate AI readiness",
     ],
     eyebrow: "AI Readiness",
-    directAnswerTitle: "What is an AI readiness assessment for property management?",
+    directAnswerTitle: "What is an AI readiness assessment for real estate?",
     directAnswer:
-      "An AI readiness assessment evaluates whether a property management firm has the workflows, data access, system integrations, governance, and executive sponsorship needed to deploy AI safely. The output should be a prioritized implementation roadmap, not a generic strategy deck.",
+      "An AI readiness assessment evaluates whether a property or asset management firm has the workflows, data access, system integrations, governance, and executive sponsorship needed to deploy AI safely. The output should be a prioritized implementation roadmap, not a generic strategy deck.",
     whoThisIsFor: [
-      "Executives who need a clear AI adoption plan before approving budget or internal change.",
-      "Operators with fragmented data across property management systems, accounting tools, portals, email, and spreadsheets.",
+      "Property management executives who need a clear AI adoption plan before approving budget or internal change.",
+      "Asset management executives gauging AI fit before investment, across portfolio reporting, valuation support, and risk surfacing.",
+      "Operators with fragmented data across property management systems, asset management stacks, accounting tools, portals, email, and spreadsheets.",
       "Firms that want to know which AI use cases are feasible, valuable, and governable before they build.",
     ],
     problemsSolved: [
       "Leadership knows AI matters but does not know which workflow should be first.",
-      "Data quality, access, and ownership vary across properties and systems.",
+      "Data quality, access, and ownership vary across properties, portfolios, and systems.",
       "Legal, compliance, IT, and operations teams are not aligned on what AI can safely do.",
       "Previous pilots produced activity but not a repeatable implementation model.",
     ],
     howQuoinHelps: [
-      "Map high-friction workflows across leasing, maintenance, reporting, accounting, and communications.",
-      "Assess data readiness across property systems and supporting applications.",
+      "Map high-friction workflows across operating workflows (leasing, maintenance, communications) and portfolio workflows (reporting, variance analysis, investor communications).",
+      "Assess data readiness across property management and asset management systems and supporting applications.",
       "Prioritize use cases by value, feasibility, risk, and executive urgency.",
       "Deliver a buildable roadmap with governance requirements and operating ownership defined.",
     ],
     faq: [
       {
-        question: "What does AI readiness mean for property management?",
+        question: "What does AI readiness mean for property and asset management?",
         answer:
-          "AI readiness means the firm has identified the right workflows, data access, system constraints, governance rules, executive sponsorship, and operating owner for AI deployment.",
+          "AI readiness means the firm has identified the right workflows, data access, system constraints, governance rules, executive sponsorship, and operating owner for AI deployment, on either the property management or asset management side.",
       },
       {
         question: "What should an AI implementation roadmap include?",
@@ -545,57 +548,58 @@ export const seoLandingPages = {
           "A practical roadmap should identify priority workflows, required data and integrations, governance requirements, launch sequence, success metrics, and ownership after deployment.",
       },
     ],
-    serviceType: "AI readiness assessment for property management firms",
+    serviceType: "AI readiness assessment for property and asset management firms",
     backgroundImage: "/approach-discover.jpg",
   },
   governance: {
     key: "governance",
     path: "/ai-governance-property-management",
-    title: "AI Governance for Property Management",
-    metaTitle: "AI Governance for Property Management",
+    title: "AI Governance for Property and Asset Management",
+    metaTitle: "AI Governance for Property and Asset Management",
     description:
-      "AI governance for property management firms covering fair housing risk, tenant data privacy, audit trails, access control, and bias monitoring.",
+      "AI governance for property and asset management firms covering anti-discrimination compliance, data privacy, audit trails, access control, and bias monitoring.",
     keywords: [
       "AI governance property management",
-      "fair housing AI compliance",
+      "AI governance asset management",
       "AI compliance real estate",
-      "property management AI compliance",
-      "AI audit trails property management",
+      "AI audit trails real estate",
+      "real estate AI bias monitoring",
     ],
     eyebrow: "AI Governance",
-    directAnswerTitle: "What does AI governance mean in property management?",
+    directAnswerTitle: "What does AI governance mean in property and asset management?",
     directAnswer:
-      "AI governance in property management defines what AI may do, what it may not do, what data it can access, when humans must review its work, and how decisions are logged. It is especially important for workflows touching residents, tenant communications, leasing, fair housing, privacy, and financial reporting.",
+      "AI governance in property and asset management defines what AI may do, what it may not do, what data it can access, when humans must review its work, and how decisions are logged. It applies to workflows touching residents, tenant communications, leasing, financial reporting, investor communications, and consequential portfolio decisions.",
     whoThisIsFor: [
-      "Executives and compliance leaders evaluating AI adoption risk.",
-      "Property management firms that operate tenant-facing workflows across multiple properties and systems.",
-      "Organizations that need auditability before AI enters leasing, maintenance, resident communication, or reporting workflows.",
+      "Executives and compliance leaders at property and asset management firms evaluating AI adoption risk.",
+      "Operators running tenant-facing workflows across multiple properties and systems.",
+      "Asset management teams running portfolio reporting, valuation support, and investor-facing workflows.",
+      "Organizations that need auditability before AI enters leasing, maintenance, resident communication, reporting, or investor-facing workflows.",
     ],
     problemsSolved: [
-      "AI tools can create fair housing, privacy, and accountability risk when deployed without guardrails.",
+      "AI tools can create anti-discrimination, privacy, and accountability risk when deployed without guardrails.",
       "Teams need clear rules for human review, escalation, data access, and exception handling.",
       "Leadership needs visibility into what an AI system did, why it acted, and who approved consequential steps.",
       "Governance often arrives after the pilot, when it should shape the design from the start.",
     ],
     howQuoinHelps: [
       "Define AI use boundaries with operations, legal, compliance, and IT stakeholders.",
-      "Build human-in-the-loop rules for consequential tenant, vendor, and financial workflows.",
+      "Build human-in-the-loop rules for consequential resident, vendor, financial, and investor-facing workflows.",
       "Implement audit trails, access control, bias monitoring, and model-evaluation routines.",
       "Keep governance active after deployment through monitoring, reporting, and remediation workflows.",
     ],
     faq: [
       {
-        question: "Why is AI governance important in property management?",
+        question: "Why is AI governance important in property and asset management?",
         answer:
-          "Property management involves tenant-facing, financial, privacy, and fair housing-sensitive workflows. Governance defines where AI can act, when humans must review, and how decisions are logged.",
+          "Property and asset management involves tenant-facing, financial, privacy, and decision-sensitive workflows. Governance defines where AI can act, when humans must review, and how decisions are logged.",
       },
       {
-        question: "What should property management AI governance include?",
+        question: "What should real estate AI governance include?",
         answer:
           "It should include data access limits, audit trails, human review thresholds, bias monitoring, escalation rules, model evaluation, and documentation for each workflow.",
       },
     ],
-    serviceType: "AI governance for property management firms",
+    serviceType: "AI governance for property and asset management firms",
     backgroundImage: "/header-approach.jpg",
   },
 } satisfies Record<string, SeoLandingPage>

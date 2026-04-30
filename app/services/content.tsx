@@ -12,7 +12,7 @@ const services = [
     title: "AI Readiness & Strategy",
     image: "/service-strategy.jpg",
     description:
-      "We map your workflows across maintenance, leasing, tenant communications, accounting, reporting and compliance. We assess data readiness across your systems and identify the highest-ROI automation opportunities.",
+      "We map your workflows across the operating side—leasing, maintenance, and resident communications—and the portfolio side—accounting, variance analysis, and investor reporting. We assess data readiness across your systems and identify the highest-ROI automation opportunities.",
     activities: [
       "Workflow mapping across all operational areas",
       "Data quality assessment across Yardi, RealPage, AppFolio, Entrata",
@@ -28,13 +28,13 @@ const services = [
     title: "Custom AI Agent Development",
     image: "/service-ai-dev.jpg",
     description:
-      "Purpose-built AI agents for your specific operations. Each agent integrates with your existing property management platform and is trained on your workflows, policies, and data.",
+      "Purpose-built AI agents for your specific operations. Each agent integrates with your existing operating systems—property management platforms or asset management stacks—and is trained on your workflows, policies, and data.",
     activities: [
       "Maintenance triage and work order dispatch agents",
       "Lease abstraction and document processing",
-      "Tenant communication automation",
-      "Financial reporting and variance analysis",
-      "Vendor management and procurement workflows",
+      "Resident communication automation",
+      "Portfolio variance analysis and investor reporting",
+      "Capital planning and asset-level risk surfacing",
     ],
     deliverable:
       "Every agent is co-designed with your operations team, so it fits real workflows, not theoretical ones.",
@@ -44,11 +44,11 @@ const services = [
     title: "Governance & Compliance Architecture",
     image: "/service-governance.jpg",
     description:
-      "Every AI deployment includes a governance framework addressing fair housing compliance, tenant data privacy, audit trails, and algorithmic bias monitoring.",
+      "Every AI deployment includes a governance framework addressing anti-discrimination compliance, data privacy, audit trails, and algorithmic bias monitoring.",
     activities: [
-      "Fair housing guardrails for tenant screening",
+      "Anti-discrimination guardrails for screening and decisioning workflows",
       "GDPR and CCPA data privacy controls",
-      "Role-based access and data isolation across properties",
+      "Role-based access and data isolation across properties and portfolios",
       "Comprehensive audit trails for all AI decisions",
       "Algorithmic bias monitoring and reporting",
     ],
@@ -164,7 +164,7 @@ export function ServicesContent() {
       <PageHeader
         eyebrow="Our Services"
         title="From diagnosis through ongoing operations, we handle every stage of AI adoption."
-        description="Each service is designed for property management firms that are serious about making AI work, not just piloting it."
+        description="Each service is designed for property and asset management firms that are serious about making AI work, not just piloting it."
         backgroundImage="https://images.unsplash.com/photo-1584638015489-d38ba6b390ce?q=80&w=1929&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="pb-4 md:pb-8"
