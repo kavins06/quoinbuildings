@@ -28,7 +28,7 @@ export function PerspectiveArticlePage({ article }: { article: PerspectiveArticl
       />
 
       <header className="border-b border-subtle px-6 pb-6 pt-10 md:px-12 md:pb-8 md:pt-14 lg:px-20">
-        <div>
+        <div className="mx-auto max-w-4xl">
           <Link
             href="/perspectives"
             className="mb-5 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-muted-foreground transition-colors duration-200 hover:text-foreground"
@@ -49,7 +49,7 @@ export function PerspectiveArticlePage({ article }: { article: PerspectiveArticl
       </header>
 
       <article className="px-6 py-8 md:px-12 md:py-12 lg:px-20">
-        <div className="prose-content flex max-w-4xl flex-col gap-4 text-[15px] leading-[1.7] text-foreground/80 md:text-base">
+        <div className="prose-content mx-auto flex max-w-4xl flex-col gap-4 text-[15px] leading-[1.7] text-foreground/80 md:text-base">
           {article.body.map((block, index) => {
             if (block.type === "h2") {
               return (
@@ -90,7 +90,7 @@ export function PerspectiveArticlePage({ article }: { article: PerspectiveArticl
           })}
         </div>
 
-        <div className="mt-16 border-t border-border pt-10">
+        <div className="mx-auto mt-16 max-w-4xl border-t border-border pt-10">
           <h2 className="mb-4 text-2xl font-normal tracking-tight text-foreground">
             Ready to discuss AI adoption for your firm?
           </h2>
