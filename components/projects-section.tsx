@@ -55,7 +55,7 @@ function ProjectCard({ project, index, onOpenDetail }: { project: typeof project
             alt={`${project.title} - ${project.category}`}
             fill
             sizes="(min-width: 1024px) 33vw, 100vw"
-            className={`object-cover transition-all duration-[800ms] ease-out ${
+            className={`object-cover transition-all duration-700 ease-out ${
               hovered ? "scale-[1.04]" : "scale-100"
             }`}
           />

@@ -44,7 +44,7 @@ export function Footer() {
               QUOIN
             </Link>
             <p className="text-sm text-ink-secondary leading-relaxed mt-5 max-w-xs">
-              Your AI Operating Partner
+              Operational AI for institutional real estate.
             </p>
           </div>
 

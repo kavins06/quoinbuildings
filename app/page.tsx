@@ -14,7 +14,7 @@ import { createPageMetadata } from "@/lib/seo"
 export const metadata: Metadata = createPageMetadata({
   title: "Quoin | Your AI Operating Partner",
   description:
-    "Quoin helps property and asset management firms adopt AI through governed agents for leasing, maintenance, resident communication, reporting, compliance, and operations.",
+    "Quoin helps institutional real estate operators—REITs, owner-operators, property management firms, and asset managers—make AI operational, governed, and measurable inside leasing, maintenance, accounting, and reporting workflows.",
   path: "/",
   image: "/hero-bg.jpg",
   keywords: [
@@ -32,11 +32,11 @@ export default function Page() {
       <Hero />
       <ProofStrip />
       <ProjectsSection />
-      <EditorialBreak />
       <WhySection />
-      <PrinciplesSection />
       <StudioSection />
+      <PrinciplesSection />
       <ApproachSection />
+      <EditorialBreak />
       <PerspectivesTeaser />
       <ContactSection />
     </main>

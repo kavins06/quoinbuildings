@@ -14,16 +14,7 @@ const team = [
     initials: "KS",
     photo: "/team-kavin.jpeg",
     short: "Georgetown \u00b7 Real Estate & Competitive Intelligence",
-    bio: "Kavin founded Quoin on a single conviction: that AI will become the intelligence layer inside real estate operations, not a tool layered on top of them. His background spans civil engineering, real estate market research, agency loan origination, financial markets, AI research, and real estate operating platforms. At Georgetown, he studied how prepared real estate firms are to adopt AI, finding that the barrier is rarely the technology alone. Kavin leads the engineering team at Quoin, sets strategic direction, and leads workflow documentation for client engagements. He holds a B.E. in Civil Engineering from PSG College of Technology, a Master's in Real Estate and Competitive Intelligence from Georgetown University, and has passed CFA Level II.",
-  },
-  {
-    hidden: true,
-    name: "Jonathan Morris",
-    role: "Advisor, Real Estate",
-    initials: "JM",
-    photo: "/team-jonathan.png",
-    short: "$4.7B CRE Transactions \u00b7 Fmr. Dir. Acquisitions, Boston Properties",
-    bio: "Jonathan Morris has spent more than three decades in commercial real estate and has closed over $4.7 billion in transactions across the capital stack. Recruited by Ray Ritchey to Boston Properties (BXP), he served as Director of Acquisitions and helped build one of the country's premier office REITs. He was later recruited by Brown Brothers Harriman to lead a private office REIT as CEO, taking the company through a $240 million IPO. He went on to co-found LMH Realty Group as Managing Principal, assembling a 1.5 million square foot portfolio valued at $1.5 billion at an average IRR of 44%. Today he is the Founder and CEO of REIT Academy, a Senior Research Advisor at Hoya Capital, and a member of Georgetown University's REIT faculty. At Quoin, Jonathan works one-on-one with clients on real estate strategy and market positioning, and helps shape the firm's own direction in the commercial real estate industry.",
+    bio: "Kavin founded Quoin on one conviction: that AI must run inside real estate operations as governed, measurable infrastructure, not as a separate tool layered on top. His background spans civil engineering, real estate market research, agency loan origination, financial markets, AI research, and real estate operating platforms. At Georgetown, he studied how prepared real estate firms are to adopt AI, finding that the barrier is rarely the technology alone. Kavin leads the engineering team at Quoin, sets strategic direction, and leads workflow documentation for client engagements. He holds a B.E. in Civil Engineering from PSG College of Technology, a Master's in Real Estate and Competitive Intelligence from Georgetown University, and has passed CFA Level II.",
   },
   {
     name: "Dr. Cynthia J. Mendoza",
@@ -32,6 +23,14 @@ const team = [
     photo: "/team-cynthia.png",
     short: "Former Deputy CIO, US Department of Defense",
     bio: "Dr. Cynthia Mendoza has spent two decades leading complex technology efforts across the U.S. Department of Defense and the Intelligence Community. As Deputy CIO of the Department of Defense, she led modernization across the department's compartmented IT enterprise; as CTO of the U.S. Department of State, she set the technology direction for the nation's diplomatic platform; and as Acting Deputy CIO and IC Chief Architect at ODNI, she championed the first community-level Reference Architecture Framework. She currently serves as Chief Engineer at BAE Systems, leading engineering decisions for a $1B+ Intelligence Community portfolio, sits on the board of the Intelligence and National Security Alliance, and teaches as an adjunct instructor at Georgetown University. She holds a Ph.D. and carries DAWIA Level Three and PMP certifications. At Quoin, Dr. Mendoza advises individual clients on governance, security architecture, and enterprise modernization, and establishes the governance and security standards the firm itself operates by.",
+  },
+  {
+    name: "Jonathan Morris",
+    role: "Advisor, Real Estate Operations",
+    initials: "JM",
+    photo: "/team-jonathan.png",
+    short: "$4.7B CRE Transactions \u00b7 Fmr. Dir. Acquisitions, Boston Properties",
+    bio: "Jonathan Morris has spent more than three decades in commercial real estate and has closed over $4.7 billion in transactions across the capital stack. Recruited by Ray Ritchey to Boston Properties (BXP), he served as Director of Acquisitions and helped build one of the country's premier office REITs. He was later recruited by Brown Brothers Harriman to lead a private office REIT as CEO, taking the company through a $240 million IPO. He went on to co-found LMH Realty Group as Managing Principal, assembling a 1.5 million square foot portfolio valued at $1.5 billion at an average IRR of 44%. Today he is the Founder and CEO of REIT Academy, a Senior Research Advisor at Hoya Capital, and a member of Georgetown University's REIT faculty. At Quoin, Jonathan works one-on-one with clients on real estate strategy and market positioning, and helps shape the firm's own direction in the commercial real estate industry.",
   },
   {
     name: "Rohith Roshan",

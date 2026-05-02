@@ -4,7 +4,7 @@ export const siteUrl = "https://quoinbuildings.com"
 export const siteName = "Quoin"
 export const companyName = "Quoin Buildings, LLC"
 export const defaultDescription =
-  "Quoin is an AI operating partner for property and asset management firms. We build, deploy, govern, and manage AI agents inside real estate operations."
+  "Quoin helps institutional real estate operators—REITs, owner-operators, property management firms, and asset managers—make AI operational, governed, and measurable inside daily workflows."
 
 export const publicRoutes = [
   { path: "/", priority: 1, changeFrequency: "weekly" },

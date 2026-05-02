@@ -2,10 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { AuroraText } from "@/components/ui/aurora-text"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { NumberTicker } from "@/components/ui/number-ticker"
-import { WordRotate } from "@/components/ui/word-rotate"
 
 export function Hero() {
   return (
@@ -15,43 +12,38 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-center">
           {/* Left: Main content */}
           <div className="lg:col-span-7">
-            <BlurFade delay={0.35} direction="up" offset={6} className="hidden md:block">
+            <BlurFade delay={0.35} direction="up" offset={6}>
               <p className="mb-5 text-[11px] uppercase tracking-[0.3em] text-accent">
-                THE MISSING INTELLIGENCE LAYER IS HERE
+                FROM AI PRESSURE TO PRODUCTION
               </p>
             </BlurFade>
 
             <BlurFade delay={0.5} direction="up" offset={8}>
-              <h1 className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.15] tracking-[-0.03em] text-ink-primary">
-                Your AI Operating
-                <br />
-                <WordRotate
-                  words={["Partner", "Infrastructure", "Advantage"]}
-                  duration={3000}
-                  className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.15] tracking-[-0.03em] text-accent"
-                />
+              <h1 className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.15] tracking-[-0.03em] text-ink-primary text-balance">
+                Make AI operational across{" "}
+                <span className="text-accent">institutional real estate</span>.
               </h1>
             </BlurFade>
 
             <BlurFade delay={0.7} direction="up">
               <p className="mt-8 text-base md:text-lg font-light leading-relaxed text-ink-primary max-w-2xl md:max-w-3xl">
-                Quoin helps enterprise <AuroraText className="font-medium">Property &amp; Asset Management Companies</AuroraText> turn AI into a governed operating layer across leasing, operations, asset management, compliance, and reporting. Improving NOI while reducing legal, security, and execution risk across the portfolio.
+                Quoin helps <span className="font-medium">institutional real estate operators</span>, including REITs, owner-operators, property management firms, and asset managers, turn AI pressure into governed workflows. We map how work actually runs, build or configure agents inside the systems your teams already use, and put governance in place before anything reaches production.
               </p>
             </BlurFade>
 
             <BlurFade delay={1.0} direction="up">
-              <div className="mt-10 md:mt-12 hidden md:flex items-center gap-6">
+              <div className="mt-10 md:mt-12 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
                 <Link
                   href="/contact"
-                  className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 bg-ink-primary text-white hover:bg-ink-primary/90 transition-colors duration-150"
+                  className="inline-flex items-center justify-center text-[11px] tracking-[0.15em] uppercase px-5 py-3 bg-ink-primary text-white hover:bg-ink-primary/90 transition-colors duration-150 min-h-[44px]"
                 >
-                  Talk to us
+                  Book the 2-week diagnostic
                 </Link>
                 <a
-                  href="/services"
-                  className="text-[11px] tracking-[0.2em] uppercase text-ink-secondary hover:text-ink-primary transition-colors duration-500"
+                  href="#diagnostic"
+                  className="inline-flex items-center text-[11px] tracking-[0.2em] uppercase text-ink-secondary hover:text-ink-primary transition-colors duration-500 py-3 min-h-[44px]"
                 >
-                  See our services &rarr;
+                  See what the diagnostic includes &rarr;
                 </a>
               </div>
             </BlurFade>
@@ -69,33 +61,33 @@ export function Hero() {
             className="pointer-events-none object-cover"
           />
           <div className="pointer-events-none absolute inset-0 bg-black/30" aria-hidden="true" />
-          <div className="relative z-10 grid grid-cols-3 gap-4 lg:flex lg:flex-col lg:gap-6">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 lg:flex lg:flex-col lg:gap-6">
             <BlurFade delay={1.1} direction="up" className="h-full">
-              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-white/70 h-full">
-                <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
-                  AI Capability
+              <div className="relative overflow-hidden border border-subtle p-5 md:p-4 lg:p-6 bg-white/70 h-full">
+                <p className="text-[11px] md:text-[9px] lg:text-[11px] tracking-[0.3em] md:tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-2 md:mb-1 lg:mb-2">
+                  Executive Priority
                 </p>
-                <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight whitespace-nowrap">
-                  <NumberTicker value={85.9} decimalPlaces={1} className="inline-block tracking-tight text-accent" />%
+                <p className="text-4xl md:text-2xl lg:text-4xl font-normal text-accent tracking-tight whitespace-nowrap">
+                  74%
                 </p>
-                <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
-                  AI ability matches or beats a domain expert
+                <p className="text-sm md:text-[10px] lg:text-sm text-ink-primary mt-1">
+                  Global leaders say AI will remain a top investment priority even if a recession occurs
                 </p>
                 <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-1 italic">
-                  <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">OpenAI, Apr 2026</a>
+                  <a href="https://kpmg.com/xx/en/media/press-releases/2026/03/kpmg-global-ai-pulse-survey.html" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">KPMG, Mar 2026</a>
                 </p>
               </div>
             </BlurFade>
 
             <BlurFade delay={1.3} direction="up" className="h-full">
-              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-white/70 h-full">
-                <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
+              <div className="relative overflow-hidden border border-subtle p-5 md:p-4 lg:p-6 bg-white/70 h-full">
+                <p className="text-[11px] md:text-[9px] lg:text-[11px] tracking-[0.3em] md:tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-2 md:mb-1 lg:mb-2">
                   Industry Gap
                 </p>
-                <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight">
-                  <NumberTicker value={5} delay={0.2} className="inline-block tracking-tight text-accent" />%
+                <p className="text-4xl md:text-2xl lg:text-4xl font-normal text-accent tracking-tight">
+                  5%
                 </p>
-                <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
+                <p className="text-sm md:text-[10px] lg:text-sm text-ink-primary mt-1">
                   CRE firms achieving their AI program goals
                 </p>
                 <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-1 italic">
@@ -105,15 +97,15 @@ export function Hero() {
             </BlurFade>
 
             <BlurFade delay={1.5} direction="up" className="h-full">
-              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-white/70 h-full">
-                <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
-                  Implement In
+              <div className="relative overflow-hidden border border-subtle p-5 md:p-4 lg:p-6 bg-white/70 h-full">
+                <p className="text-[11px] md:text-[9px] lg:text-[11px] tracking-[0.3em] md:tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-2 md:mb-1 lg:mb-2">
+                  First Workflow
                 </p>
-                <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight">
-                  <NumberTicker value={4} delay={0.4} className="inline-block tracking-tight text-accent" /> Wks
+                <p className="text-4xl md:text-2xl lg:text-4xl font-normal text-accent tracking-tight">
+                  4 Wks
                 </p>
-                <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
-                  First production workflow, typical Quoin engagement
+                <p className="text-sm md:text-[10px] lg:text-sm text-ink-primary mt-1">
+                  Target window for a scoped governed workflow after diagnostic
                 </p>
               </div>
             </BlurFade>

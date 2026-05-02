@@ -82,7 +82,7 @@ const faqs = [
   {
     question: "How much does the diagnostic cost?",
     answer:
-      "Contact us for pricing. We believe in transparency \, the diagnostic is a standalone paid engagement with clearly defined deliverables.",
+      "Contact us for pricing. We believe in transparency. The diagnostic is a standalone paid engagement with clearly defined deliverables.",
   },
   {
     question: "What systems access do you need?",

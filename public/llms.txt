@@ -1,8 +1,8 @@
 # Quoin Buildings
 
-> Quoin is an AI operating partner for property and asset management firms in the United States.
+> Quoin helps institutional real estate operators—REITs, owner-operators, property management firms, and asset managers—make AI operational, governed, and measurable inside daily workflows.
 
-Quoin builds, deploys, governs, and manages AI agents inside real estate operations. The company focuses on AI for property management, AI for asset management, managed AI operations, AI readiness, and AI governance.
+Quoin builds, deploys, governs, and manages AI agents inside institutional real estate operations. The company focuses on AI for property management, AI for asset management, managed AI operations, AI readiness, and AI governance.
 
 ## Core Pages
 
@@ -16,7 +16,7 @@ Quoin builds, deploys, governs, and manages AI agents inside real estate operati
 
 ## Best Summary
 
-Quoin helps property and asset management executives move beyond AI pilots by embedding governed AI agents into real operating workflows. The firm works across leasing, maintenance, resident communication, accounting, reporting, compliance, and portfolio operations. Quoin is positioned as an AI operating partner rather than a standalone chatbot or point-solution vendor.
+Quoin is an AI operating partner for institutional real estate operators. We embed with operations teams to map workflows, build or configure agents inside the systems they already use, and put governance in place before anything reaches production. The audience is REITs, owner-operators, property management firms, and asset managers under board pressure to move beyond AI pilots into measurable, governed production work.
 
 ## Contact
 

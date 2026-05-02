@@ -107,7 +107,7 @@ export function EditorialBreak() {
         <div className="mt-20 md:mt-28 max-w-3xl mx-auto text-center">
           <div className="w-10 h-px bg-accent/40 mb-8 mx-auto" />
           <p className="text-xl md:text-2xl lg:text-[1.65rem] font-normal leading-[1.35] tracking-tight text-foreground text-balance">
-            {"“The firms that will succeed in the AI revolution are not the ones that buy the best tools. They are the ones that integrate all workflows through an intelligence layer, govern the risk, and train their employees for the future.”"}
+            {"“The firms that succeed with AI will not be the ones that buy the most tools. They will be the ones that turn AI into governed workflows, connect it to how work actually runs, and train their teams to operate it.”"}
           </p>
           <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mt-8">
             Kavin Sakthivel, CEO &amp; Chief Engineer

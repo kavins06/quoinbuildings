@@ -14,7 +14,7 @@ export function ContactSection() {
               Next Step
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-normal leading-[1.15] tracking-tight text-balance">
-              {"\u201CLet\u2019s start with"}<br />{"a conversation.\u201D"}
+              Start with the AI workflow conversation.
             </h2>
             <p className="mt-6 text-sm leading-[1.85] text-background/50 max-w-md">
               A 1-hour conversation about your operations. No pitch. No pressure.

@@ -7,27 +7,27 @@ import { BlurFade } from "@/components/ui/blur-fade"
 const triggers = [
   {
     number: "01",
-    title: "\u201CThe pilot did not scale.\u201D",
+    title: "“The pilot did not scale.”",
     description:
       "You ran a leasing chatbot or maintenance tool pilot at one property. It worked well enough in isolation. Scaling it across the portfolio revealed data inconsistencies, integration gaps, and governance questions nobody had scoped. The pilot sits in limbo.",
   },
   {
     number: "02",
-    title: "\u201CThe board is asking about AI.\u201D",
+    title: "“The board is asking about AI.”",
     description:
-      "Ownership or the board wants an AI strategy. You need something more than a slide deck and more credible than \u201Cwe are looking into it.\u201D You need a concrete plan with timelines, costs, and risk mitigation \, and ideally someone who can execute it.",
+      "Ownership or the board wants an AI strategy. You need something more than a slide deck and more credible than “we are looking into it.” You need a concrete plan with timelines, costs, and risk mitigation, and ideally someone who can execute it.",
   },
   {
     number: "03",
-    title: "\u201CWe have too many point solutions.\u201D",
+    title: "“We have too many point solutions.”",
     description:
       "You have three or four AI-adjacent tools from different vendors. None share data. Your staff manages multiple systems. The total cost is significant and the total impact is unclear. You want to consolidate and get real operational value.",
   },
   {
     number: "04",
-    title: "\u201CWe cannot hire for this.\u201D",
+    title: "“We cannot hire for this.”",
     description:
-      "You have looked at building an internal AI team. The talent market is expensive, competitive, and slow. You need AI capability without the 12\u201318 month ramp of recruiting, onboarding, and retaining a specialized team.",
+      "You have looked at building an internal AI team. The talent market is expensive, competitive, and slow. You need AI capability without the 12–18 month ramp of recruiting, onboarding, and retaining a specialized team.",
   },
 ]
 
@@ -56,7 +56,7 @@ export function WhoWeHelpContent() {
       <PageHeader
         eyebrow="Who We Help"
         title="AI Adoption and Operations for Property & Asset Management Firms"
-        description="We work with firms large enough to have multi-property operational complexity and too lean to build a dedicated internal AI team."
+        description="We work with institutional real estate operators large enough to have multi-property operational complexity and too lean to build a dedicated internal AI team."
         backgroundImage="/header-team.jpg"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="max-w-6xl pb-4 md:pb-8"
@@ -77,9 +77,9 @@ export function WhoWeHelpContent() {
                 {[
                   "Manage 2,000 to 50,000 residential, mixed-use, or commercial units",
                   "Operate across multiple properties with regional management layers",
-                  "Have an executive sponsor \, COO, CEO, VP of Operations, or ownership \, who owns the AI question",
+                  "Have an executive sponsor — COO, CEO, VP of Operations, or ownership — who owns the AI question",
                   "Are under pressure from ownership, boards, or competitive dynamics to adopt AI but are unsure how to move beyond pilots",
-                  "Have tried at least one of: a point solution vendor, a consulting engagement, or an internal AI initiative \, and are dissatisfied with the results",
+                  "Have tried at least one of: a point solution vendor, a consulting engagement, or an internal AI initiative — and are dissatisfied with the results",
                   "Need firm-wide capability, not another single-use tool",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
@@ -126,7 +126,7 @@ export function WhoWeHelpContent() {
               Trigger Moments
             </p>
             <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-tight text-foreground">
-              What Firm&rsquo;s are experiencing
+              What Firms Are Telling Us
             </h2>
           </div>
         </BlurFade>

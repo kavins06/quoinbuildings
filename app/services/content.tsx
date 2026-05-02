@@ -53,7 +53,7 @@ const services = [
       "Algorithmic bias monitoring and reporting",
     ],
     deliverable:
-      "Informed by two decades of enterprise technology leadership across the Department of Defense and Intelligence Community.",
+      "A documented governance framework wired into every workflow we deploy: bias controls, audit trails, access boundaries, and human-review thresholds, drawn from two decades of enterprise governance experience across the Department of Defense and Intelligence Community.",
   },
   {
     number: "04",
@@ -164,7 +164,7 @@ export function ServicesContent() {
       <PageHeader
         eyebrow="Our Services"
         title="From diagnosis through ongoing operations, we handle every stage of AI adoption."
-        description="Each service is designed for property and asset management firms that are serious about making AI work, not just piloting it."
+        description="Each service is designed for institutional real estate operators—property and asset management firms—that are serious about making AI work in production, not just piloting it."
         backgroundImage="https://images.unsplash.com/photo-1584638015489-d38ba6b390ce?q=80&w=1929&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="pb-4 md:pb-8"

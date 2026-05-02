@@ -45,7 +45,7 @@ const pillars = [
     number: "04",
     title: "Algorithmic Bias Monitoring",
     description:
-      "Deployed models are continuously monitored for disparate impact across protected classes. Bias is not a one-time test. it is an ongoing operational concern.",
+      "Deployed models are continuously monitored for disparate impact across protected classes. Bias is not a one-time test; it is an ongoing operational concern.",
     mechanisms: [
       "Statistical monitoring of outcomes by demographic group",
       "Periodic model revalidation against updated data",

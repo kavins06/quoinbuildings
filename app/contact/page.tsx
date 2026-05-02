@@ -6,9 +6,9 @@ import { createPageMetadata } from "@/lib/seo"
 export const metadata: Metadata = createPageMetadata({
   title: "Contact Quoin",
   description:
-    "Tell Quoin about your property or asset management firm, then book a call to discuss AI readiness, governance, and operations.",
+    "Tell Quoin about your firm, the AI pressure you are seeing, and the workflows where the work is hardest. We will decide together whether a 2-week Executive Diagnostic is the right next step.",
   path: "/contact",
-  image: "/header-contact.jpg",
+  image: "/header-who-we-help.jpg",
   keywords: ["book AI consultation", "property management AI consultation", "real estate AI partner"],
 })
 
