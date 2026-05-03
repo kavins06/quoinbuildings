@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`scoreAssessment specific cases > scoring is stable for fixed input (snapshot at SCORING_VERSION) 1`] = `
+[
+  "operator_data_normalization",
+  "ai_roadmap_irr",
+  "ai_team_charter",
+]
+`;
