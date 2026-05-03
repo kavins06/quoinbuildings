@@ -2,33 +2,105 @@
 
 import { BlurFade } from "@/components/ui/blur-fade"
 
+interface Pain {
+  numeral: string
+  heading: string
+  body: string
+}
+
+const pains: Pain[] = [
+  {
+    numeral: "01",
+    heading: "No partner speaks both sides.",
+    body:
+      "Asset-side AI vendors don’t get operations. Property-management AI vendors don’t get fund returns. The big consulting firms hand you a strategy deck that ignores both. Owner/operators need a partner fluent in both halves of the business, integrated.",
+  },
+  {
+    numeral: "02",
+    heading: "Data is scattered across the seam.",
+    body:
+      "Operations data and asset data live in different systems and report on different cadences. Yardi, RealPage, Entrata, MRI on one side. Investor reporting and fund models on the other. AI on top of a broken data foundation produces stalled pilots, not deployed workflows.",
+  },
+  {
+    numeral: "03",
+    heading: "Build-vs-buy doesn’t pencil.",
+    body:
+      "Hiring a 20-person internal AI team is hard to justify under $5B AUM. The big consultancies want 12-month, multi-million-dollar engagements that end in shelfware. There’s nothing in between that understands an owner/operator firm. So the AI conversation stalls at the board level.",
+  },
+]
+
 export function WhySection() {
   return (
-    <section className="px-6 py-10 md:px-12 lg:px-20 md:py-14">
-      <div className="max-w-5xl">
-        <BlurFade inView direction="up">
-          <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4">
-            Why Quoin Exists
-          </p>
-          <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-6">
-            The industry needs more than another vendor
-          </h2>
-        </BlurFade>
+    <section
+      aria-labelledby="why-heading"
+      className="bg-surface-base py-20 md:py-32"
+    >
+      <div className="container-shell">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+          {/* Section header — editorial column */}
+          <header className="lg:col-span-5">
+            <BlurFade inView direction="up">
+              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent mb-6">
+                The pattern
+              </p>
+            </BlurFade>
+            <BlurFade inView delay={0.05} direction="up">
+              <h2
+                id="why-heading"
+                className="font-serif text-balance text-ink-primary text-[clamp(2rem,4.5vw,2.625rem)] leading-[1.1] tracking-[-0.02em] font-normal"
+              >
+                Why owner/operators get AI <em className="italic">wrong.</em>
+              </h2>
+            </BlurFade>
+            <BlurFade inView delay={0.1} direction="up">
+              <p className="mt-8 measure text-ink-secondary text-[17px] leading-[1.55]">
+                The asset-management consultants don&rsquo;t understand your
+                operations. The property-management software vendors don&rsquo;t
+                understand your asset thesis. Meanwhile, the firms that own AND
+                operate are starting to deploy real AI in leasing, in
+                maintenance, in asset performance, in resident comms. Your
+                board is asking. Your LPs are asking. You don&rsquo;t have an
+                answer yet because no one in the room speaks both halves of
+                your business.
+              </p>
+            </BlurFade>
+          </header>
 
-        <BlurFade inView delay={0.1} direction="up">
-          <div className="flex flex-col gap-5">
-            <p className="text-sm leading-[1.85] text-muted-foreground">
-              Property and asset management teams are investing in AI, but the investments are not
-              translating into operational results that move the bottom line significantly. The gap is not technology. It is execution &amp; integration.
-            </p>
-            <p className="text-sm leading-[1.85] text-muted-foreground">
-              So, we started Quoin. We embed with your teams and build AI agents on a shared
-              intelligence layer that unifies your PMS, accounting, leases, and work orders.
-              Property managers gets hours of work done in minutes. Asset managers drill from portfolio to
-              root cause. Both sides decide on evidence, at a fraction of the time.
-            </p>
-          </div>
-        </BlurFade>
+          {/* Three pains — editorial bullet list with serif numerals + hairlines */}
+          <ol className="lg:col-span-7 lg:col-start-6 flex flex-col">
+            {pains.map((pain, index) => (
+              <BlurFade
+                key={pain.numeral}
+                inView
+                delay={0.15 + index * 0.08}
+                direction="up"
+              >
+                <li
+                  className={[
+                    "grid grid-cols-[auto_1fr] gap-x-8 gap-y-3 py-10 md:py-12",
+                    index === 0 ? "border-t border-strong" : "",
+                    "border-b border-strong",
+                  ].join(" ")}
+                >
+                  <span
+                    aria-hidden="true"
+                    className="font-serif text-[64px] md:text-[80px] leading-[0.9] text-accent tracking-[-0.02em] tabular-nums self-start"
+                  >
+                    {pain.numeral}
+                  </span>
+                  <div className="self-center">
+                    <h3 className="font-serif text-[24px] md:text-[28px] leading-[1.2] tracking-[-0.015em] text-ink-primary font-normal">
+                      {pain.heading}
+                    </h3>
+                    <p className="mt-4 measure text-ink-secondary text-[16px] md:text-[17px] leading-[1.6]">
+                      {pain.body}
+                    </p>
+                  </div>
+                </li>
+              </BlurFade>
+            ))}
+          </ol>
+        </div>
       </div>
     </section>
   )
