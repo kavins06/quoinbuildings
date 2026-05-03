@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { BlurFade } from "@/components/ui/blur-fade"
 import { DraggableMarquee } from "@/components/ui/draggable-marquee"
 
@@ -26,16 +25,18 @@ function LogoItem({ logo, compact = false }: { logo: typeof logos[number]; compa
         compact ? "mx-5 h-16" : "mx-8 h-28",
       ].join(" ")}
     >
-      <Image
+      <img
         src={logo.src}
         alt={logo.alt}
         width={compact ? 80 : 160}
         height={compact ? 28 : 64}
         draggable={false}
+        loading="lazy"
+        decoding="async"
+        style={{ width: "auto", height: compact ? 28 : 64 }}
         className={[
-          "w-auto object-contain grayscale opacity-85 hover:opacity-100",
+          "object-contain grayscale opacity-85 hover:opacity-100",
           "transition-opacity duration-300 select-none pointer-events-none",
-          compact ? "h-7" : "h-16",
         ].join(" ")}
       />
       {logo.label ? (
