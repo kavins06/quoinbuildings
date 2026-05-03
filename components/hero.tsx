@@ -7,17 +7,17 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative bg-surface-base pt-20 pb-16 md:pt-28 md:pb-24 lg:pt-36 lg:pb-32"
+      className="relative bg-surface-base pt-12 pb-14 md:pt-20 md:pb-20 lg:pt-28 lg:pb-24"
     >
       <div className="container-shell">
         <BlurFade inView direction="up" offset={0}>
-          <div className="hairline border-t w-full mb-10 md:mb-14" aria-hidden="true" />
+          <div className="hairline border-t w-full mb-8 md:mb-10" aria-hidden="true" />
         </BlurFade>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-8">
             <BlurFade inView delay={0.05} direction="up">
-              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent mb-8">
+              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent mb-6">
                 AI for real estate owner/operators
               </p>
             </BlurFade>
@@ -25,7 +25,7 @@ export function Hero() {
             <BlurFade inView delay={0.1} direction="up">
               <h1
                 id="hero-heading"
-                className="font-serif text-balance text-ink-primary font-normal leading-[1.02] tracking-[-0.025em] text-[clamp(3rem,7vw,6rem)]"
+                className="font-serif text-balance text-ink-primary font-normal leading-[1.02] tracking-[-0.025em] text-[clamp(2.65rem,6.4vw,5.5rem)]"
               >
                 You own the buildings. You run them. AI should work the{" "}
                 <em className="italic">same way.</em>
@@ -33,7 +33,7 @@ export function Hero() {
             </BlurFade>
 
             <BlurFade inView delay={0.2} direction="up">
-              <p className="mt-10 measure text-ink-secondary text-[17px] md:text-[19px] leading-[1.55]">
+              <p className="mt-8 measure text-ink-secondary text-[16px] md:text-[18px] leading-[1.55]">
                 Quoin discovers, implements, and manages AI for owner/operators of
                 real estate. We figure out where AI actually moves IRR in your
                 portfolio and operating margin across your operations, build the
@@ -45,7 +45,7 @@ export function Hero() {
             </BlurFade>
 
             <BlurFade inView delay={0.3} direction="up">
-              <div className="mt-12 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
+              <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
                 <Link
                   href="/contact"
                   className="cta-primary text-[15px] font-medium tracking-[0.01em] inline-flex items-center gap-2 self-start"
