@@ -1,6 +1,6 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Inter, Source_Serif_4 } from 'next/font/google'
+import { DM_Sans, Instrument_Serif } from 'next/font/google'
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { CookieBanner } from "@/components/cookie-banner"
@@ -9,17 +9,18 @@ import { defaultDescription, organizationJsonLd, siteName, siteUrl, websiteJsonL
 
 import './globals.css'
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-sans',
+  weight: ['400', '500', '700'],
   display: 'swap',
 })
 
-const sourceSerif = Source_Serif_4({
+const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
   variable: '--font-serif',
-  weight: ['400', '500'],
-  style: 'normal',
+  weight: ['400'],
+  style: ['normal', 'italic'],
   display: 'swap',
 })
 export const metadata: Metadata = {
@@ -90,8 +91,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
-      <body className="font-sans antialiased bg-background text-foreground">
+    <html lang="en" className={`${dmSans.variable} ${instrumentSerif.variable}`}>
+      <body className="font-sans antialiased bg-surface-base text-ink-primary paper-grain">
         <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
         <a
           href="#main"

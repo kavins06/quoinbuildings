@@ -11,16 +11,18 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-serif)', 'Source Serif 4', 'Source Serif Pro', 'Georgia', 'serif'],
+        sans: ['var(--font-sans)', 'DM Sans', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Instrument Serif', 'Georgia', 'serif'],
       },
       colors: {
-        // Semantic trust-system tokens
+        // Semantic trust-system tokens (DESIGN.md Editorial-Architectural)
         surface: {
           base: 'hsl(var(--surface-base))',
           raised: 'hsl(var(--surface-raised))',
           sunken: 'hsl(var(--surface-sunken))',
           inverse: 'hsl(var(--surface-inverse))',
+          paper: 'hsl(var(--surface-base))',
+          'paper-deep': 'hsl(var(--surface-sunken))',
         },
         ink: {
           primary: 'hsl(var(--text-primary))',
@@ -30,11 +32,13 @@ const config: Config = {
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
+          editorial: 'hsl(var(--accent))',
         },
         border: {
           DEFAULT: 'hsl(var(--border))',
           subtle: 'hsl(var(--border-subtle))',
           strong: 'hsl(var(--border-strong))',
+          hairline: 'hsl(var(--border-hairline) / 0.15)',
         },
 
         // shadcn compatibility (unchanged API for existing components)

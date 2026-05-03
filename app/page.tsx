@@ -1,26 +1,24 @@
 import type { Metadata } from "next"
 import { Hero } from "@/components/hero"
-import { ProofStrip } from "@/components/proof-strip"
-import { ProjectsSection } from "@/components/projects-section"
-import { EditorialBreak } from "@/components/editorial-break"
 import { WhySection } from "@/components/why-section"
-import { PrinciplesSection } from "@/components/principles-section"
-import { StudioSection } from "@/components/studio-section"
-import { ApproachSection } from "@/components/approach-section"
+import { PromiseSection } from "@/components/promise-section"
+import { AssessmentOfferSection } from "@/components/assessment-offer-section"
+import { EditorialBreak } from "@/components/editorial-break"
 import { PerspectivesTeaser } from "@/components/perspectives-teaser"
 import { ContactSection } from "@/components/contact-section"
 import { createPageMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Quoin | Your AI Operating Partner",
+  title: "Quoin | AI for Real Estate Owner/Operators",
   description:
-    "Quoin helps institutional real estate operators—REITs, owner-operators, property management firms, and asset managers—make AI operational, governed, and measurable inside leasing, maintenance, accounting, and reporting workflows.",
+    "Quoin discovers, implements, and manages AI for owner/operators of real estate. Senior, vendor-neutral, accountable to outcomes across the seam between asset decisions and operations.",
   path: "/",
   image: "/hero-bg.jpg",
   keywords: [
+    "AI for real estate owner/operators",
     "AI operating partner",
-    "AI for property management",
-    "AI for asset management",
+    "AI for vertically integrated REITs",
+    "AI readiness real estate",
     "managed AI operations",
   ],
   absoluteTitle: true,
@@ -28,17 +26,14 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function Page() {
   return (
-    <main>
+    <>
       <Hero />
-      <ProofStrip />
-      <ProjectsSection />
       <WhySection />
-      <StudioSection />
-      <PrinciplesSection />
-      <ApproachSection />
+      <PromiseSection />
+      <AssessmentOfferSection />
       <EditorialBreak />
       <PerspectivesTeaser />
       <ContactSection />
-    </main>
+    </>
   )
 }

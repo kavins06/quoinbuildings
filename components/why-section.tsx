@@ -2,66 +2,103 @@
 
 import { BlurFade } from "@/components/ui/blur-fade"
 
-const pains = [
+interface Pain {
+  numeral: string
+  heading: string
+  body: string
+}
+
+const pains: Pain[] = [
   {
-    lead: "Your board or ownership is asking what AI will change.",
-    follow: "The honest answer right now is “not much, yet.”",
+    numeral: "01",
+    heading: "No partner speaks both sides.",
+    body:
+      "Asset-side AI vendors do not get operations. Property-management AI vendors do not get fund returns. The big consulting firms hand you a strategy deck that ignores both. Owner/operators need a partner fluent in both halves of the business, integrated.",
   },
   {
-    lead: "Copilot and AI pilots have not changed how operations run.",
-    follow: "Adoption is mixed. Work still flows the way it did.",
+    numeral: "02",
+    heading: "Data is scattered across the seam.",
+    body:
+      "Operations data and asset data live in different systems and report on different cadences. Yardi, RealPage, Entrata, MRI on one side. Investor reporting and fund models on the other. AI on top of a broken data foundation produces stalled pilots, not deployed workflows.",
   },
   {
-    lead: "No one inside the firm owns AI as a workflow problem.",
-    follow:
-      "IT, operations, and asset management each have a piece. None of them have all of it.",
-  },
-  {
-    lead: "Operational context is fragmented.",
-    follow:
-      "PMS, accounting, maintenance portals, inboxes, shared drives. No tool sees the whole picture.",
-  },
-  {
-    lead: "Governance, security, and legal concerns block scale.",
-    follow:
-      "The pilots that work at one property cannot ship across the portfolio.",
+    numeral: "03",
+    heading: "Build-vs-buy does not pencil.",
+    body:
+      "Hiring a 20-person internal AI team is hard to justify under $5B AUM. The big consultancies want 12-month, multi-million-dollar engagements that end in shelfware. There is nothing in between that understands an owner/operator firm. So the AI conversation stalls at the board level.",
   },
 ]
 
 export function WhySection() {
   return (
-    <section className="px-6 py-10 md:px-12 lg:px-20 md:py-14">
-      <div className="max-w-5xl">
-        <BlurFade inView direction="up">
-          <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-4">
-            Why Quoin Exists
-          </p>
-          <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-6">
-            The AI conversation inside your firm has hit a wall.
-          </h2>
-        </BlurFade>
+    <section
+      aria-labelledby="why-heading"
+      className="bg-surface-base py-20 md:py-32"
+    >
+      <div className="container-shell">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+          <header className="lg:col-span-5">
+            <BlurFade inView direction="up">
+              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent mb-6">
+                The pattern
+              </p>
+            </BlurFade>
+            <BlurFade inView delay={0.05} direction="up">
+              <h2
+                id="why-heading"
+                className="font-serif text-balance text-ink-primary text-[clamp(2rem,4.5vw,2.625rem)] leading-[1.1] tracking-[-0.02em] font-normal"
+              >
+                Why owner/operators get AI <em className="italic">wrong.</em>
+              </h2>
+            </BlurFade>
+            <BlurFade inView delay={0.1} direction="up">
+              <p className="mt-8 measure text-ink-secondary text-[17px] leading-[1.55]">
+                The asset-management consultants do not understand your
+                operations. The property-management software vendors do not
+                understand your asset thesis. Meanwhile, the firms that own and
+                operate are starting to deploy real AI in leasing, in
+                maintenance, in asset performance, in resident comms. Your
+                board is asking. Your LPs are asking. You do not have an
+                answer yet because no one in the room speaks both halves of
+                your business.
+              </p>
+            </BlurFade>
+          </header>
 
-        <BlurFade inView delay={0.1} direction="up">
-          <p className="text-sm leading-[1.85] text-muted-foreground mb-8 max-w-3xl">
-            If you run operations, IT, or asset management at an institutional real estate firm, the wall usually shows up in some version of these:
-          </p>
-
-          <ul className="flex flex-col gap-5 mb-10 max-w-3xl">
-            {pains.map((pain) => (
-              <li key={pain.lead} className="flex items-start gap-3">
-                <div className="w-1.5 h-px bg-accent/60 mt-2.5 shrink-0" />
-                <p className="text-sm leading-[1.75] text-muted-foreground">
-                  <span className="font-medium text-foreground">{pain.lead}</span>{" "}
-                  {pain.follow}
-                </p>
-              </li>
+          <ol className="lg:col-span-7 lg:col-start-6 flex flex-col">
+            {pains.map((pain, index) => (
+              <BlurFade
+                key={pain.numeral}
+                inView
+                delay={0.15 + index * 0.08}
+                direction="up"
+              >
+                <li
+                  className={[
+                    "grid grid-cols-[auto_1fr] gap-x-8 gap-y-3 py-10 md:py-12",
+                    index === 0 ? "border-t border-strong" : "",
+                    "border-b border-strong",
+                  ].join(" ")}
+                >
+                  <span
+                    aria-hidden="true"
+                    className="font-serif text-[64px] md:text-[80px] leading-[0.9] text-accent tracking-[-0.02em] tabular-nums self-start"
+                  >
+                    {pain.numeral}
+                  </span>
+                  <div className="self-center">
+                    <h3 className="font-serif text-[24px] md:text-[28px] leading-[1.2] tracking-[-0.015em] text-ink-primary font-normal">
+                      {pain.heading}
+                    </h3>
+                    <p className="mt-4 measure text-ink-secondary text-[16px] md:text-[17px] leading-[1.6]">
+                      {pain.body}
+                    </p>
+                  </div>
+                </li>
+              </BlurFade>
             ))}
-          </ul>
-
-          <p className="text-sm leading-[1.85] text-muted-foreground max-w-3xl">
-            Quoin is built so an institutional operator gets one team for all five: the workflow, the build, the governance, and the operating layer that keeps it running.
-          </p>
-        </BlurFade>
+          </ol>
+        </div>
       </div>
     </section>
   )
