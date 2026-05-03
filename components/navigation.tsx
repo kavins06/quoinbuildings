@@ -46,7 +46,7 @@ export function Navigation() {
           className="flex items-center gap-1.5 font-serif text-lg md:text-xl text-ink-primary"
         >
           QUOIN
-          <AnimatedLogo size={32} float={false} className="shrink-0" />
+          <AnimatedLogo size={32} float={false} priority className="shrink-0" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
