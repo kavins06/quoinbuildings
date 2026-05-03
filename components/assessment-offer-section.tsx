@@ -29,7 +29,7 @@ export function AssessmentOfferSection() {
           <div className="lg:col-span-5 lg:pb-2">
             <BlurFade inView delay={0.1} direction="up">
               <p className="measure text-ink-secondary text-[17px] leading-[1.55]">
-                Six questions, five minutes. You get a score, a benchmark
+                Seven questions, five minutes. You get a score, a benchmark
                 against peer owner/operator firms, and three specific
                 recommendations for where AI moves the needle in your firm.
               </p>
