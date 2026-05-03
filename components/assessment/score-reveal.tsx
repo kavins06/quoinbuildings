@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import Link from "next/link"
 import { motion, useReducedMotion } from "motion/react"
 import { ArrowRight } from "lucide-react"
@@ -13,40 +13,8 @@ interface ScoreRevealProps {
   answers: Record<string, string>
 }
 
-function useCountUp(target: number, durationMs = 1200, enabled = true): number {
-  const [value, setValue] = useState(enabled ? 0 : target)
-  const frameRef = useRef<number | null>(null)
-
-  useEffect(() => {
-    if (!enabled) {
-      setValue(target)
-      return
-    }
-    const start = performance.now()
-    function step(now: number) {
-      const elapsed = now - start
-      const t = Math.min(1, elapsed / durationMs)
-      // ease-out cubic
-      const eased = 1 - Math.pow(1 - t, 3)
-      setValue(Number((target * eased).toFixed(1)))
-      if (t < 1) {
-        frameRef.current = requestAnimationFrame(step)
-      } else {
-        setValue(target)
-      }
-    }
-    frameRef.current = requestAnimationFrame(step)
-    return () => {
-      if (frameRef.current) cancelAnimationFrame(frameRef.current)
-    }
-  }, [target, durationMs, enabled])
-
-  return value
-}
-
 export function ScoreReveal({ scoring, interpretation, answers }: ScoreRevealProps) {
   const reduced = useReducedMotion()
-  const animatedScore = useCountUp(scoring.score, 1200, !reduced)
   const headingRef = useRef<HTMLHeadingElement>(null)
 
   useEffect(() => {
@@ -70,7 +38,7 @@ export function ScoreReveal({ scoring, interpretation, answers }: ScoreRevealPro
         className="font-serif leading-none mb-2 text-balance focus:outline-none"
         style={{ fontVariantNumeric: "tabular-nums", fontSize: "clamp(80px, 14vw, 150px)" }}
       >
-        <span aria-hidden>{animatedScore.toFixed(1)}</span>
+        <span aria-hidden>{scoring.score.toFixed(1)}</span>
         <span className="text-ink-muted text-[0.4em] align-middle ml-2">/ 5.0</span>
       </h1>
 

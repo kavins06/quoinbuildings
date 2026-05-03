@@ -2,9 +2,7 @@
 
 import Image from "next/image"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { Marquee } from "@/components/ui/marquee"
 import { DraggableMarquee } from "@/components/ui/draggable-marquee"
-import { AuroraText } from "@/components/ui/aurora-text"
 
 const logos = [
   { src: "/logos/georgetown.svg", alt: "Georgetown University" },
@@ -20,100 +18,121 @@ const logos = [
   { src: "/logos/enabled-intelligence.png", alt: "Enabled Intelligence", label: "Enabled Intelligence" },
 ]
 
+function LogoItem({ logo, compact = false }: { logo: typeof logos[number]; compact?: boolean }) {
+  return (
+    <div
+      className={[
+        "flex flex-col items-center justify-start shrink-0",
+        compact ? "mx-5 h-16" : "mx-8 h-28",
+      ].join(" ")}
+    >
+      <Image
+        src={logo.src}
+        alt={logo.alt}
+        width={compact ? 80 : 160}
+        height={compact ? 28 : 64}
+        draggable={false}
+        className={[
+          "w-auto object-contain grayscale opacity-85 hover:opacity-100",
+          "transition-opacity duration-300 select-none pointer-events-none",
+          compact ? "h-7" : "h-16",
+        ].join(" ")}
+      />
+      {logo.label ? (
+        <p
+          className={[
+            "mt-2 text-center uppercase text-ink-muted/70 whitespace-pre-line select-none",
+            compact
+              ? "text-[9px] tracking-[0.15em] leading-tight"
+              : "text-[10px] tracking-[0.15em] leading-tight",
+          ].join(" ")}
+        >
+          {logo.label}
+        </p>
+      ) : null}
+    </div>
+  )
+}
+
 export function EditorialBreak() {
   return (
-    <section className="px-6 md:px-12 lg:px-20 pt-4 pb-12 md:pt-6 md:pb-16 -mt-4 md:mt-0">
-      <BlurFade inView direction="up">
-        <h2 className="font-serif text-[11px] md:text-sm font-normal uppercase tracking-[0.2em] mb-8 md:mb-12 md:-mt-6 text-center">
-          <AuroraText>Bringing Expertise From</AuroraText>
-        </h2>
-        <div className="relative max-w-6xl mx-auto">
-          {/* Desktop: two rows, second reversed */}
-          <div className="hidden md:flex flex-col gap-6">
-            <DraggableMarquee duration={55}>
-              {logos.slice(0, 6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-start mx-8 h-28 shrink-0">
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={160}
-                    height={64}
-                    draggable={false}
-                    className="h-16 w-auto object-contain grayscale opacity-90 hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
-                  />
-                  {logo.label && (
-                    <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
-                      {logo.label}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </DraggableMarquee>
-            <DraggableMarquee duration={55} reverse>
-              {logos.slice(6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-start mx-8 h-28 shrink-0">
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={160}
-                    height={64}
-                    draggable={false}
-                    className="h-16 w-auto object-contain grayscale opacity-90 hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
-                  />
-                  {logo.label && (
-                    <p className="mt-2 text-[10px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
-                      {logo.label}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </DraggableMarquee>
+    <section
+      aria-labelledby="proof-heading"
+      className="bg-surface-base py-20 md:py-28 border-t border-strong"
+    >
+      <div className="container-shell">
+        <BlurFade inView direction="up">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-14 md:mb-20">
+            <div className="lg:col-span-5">
+              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent mb-6">
+                Proof of execution
+              </p>
+              <h2
+                id="proof-heading"
+                className="font-serif text-[clamp(2rem,4.5vw,2.625rem)] leading-[1.1] tracking-[-0.02em] text-ink-primary font-normal text-balance"
+              >
+                Experience from public institutions, real estate, and
+                mission-critical operations.
+              </h2>
+            </div>
+            <p className="lg:col-span-6 lg:col-start-7 measure text-[17px] leading-[1.55] text-ink-secondary">
+              Quoin brings together real estate operating context, AI delivery,
+              and the governance habits learned in environments where sloppy
+              systems do not survive contact with the work.
+            </p>
           </div>
+        </BlurFade>
 
-          {/* Mobile: two rows, second reversed */}
-          <div className="md:hidden flex flex-col gap-4">
-            <DraggableMarquee duration={40}>
-              {logos.slice(0, 6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-start mx-5 h-16 shrink-0">
-                  <Image src={logo.src} alt={logo.alt} width={80} height={28} draggable={false} className="h-7 w-auto object-contain grayscale opacity-90 select-none pointer-events-none" />
-                  {logo.label && (
-                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
-                      {logo.label}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </DraggableMarquee>
-            <DraggableMarquee duration={40} reverse>
-              {logos.slice(6).map((logo) => (
-                <div key={logo.alt} className="flex flex-col items-center justify-start mx-5 h-16 shrink-0">
-                  <Image src={logo.src} alt={logo.alt} width={80} height={28} draggable={false} className="h-7 w-auto object-contain grayscale opacity-90 select-none pointer-events-none" />
-                  {logo.label && (
-                    <p className="mt-1.5 text-[9px] tracking-[0.15em] uppercase text-muted-foreground/70 whitespace-pre-line text-center leading-tight select-none">
-                      {logo.label}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </DraggableMarquee>
+        <BlurFade inView delay={0.1} direction="up">
+          <div className="relative border-y border-strong py-8 md:py-10">
+            <div className="hidden md:flex flex-col gap-6">
+              <DraggableMarquee duration={55}>
+                {logos.slice(0, 6).map((logo) => (
+                  <LogoItem key={logo.alt} logo={logo} />
+                ))}
+              </DraggableMarquee>
+              <DraggableMarquee duration={55} reverse>
+                {logos.slice(6).map((logo) => (
+                  <LogoItem key={logo.alt} logo={logo} />
+                ))}
+              </DraggableMarquee>
+            </div>
+
+            <div className="md:hidden flex flex-col gap-4">
+              <DraggableMarquee duration={40}>
+                {logos.slice(0, 6).map((logo) => (
+                  <LogoItem key={logo.alt} logo={logo} compact />
+                ))}
+              </DraggableMarquee>
+              <DraggableMarquee duration={40} reverse>
+                {logos.slice(6).map((logo) => (
+                  <LogoItem key={logo.alt} logo={logo} compact />
+                ))}
+              </DraggableMarquee>
+            </div>
+
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24 bg-gradient-to-r from-surface-base to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-24 bg-gradient-to-l from-surface-base to-transparent" />
           </div>
+        </BlurFade>
 
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24 bg-gradient-to-r from-background to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-24 bg-gradient-to-l from-background to-transparent" />
-        </div>
-      </BlurFade>
-
-      <BlurFade inView delay={0.2} direction="up">
-        <div className="mt-20 md:mt-28 max-w-3xl mx-auto text-center">
-          <div className="w-10 h-px bg-accent/40 mb-8 mx-auto" />
-          <p className="text-xl md:text-2xl lg:text-[1.65rem] font-normal leading-[1.35] tracking-tight text-foreground text-balance">
-            {"“The firms that succeed with AI will not be the ones that buy the most tools. They will be the ones that turn AI into governed workflows, connect it to how work actually runs, and train their teams to operate it.”"}
-          </p>
-          <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mt-8">
-            Kavin Sakthivel, CEO &amp; Chief Engineer
-          </p>
-        </div>
-      </BlurFade>
+        <BlurFade inView delay={0.2} direction="up">
+          <figure className="mt-16 md:mt-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+            <div className="hidden lg:block lg:col-span-3 border-t border-strong" aria-hidden="true" />
+            <div className="lg:col-span-8 lg:col-start-5">
+              <blockquote className="font-serif text-[clamp(1.75rem,3.5vw,2.625rem)] leading-[1.15] tracking-[-0.02em] text-ink-primary text-balance">
+                The firms that succeed with AI will not be the ones that buy the
+                most tools. They will be the ones that turn AI into governed
+                workflows, connect it to how work actually runs, and train their
+                teams to operate it.
+              </blockquote>
+              <figcaption className="mt-8 text-[11px] font-medium tracking-[0.16em] uppercase text-ink-muted">
+                Kavin Sakthivel, CEO &amp; Chief Engineer
+              </figcaption>
+            </div>
+          </figure>
+        </BlurFade>
+      </div>
     </section>
   )
 }
