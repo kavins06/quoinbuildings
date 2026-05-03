@@ -8,6 +8,7 @@ export const defaultDescription =
 
 export const publicRoutes = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
+  { path: "/owner-operators", priority: 0.95, changeFrequency: "monthly" },
   { path: "/who-we-help", priority: 0.9, changeFrequency: "monthly" },
   { path: "/services", priority: 0.9, changeFrequency: "monthly" },
   { path: "/approach", priority: 0.8, changeFrequency: "monthly" },
