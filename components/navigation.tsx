@@ -8,6 +8,7 @@ import { AnimatedLogo } from "@/components/ui/animated-logo"
 
 const navLinks = [
   { label: "Who We Help", href: "/who-we-help" },
+  { label: "Owner/Operators", href: "/owner-operators" },
   { label: "Services", href: "/services" },
   { label: "Approach", href: "/approach" },
   { label: "Governance", href: "/governance" },

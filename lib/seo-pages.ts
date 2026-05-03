@@ -19,6 +19,7 @@ export type SeoLandingPage = {
 }
 
 export const coreResourceLinks = [
+  { label: "AI for Owner/Operators", href: "/owner-operators" },
   { label: "AI for Property Management", href: "/ai-for-property-management" },
   { label: "AI for Asset Management", href: "/ai-for-asset-management" },
   { label: "Managed AI Operations", href: "/managed-ai-operations" },
@@ -32,6 +33,31 @@ export const coreResourceLinks = [
   { label: "Perspectives", href: "/perspectives" },
   { label: "Contact", href: "/contact" },
 ]
+
+/**
+ * Reference metadata for the `/owner-operators` route.
+ *
+ * The page itself is a fully custom buyer-specific landing page (see
+ * `app/owner-operators/page.tsx`) and does not consume the SEO landing
+ * template, so this entry lives outside `seoLandingPages`. It is the
+ * single source of truth for sitemap, sharing, and any future inbound
+ * links that need consistent copy.
+ */
+export const ownerOperatorsSeo = {
+  slug: "owner-operators",
+  path: "/owner-operators",
+  title: "AI for Real Estate Owner/Operators | Quoin",
+  metaTitle: "AI for Real Estate Owner/Operators",
+  description:
+    "Quoin discovers, implements, and manages AI for owner/operators of real estate. From AI-curious to AI in production in 90 days. No internal AI team to hire.",
+  keywords: [
+    "AI for owner-operators",
+    "AI for real estate",
+    "AI for REITs",
+    "vertically integrated REITs AI",
+    "AI implementation real estate",
+  ],
+} as const
 
 export const seoLandingPages = {
   propertyManagement: {
@@ -815,7 +841,7 @@ export const perspectiveArticles: PerspectiveArticle[] = [
       },
       {
         type: "p",
-        text: "More than 60% of firms in JLL's survey said they must address fundamental technology issues, including duplicated functionality and dormant systems, before they can fully use AI. 81% reported at least three existing systems that are not generating expected results [2].",
+        text: "More than 60% of firms in JLL's survey said they must address underlying technology issues, including duplicated functionality and dormant systems, before they can fully use AI. 81% reported at least three existing systems that are not generating expected results [2].",
       },
       {
         type: "p",

@@ -4,10 +4,11 @@ export const siteUrl = "https://quoinbuildings.com"
 export const siteName = "Quoin"
 export const companyName = "Quoin Buildings, LLC"
 export const defaultDescription =
-  "Quoin helps institutional real estate operators—REITs, owner-operators, property management firms, and asset managers—make AI operational, governed, and measurable inside daily workflows."
+  "Quoin helps real estate owner/operators make AI operational, governed, and measurable inside daily workflows."
 
 export const publicRoutes = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
+  { path: "/owner-operators", priority: 0.95, changeFrequency: "monthly" },
   { path: "/who-we-help", priority: 0.9, changeFrequency: "monthly" },
   { path: "/services", priority: 0.9, changeFrequency: "monthly" },
   { path: "/approach", priority: 0.8, changeFrequency: "monthly" },
