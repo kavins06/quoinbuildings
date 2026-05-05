@@ -251,6 +251,7 @@ export default function Page() {
     <>
       <Hero />
       <EvidenceBandSection />
+      <OperatingPrinciplesSection />
       <WhyThisExistsSection />
       <OperatingValueSection />
       <HumanAccountabilitySection />
@@ -261,6 +262,54 @@ export default function Page() {
       <FitSection />
       <ClosingCtaSection />
     </>
+  )
+}
+
+function OperatingPrinciplesSection() {
+  const principles = [
+    {
+      eyebrow: "Engagement",
+      title: "No production access required to start.",
+      body: "Discovery runs on redacted artifacts, walkthroughs, and approved evidence. Production credentials are earned by the work, not assumed at the start.",
+    },
+    {
+      eyebrow: "Accountability",
+      title: "AI-assisted work. Expert-owned decisions.",
+      body: "Quoin's platform accelerates mapping, scoring, and drafts. Real estate, governance, security, and AI experts own every recommendation and build path.",
+    },
+    {
+      eyebrow: "Honest readiness",
+      title: "We are allowed to recommend not building.",
+      body: "Five readiness paths come out of every engagement: build, remediate, buy, pause, or do not automate. The right answer is sometimes don't.",
+    },
+  ]
+
+  return (
+    <section
+      aria-label="Operating principles"
+      className="bg-surface-sunken py-16 md:py-20"
+    >
+      <div className="container-shell">
+        <div className="grid grid-cols-1 gap-px bg-[hsl(var(--border-subtle))] md:grid-cols-3">
+          {principles.map((p) => (
+            <article
+              key={p.title}
+              className="bg-surface-base p-6 md:p-7"
+            >
+              <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-accent">
+                {p.eyebrow}
+              </p>
+              <h3 className="mt-4 text-balance text-[19px] font-medium leading-[1.25] tracking-normal text-ink-primary md:text-[21px]">
+                {p.title}
+              </h3>
+              <p className="mt-4 text-[14px] leading-[1.65] text-ink-secondary md:text-[15px]">
+                {p.body}
+              </p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 
