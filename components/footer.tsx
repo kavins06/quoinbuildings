@@ -2,7 +2,7 @@ import Link from "next/link"
 import { CookiePreferencesLink } from "@/components/cookie-preferences-link"
 
 const companyLinks = [
-  { label: "Operating Partner", href: "/" },
+  { label: "Home", href: "/" },
   { label: "Method", href: "/method" },
   { label: "Intelligence Platform", href: "/platform" },
   { label: "Team", href: "/team" },

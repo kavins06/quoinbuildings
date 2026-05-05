@@ -918,15 +918,15 @@ function ClosingCtaSection() {
               href="/contact"
               className="inline-flex items-center gap-2 border-b border-white pb-1 text-[15px] font-medium text-white transition-colors hover:border-white/70 hover:text-white/70"
             >
-              <span>Discuss AI operating value</span>
-              <span aria-hidden="true">-&gt;</span>
+              <span>Map one operating area with us</span>
+              <span aria-hidden="true">&rarr;</span>
             </Link>
             <Link
               href="/method"
               className="inline-flex items-center gap-2 border-b border-white/55 pb-1 text-[15px] font-medium text-white/75 transition-colors hover:border-white hover:text-white"
             >
               <span>See the method</span>
-              <span aria-hidden="true">-&gt;</span>
+              <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </div>
