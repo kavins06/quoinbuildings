@@ -2,15 +2,13 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { ChevronDown } from "lucide-react"
-import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
 
-const steps = [
-  { number: "01", text: "We discuss your current AI pressure and operating model." },
-  { number: "02", text: "We identify where value may show up: NOI, speed, risk, staff leverage, or portfolio signal." },
+const callExpectations = [
+  { number: "01", text: "We discuss your operating model and the AI pressure you are seeing." },
+  { number: "02", text: "We identify candidate workflows where better intelligence would matter." },
   { number: "03", text: "If there is a fit, we scope a bounded mapping engagement." },
-  { number: "04", text: "No production access is required to start." },
+  { number: "04", text: "No production access required to start. Redacted evidence is enough." },
 ]
 
 export function ContactContent() {
@@ -18,11 +16,6 @@ export function ContactContent() {
   const [lastName, setLastName] = useState("")
   const [company, setCompany] = useState("")
   const [email, setEmail] = useState("")
-  const [role, setRole] = useState("")
-  const [propertyType, setPropertyType] = useState("")
-  const [currentAiActivity, setCurrentAiActivity] = useState("")
-  const [portfolioUnits, setPortfolioUnits] = useState("")
-  const [portfolioSqFt, setPortfolioSqFt] = useState("")
   const [message, setMessage] = useState("")
   const [hp, setHp] = useState("")
   const [submitting, setSubmitting] = useState(false)
@@ -45,11 +38,11 @@ export function ContactContent() {
           lastName,
           company,
           email,
-          role,
-          propertyType,
-          currentAiActivity,
-          portfolioUnits,
-          portfolioSqFt,
+          role: "",
+          propertyType: "",
+          currentAiActivity: "",
+          portfolioUnits: "",
+          portfolioSqFt: "",
           message,
           _hp: hp,
         }),
@@ -79,360 +72,271 @@ export function ContactContent() {
 
   return (
     <main>
-      <PageHeader
-        eyebrow="Contact"
-        title="Discuss where AI can create operating value."
-        description="Tell us about your firm, the AI pressure you are seeing, and the operating areas where better intelligence would matter. We will use the conversation to decide whether Quoin's method is a fit."
-        backgroundImage="/contact-hero.jpg"
-        className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
-        contentClassName="pb-4 md:pb-8"
-      />
+      <section className="border-b border-strong bg-surface-base pt-36 md:pt-44 lg:pt-48">
+        <div className="container-shell pb-16 md:pb-20">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+            <BlurFade inView direction="up" className="lg:col-span-7">
+              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+                Contact
+              </p>
+              <h1 className="text-balance font-serif text-[clamp(3rem,7vw,5.875rem)] font-normal leading-[1.02] tracking-normal text-ink-primary">
+                Map one operating area. Decide where AI belongs.
+              </h1>
+              <p className="mt-8 measure text-[18px] leading-[1.6] text-ink-secondary md:text-[19px]">
+                30-minute call. Bring your operating model and the workflows
+                where AI pressure is loudest. Leave with three candidate
+                workflows and a no-pressure decision packet.
+              </p>
+            </BlurFade>
+          </div>
+        </div>
+      </section>
 
-      <section className="px-6 py-20 md:px-12 lg:px-20 md:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
-          <BlurFade inView direction="up" className="lg:col-span-7">
-            {bookingConfirmed ? (
-              <div className="py-12">
-                <div className="w-10 h-px bg-accent/40 mb-6" />
-                <p className="text-[11px] tracking-[0.3em] uppercase text-accent mb-4">
-                  You&rsquo;re booked
-                </p>
-                <h2 className="text-3xl md:text-[2.5rem] font-normal tracking-normal text-foreground mb-5">
-                  Thank you. Talk soon.
-                </h2>
-                <p className="text-sm leading-[1.85] text-muted-foreground max-w-md">
-                  Your call is on Kavin&rsquo;s calendar. A confirmation email
-                  with the Google Meet link should be in your inbox in the next
-                  few minutes.
-                </p>
-                <p className="text-sm leading-[1.85] text-muted-foreground max-w-md mt-3">
-                  Need to reschedule? Use the link in the calendar invite, or
-                  email{" "}
-                  <a
-                    href="mailto:kavins@quoinbuildings.com"
-                    className="underline underline-offset-2 decoration-accent hover:text-foreground"
-                  >
-                    kavins@quoinbuildings.com
-                  </a>
-                  .
-                </p>
-              </div>
-            ) : submitted ? (
-              <div className="py-8">
-                <div className="w-10 h-px bg-accent/40 mb-6" />
-                <h2 className="text-2xl md:text-3xl font-normal tracking-normal text-foreground mb-3">
-                  Thanks. Pick a time.
-                </h2>
-                <p className="text-sm leading-[1.75] text-muted-foreground mb-8">
-                  Grab a slot below. You&rsquo;ll get a calendar invite and a Google Meet link.
-                </p>
-                <div className="border border-border rounded-sm overflow-hidden bg-background">
-                  <iframe
-                    src={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.google.com/calendar/appointments/schedules/AcZssZ00JrZ1C4N98WsTIZ5ic1XOdDAIkwe1JhRhPy15f7PTAMtoJKshGXM5qaRYIoL2jcc1OoNamnaX?gv=true"}
-                    title="Book a call"
-                    className="w-full"
-                    style={{ height: "780px", border: 0 }}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
-                  <button
-                    type="button"
-                    onClick={() => setBookingConfirmed(true)}
-                    className="self-start inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 bg-accent text-background hover:bg-accent/90 transition-colors duration-200 rounded-sm"
-                  >
-                    I&rsquo;ve booked my call
-                  </button>
-                  <p className="text-[12px] text-muted-foreground/70">
-                    Calendar not loading?{" "}
+      <section className="bg-surface-base py-20 md:py-28">
+        <div className="container-shell">
+          <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-20">
+            <BlurFade inView direction="up" className="lg:col-span-7">
+              {bookingConfirmed ? (
+                <div className="py-12">
+                  <div className="mb-6 h-px w-10 bg-accent" />
+                  <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+                    You&rsquo;re booked
+                  </p>
+                  <h2 className="mb-5 text-balance text-[clamp(2rem,4vw,2.5rem)] font-medium leading-[1.15] text-ink-primary">
+                    Thank you. Talk soon.
+                  </h2>
+                  <p className="max-w-md text-[15px] leading-[1.7] text-ink-secondary">
+                    Your call is on the calendar. A confirmation with the
+                    Google Meet link should be in your inbox in the next few
+                    minutes.
+                  </p>
+                  <p className="mt-3 max-w-md text-[15px] leading-[1.7] text-ink-secondary">
+                    Need to reschedule? Use the link in the calendar invite, or
+                    email{" "}
                     <a
-                      href={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.google.com/calendar/appointments/schedules/AcZssZ00JrZ1C4N98WsTIZ5ic1XOdDAIkwe1JhRhPy15f7PTAMtoJKshGXM5qaRYIoL2jcc1OoNamnaX?gv=true"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline underline-offset-2 hover:text-foreground"
+                      href="mailto:kavins@quoinbuildings.com"
+                      className="border-b border-accent text-ink-primary hover:border-ink-primary"
                     >
-                      Open in a new tab
+                      kavins@quoinbuildings.com
                     </a>
                     .
                   </p>
                 </div>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-8">
-                <div
-                  aria-hidden="true"
-                  style={{
-                    position: "absolute",
-                    left: "-9999px",
-                    width: "1px",
-                    height: "1px",
-                    overflow: "hidden",
-                  }}
-                >
-                  <label>
-                    Do not fill this field
-                    <input
-                      type="text"
-                      tabIndex={-1}
-                      autoComplete="off"
-                      value={hp}
-                      onChange={(e) => setHp(e.target.value)}
-                    />
-                  </label>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={firstName}
-                      onChange={(e) => setFirstName(e.target.value)}
-                      className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 placeholder:text-muted-foreground/30"
-                      placeholder="First name"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={lastName}
-                      onChange={(e) => setLastName(e.target.value)}
-                      className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 placeholder:text-muted-foreground/30"
-                      placeholder="Last name"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={company}
-                      onChange={(e) => setCompany(e.target.value)}
-                      className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 placeholder:text-muted-foreground/30"
-                      placeholder="Company name"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 placeholder:text-muted-foreground/30"
-                      placeholder="email@company.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      Your Role
-                      <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
-                    </label>
-                    <div className="relative">
-                      <select
-                        value={role}
-                        onChange={(e) => setRole(e.target.value)}
-                        className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${role ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
-                      >
-                        <option value="">Select your role</option>
-                        <option value="ceo-president">CEO/President</option>
-                        <option value="coo-vp-operations">COO/VP Operations</option>
-                        <option value="cto-vp-technology">CTO/VP Technology</option>
-                        <option value="cfo-vp-finance">CFO/VP Finance</option>
-                        <option value="other">Other</option>
-                      </select>
-                      <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      Portfolio Type
-                      <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
-                    </label>
-                    <div className="relative">
-                      <select
-                        value={propertyType}
-                        onChange={(e) => setPropertyType(e.target.value)}
-                        className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${propertyType ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
-                      >
-                        <option value="">Select type</option>
-                        <option value="residential">Residential</option>
-                        <option value="commercial">Commercial</option>
-                        <option value="mixed-use">Mixed-Use</option>
-                        <option value="other">Other</option>
-                      </select>
-                      <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      Current AI Activity
-                      <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
-                    </label>
-                    <div className="relative">
-                      <select
-                        value={currentAiActivity}
-                        onChange={(e) => setCurrentAiActivity(e.target.value)}
-                        className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${currentAiActivity ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
-                      >
-                        <option value="">Select current activity</option>
-                        <option value="exploring-internally">Exploring internally</option>
-                        <option value="using-copilot-chatgpt">Using Copilot / ChatGPT</option>
-                        <option value="testing-vendor-ai">Testing vendor AI</option>
-                        <option value="running-pilots">Running pilots</option>
-                        <option value="built-internal-tools">Already built internal tools</option>
-                        <option value="not-sure">Not sure</option>
-                      </select>
-                      <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      Portfolio Size &mdash; Units
-                      <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
-                    </label>
-                    <div className="relative">
-                      <select
-                        value={portfolioUnits}
-                        onChange={(e) => setPortfolioUnits(e.target.value)}
-                        className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${portfolioUnits ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
-                      >
-                        <option value="">Select a range</option>
-                        <option value="1000-5000">1,000&ndash;5,000 units</option>
-                        <option value="5000-15000">5,000&ndash;15,000 units</option>
-                        <option value="15000-50000">15,000&ndash;50,000 units</option>
-                        <option value="50000+">50,000+ units</option>
-                      </select>
-                      <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                      Portfolio Size &mdash; Sq Ft
-                      <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
-                    </label>
-                    <div className="relative">
-                      <select
-                        value={portfolioSqFt}
-                        onChange={(e) => setPortfolioSqFt(e.target.value)}
-                        className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${portfolioSqFt ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
-                      >
-                        <option value="">Select a range</option>
-                        <option value="1m-2m">1M&ndash;2M sq ft</option>
-                        <option value="2m-5m">2M&ndash;5M sq ft</option>
-                        <option value="5m-10m">5M&ndash;10M sq ft</option>
-                        <option value="10m+">10M+ sq ft</option>
-                      </select>
-                      <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                    What AI operating question are you trying to answer?
-                  </label>
-                  <textarea
-                    rows={4}
-                    required
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 resize-none placeholder:text-muted-foreground/30"
-                    placeholder="Where AI could reduce maintenance expense leakage, improve leasing response, accelerate reporting, or make operating exceptions visible earlier."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="self-start mt-4 px-10 py-4 bg-foreground text-background text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-foreground/90 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {submitting ? "Sending..." : "Request conversation"}
-                </button>
-
-                {errorMessage && (
-                  <p className="text-[11px] leading-relaxed text-accent mt-1" role="alert">
-                    {errorMessage}
+              ) : submitted ? (
+                <div className="py-8">
+                  <div className="mb-6 h-px w-10 bg-accent" />
+                  <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+                    Step 02
                   </p>
-                )}
+                  <h2 className="mb-3 text-[clamp(1.75rem,3vw,2.25rem)] font-medium leading-[1.2] text-ink-primary">
+                    Pick a time.
+                  </h2>
+                  <p className="mb-8 text-[15px] leading-[1.7] text-ink-secondary">
+                    Grab a slot below. You&rsquo;ll get a calendar invite and a
+                    Google Meet link.
+                  </p>
+                  <div className="overflow-hidden border border-strong bg-surface-base">
+                    <iframe
+                      src={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.google.com/calendar/appointments/schedules/AcZssZ00JrZ1C4N98WsTIZ5ic1XOdDAIkwe1JhRhPy15f7PTAMtoJKshGXM5qaRYIoL2jcc1OoNamnaX?gv=true"}
+                      title="Book a call"
+                      className="w-full"
+                      style={{ height: "780px", border: 0 }}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
+                    <button
+                      type="button"
+                      onClick={() => setBookingConfirmed(true)}
+                      className="cta-primary inline-flex items-center gap-2 self-start text-[15px] font-medium"
+                    >
+                      <span>I&rsquo;ve booked my call</span>
+                      <span aria-hidden="true">&rarr;</span>
+                    </button>
+                    <p className="text-[12px] text-ink-muted">
+                      Calendar not loading?{" "}
+                      <a
+                        href={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.google.com/calendar/appointments/schedules/AcZssZ00JrZ1C4N98WsTIZ5ic1XOdDAIkwe1JhRhPy15f7PTAMtoJKshGXM5qaRYIoL2jcc1OoNamnaX?gv=true"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border-b border-strong/30 hover:text-ink-primary"
+                      >
+                        Open in a new tab
+                      </a>
+                      .
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+                  <div
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "-9999px",
+                      width: "1px",
+                      height: "1px",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <label>
+                      Do not fill this field
+                      <input
+                        type="text"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={hp}
+                        onChange={(e) => setHp(e.target.value)}
+                      />
+                    </label>
+                  </div>
 
-                <p className="text-[11px] leading-relaxed text-muted-foreground/50 mt-2">
-                  Your information is handled in accordance with our{" "}
-                  <Link href="/privacy" className="text-muted-foreground/70 underline underline-offset-2 hover:text-foreground transition-colors duration-300">
-                    Privacy Policy
-                  </Link>.
-                </p>
-              </form>
-            )}
-          </BlurFade>
-
-          <BlurFade inView delay={0.2} direction="up" className="lg:col-span-4 lg:col-start-9">
-            <div className="flex flex-col gap-12">
-              <div>
-                <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-5">
-                  Direct
-                </p>
-                <a
-                  href="mailto:kavins@quoinbuildings.com"
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors duration-300 border-b border-border pb-0.5"
-                >
-                  kavins@quoinbuildings.com
-                </a>
-              </div>
-
-              <div>
-                <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-5">
-                  What to Expect
-                </p>
-                <div className="flex flex-col gap-4">
-                  {steps.map((step) => (
-                    <div key={step.number} className="flex items-start gap-4">
-                      <span className="text-[11px] tracking-[0.15em] text-muted-foreground/30 mt-0.5 shrink-0">
-                        ({step.number})
-                      </span>
-                      <p className="text-sm leading-[1.6] text-muted-foreground">
-                        {step.text}
-                      </p>
+                  <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div className="flex flex-col gap-2">
+                      <label className="text-[10px] font-medium uppercase tracking-[0.16em] text-ink-muted">
+                        First name
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        className="border-b border-strong/30 bg-transparent pb-3 text-[15px] text-ink-primary transition-colors duration-200 placeholder:text-ink-muted/40 focus:border-accent focus:outline-none"
+                        placeholder="First name"
+                      />
                     </div>
-                  ))}
+                    <div className="flex flex-col gap-2">
+                      <label className="text-[10px] font-medium uppercase tracking-[0.16em] text-ink-muted">
+                        Last name
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
+                        className="border-b border-strong/30 bg-transparent pb-3 text-[15px] text-ink-primary transition-colors duration-200 placeholder:text-ink-muted/40 focus:border-accent focus:outline-none"
+                        placeholder="Last name"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <div className="flex flex-col gap-2">
+                      <label className="text-[10px] font-medium uppercase tracking-[0.16em] text-ink-muted">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={company}
+                        onChange={(e) => setCompany(e.target.value)}
+                        className="border-b border-strong/30 bg-transparent pb-3 text-[15px] text-ink-primary transition-colors duration-200 placeholder:text-ink-muted/40 focus:border-accent focus:outline-none"
+                        placeholder="Company name"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <label className="text-[10px] font-medium uppercase tracking-[0.16em] text-ink-muted">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="border-b border-strong/30 bg-transparent pb-3 text-[15px] text-ink-primary transition-colors duration-200 placeholder:text-ink-muted/40 focus:border-accent focus:outline-none"
+                        placeholder="email@company.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[10px] font-medium uppercase tracking-[0.16em] text-ink-muted">
+                      What AI operating question are you trying to answer?
+                    </label>
+                    <textarea
+                      rows={4}
+                      required
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      className="resize-none border-b border-strong/30 bg-transparent pb-3 text-[15px] leading-[1.55] text-ink-primary transition-colors duration-200 placeholder:text-ink-muted/40 focus:border-accent focus:outline-none"
+                      placeholder="Where AI could reduce maintenance expense leakage, improve leasing response, accelerate reporting, or make operating exceptions visible earlier."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="cta-primary inline-flex items-center gap-2 self-start text-[15px] font-medium disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <span>{submitting ? "Sending..." : "Request conversation"}</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  {errorMessage && (
+                    <p className="text-[12px] leading-relaxed text-accent" role="alert">
+                      {errorMessage}
+                    </p>
+                  )}
+
+                  <p className="mt-2 text-[11px] leading-[1.6] text-ink-muted">
+                    Your information is handled in accordance with our{" "}
+                    <Link
+                      href="/privacy"
+                      className="border-b border-strong/30 hover:text-ink-primary"
+                    >
+                      Privacy Policy
+                    </Link>
+                    .
+                  </p>
+                </form>
+              )}
+            </BlurFade>
+
+            <BlurFade inView delay={0.2} direction="up" className="lg:col-span-4 lg:col-start-9">
+              <div className="flex flex-col gap-12 border-l border-strong/15 pl-8">
+                <div>
+                  <p className="mb-5 text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
+                    Direct
+                  </p>
+                  <a
+                    href="mailto:kavins@quoinbuildings.com"
+                    className="border-b border-strong/30 pb-0.5 text-[15px] text-ink-primary transition-colors duration-200 hover:border-accent"
+                  >
+                    kavins@quoinbuildings.com
+                  </a>
+                </div>
+
+                <div>
+                  <p className="mb-6 text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
+                    What to expect on the call
+                  </p>
+                  <div className="flex flex-col gap-4">
+                    {callExpectations.map((step) => (
+                      <div key={step.number} className="flex items-start gap-4">
+                        <span className="mt-0.5 shrink-0 font-serif text-[16px] leading-none text-accent tabular-nums">
+                          {step.number}
+                        </span>
+                        <p className="text-[14px] leading-[1.6] text-ink-secondary">
+                          {step.text}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <p className="mb-5 text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
+                    Suggested participants
+                  </p>
+                  <p className="text-[14px] leading-[1.65] text-ink-secondary">
+                    COO, President, Head of Operations, Head of Asset
+                    Management, CIO/CTO, or the executive responsible for AI
+                    adoption.
+                  </p>
                 </div>
               </div>
-
-              <div>
-                <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-5">
-                  Suggested Participants
-                </p>
-                <p className="text-sm leading-[1.75] text-muted-foreground">
-                  Best first participants: COO, President, Head of Operations,
-                  Head of Asset Management, CIO/CTO, or the executive
-                  responsible for AI adoption.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
+            </BlurFade>
+          </div>
         </div>
       </section>
     </main>
