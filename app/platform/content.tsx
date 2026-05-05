@@ -263,9 +263,12 @@ export function PlatformContent() {
               className="lg:col-span-4 lg:col-start-9 lg:pt-20"
             >
               <aside className="border-l border-strong pl-8">
-                <p className="font-serif text-[28px] italic leading-[1.25] tracking-normal text-ink-primary">
-                  The output is inspectable operating memory that can become an
-                  agent contract.
+                <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
+                  What the platform produces
+                </p>
+                <p className="mt-4 font-sans text-[24px] font-medium leading-[1.25] tracking-normal text-ink-primary md:text-[26px]">
+                  Inspectable operating memory that can become an agent
+                  contract.
                 </p>
                 <div className="mt-10 border-y border-border-hairline">
                   {[
@@ -550,7 +553,10 @@ export function PlatformContent() {
               </div>
 
               <aside className="border-l border-strong pl-8 lg:col-span-4 lg:col-start-9">
-                <p className="font-serif text-[28px] italic leading-[1.3] tracking-normal text-ink-primary">
+                <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
+                  Allowed outcome
+                </p>
+                <p className="mt-4 font-sans text-[24px] font-medium leading-[1.3] tracking-normal text-ink-primary md:text-[26px]">
                   A no-build decision can still be a good operating outcome.
                 </p>
                 <p className="mt-8 text-[15px] leading-[1.7] text-ink-secondary">

@@ -268,7 +268,10 @@ export function MethodContent() {
                 aria-label="Method summary"
                 className="border-l border-strong pl-8"
               >
-                <p className="font-serif text-[28px] italic leading-[1.25] tracking-normal text-ink-primary">
+                <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
+                  Operating principle
+                </p>
+                <p className="mt-4 font-sans text-[24px] font-medium leading-[1.25] tracking-normal text-ink-primary md:text-[26px]">
                   Discovery should lower risk before it asks for access.
                 </p>
                 <dl className="mt-10 divide-y divide-border-hairline border-y border-border-hairline">
@@ -540,7 +543,10 @@ export function MethodContent() {
               </div>
 
               <aside className="border-l border-strong pl-8 lg:col-span-4 lg:col-start-9">
-                <p className="font-serif text-[28px] italic leading-[1.3] tracking-normal text-ink-primary">
+                <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
+                  Engagement principle
+                </p>
+                <p className="mt-4 font-sans text-[24px] font-medium leading-[1.3] tracking-normal text-ink-primary md:text-[26px]">
                   Access is earned by the work, not assumed at the start.
                 </p>
                 <p className="mt-8 text-[15px] leading-[1.7] text-ink-secondary">
