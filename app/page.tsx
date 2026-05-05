@@ -899,19 +899,19 @@ function ClosingCtaSection() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="mx-auto mb-10 h-px w-12 bg-accent" />
           <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-white/42">
-            Next Step
+            Next step
           </p>
           <h2
             id="closing-cta-heading"
             className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-white"
           >
-            Find where AI can create operating value without creating unmanaged risk.
+            One 30-minute call. Three candidate workflows. A no-pressure decision packet.
           </h2>
           <p className="mx-auto mt-7 max-w-2xl text-[16px] leading-[1.65] text-white/64">
-            Start with a conversation about your operating model and the workflows
-            where better intelligence would matter. If there is a fit, Quoin maps
-            the first operating area, builds the intelligence layer, and defines
-            the path to a governed agent before any production deployment.
+            Bring your operating model and the workflows where AI pressure is
+            loudest. Leave with three candidate workflows, the controls each
+            would require, and a clear sense of which to map first. No
+            production access. No commitment to build.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
             <Link
