@@ -645,63 +645,138 @@ function PlatformSection() {
 }
 
 function PlatformMockup() {
+  const dimensionScores: Array<{ label: string; value: number; max: number }> = [
+    { label: "Operating value", value: 4.1, max: 5 },
+    { label: "Source trust", value: 2.6, max: 5 },
+    { label: "Control maturity", value: 3.8, max: 5 },
+    { label: "Workflow stability", value: 3.5, max: 5 },
+    { label: "Adoption reality", value: 3.0, max: 5 },
+  ]
+
   return (
-    <div className="border border-strong bg-surface-base">
-      <div className="grid grid-cols-1 border-b border-strong md:grid-cols-[1fr_12rem]">
-        <div className="p-5 md:p-6">
+    <div className="border border-strong bg-surface-base shadow-[0_24px_60px_-32px_rgba(26,26,26,0.18)]">
+      <div className="flex items-center justify-between gap-4 border-b border-strong/30 bg-surface-sunken px-5 py-3">
+        <div className="flex items-center gap-2">
+          <span className="h-2 w-2 rounded-full bg-strong/30" aria-hidden="true" />
+          <span className="h-2 w-2 rounded-full bg-strong/30" aria-hidden="true" />
+          <span className="h-2 w-2 rounded-full bg-strong/30" aria-hidden="true" />
+        </div>
+        <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-ink-muted">
+          quoin.workspace / acme-reit / maintenance-intake
+        </p>
+        <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-accent">
+          v1.4
+        </span>
+      </div>
+
+      <div className="grid grid-cols-1 border-b border-strong md:grid-cols-[1fr_14rem]">
+        <div className="p-5 md:p-7">
           <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-ink-muted">
             Operating intelligence workspace
           </p>
-          <h3 className="mt-3 text-[24px] font-medium leading-[1.15] text-ink-primary md:text-[30px]">
-            Maintenance intake - readiness review
+          <h3 className="mt-3 text-[24px] font-medium leading-[1.15] text-ink-primary md:text-[28px]">
+            Maintenance intake &middot; readiness review
           </h3>
+          <div className="mt-5 flex flex-wrap items-center gap-3 text-[11px]">
+            <span className="border border-accent/40 bg-accent/5 px-2 py-1 font-medium uppercase tracking-[0.14em] text-accent">
+              In review
+            </span>
+            <span className="border border-strong/20 px-2 py-1 font-medium uppercase tracking-[0.14em] text-ink-secondary">
+              12,400 work orders / yr
+            </span>
+            <span className="border border-strong/20 px-2 py-1 font-medium uppercase tracking-[0.14em] text-ink-secondary">
+              4 regions
+            </span>
+          </div>
         </div>
-        <div className="border-t border-strong p-5 md:border-l md:border-t-0 md:p-6">
+        <div className="border-t border-strong p-5 md:border-l md:border-t-0 md:p-7">
           <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-ink-muted">
-            Readiness
+            Composite readiness
           </p>
-          <p className="mt-4 font-serif text-[56px] leading-none text-accent tabular-nums">
-            3.4
+          <p className="mt-3 font-serif text-[56px] leading-none text-accent tabular-nums">
+            3.4<span className="text-[24px] text-ink-muted">/5</span>
           </p>
-          <p className="mt-2 text-[13px] text-ink-secondary">out of 5</p>
+          <p className="mt-3 text-[12px] leading-[1.45] text-ink-secondary">
+            Source trust drags the composite. Remediate before build.
+          </p>
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr]">
-        <div className="border-b border-strong p-5 md:border-b-0 md:border-r md:p-6">
-          <div className="grid grid-cols-1 gap-5">
-            {[
-              ["Workflow intelligence", "Intake, urgency, trade routing, vendor recommendation, resident update."],
-              ["Source inventory", "PMS work order, vendor notes, resident messages, property policy."],
-              ["Control model", "AI may classify and draft. Human approval required before resident-facing action."],
-            ].map(([label, value]) => (
-              <div key={label} className="grid grid-cols-1 gap-2 border-b border-strong/15 pb-5 last:border-b-0 last:pb-0 md:grid-cols-[10rem_1fr]">
-                <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
-                  {label}
-                </p>
-                <p className="text-[15px] leading-[1.55] text-ink-secondary">{value}</p>
-              </div>
-            ))}
+        <div className="border-b border-strong p-5 md:border-b-0 md:border-r md:p-7">
+          <p className="mb-5 text-[10px] font-medium uppercase tracking-[0.18em] text-ink-muted">
+            Readiness by dimension
+          </p>
+          <ul className="space-y-4">
+            {dimensionScores.map((dim) => {
+              const pct = (dim.value / dim.max) * 100
+              const lagging = dim.value < 3
+              return (
+                <li key={dim.label} className="grid grid-cols-[10rem_1fr_3rem] items-center gap-4">
+                  <p className="text-[12px] font-medium leading-[1.3] text-ink-primary">
+                    {dim.label}
+                  </p>
+                  <div className="relative h-1.5 w-full bg-strong/10">
+                    <div
+                      className={[
+                        "absolute inset-y-0 left-0",
+                        lagging ? "bg-accent/40" : "bg-accent",
+                      ].join(" ")}
+                      style={{ width: `${pct}%` }}
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p className="text-right font-serif text-[16px] leading-none text-ink-primary tabular-nums">
+                    {dim.value.toFixed(1)}
+                  </p>
+                </li>
+              )
+            })}
+          </ul>
+
+          <div className="mt-7 grid grid-cols-1 gap-4 border-t border-strong/15 pt-5 md:grid-cols-[10rem_1fr]">
+            <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
+              Control model
+            </p>
+            <p className="text-[14px] leading-[1.55] text-ink-secondary">
+              AI may classify and draft. Human approval required before
+              vendor assignment or resident-facing action.
+            </p>
           </div>
         </div>
 
-        <div className="p-5 md:p-6">
+        <div className="p-5 md:p-7">
           <p className="mb-5 text-[10px] font-medium uppercase tracking-[0.18em] text-ink-muted">
             Build handoff
           </p>
           <div className="border-y border-strong py-5">
-            <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-accent">
-              Next path
+            <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-accent">
+              Recommended path
             </p>
-            <p className="mt-3 text-[24px] font-medium leading-[1.2] text-ink-primary">
-              Remediate source trust, then approve agent behavior contract
+            <p className="mt-3 text-[20px] font-medium leading-[1.25] text-ink-primary md:text-[22px]">
+              Remediate source trust, then approve agent behavior contract.
+            </p>
+            <p className="mt-3 text-[12px] leading-[1.5] text-ink-muted">
+              Confidence 0.78 &middot; Reviewed by 3 owners
             </p>
           </div>
           <div className="mt-5 grid grid-cols-2 gap-px bg-border-strong/15">
-            {["Workflow", "Source", "Owner", "Controls"].map((item) => (
+            {[
+              ["Workflow", "Mapped"],
+              ["Source", "Disputed"],
+              ["Owner", "Mapped"],
+              ["Controls", "Drafted"],
+            ].map(([item, status]) => (
               <div key={item} className="bg-surface-base p-4">
                 <p className="text-[10px] uppercase tracking-[0.16em] text-ink-muted">{item}</p>
-                <p className="mt-3 text-[15px] font-medium text-ink-primary">Mapped</p>
+                <p
+                  className={[
+                    "mt-3 text-[14px] font-medium",
+                    status === "Disputed" ? "text-accent" : "text-ink-primary",
+                  ].join(" ")}
+                >
+                  {status}
+                </p>
               </div>
             ))}
           </div>
