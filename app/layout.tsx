@@ -1,32 +1,40 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Inter, Source_Serif_4 } from 'next/font/google'
+import { IBM_Plex_Sans, Instrument_Serif } from 'next/font/google'
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { CookieBanner } from "@/components/cookie-banner"
+import { GoogleAnalytics } from "@/components/google-analytics"
 import { JsonLd } from "@/components/json-ld"
 import { defaultDescription, organizationJsonLd, siteName, siteUrl, websiteJsonLd } from "@/lib/seo"
 
 import './globals.css'
 
-const inter = Inter({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-sans',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
-const sourceSerif = Source_Serif_4({
+const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
   variable: '--font-serif',
-  weight: ['400', '500'],
-  style: 'normal',
+  weight: ['400'],
+  style: ['normal', 'italic'],
   display: 'swap',
 })
+
+const productionGaMeasurementId = "G-K33X6S8W9V"
+const gaMeasurementId =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ??
+  (process.env.VERCEL_ENV === "production" ? productionGaMeasurementId : undefined)
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: siteName,
   title: {
-    default: "Quoin | Your AI Operating Partner",
+    default: "Quoin | Governed AI Agents for Real Estate Companies",
     template: "%s | Quoin",
   },
   description: defaultDescription,
@@ -34,6 +42,8 @@ export const metadata: Metadata = {
     "AI for property management",
     "AI for asset management",
     "AI for REITs",
+    "AI agents for real estate companies",
+    "organizational intelligence real estate",
     "managed AI operations",
     "AI governance real estate",
     "real estate AI operations",
@@ -46,7 +56,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Quoin | Your AI Operating Partner",
+    title: "Quoin | Governed AI Agents for Real Estate Companies",
     description: defaultDescription,
     url: siteUrl,
     siteName,
@@ -57,13 +67,13 @@ export const metadata: Metadata = {
         url: "/hero-bg.jpg",
         width: 1200,
         height: 630,
-        alt: "Quoin AI operating partner for property and asset management firms",
+        alt: "Quoin governed AI agents for vertically integrated real estate companies",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quoin | Your AI Operating Partner",
+    title: "Quoin | Governed AI Agents for Real Estate Companies",
     description: defaultDescription,
     images: ["/hero-bg.jpg"],
   },
@@ -90,9 +100,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
-      <body className="font-sans antialiased bg-background text-foreground">
+    <html lang="en" className={`${ibmPlexSans.variable} ${instrumentSerif.variable}`}>
+      <body className="font-sans antialiased bg-surface-base text-ink-primary paper-grain">
         <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
+        <GoogleAnalytics measurementId={gaMeasurementId} />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-surface-raised focus:text-ink-primary focus:px-4 focus:py-2 focus:border focus:border-strong"

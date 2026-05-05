@@ -12,6 +12,7 @@ interface AnimatedLogoProps {
   size?: number
   className?: string
   float?: boolean
+  priority?: boolean
 }
 
 export function AnimatedLogo({
@@ -20,6 +21,7 @@ export function AnimatedLogo({
   size = 280,
   className,
   float = true,
+  priority = false,
 }: AnimatedLogoProps) {
   const shouldReduceMotion = useReducedMotion()
 
@@ -30,6 +32,7 @@ export function AnimatedLogo({
         alt={alt}
         width={size}
         height={size}
+        priority={priority}
         className={cn("block select-none", className)}
         draggable={false}
       />
@@ -49,6 +52,7 @@ export function AnimatedLogo({
         alt={alt}
         width={size}
         height={size}
+        priority={priority}
         draggable={false}
         className="block w-full h-full object-contain"
         animate={

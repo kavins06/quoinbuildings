@@ -4,36 +4,41 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
+import { usePathname } from "next/navigation"
 import { AnimatedLogo } from "@/components/ui/animated-logo"
 
 const navLinks = [
-  { label: "Who We Help", href: "/who-we-help" },
-  { label: "Services", href: "/services" },
-  { label: "Approach", href: "/approach" },
-  { label: "Governance", href: "/governance" },
+  { label: "Method", href: "/method" },
+  { label: "Intelligence Platform", href: "/platform" },
   { label: "Team", href: "/team" },
-  { label: "Perspectives", href: "/perspectives" },
   { label: "Contact", href: "/contact" },
 ]
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
+  const isLandingPage = pathname === "/"
+  const isTransparentLanding = isLandingPage && !scrolled
+  const collapseBrand = isLandingPage && scrolled
+  const navBackgroundOpacity = isTransparentLanding ? 0 : 0.5
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 24)
+      setScrolled(window.scrollY > 0)
     }
+    handleScroll()
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
     <header
-      className={`sticky top-0 z-50 ${
+      style={{ backgroundColor: `hsl(var(--surface-base) / ${navBackgroundOpacity})` }}
+      className={`fixed inset-x-0 top-0 z-50 ${
         scrolled
-          ? "bg-surface-base/70 backdrop-blur-md border-b border-subtle"
-          : "bg-surface-base border-b border-transparent"
+          ? "backdrop-blur-md border-b border-subtle"
+          : "border-b border-transparent"
       } transition-[background-color,backdrop-filter,border-color] duration-200`}
     >
       <nav
@@ -42,10 +47,33 @@ export function Navigation() {
       >
         <Link
           href="/"
-          className="flex items-center gap-1.5 font-serif text-lg md:text-xl text-ink-primary"
+          aria-label="Quoin home"
+          className={[
+            "flex w-[6rem] items-center justify-center font-serif text-lg md:w-[6.5rem] md:text-xl transition-colors duration-200",
+            isTransparentLanding ? "text-white" : "text-ink-primary",
+          ].join(" ")}
         >
-          QUOIN
-          <AnimatedLogo size={32} float={false} className="shrink-0" />
+          <span
+            aria-hidden="true"
+            className={[
+              "overflow-hidden whitespace-nowrap transition-[width,margin,opacity] duration-200 ease-out",
+              collapseBrand
+                ? "mr-0 w-0 opacity-0"
+                : "mr-1.5 w-[3.35rem] opacity-100 md:w-[3.75rem]",
+            ].join(" ")}
+          >
+            QUOIN
+          </span>
+          <AnimatedLogo
+            alt=""
+            size={32}
+            float={false}
+            priority
+            className={[
+              "shrink-0 transition-[filter] duration-200",
+              isTransparentLanding ? "brightness-0 invert" : "",
+            ].join(" ")}
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -53,7 +81,12 @@ export function Navigation() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-[14px] text-ink-secondary hover:text-ink-primary hover:underline underline-offset-[6px] decoration-accent decoration-1 transition-colors duration-150"
+              className={[
+                "text-[14px] hover:underline underline-offset-[6px] decoration-accent decoration-1 transition-colors duration-150",
+                isTransparentLanding
+                  ? "text-white hover:text-white/80"
+                  : "text-ink-secondary hover:text-ink-primary",
+              ].join(" ")}
             >
               {link.label}
             </Link>
@@ -66,7 +99,10 @@ export function Navigation() {
           aria-controls="mobile-nav"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           onClick={() => setIsOpen((prev) => !prev)}
-          className="md:hidden text-ink-primary"
+          className={[
+            "md:hidden transition-colors duration-200",
+            isTransparentLanding ? "text-white" : "text-ink-primary",
+          ].join(" ")}
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>

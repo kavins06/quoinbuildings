@@ -5,7 +5,7 @@ export function AccessibilityContent() {
         <p className="text-[12px] font-semibold tracking-[0.14em] uppercase text-accent mb-5">
           Accessibility
         </p>
-        <h1 className="text-4xl md:text-5xl text-ink-primary tracking-[-0.01em] leading-[1.1]">
+        <h1 className="text-4xl md:text-5xl text-ink-primary tracking-normal leading-[1.1]">
           Accessibility at Quoin
         </h1>
         <p className="text-lg text-ink-secondary leading-relaxed mt-6 measure">

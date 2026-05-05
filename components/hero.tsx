@@ -1,124 +1,167 @@
 "use client"
 
-import Image from "next/image"
+import { useEffect, useRef } from "react"
 import Link from "next/link"
-import { AuroraText } from "@/components/ui/aurora-text"
 import { BlurFade } from "@/components/ui/blur-fade"
-import { NumberTicker } from "@/components/ui/number-ticker"
-import { WordRotate } from "@/components/ui/word-rotate"
+
+const HERO_VIDEO_PLAYBACK_RATE = 1.5
+
+const proofRows = [
+  {
+    label: "01",
+    value: "Map the workflow",
+    detail: "Systems, roles, exceptions, approvals, source trust, and value.",
+  },
+  {
+    label: "02",
+    value: "Build the intelligence layer",
+    detail: "Workflow objects, source inventory, decision rights, governance, readiness, and evidence.",
+  },
+  {
+    label: "03",
+    value: "Build the agent",
+    detail: "Agents, automations, connectors, review queues, evals, audit trails, and interfaces.",
+  },
+  {
+    label: "04",
+    value: "Deploy with controls",
+    detail: "Permitted actions, prohibited actions, human review, access boundaries, escalation, and logging.",
+  },
+  {
+    label: "05",
+    value: "Manage continuously",
+    detail: "Quality, drift, overrides, incidents, adoption, access reviews, workflow changes, and expansion.",
+  },
+]
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    video.playbackRate = HERO_VIDEO_PLAYBACK_RATE
+    const handleLoadedData = () => {
+      video.playbackRate = HERO_VIDEO_PLAYBACK_RATE
+    }
+    video.addEventListener("loadeddata", handleLoadedData)
+    return () => video.removeEventListener("loadeddata", handleLoadedData)
+  }, [])
+
   return (
-    <section className="relative lg:min-h-screen flex items-start lg:items-center overflow-hidden bg-surface-base pt-10 pb-16 lg:py-24">
+    <section
+      aria-labelledby="hero-heading"
+      className="relative flex min-h-[100svh] flex-col overflow-hidden bg-surface-inverse pt-[calc(45px+1.75rem)] pb-12 md:min-h-[100dvh] md:pt-[calc(54px+2.75rem)] md:pb-16 lg:pt-[calc(54px+4rem)]"
+    >
+      <video
+        ref={videoRef}
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[52%_50%] md:object-center"
+        src="/hero-bg.webm"
+        poster="/hero-bg.jpg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
 
-      <div className="relative z-10 px-6 md:px-12 lg:px-20 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-center">
-          {/* Left: Main content */}
-          <div className="lg:col-span-7">
-            <BlurFade delay={0.35} direction="up" offset={6} className="hidden md:block">
-              <p className="mb-5 text-[11px] uppercase tracking-[0.3em] text-accent">
-                THE MISSING INTELLIGENCE LAYER IS HERE
-              </p>
-            </BlurFade>
+      <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-1 flex-col px-6 lg:px-20 2xl:max-w-[1520px]">
+        <div className="grid flex-1 grid-cols-1 items-stretch gap-y-10 xl:grid-cols-[minmax(0,1.08fr)_clamp(4rem,8vw,9rem)_minmax(25rem,0.82fr)]">
+          <div className="flex flex-col xl:col-start-1 xl:-translate-x-3 2xl:-translate-x-6">
+            <div className="flex flex-1 flex-col justify-center">
+              <BlurFade inView delay={0.05} direction="up">
+                <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-white mb-4">
+                  Organizational intelligence and governed AI agents
+                </p>
+              </BlurFade>
 
-            <BlurFade delay={0.5} direction="up" offset={8}>
-              <h1 className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.15] tracking-[-0.03em] text-ink-primary">
-                Your AI Operating
-                <br />
-                <WordRotate
-                  words={["Partner", "Infrastructure", "Advantage"]}
-                  duration={3000}
-                  className="text-[clamp(2.25rem,6vw,5.5rem)] font-normal leading-[1.15] tracking-[-0.03em] text-accent"
-                />
-              </h1>
-            </BlurFade>
-
-            <BlurFade delay={0.7} direction="up">
-              <p className="mt-8 text-base md:text-lg font-light leading-relaxed text-ink-primary max-w-2xl md:max-w-3xl">
-                Quoin helps enterprise <AuroraText className="font-medium">Property &amp; Asset Management Companies</AuroraText> turn AI into a governed operating layer across leasing, operations, asset management, compliance, and reporting. Improving NOI while reducing legal, security, and execution risk across the portfolio.
-              </p>
-            </BlurFade>
-
-            <BlurFade delay={1.0} direction="up">
-              <div className="mt-10 md:mt-12 hidden md:flex items-center gap-6">
-                <Link
-                  href="/contact"
-                  className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 bg-ink-primary text-white hover:bg-ink-primary/90 transition-colors duration-150"
+              <BlurFade inView delay={0.1} direction="up">
+                <h1
+                  id="hero-heading"
+                  className="font-serif text-balance text-white font-normal leading-[1.02] tracking-normal text-[clamp(1.8rem,4vw,3.5rem)]"
                 >
-                  Talk to us
-                </Link>
-                <a
-                  href="/services"
-                  className="text-[11px] tracking-[0.2em] uppercase text-ink-secondary hover:text-ink-primary transition-colors duration-500"
-                >
-                  See our services &rarr;
-                </a>
-              </div>
-            </BlurFade>
+                  The AI operating partner for vertically integrated real
+                  estate companies.
+                </h1>
+              </BlurFade>
+
+              <BlurFade inView delay={0.2} direction="up">
+                <p className="mt-6 measure text-white text-[16px] leading-[1.55] sm:hidden">
+                  Quoin maps how your company actually works, builds the
+                  intelligence layer required for safe AI, then builds,
+                  deploys, governs, and manages agents inside your operating
+                  workflows.
+                </p>
+                <p className="mt-8 hidden measure text-white text-[16px] leading-[1.55] sm:block md:text-[18px]">
+                  Quoin maps how your company actually works, builds the
+                  intelligence layer required for safe AI, then builds,
+                  deploys, governs, and manages agents inside your operating
+                  workflows.
+                </p>
+              </BlurFade>
+
+              <BlurFade inView delay={0.3} direction="up">
+                <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
+                  <Link
+                    href="/contact"
+                    className="cta-primary text-[15px] font-medium tracking-[0.01em] inline-flex items-center gap-2 self-start !text-white !border-b-white hover:!text-white/80 hover:!border-b-white/80"
+                  >
+                    <span>Discuss AI operating value</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                  <Link
+                    href="/method"
+                    className="cta-secondary text-[15px] font-medium tracking-[0.01em] inline-flex items-center gap-2 self-start !text-white !border-b-white hover:!text-white/80 hover:!border-b-white/80"
+                  >
+                    <span>See the method</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                </div>
+              </BlurFade>
+            </div>
           </div>
 
-          {/* Right: Stats framed */}
-          <div className="relative overflow-hidden lg:col-span-4 lg:col-start-9 lg:self-stretch mt-10 lg:mt-0 -ml-6 md:-ml-12 lg:ml-0 -mr-6 md:-mr-12 lg:-mr-20 border border-subtle p-4 lg:p-8 flex flex-col justify-center">
-          <Image
-            src="https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-            aria-hidden="true"
-            fill
-            priority
-            sizes="(min-width: 1024px) 33vw, 100vw"
-            className="pointer-events-none object-cover"
-          />
-          <div className="pointer-events-none absolute inset-0 bg-black/30" aria-hidden="true" />
-          <div className="relative z-10 grid grid-cols-3 gap-4 lg:flex lg:flex-col lg:gap-6">
-            <BlurFade delay={1.1} direction="up" className="h-full">
-              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-white/70 h-full">
-                <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
-                  AI Capability
-                </p>
-                <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight whitespace-nowrap">
-                  <NumberTicker value={85.9} decimalPlaces={1} className="inline-block tracking-tight text-accent" />%
-                </p>
-                <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
-                  AI ability matches or beats a domain expert
-                </p>
-                <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-1 italic">
-                  <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">OpenAI, Apr 2026</a>
-                </p>
+          <aside
+            aria-label="Proof summary"
+            className="hidden xl:col-start-3 xl:flex xl:translate-x-3 xl:items-center xl:justify-end 2xl:translate-x-6"
+          >
+            <BlurFade
+              inView
+              delay={0.35}
+              direction="up"
+              className="w-full max-w-[28rem]"
+            >
+              <div className="relative overflow-hidden border border-strong bg-black/30 min-h-[430px]">
+                <div className="relative z-10 flex min-h-[430px] flex-col justify-start p-5 md:p-6">
+                  <p className="mb-5 max-w-[26ch] font-serif text-[24px] leading-[1.13] tracking-normal text-white md:text-[29px]">
+                    Map. Build. Deploy. Manage. Built for firms where ownership
+                    and operations share the same P&amp;L.
+                  </p>
+                  <div className="border-y border-white/25 bg-black/25">
+                    {proofRows.map((row) => (
+                      <div
+                        key={row.label}
+                        className="grid grid-cols-[2.25rem_1fr] gap-4 border-b border-white/20 px-3 py-2.5 last:border-b-0"
+                      >
+                        <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-white/60">
+                          {row.label}
+                        </p>
+                        <div>
+                          <p className="font-sans text-[16px] font-medium leading-[1.2] text-white">
+                            {row.value}
+                          </p>
+                          <p className="mt-1 text-[12px] leading-[1.35] text-white/75">
+                            {row.detail}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </BlurFade>
-
-            <BlurFade delay={1.3} direction="up" className="h-full">
-              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-white/70 h-full">
-                <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
-                  Industry Gap
-                </p>
-                <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight">
-                  <NumberTicker value={5} delay={0.2} className="inline-block tracking-tight text-accent" />%
-                </p>
-                <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
-                  CRE firms achieving their AI program goals
-                </p>
-                <p className="text-[11px] tracking-[0.02em] text-ink-muted mt-1 italic">
-                  <a href="https://www.jll.com/en-us/newsroom/real-estates-ai-reality-check-companies-piloting-only-achieved-all-ai-goals" target="_blank" rel="noopener noreferrer" className="underline decoration-accent underline-offset-2">JLL, Oct 2025</a>
-                </p>
-              </div>
-            </BlurFade>
-
-            <BlurFade delay={1.5} direction="up" className="h-full">
-              <div className="relative overflow-hidden border border-subtle p-4 lg:p-6 bg-white/70 h-full">
-                <p className="text-[9px] lg:text-[11px] tracking-[0.2em] lg:tracking-[0.3em] uppercase text-ink-primary mb-1 lg:mb-2">
-                  Implement In
-                </p>
-                <p className="text-2xl lg:text-4xl font-normal text-accent tracking-tight">
-                  <NumberTicker value={4} delay={0.4} className="inline-block tracking-tight text-accent" /> Wks
-                </p>
-                <p className="text-[10px] lg:text-sm text-ink-primary mt-1">
-                  First production workflow, typical Quoin engagement
-                </p>
-              </div>
-            </BlurFade>
-          </div>
-          </div>
+          </aside>
         </div>
       </div>
     </section>

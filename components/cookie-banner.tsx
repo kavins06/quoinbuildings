@@ -1,19 +1,19 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Link from "next/link"
 import { motion, AnimatePresence } from "motion/react"
-
-const STORAGE_KEY = "quoin-cookie-consent"
-
-type Choice = "accepted" | "rejected"
+import {
+  COOKIE_CONSENT_ACCEPTED_EVENT,
+  COOKIE_CONSENT_OPEN_EVENT,
+  COOKIE_CONSENT_STORAGE_KEY,
+} from "@/lib/cookie-consent"
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     try {
-      const existing = localStorage.getItem(STORAGE_KEY)
+      const existing = localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY)
       if (!existing) {
         const t = setTimeout(() => setVisible(true), 600)
         return () => clearTimeout(t)
@@ -27,25 +27,26 @@ export function CookieBanner() {
   useEffect(() => {
     const open = () => {
       try {
-        localStorage.removeItem(STORAGE_KEY)
+        localStorage.removeItem(COOKIE_CONSENT_STORAGE_KEY)
       } catch {
         // ignore
       }
       setVisible(true)
     }
-    window.addEventListener("quoin:open-cookie-banner", open)
-    return () => window.removeEventListener("quoin:open-cookie-banner", open)
+    window.addEventListener(COOKIE_CONSENT_OPEN_EVENT, open)
+    return () => window.removeEventListener(COOKIE_CONSENT_OPEN_EVENT, open)
   }, [])
 
-  const decide = (choice: Choice) => {
+  const acknowledge = () => {
     try {
       localStorage.setItem(
-        STORAGE_KEY,
-        JSON.stringify({ choice, ts: Date.now() }),
+        COOKIE_CONSENT_STORAGE_KEY,
+        JSON.stringify({ choice: "accepted", ts: Date.now() }),
       )
     } catch {
       // ignore
     }
+    window.dispatchEvent(new Event(COOKIE_CONSENT_ACCEPTED_EVENT))
     setVisible(false)
   }
 
@@ -56,48 +57,27 @@ export function CookieBanner() {
           role="dialog"
           aria-live="polite"
           aria-label="Cookie consent"
-          initial={{ y: "100%" }}
-          animate={{ y: 0 }}
-          exit={{ y: "100%" }}
+          initial={{ opacity: 0, y: 16, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 16, scale: 0.98 }}
           transition={{
-            duration: 0.6,
+            duration: 0.32,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="fixed bottom-0 inset-x-0 z-[60]"
+          className="fixed inset-x-0 bottom-4 z-[60] flex justify-center px-4 sm:inset-x-auto sm:left-6 sm:justify-start sm:px-0 md:bottom-6"
         >
-          <div className="bg-background/95 backdrop-blur-md text-foreground border-t border-border shadow-[0_-12px_40px_-20px_rgba(0,0,0,0.18)]">
-            <div className="container-shell py-5 md:py-6 flex flex-col md:flex-row md:items-center gap-5 md:gap-10">
-              <div className="flex-1 min-w-0">
-                <p className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground/60 mb-2">
-                  Cookies
-                </p>
-                <p className="text-[13px] leading-[1.6] text-foreground/80 max-w-3xl">
-                  We use a small number of cookies to keep the site secure, remember
-                  your preferences, and understand which pages are useful. See our{" "}
-                  <Link
-                    href="/privacy"
-                    className="underline underline-offset-2 decoration-accent hover:text-foreground"
-                  >
-                    Privacy Policy
-                  </Link>{" "}
-                  for details.
-                </p>
-              </div>
-              <div className="flex flex-wrap items-center gap-3 shrink-0">
-                <button
-                  onClick={() => decide("rejected")}
-                  className="text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 border border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground transition-colors duration-200 rounded-sm"
-                >
-                  Reject non-essential
-                </button>
-                <button
-                  onClick={() => decide("accepted")}
-                  className="text-[11px] tracking-[0.2em] uppercase px-5 py-2.5 bg-foreground text-background hover:bg-foreground/90 transition-colors duration-200 rounded-sm"
-                >
-                  Accept all
-                </button>
-              </div>
-            </div>
+          <div className="flex w-full max-w-[526px] items-center gap-4 rounded-[20px] border border-black/10 bg-white/95 px-5 py-4 text-ink-primary shadow-[0_18px_50px_rgba(0,0,0,0.22)] backdrop-blur-sm sm:w-[min(526px,calc(100vw-3rem))] sm:gap-6 sm:px-6 sm:py-5">
+            <p className="flex-1 text-[15px] font-medium leading-[1.35] text-ink-secondary sm:text-[18px] sm:leading-[1.25]">
+              We use cookies to keep the site secure, remember preferences, and
+              analyze traffic with Google Analytics 4.
+            </p>
+            <button
+              type="button"
+              onClick={acknowledge}
+              className="shrink-0 rounded-[10px] bg-[#ecebe8] px-4 py-3 text-[14px] font-semibold leading-none text-ink-primary transition-colors duration-200 hover:bg-[#deddd9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-[15px]"
+            >
+              Accept
+            </button>
           </div>
         </motion.div>
       )}

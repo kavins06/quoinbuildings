@@ -7,10 +7,10 @@ import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
 
 const steps = [
-  { number: "01", text: "Tell us about your firm using the form." },
-  { number: "02", text: "Pick a time on the same page." },
-  { number: "03", text: "1-hour conversation: your operations, your challenges, mutual fit." },
-  { number: "04", text: "If there is a fit, we scope a 2-week Executive Diagnostic." },
+  { number: "01", text: "We discuss your current AI pressure and operating model." },
+  { number: "02", text: "We identify where value may show up: NOI, speed, risk, staff leverage, or portfolio signal." },
+  { number: "03", text: "If there is a fit, we scope a bounded mapping engagement." },
+  { number: "04", text: "No production access is required to start." },
 ]
 
 export function ContactContent() {
@@ -20,6 +20,7 @@ export function ContactContent() {
   const [email, setEmail] = useState("")
   const [role, setRole] = useState("")
   const [propertyType, setPropertyType] = useState("")
+  const [currentAiActivity, setCurrentAiActivity] = useState("")
   const [portfolioUnits, setPortfolioUnits] = useState("")
   const [portfolioSqFt, setPortfolioSqFt] = useState("")
   const [message, setMessage] = useState("")
@@ -46,6 +47,7 @@ export function ContactContent() {
           email,
           role,
           propertyType,
+          currentAiActivity,
           portfolioUnits,
           portfolioSqFt,
           message,
@@ -78,10 +80,10 @@ export function ContactContent() {
   return (
     <main>
       <PageHeader
-        eyebrow="Next Step"
-        title="Let&rsquo;s talk."
-        description="Tell us about your firm, then book a 1-hour call directly on Kavin's calendar. If there is a fit, the next step is a 2-week Executive Diagnostic."
-        backgroundImage="https://images.unsplash.com/photo-1750365919971-7dd273e7b317?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        eyebrow="Contact"
+        title="Discuss where AI can create operating value."
+        description="Tell us about your firm, the AI pressure you are seeing, and the operating areas where better intelligence would matter. We will use the conversation to decide whether Quoin's method is a fit."
+        backgroundImage="/contact-hero.jpg"
         className="h-[56vh] min-h-[520px] md:h-[66vh] md:min-h-[620px]"
         contentClassName="pb-4 md:pb-8"
       />
@@ -95,7 +97,7 @@ export function ContactContent() {
                 <p className="text-[11px] tracking-[0.3em] uppercase text-accent mb-4">
                   You&rsquo;re booked
                 </p>
-                <h2 className="text-3xl md:text-[2.5rem] font-normal tracking-tight text-foreground mb-5">
+                <h2 className="text-3xl md:text-[2.5rem] font-normal tracking-normal text-foreground mb-5">
                   Thank you. Talk soon.
                 </h2>
                 <p className="text-sm leading-[1.85] text-muted-foreground max-w-md">
@@ -118,16 +120,16 @@ export function ContactContent() {
             ) : submitted ? (
               <div className="py-8">
                 <div className="w-10 h-px bg-accent/40 mb-6" />
-                <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-foreground mb-3">
+                <h2 className="text-2xl md:text-3xl font-normal tracking-normal text-foreground mb-3">
                   Thanks. Pick a time.
                 </h2>
                 <p className="text-sm leading-[1.75] text-muted-foreground mb-8">
-                  Grab a 1-hour slot below. You&rsquo;ll get a calendar invite and a Google Meet link.
+                  Grab a slot below. You&rsquo;ll get a calendar invite and a Google Meet link.
                 </p>
                 <div className="border border-border rounded-sm overflow-hidden bg-background">
                   <iframe
                     src={process.env.NEXT_PUBLIC_BOOKING_URL || "https://calendar.google.com/calendar/appointments/schedules/AcZssZ00JrZ1C4N98WsTIZ5ic1XOdDAIkwe1JhRhPy15f7PTAMtoJKshGXM5qaRYIoL2jcc1OoNamnaX?gv=true"}
-                    title="Book a 1-hour call"
+                    title="Book a call"
                     className="w-full"
                     style={{ height: "780px", border: 0 }}
                     loading="lazy"
@@ -250,7 +252,7 @@ export function ContactContent() {
                         className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${role ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
                       >
                         <option value="">Select your role</option>
-                        <option value="ceo-owner">CEO/Owner</option>
+                        <option value="ceo-president">CEO/President</option>
                         <option value="coo-vp-operations">COO/VP Operations</option>
                         <option value="cto-vp-technology">CTO/VP Technology</option>
                         <option value="cfo-vp-finance">CFO/VP Finance</option>
@@ -275,6 +277,31 @@ export function ContactContent() {
                         <option value="commercial">Commercial</option>
                         <option value="mixed-use">Mixed-Use</option>
                         <option value="other">Other</option>
+                      </select>
+                      <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
+                      Current AI Activity
+                      <span className="text-muted-foreground/30 ml-2 normal-case tracking-normal">(optional)</span>
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={currentAiActivity}
+                        onChange={(e) => setCurrentAiActivity(e.target.value)}
+                        className={`w-full bg-transparent border-b border-border pb-3 pr-8 text-sm focus:outline-none focus:border-accent transition-colors duration-300 appearance-none cursor-pointer ${currentAiActivity ? "text-foreground font-medium" : "text-muted-foreground/60"}`}
+                      >
+                        <option value="">Select current activity</option>
+                        <option value="exploring-internally">Exploring internally</option>
+                        <option value="using-copilot-chatgpt">Using Copilot / ChatGPT</option>
+                        <option value="testing-vendor-ai">Testing vendor AI</option>
+                        <option value="running-pilots">Running pilots</option>
+                        <option value="built-internal-tools">Already built internal tools</option>
+                        <option value="not-sure">Not sure</option>
                       </select>
                       <ChevronDown className="pointer-events-none absolute right-1 bottom-3 h-4 w-4 text-muted-foreground/60" />
                     </div>
@@ -326,7 +353,7 @@ export function ContactContent() {
 
                 <div className="flex flex-col gap-2">
                   <label className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground/60">
-                    What is your expected outcome of this call?
+                    What AI operating question are you trying to answer?
                   </label>
                   <textarea
                     rows={4}
@@ -334,7 +361,7 @@ export function ContactContent() {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-accent transition-colors duration-300 resize-none placeholder:text-muted-foreground/30"
-                    placeholder="e.g., understand if AI can fix our maintenance backlog and update our books"
+                    placeholder="Where AI could reduce maintenance expense leakage, improve leasing response, accelerate reporting, or make operating exceptions visible earlier."
                   />
                 </div>
 
@@ -343,11 +370,11 @@ export function ContactContent() {
                   disabled={submitting}
                   className="self-start mt-4 px-10 py-4 bg-foreground text-background text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-foreground/90 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {submitting ? "Sending…" : "Submit"}
+                  {submitting ? "Sending..." : "Request conversation"}
                 </button>
 
                 {errorMessage && (
-                  <p className="text-[11px] leading-relaxed text-red-600/90 mt-1" role="alert">
+                  <p className="text-[11px] leading-relaxed text-accent mt-1" role="alert">
                     {errorMessage}
                   </p>
                 )}
@@ -399,7 +426,10 @@ export function ContactContent() {
                   Suggested Participants
                 </p>
                 <p className="text-sm leading-[1.75] text-muted-foreground">
-                  The first call works best with the executive sponsor: COO, CEO, or VP Operations. If your CTO or IT lead is part of the AI decision, they are welcome.                </p>
+                  Best first participants: COO, President, Head of Operations,
+                  Head of Asset Management, CIO/CTO, or the executive
+                  responsible for AI adoption.
+                </p>
               </div>
             </div>
           </BlurFade>

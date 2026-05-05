@@ -6,14 +6,14 @@ import { createPageMetadata } from "@/lib/seo"
 export const metadata: Metadata = createPageMetadata({
   title: "Team",
   description:
-    "Meet the Quoin leadership team bridging AI engineering, governance, cybersecurity, data readiness, and property and asset management operations.",
+    "Meet the expert team behind Quoin's operating model, spanning real estate operations, AI architecture, governance, cybersecurity, deployment infrastructure, and data readiness.",
   path: "/team",
   image: "/header-team.jpg",
   keywords: [
     "Quoin team",
     "real estate AI team",
-    "property management AI operators",
-    "asset management AI operators",
+    "AI agents real estate team",
+    "managed AI operations team",
   ],
 })
 
