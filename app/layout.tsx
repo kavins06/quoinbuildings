@@ -4,6 +4,7 @@ import { IBM_Plex_Sans, Instrument_Serif } from 'next/font/google'
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { CookieBanner } from "@/components/cookie-banner"
+import { GoogleAnalytics } from "@/components/google-analytics"
 import { JsonLd } from "@/components/json-ld"
 import { defaultDescription, organizationJsonLd, siteName, siteUrl, websiteJsonLd } from "@/lib/seo"
 
@@ -23,6 +24,12 @@ const instrumentSerif = Instrument_Serif({
   style: ['normal', 'italic'],
   display: 'swap',
 })
+
+const productionGaMeasurementId = "G-K33X6S8W9V"
+const gaMeasurementId =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ??
+  (process.env.VERCEL_ENV === "production" ? productionGaMeasurementId : undefined)
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: siteName,
@@ -96,6 +103,7 @@ export default function RootLayout({
     <html lang="en" className={`${ibmPlexSans.variable} ${instrumentSerif.variable}`}>
       <body className="font-sans antialiased bg-surface-base text-ink-primary paper-grain">
         <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
+        <GoogleAnalytics measurementId={gaMeasurementId} />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-surface-raised focus:text-ink-primary focus:px-4 focus:py-2 focus:border focus:border-strong"

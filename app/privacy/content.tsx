@@ -8,7 +8,7 @@ const sections = [
   {
     title: "Information We Collect",
     content:
-      "We collect information you provide directly through our contact form: your name, email address, company name, portfolio size (if provided), and the content of your message. We also collect anonymized website usage data through standard analytics tools to understand how visitors use our site. We do not use tracking cookies beyond those essential for site functionality.",
+      "We collect information you provide directly through our contact form: your name, email address, company name, portfolio size (if provided), and the content of your message. If you accept analytics cookies, we use Google Analytics 4 to collect aggregated website usage data such as pages viewed, referrers, approximate geography, browser and device information, and site interactions.",
   },
   {
     title: "How We Use Your Information",
@@ -23,7 +23,7 @@ const sections = [
   {
     title: "Data Retention",
     content:
-      "Contact form submissions are retained for the duration of any business relationship and for two years following its conclusion. Website analytics data is anonymized and aggregated. You may request deletion of your personal information at any time by contacting us.",
+      "Contact form submissions are retained for the duration of any business relationship and for two years following its conclusion. Google Analytics 4 data is retained according to the settings in our Google Analytics property and is reviewed in aggregate. You may request deletion of your personal information at any time by contacting us.",
   },
   {
     title: "Your Rights",

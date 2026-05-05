@@ -46,6 +46,7 @@ See [`.env.example`](.env.example) for the full list. All public variables are p
 | Variable                  | Required | Purpose                                                      |
 | ------------------------- | -------- | ------------------------------------------------------------ |
 | `NEXT_PUBLIC_BOOKING_URL` | optional | Override the Google Calendar appointment iframe URL.         |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | optional | Override the default production Google Analytics 4 property or enable GA4 locally/previews. Use `G-K33X6S8W9V` for Quoin. |
 
 Production values are configured in the Vercel dashboard, not in this repo.
 

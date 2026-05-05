@@ -2,15 +2,18 @@
 
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "motion/react"
-
-const STORAGE_KEY = "quoin-cookie-consent"
+import {
+  COOKIE_CONSENT_ACCEPTED_EVENT,
+  COOKIE_CONSENT_OPEN_EVENT,
+  COOKIE_CONSENT_STORAGE_KEY,
+} from "@/lib/cookie-consent"
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     try {
-      const existing = localStorage.getItem(STORAGE_KEY)
+      const existing = localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY)
       if (!existing) {
         const t = setTimeout(() => setVisible(true), 600)
         return () => clearTimeout(t)
@@ -24,25 +27,26 @@ export function CookieBanner() {
   useEffect(() => {
     const open = () => {
       try {
-        localStorage.removeItem(STORAGE_KEY)
+        localStorage.removeItem(COOKIE_CONSENT_STORAGE_KEY)
       } catch {
         // ignore
       }
       setVisible(true)
     }
-    window.addEventListener("quoin:open-cookie-banner", open)
-    return () => window.removeEventListener("quoin:open-cookie-banner", open)
+    window.addEventListener(COOKIE_CONSENT_OPEN_EVENT, open)
+    return () => window.removeEventListener(COOKIE_CONSENT_OPEN_EVENT, open)
   }, [])
 
   const acknowledge = () => {
     try {
       localStorage.setItem(
-        STORAGE_KEY,
+        COOKIE_CONSENT_STORAGE_KEY,
         JSON.stringify({ choice: "accepted", ts: Date.now() }),
       )
     } catch {
       // ignore
     }
+    window.dispatchEvent(new Event(COOKIE_CONSENT_ACCEPTED_EVENT))
     setVisible(false)
   }
 
@@ -65,14 +69,14 @@ export function CookieBanner() {
           <div className="flex w-full max-w-[526px] items-center gap-4 rounded-[20px] border border-black/10 bg-white/95 px-5 py-4 text-ink-primary shadow-[0_18px_50px_rgba(0,0,0,0.22)] backdrop-blur-sm sm:w-[min(526px,calc(100vw-3rem))] sm:gap-6 sm:px-6 sm:py-5">
             <p className="flex-1 text-[15px] font-medium leading-[1.35] text-ink-secondary sm:text-[18px] sm:leading-[1.25]">
               We use cookies to keep the site secure, remember preferences, and
-              analyze traffic.
+              analyze traffic with Google Analytics 4.
             </p>
             <button
               type="button"
               onClick={acknowledge}
               className="shrink-0 rounded-[10px] bg-[#ecebe8] px-4 py-3 text-[14px] font-semibold leading-none text-ink-primary transition-colors duration-200 hover:bg-[#deddd9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-[15px]"
             >
-              Okay
+              Accept
             </button>
           </div>
         </motion.div>
