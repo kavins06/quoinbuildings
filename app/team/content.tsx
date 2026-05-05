@@ -4,7 +4,6 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { X } from "lucide-react"
-import { PageHeader } from "@/components/page-header"
 import { BlurFade } from "@/components/ui/blur-fade"
 
 type TeamMember = {
@@ -93,7 +92,7 @@ const logos: Logo[] = [
 
 function LogoTile({ logo }: { logo: Logo }) {
   return (
-    <div className="flex min-h-[112px] flex-col items-center justify-center border border-border px-5 py-5">
+    <div className="flex min-h-[112px] flex-col items-center justify-center border border-strong/15 px-5 py-5">
       <Image
         src={logo.src}
         alt={logo.alt}
@@ -107,10 +106,22 @@ function LogoTile({ logo }: { logo: Logo }) {
             : "grayscale contrast-125",
         ].join(" ")}
       />
-      <p className="mt-3 text-center text-[9px] uppercase tracking-[0.15em] leading-tight text-muted-foreground/70">
+      <p className="mt-3 text-center text-[9px] uppercase tracking-[0.16em] leading-tight text-ink-muted">
         {logo.label}
       </p>
     </div>
+  )
+}
+
+function TeamCta() {
+  return (
+    <Link
+      href="/contact"
+      className="cta-primary inline-flex items-center gap-2 self-start text-[15px] font-medium"
+    >
+      <span>Map one operating area with us</span>
+      <span aria-hidden="true">&rarr;</span>
+    </Link>
   )
 }
 
@@ -119,201 +130,245 @@ export function TeamContent() {
 
   return (
     <main>
-      <PageHeader
-        eyebrow="Team"
-        title="The expert team behind Quoin's operating model."
-        description="Quoin combines real estate operating judgment, AI architecture, governance, cybersecurity, deployment infrastructure, data readiness, and an AI-native delivery model."
-        className="h-auto min-h-[520px] md:min-h-[600px]"
-        contentClassName="pb-4 md:pb-8"
-      />
+      <section className="border-b border-strong bg-surface-base pt-36 md:pt-44 lg:pt-48">
+        <div className="container-shell pb-20 md:pb-28">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+            <BlurFade inView direction="up" className="lg:col-span-7">
+              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+                Team
+              </p>
+              <h1 className="text-balance font-serif text-[clamp(3rem,7vw,5.875rem)] font-normal leading-[1.02] tracking-normal text-ink-primary">
+                The expert team behind Quoin&apos;s operating model.
+              </h1>
+              <p className="mt-8 measure text-[18px] leading-[1.6] text-ink-secondary md:text-[19px]">
+                Quoin combines real estate operating judgment, AI architecture,
+                governance, cybersecurity, deployment infrastructure, and data
+                readiness. Real estate AI requires more than AI engineers.
+              </p>
+              <div className="mt-10">
+                <TeamCta />
+              </div>
+            </BlurFade>
 
-      <section className="px-6 py-20 md:px-12 lg:px-20 md:py-28 border-t border-border">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-          <BlurFade inView direction="up" className="lg:col-span-5">
-            <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
-              Why This Team Exists
-            </p>
-            <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-normal text-foreground text-balance">
-              Real estate AI requires more than AI engineers.
-            </h2>
-          </BlurFade>
-
-          <BlurFade inView delay={0.1} direction="up" className="lg:col-span-6 lg:col-start-7">
-            <p className="text-sm md:text-base leading-[1.85] text-muted-foreground max-w-3xl">
-              A governed agent has to understand workflows, systems, sources,
-              approvals, controls, adoption, security, and portfolio value.
-              Quoin was built around those disciplines from the beginning.
-            </p>
-          </BlurFade>
+            <BlurFade
+              inView
+              delay={0.12}
+              direction="up"
+              className="lg:col-span-4 lg:col-start-9 lg:pt-20"
+            >
+              <aside className="border-l border-strong pl-8">
+                <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
+                  Disciplines
+                </p>
+                <ul className="mt-6 grid grid-cols-1 gap-4">
+                  {[
+                    "Real estate operating judgment",
+                    "Agent architecture and evaluation",
+                    "Governance and security architecture",
+                    "Cybersecurity and deployment",
+                    "Data readiness and applications",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="mt-3 h-px w-5 shrink-0 bg-accent" aria-hidden="true" />
+                      <span className="text-[15px] leading-[1.5] text-ink-secondary">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </aside>
+            </BlurFade>
+          </div>
         </div>
       </section>
 
-      <section className="px-6 py-20 md:px-12 lg:px-20 md:py-28 border-t border-border">
-        <BlurFade inView direction="up">
-          <div className="mb-16 pb-6 border-b border-border">
-            <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
-              Team Grid
-            </p>
-            <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-normal text-foreground">
-              One judgment stack, shown equally.
-            </h2>
-          </div>
-        </BlurFade>
+      <section className="bg-surface-base py-20 md:py-32">
+        <div className="container-shell">
+          <BlurFade inView direction="up">
+            <header className="mb-14 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-5">
+                <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+                  Team
+                </p>
+                <h2 className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-ink-primary">
+                  One judgment stack, shown equally.
+                </h2>
+              </div>
+              <div className="lg:col-span-6 lg:col-start-7 lg:pt-7">
+                <p className="measure text-[16px] leading-[1.65] text-ink-secondary md:text-[17px]">
+                  Six practitioners across real estate, AI, governance,
+                  cybersecurity, infrastructure, and data. Click any name for
+                  the full bio.
+                </p>
+              </div>
+            </header>
+          </BlurFade>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {team.map((member, index) => (
-            <BlurFade key={member.name} inView delay={index * 0.06} direction="up">
-              <button
-                type="button"
-                onClick={() => setSelectedMember(member)}
-                className="group grid h-full w-full grid-rows-[auto_1fr] text-left border border-border hover:border-muted-foreground/40 transition-colors duration-300"
-              >
-                <div className="aspect-square bg-muted flex items-center justify-center relative overflow-hidden">
-                  {member.photo ? (
-                    <Image
-                      src={member.photo}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  ) : (
-                    <span className="text-4xl font-normal text-muted-foreground/60 tracking-wider">
-                      {member.initials}
-                    </span>
-                  )}
-                </div>
-                <div className="flex min-h-[168px] flex-col justify-between p-5">
-                  <div>
-                    <p className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground/50 mb-2 leading-relaxed">
-                      {member.role}
-                    </p>
-                    <h3 className="text-lg font-normal tracking-normal text-foreground group-hover:text-muted-foreground transition-colors duration-300">
-                      {member.name}
-                    </h3>
+          <div className="grid grid-cols-1 gap-px bg-[hsl(var(--border-subtle))] md:grid-cols-2 lg:grid-cols-3">
+            {team.map((member, index) => (
+              <BlurFade key={member.name} inView delay={index * 0.06} direction="up">
+                <button
+                  type="button"
+                  onClick={() => setSelectedMember(member)}
+                  className="group grid h-full w-full grid-rows-[auto_1fr] bg-surface-base text-left"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden bg-surface-sunken">
+                    {member.photo ? (
+                      <Image
+                        src={member.photo}
+                        alt={member.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover object-[center_16%] grayscale transition duration-500 group-hover:scale-[1.02] group-hover:grayscale-0"
+                      />
+                    ) : (
+                      <span className="flex h-full items-center justify-center text-4xl font-normal tracking-wider text-ink-muted">
+                        {member.initials}
+                      </span>
+                    )}
                   </div>
-                  <p className="mt-6 text-[12px] leading-[1.55] text-accent">
-                    {member.expertise}
-                  </p>
-                </div>
-              </button>
-            </BlurFade>
-          ))}
+                  <div className="flex min-h-[168px] flex-col justify-between p-5 md:p-6">
+                    <div>
+                      <h3 className="text-[20px] font-medium leading-[1.25] text-ink-primary">
+                        {member.name}
+                      </h3>
+                      <p className="mt-2 text-[13px] leading-[1.4] text-ink-secondary">
+                        {member.role}
+                      </p>
+                    </div>
+                    <p className="mt-6 text-[11px] font-medium uppercase tracking-[0.14em] text-accent">
+                      {member.expertise}
+                    </p>
+                  </div>
+                </button>
+              </BlurFade>
+            ))}
+          </div>
         </div>
       </section>
 
       {selectedMember && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-background/85 p-6"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-surface-inverse/85 p-6"
           onClick={() => setSelectedMember(null)}
         >
           <div
-            className="relative bg-background border border-border max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 md:p-12"
+            className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto border border-strong bg-surface-base p-8 md:p-12"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               type="button"
               aria-label="Close biography"
               onClick={() => setSelectedMember(null)}
-              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className="absolute right-4 top-4 text-ink-muted transition-colors hover:text-ink-primary"
             >
               <X className="h-5 w-5" />
             </button>
 
-            <p className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground/50 mb-1">
+            <p className="mb-2 text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
               {selectedMember.role}
             </p>
-            <h3 className="text-2xl font-normal tracking-normal text-foreground mb-3">
+            <h3 className="mb-3 text-[28px] font-medium leading-[1.2] tracking-normal text-ink-primary">
               {selectedMember.name}
             </h3>
-            <p className="text-sm leading-[1.6] text-accent mb-7">
+            <p className="mb-7 text-[12px] font-medium uppercase tracking-[0.14em] text-accent">
               {selectedMember.expertise}
             </p>
-            <p className="text-sm leading-[1.85] text-muted-foreground">
+            <p className="text-[15px] leading-[1.7] text-ink-secondary">
               {selectedMember.bio}
             </p>
           </div>
         </div>
       )}
 
-      <section className="px-6 py-20 md:px-12 lg:px-20 md:py-28 border-t border-border bg-muted/25">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-          <BlurFade inView direction="up" className="lg:col-span-5">
-            <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
-              AI-Native Operating Model
-            </p>
-            <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-normal text-foreground text-balance">
-              The team is amplified by Quoin&apos;s own intelligence platform.
-            </h2>
+      <section className="border-y border-strong bg-surface-sunken py-20 md:py-32">
+        <div className="container-shell">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+            <BlurFade inView direction="up" className="lg:col-span-5">
+              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+                AI-native operating model
+              </p>
+              <h2 className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-ink-primary">
+                The team is amplified by Quoin&apos;s own intelligence platform.
+              </h2>
+            </BlurFade>
+            <BlurFade inView delay={0.1} direction="up" className="lg:col-span-6 lg:col-start-7 lg:pt-7">
+              <p className="measure text-[16px] leading-[1.65] text-ink-secondary md:text-[17px]">
+                Quoin uses governed internal agents to accelerate interview
+                synthesis, workflow mapping, source inventory, evidence review,
+                scoring, completeness checks, and draft deliverables. Human
+                experts remain accountable for interpretation and
+                recommendations.
+              </p>
+            </BlurFade>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-surface-base py-20 md:py-32">
+        <div className="container-shell">
+          <BlurFade inView direction="up">
+            <header className="mb-14 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-5">
+                <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+                  Institutional experience
+                </p>
+                <h2 className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-ink-primary">
+                  Experience from real estate, AI, security, governance, and
+                  enterprise technology.
+                </h2>
+              </div>
+              <p className="lg:col-span-6 lg:col-start-7 measure text-[16px] leading-[1.65] text-ink-secondary md:text-[17px] lg:pt-7">
+                The team brings operating and technical judgment from settings
+                where source trust, auditability, security, and decision rights
+                matter.
+              </p>
+            </header>
           </BlurFade>
-          <BlurFade inView delay={0.1} direction="up" className="lg:col-span-6 lg:col-start-7">
-            <p className="text-sm md:text-base leading-[1.85] text-muted-foreground">
-              Quoin uses governed internal agents to accelerate interview
-              synthesis, workflow mapping, source inventory, evidence review,
-              scoring, completeness checks, and draft deliverables. Human
-              experts remain accountable for interpretation and
-              recommendations.
+
+          <BlurFade inView delay={0.1} direction="up">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
+              {logos.map((logo) => (
+                <LogoTile key={logo.alt} logo={logo} />
+              ))}
+            </div>
+            <p className="mt-5 text-[11px] leading-[1.6] text-ink-muted">
+              Logos indicate prior institutions, employers, and academic
+              affiliations across Quoin&apos;s team and consultants. They are not
+              presented as a client roster.
             </p>
           </BlurFade>
         </div>
       </section>
 
-      <section className="px-6 py-20 md:px-12 lg:px-20 md:py-28 border-t border-border">
-        <BlurFade inView direction="up">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-14">
-            <div className="lg:col-span-5">
-              <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50 mb-3">
-                Institutional Experience
+      <section className="bg-[hsl(var(--surface-inverse))] py-20 text-white md:py-28">
+        <div className="container-shell">
+          <BlurFade inView direction="up">
+            <div className="mx-auto max-w-3xl text-center">
+              <div className="mx-auto mb-10 h-px w-12 bg-accent" />
+              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-white/45">
+                Next step
               </p>
-              <h2 className="text-3xl md:text-[2.75rem] font-normal tracking-normal text-foreground text-balance">
-                Experience from real estate, AI, security, governance, and
-                enterprise technology.
+              <h2 className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-white">
+                Map one operating area. Decide where AI belongs.
               </h2>
+              <p className="mx-auto mt-7 max-w-2xl text-[16px] leading-[1.65] text-white/64">
+                30-minute call. Bring your operating model and the workflows
+                where AI pressure is loudest. Leave with three candidate
+                workflows and a no-pressure decision packet.
+              </p>
+              <div className="mt-10 flex justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 border-b border-white pb-1 text-[15px] font-medium text-white transition-colors hover:border-white/70 hover:text-white/70"
+                >
+                  <span>Map one operating area with us</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </Link>
+              </div>
             </div>
-            <p className="lg:col-span-6 lg:col-start-7 text-sm md:text-base leading-[1.85] text-muted-foreground">
-              The team brings operating and technical judgment from settings
-              where source trust, auditability, security, and decision rights
-              matter.
-            </p>
-          </div>
-        </BlurFade>
-
-        <BlurFade inView delay={0.1} direction="up">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
-            {logos.map((logo) => (
-              <LogoTile key={logo.alt} logo={logo} />
-            ))}
-          </div>
-          <p className="mt-5 text-[11px] leading-[1.6] text-muted-foreground">
-            Logos indicate prior institutions, employers, and academic
-            affiliations across Quoin&apos;s team and consultants. They are not
-            presented as a client roster.
-          </p>
-        </BlurFade>
-      </section>
-
-      <section className="px-6 py-28 md:px-12 lg:px-20 md:py-36 bg-foreground text-background">
-        <BlurFade inView direction="up">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="w-10 h-px bg-accent/40 mx-auto mb-10" />
-            <p className="text-[11px] tracking-[0.3em] uppercase text-background/45 mb-5">
-              Next Step
-            </p>
-            <h2 className="text-3xl md:text-4xl font-normal leading-[1.15] tracking-normal mb-6 text-balance">
-              Discuss where AI can create operating value.
-            </h2>
-            <p className="text-sm leading-[1.85] text-background/55 max-w-lg mx-auto mb-12">
-              Start with the operating model, current AI pressure, and the
-              workflows where better intelligence would matter.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block text-[11px] tracking-[0.15em] uppercase px-5 py-2.5 bg-white text-black hover:bg-white/90 transition-colors duration-150"
-            >
-              Request conversation
-            </Link>
-          </div>
-        </BlurFade>
+          </BlurFade>
+        </div>
       </section>
     </main>
   )
