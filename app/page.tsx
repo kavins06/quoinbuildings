@@ -250,16 +250,83 @@ export default function Page() {
   return (
     <>
       <Hero />
+      <EvidenceBandSection />
+      <WhyThisExistsSection />
       <OperatingValueSection />
+      <HumanAccountabilitySection />
       <BuildManageSection />
       <OperatingPartnerModelSection />
-      <WhyThisExistsSection />
       <PlatformSection />
       <QuoinMethodSection />
-      <HumanAccountabilitySection />
       <FitSection />
       <ClosingCtaSection />
     </>
+  )
+}
+
+function EvidenceBandSection() {
+  return (
+    <section
+      aria-label="Industry evidence"
+      className="border-y border-strong bg-surface-base"
+    >
+      <div className="container-shell">
+        <div className="grid grid-cols-1 divide-y divide-strong/15 md:grid-cols-3 md:divide-x md:divide-y-0">
+          <a
+            href="https://www.nareim.org/2026/04/20/technology-data-ai-survey-2026/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col gap-3 px-6 py-8 transition-colors hover:bg-surface-sunken md:px-8 md:py-10"
+          >
+            <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-accent">
+              NAREIM 2026
+            </p>
+            <p className="font-serif text-[40px] leading-[0.95] tracking-normal text-ink-primary tabular-nums md:text-[52px]">
+              5.7<span className="text-ink-muted">/10</span>
+            </p>
+            <p className="text-[14px] leading-[1.5] text-ink-secondary md:text-[15px]">
+              Institutional real estate AI maturity. Governance readiness sat
+              at 5.1/10 while AI tools had already proliferated.
+            </p>
+          </a>
+
+          <a
+            href="https://www.jll.com/en-de/newsroom/real-estates-ai-reality-check-companies-piloting-only-achieved-all-ai-goals"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col gap-3 px-6 py-8 transition-colors hover:bg-surface-sunken md:px-8 md:py-10"
+          >
+            <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-accent">
+              JLL 2025
+            </p>
+            <p className="font-serif text-[40px] leading-[0.95] tracking-normal text-ink-primary tabular-nums md:text-[52px]">
+              88<span className="text-ink-muted">%</span>
+            </p>
+            <p className="text-[14px] leading-[1.5] text-ink-secondary md:text-[15px]">
+              of investors, owners, and landlords had started AI pilots. Goal
+              completion lagged.
+            </p>
+          </a>
+
+          <a
+            href="https://digitaleconomy.stanford.edu/publication/enterprise-ai-playbook/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col gap-3 px-6 py-8 transition-colors hover:bg-surface-sunken md:px-8 md:py-10"
+          >
+            <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-accent">
+              Stanford Digital Economy Lab
+            </p>
+            <p className="font-serif text-[24px] leading-[1.1] tracking-normal text-ink-primary md:text-[28px]">
+              The difference was the organization, not the model.
+            </p>
+            <p className="text-[14px] leading-[1.5] text-ink-secondary md:text-[15px]">
+              Across 51 enterprise AI cases studied.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -284,6 +351,38 @@ function OperatingValueSection() {
               The model is not the value by itself. The value comes from changing how operating
               decisions get made.
             </p>
+
+            <div className="mt-12 border border-strong bg-surface-sunken p-6 md:p-7">
+              <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-accent">
+                Illustrative engagement
+              </p>
+              <p className="mt-4 text-[18px] font-medium leading-[1.3] text-ink-primary md:text-[20px]">
+                $400M owner-operator, 12,000 units, regional ops layer.
+              </p>
+              <ul className="mt-5 space-y-3 text-[14px] leading-[1.55] text-ink-secondary">
+                <li className="flex items-start gap-3">
+                  <span className="mt-2 h-px w-5 shrink-0 bg-accent" aria-hidden="true" />
+                  <span>Three-week mapping engagement, no production access required.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-2 h-px w-5 shrink-0 bg-accent" aria-hidden="true" />
+                  <span>
+                    Four candidate workflows surfaced; one approved for build,
+                    one sent to remediation, two flagged not-yet-ready.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-2 h-px w-5 shrink-0 bg-accent" aria-hidden="true" />
+                  <span>
+                    Maintenance triage agent deployed under human approval,
+                    audit logging, and quarterly governance review.
+                  </span>
+                </li>
+              </ul>
+              <p className="mt-6 border-t border-strong/20 pt-4 text-[11px] leading-[1.5] text-ink-muted">
+                Composite illustration. Specifics differ per engagement.
+              </p>
+            </div>
           </header>
 
           <div className="lg:col-span-7">
