@@ -95,7 +95,7 @@ const failurePatterns = [
   "Control path unclear.",
 ]
 
-const methodSteps = [
+const phaseOneTouchpoints = [
   {
     number: "01",
     title: "Strategy and scope",
@@ -543,33 +543,34 @@ function QuoinMethodSection() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
           <header className="lg:col-span-5">
             <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
-              Method
+              Inside Phase 01: Map
             </p>
             <h2
               id="quoin-method-heading"
               className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-ink-primary"
             >
-              A conservative path from AI pressure to build decision.
+              Five client touchpoints, not nineteen interruptions.
             </h2>
           </header>
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="measure text-[17px] leading-[1.6] text-ink-secondary">
-              Clients experience five batched touchpoints. Behind them is Quoin&apos;s deeper
-              operating method for workflow intelligence, source validation, governance,
-              readiness scoring, implementation planning, and managed lifecycle design.
+              Phase 01 is where most engagements start. Leadership, operators,
+              technology, governance, and data owners each get pulled in once,
+              when their judgment changes the recommendation. The output is an
+              inspectable workflow map and a no-build-or-build decision packet.
             </p>
           </div>
         </div>
 
         <ol className="mt-16 grid grid-cols-1 border-t border-strong lg:grid-cols-5">
-          {methodSteps.map((step, index) => (
+          {phaseOneTouchpoints.map((step, index) => (
             <li
               key={step.number}
               className={[
                 "border-b border-strong/15 py-8 lg:border-b-0 lg:border-t-0 lg:px-6",
-                index < methodSteps.length - 1 ? "lg:border-r lg:border-strong/15" : "",
+                index < phaseOneTouchpoints.length - 1 ? "lg:border-r lg:border-strong/15" : "",
                 index === 0 ? "lg:pl-0" : "",
-                index === methodSteps.length - 1 ? "lg:pr-0" : "",
+                index === phaseOneTouchpoints.length - 1 ? "lg:pr-0" : "",
               ].join(" ")}
             >
               <p className="mb-8 font-serif text-[56px] leading-none text-accent tabular-nums">
@@ -592,7 +593,7 @@ function QuoinMethodSection() {
           </p>
           <Link href="/method" className="cta-primary inline-flex self-start items-center gap-2 text-[15px] font-medium">
             <span>See the full method</span>
-            <span aria-hidden="true">-&gt;</span>
+            <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
       </div>

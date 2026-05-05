@@ -3,37 +3,45 @@
 import Link from "next/link"
 import { BlurFade } from "@/components/ui/blur-fade"
 
-const touchpoints = [
+const operatingPhases = [
   {
     number: "01",
-    title: "Strategy and scope",
+    title: "Map the workflow",
     body:
-      "Define the business pressure, candidate operating areas, sponsor goals, constraints, decision rights, and the first workflow boundary.",
+      "Surface how the work actually happens. Systems, roles, exceptions, approvals, source trust, and value, across operators, regional managers, asset teams, and leadership.",
   },
   {
     number: "02",
-    title: "Workflow interviews",
+    title: "Build the intelligence layer",
     body:
-      "Use role-aware voice interviews to capture how work actually happens, including exceptions, workarounds, informal judgment, and handoffs.",
+      "Turn interviews and approved evidence into structured workflow objects, source inventory, decision rights, governance rules, readiness scores, and the artifact baseline.",
   },
   {
     number: "03",
-    title: "Evidence and data request",
+    title: "Build the agent",
     body:
-      "Collect approved artifacts, redacted examples, screenshots, reports, field lists, policies, system context, and walkthrough notes.",
+      "Translate the approved baseline into agents, automations, connectors, review queues, evals, audit trails, and the operating interfaces your team will actually use.",
   },
   {
     number: "04",
-    title: "Governance validation",
+    title: "Deploy with controls",
     body:
-      "Resolve trusted sources, owners, access paths, sensitivity, retention, permitted AI actions, prohibited behaviors, and escalation paths.",
+      "Production rollout under permitted and prohibited actions, human-review thresholds, access boundaries, escalation paths, and full audit logging.",
   },
   {
     number: "05",
-    title: "Decision and handoff",
+    title: "Manage continuously",
     body:
-      "Deliver the private intelligence workspace, readiness score, agent behavior contract, governed build path, and managed lifecycle plan.",
+      "Quality, drift, overrides, incidents, adoption, access reviews, workflow changes, and expansion decisions, owned and operated as workflows and policies evolve.",
   },
+]
+
+const mappingTouchpoints = [
+  { number: "01", title: "Strategy and scope" },
+  { number: "02", title: "Workflow interviews" },
+  { number: "03", title: "Evidence and data request" },
+  { number: "04", title: "Governance validation" },
+  { number: "05", title: "Decision and handoff" },
 ]
 
 const mappingRows = [
@@ -293,16 +301,16 @@ export function MethodContent() {
         <div className="container-shell">
           <BlurFade inView direction="up">
             <SectionHeading
-              eyebrow="Client experience"
-              title="Five touchpoints, not nineteen interruptions."
-              body="The client experience is deliberately batched. Leadership, operators, technology, governance, and data owners each get pulled in when their judgment changes the recommendation."
+              eyebrow="The five operating phases"
+              title="Map. Build the intelligence layer. Build the agent. Deploy. Manage."
+              body="One canonical model from first conversation to managed operations. Each phase produces an inspectable artifact that the next phase depends on. You can stop after any phase."
             />
           </BlurFade>
 
           <ol className="mt-14 grid grid-cols-1 border-t border-strong md:mt-18 lg:grid-cols-5 lg:border-t-0">
-            {touchpoints.map((touchpoint, index) => (
+            {operatingPhases.map((phase, index) => (
               <BlurFade
-                key={touchpoint.number}
+                key={phase.number}
                 inView
                 delay={0.05 + index * 0.05}
                 direction="up"
@@ -310,20 +318,20 @@ export function MethodContent() {
                 <li
                   className={[
                     "border-b border-strong py-8 lg:border-b-0 lg:border-t lg:py-10",
-                    index < touchpoints.length - 1
+                    index < operatingPhases.length - 1
                       ? "lg:border-r lg:pr-8"
                       : "",
                     index > 0 ? "lg:pl-8" : "",
                   ].join(" ")}
                 >
                   <p className="font-serif text-[54px] leading-none tracking-normal text-accent tabular-nums">
-                    {touchpoint.number}
+                    {phase.number}
                   </p>
                   <h3 className="mt-6 text-[21px] font-medium leading-[1.25] tracking-normal text-ink-primary">
-                    {touchpoint.title}
+                    {phase.title}
                   </h3>
                   <p className="mt-4 text-[15px] leading-[1.6] text-ink-secondary">
-                    {touchpoint.body}
+                    {phase.body}
                   </p>
                 </li>
               </BlurFade>
@@ -331,6 +339,29 @@ export function MethodContent() {
           </ol>
 
           <BlurFade inView delay={0.15} direction="up">
+            <div className="mt-12 grid grid-cols-1 gap-8 border-t border-strong/15 pt-10 md:grid-cols-[1fr_2fr] md:gap-12">
+              <div>
+                <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-accent">
+                  Inside step 01
+                </p>
+                <p className="mt-3 text-[16px] leading-[1.55] text-ink-secondary">
+                  Map the workflow happens through five batched client
+                  touchpoints, not nineteen interruptions.
+                </p>
+              </div>
+              <ol className="grid grid-cols-1 gap-3 sm:grid-cols-5">
+                {mappingTouchpoints.map((touchpoint) => (
+                  <li key={touchpoint.number} className="border-l border-strong/30 pl-3">
+                    <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-ink-muted tabular-nums">
+                      {touchpoint.number}
+                    </p>
+                    <p className="mt-1 text-[13px] font-medium leading-[1.3] text-ink-primary">
+                      {touchpoint.title}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </div>
             <p className="mt-10 border-l border-accent pl-6 text-[15px] leading-[1.65] text-ink-secondary">
               No production access required to start. Redacted evidence
               accepted. Client owns the output. Recommendations remain
