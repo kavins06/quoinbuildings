@@ -79,25 +79,22 @@ export function Hero() {
               <BlurFade inView delay={0.1} direction="up">
                 <h1
                   id="hero-heading"
-                  className="font-serif text-balance text-white font-normal leading-[1.02] tracking-normal text-[clamp(1.8rem,4vw,3.5rem)]"
+                  className="font-serif text-balance text-white font-normal leading-[1.02] tracking-normal text-[clamp(1.9rem,4.4vw,3.75rem)]"
                 >
-                  The AI operating partner for vertically integrated real
-                  estate companies.
+                  AI adoption has outrun operating readiness in real estate.
                 </h1>
               </BlurFade>
 
               <BlurFade inView delay={0.2} direction="up">
                 <p className="mt-6 measure text-white text-[16px] leading-[1.55] sm:hidden">
-                  Quoin maps how your company actually works, builds the
-                  intelligence layer required for safe AI, then builds,
-                  deploys, governs, and manages agents inside your operating
-                  workflows.
+                  Quoin gives REITs and large operators the workflow map,
+                  control model, and governed agents institutional AI requires.
+                  AI-assisted work, expert-owned decisions.
                 </p>
                 <p className="mt-8 hidden measure text-white text-[16px] leading-[1.55] sm:block md:text-[18px]">
-                  Quoin maps how your company actually works, builds the
-                  intelligence layer required for safe AI, then builds,
-                  deploys, governs, and manages agents inside your operating
-                  workflows.
+                  Quoin gives REITs and large operators the workflow map,
+                  control model, and governed agents institutional AI requires.
+                  AI-assisted work, expert-owned decisions.
                 </p>
               </BlurFade>
 
@@ -107,7 +104,7 @@ export function Hero() {
                     href="/contact"
                     className="cta-primary text-[15px] font-medium tracking-[0.01em] inline-flex items-center gap-2 self-start !text-white !border-b-white hover:!text-white/80 hover:!border-b-white/80"
                   >
-                    <span>Discuss AI operating value</span>
+                    <span>Map one operating area with us</span>
                     <span aria-hidden="true">&rarr;</span>
                   </Link>
                   <Link
@@ -117,6 +114,26 @@ export function Hero() {
                     <span>See the method</span>
                     <span aria-hidden="true">&rarr;</span>
                   </Link>
+                </div>
+              </BlurFade>
+
+              <BlurFade inView delay={0.4} direction="up">
+                <div className="mt-10 border-t border-white/25 pt-6 xl:hidden">
+                  <p className="mb-4 text-[10px] font-medium uppercase tracking-[0.18em] text-white/60">
+                    What Quoin does
+                  </p>
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-5">
+                    {proofRows.map((row) => (
+                      <div key={row.label} className="border-l border-white/30 pl-3">
+                        <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-white/55">
+                          {row.label}
+                        </p>
+                        <p className="mt-1 text-[13px] font-medium leading-[1.25] text-white">
+                          {row.value}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </BlurFade>
             </div>

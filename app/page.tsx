@@ -5,9 +5,9 @@ import { Hero } from "@/components/hero"
 import { createPageMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Quoin | AI Operating Partner for Real Estate Companies",
+  title: "Quoin | Governed AI for Real Estate Operations",
   description:
-    "Quoin maps real estate workflows, builds the intelligence layer required for safe AI, then builds, deploys, governs, and manages agents inside operating workflows.",
+    "AI adoption has outrun operating readiness in real estate. Quoin gives REITs and large operators the workflow map, control model, and governed agents institutional AI requires.",
   path: "/",
   image: "/hero-bg.jpg",
   keywords: [
@@ -16,6 +16,7 @@ export const metadata: Metadata = createPageMetadata({
     "AI governance for real estate companies",
     "AI for vertically integrated real estate companies",
     "managed AI operations",
+    "governed AI agents REIT",
   ],
   absoluteTitle: true,
 })
