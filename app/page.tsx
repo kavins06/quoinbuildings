@@ -712,7 +712,7 @@ function HumanAccountabilitySection() {
                   alt={member.name}
                   fill
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-cover grayscale transition duration-500 group-hover:scale-[1.02] group-hover:grayscale-0"
+                  className="object-cover object-[center_16%] grayscale transition duration-500 group-hover:scale-[1.02] group-hover:grayscale-0"
                 />
               </div>
               <div className="p-5 md:p-6">

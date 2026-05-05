@@ -51,12 +51,13 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative flex min-h-[92dvh] flex-col overflow-hidden bg-surface-base pt-[calc(45px+1.75rem)] pb-24 md:pt-[calc(54px+2.75rem)] md:pb-16 lg:pt-[calc(54px+4rem)] lg:pb-16"
+      className="relative flex min-h-[100svh] flex-col overflow-hidden bg-surface-inverse pt-[calc(45px+1.75rem)] pb-12 md:min-h-[100dvh] md:pt-[calc(54px+2.75rem)] md:pb-16 lg:pt-[calc(54px+4rem)]"
     >
       <video
         ref={videoRef}
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[52%_50%] md:object-center"
         src="/hero-bg.webm"
+        poster="/hero-bg.jpg"
         autoPlay
         muted
         loop
@@ -65,9 +66,9 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="container-shell relative z-10 flex flex-1 flex-col">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch flex-1">
-          <div className="lg:col-span-7 flex flex-col">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-1 flex-col px-6 lg:px-20 2xl:max-w-[1520px]">
+        <div className="grid flex-1 grid-cols-1 items-stretch gap-y-10 xl:grid-cols-[minmax(0,1.08fr)_clamp(4rem,8vw,9rem)_minmax(25rem,0.82fr)]">
+          <div className="flex flex-col xl:col-start-1 xl:-translate-x-3 2xl:-translate-x-6">
             <div className="flex flex-1 flex-col justify-center">
               <BlurFade inView delay={0.05} direction="up">
                 <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-white mb-4">
@@ -123,9 +124,14 @@ export function Hero() {
 
           <aside
             aria-label="Proof summary"
-            className="hidden lg:block lg:col-span-5 lg:pt-1"
+            className="hidden xl:col-start-3 xl:flex xl:translate-x-3 xl:items-center xl:justify-end 2xl:translate-x-6"
           >
-            <BlurFade inView delay={0.35} direction="up">
+            <BlurFade
+              inView
+              delay={0.35}
+              direction="up"
+              className="w-full max-w-[28rem]"
+            >
               <div className="relative overflow-hidden border border-strong bg-black/30 min-h-[430px]">
                 <div className="relative z-10 flex min-h-[430px] flex-col justify-start p-5 md:p-6">
                   <p className="mb-5 max-w-[26ch] font-serif text-[24px] leading-[1.13] tracking-normal text-white md:text-[29px]">

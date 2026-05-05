@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation"
 import { AnimatedLogo } from "@/components/ui/animated-logo"
 
 const navLinks = [
-  { label: "Operating Partner", href: "/" },
   { label: "Method", href: "/method" },
   { label: "Intelligence Platform", href: "/platform" },
   { label: "Team", href: "/team" },
@@ -21,6 +20,7 @@ export function Navigation() {
   const pathname = usePathname()
   const isLandingPage = pathname === "/"
   const isTransparentLanding = isLandingPage && !scrolled
+  const collapseBrand = isLandingPage && scrolled
   const navBackgroundOpacity = isTransparentLanding ? 0 : 0.5
 
   useEffect(() => {
@@ -47,13 +47,25 @@ export function Navigation() {
       >
         <Link
           href="/"
+          aria-label="Quoin home"
           className={[
-            "flex items-center gap-1.5 font-serif text-lg md:text-xl transition-colors duration-200",
+            "flex w-[6rem] items-center justify-center font-serif text-lg md:w-[6.5rem] md:text-xl transition-colors duration-200",
             isTransparentLanding ? "text-white" : "text-ink-primary",
           ].join(" ")}
         >
-          QUOIN
+          <span
+            aria-hidden="true"
+            className={[
+              "overflow-hidden whitespace-nowrap transition-[width,margin,opacity] duration-200 ease-out",
+              collapseBrand
+                ? "mr-0 w-0 opacity-0"
+                : "mr-1.5 w-[3.35rem] opacity-100 md:w-[3.75rem]",
+            ].join(" ")}
+          >
+            QUOIN
+          </span>
           <AnimatedLogo
+            alt=""
             size={32}
             float={false}
             priority
