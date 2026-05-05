@@ -1,10 +1,16 @@
 import { defineConfig, devices } from "@playwright/test"
+import os from "node:os"
+import path from "node:path"
 
 const PORT = process.env.PORT ?? "3000"
 const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? `http://localhost:${PORT}`
+const outputDir =
+  process.env.PLAYWRIGHT_OUTPUT_DIR ??
+  path.join(os.tmpdir(), "quoin-playwright-results")
 
 export default defineConfig({
   testDir: "./e2e",
+  outputDir,
   timeout: 60_000,
   expect: { timeout: 5_000 },
   fullyParallel: true,
@@ -23,8 +29,11 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"] },
     },
     {
-      name: "mobile",
-      use: { ...devices["iPhone 13"] },
+      name: "mobile-chromium",
+      use: {
+        ...devices["Pixel 5"],
+        browserName: "chromium",
+      },
     },
   ],
   webServer: process.env.PLAYWRIGHT_BASE_URL

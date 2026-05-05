@@ -61,7 +61,7 @@ export function PageHeader({
         <BlurFade delay={0.4} direction="up" offset={6}>
           <h1
             className={cn(
-              "text-[clamp(2rem,5vw,3.5rem)] font-normal leading-[1.1] tracking-[-0.02em] text-balance",
+              "font-serif text-[clamp(2rem,5vw,3.5rem)] font-normal leading-[1.1] tracking-normal text-balance",
               backgroundImage ? "text-white" : "text-ink-primary",
             )}
           >

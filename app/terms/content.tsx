@@ -12,7 +12,7 @@ const sections = [
   {
     title: "Description of Services",
     content:
-      "Quoin Buildings provides AI consulting and advisory services for property management firms. This website provides information about our services, our team, and our approach, and offers a means to contact us. The content on this site is for informational purposes.",
+      "Quoin Buildings provides AI operating partner services for vertically integrated real estate companies. This website provides information about our work, our team, and our operating method, and offers a means to contact us. The content on this site is for informational purposes.",
   },
   {
     title: "Intellectual Property",
@@ -60,7 +60,7 @@ export function TermsContent() {
           {sections.map((section, index) => (
             <BlurFade key={section.title} inView direction="up" delay={0.05}>
               <div className="py-8 border-b border-border last:border-b-0">
-                <h2 className="text-lg md:text-xl font-normal tracking-tight text-foreground mb-4">
+                <h2 className="text-lg md:text-xl font-normal tracking-normal text-foreground mb-4">
                   {section.title}
                 </h2>
                 <p className="text-sm leading-[1.85] text-muted-foreground">

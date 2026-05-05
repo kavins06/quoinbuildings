@@ -11,11 +11,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', 'DM Sans', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-sans)', 'IBM Plex Sans', 'system-ui', 'sans-serif'],
         serif: ['var(--font-serif)', 'Instrument Serif', 'Georgia', 'serif'],
       },
       colors: {
-        // Semantic trust-system tokens (DESIGN.md Editorial-Architectural)
         surface: {
           base: 'hsl(var(--surface-base))',
           raised: 'hsl(var(--surface-raised))',
@@ -40,8 +39,6 @@ const config: Config = {
           strong: 'hsl(var(--border-strong))',
           hairline: 'hsl(var(--border-hairline) / 0.15)',
         },
-
-        // shadcn compatibility (unchanged API for existing components)
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -76,37 +73,8 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
-        },
-        'fade-rise': {
-          from: { opacity: '0', transform: 'translateY(8px)' },
-          to: { opacity: '1', transform: 'translateY(0)' },
-        },
-        marquee: {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(calc(-100% - var(--gap)))' },
-        },
-        'marquee-vertical': {
-          from: { transform: 'translateY(0)' },
-          to: { transform: 'translateY(calc(-100% - var(--gap)))' },
-        },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-rise': 'fade-rise 400ms ease-out',
-        marquee: 'marquee var(--duration) linear infinite',
-        'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
-      },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [],
 }
 export default config

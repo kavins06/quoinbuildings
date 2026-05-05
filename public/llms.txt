@@ -1,34 +1,43 @@
 # Quoin Buildings
 
-> Quoin is the AI partner for owner/operators of real estate in the United States.
+> Quoin builds and operates governed AI agents for vertically integrated real estate companies.
 
-Quoin discovers, implements, and manages AI for firms that both own and operate their real estate: vertically integrated multifamily REITs and large private owner/operators. The firm runs the full AI lifecycle: identifying where AI moves IRR or operating margin in a specific firm, fixing the data foundation across the asset/operations seam, and running deployments end-to-end. Quoin is positioned as a senior, vendor-neutral, outcome-accountable partner. Not a consulting deck. Not a software vendor. Not a fractional team.
+Quoin makes real estate companies queryable, governable, and agent-ready, then builds and manages the AI agents, automations, integrations, controls, and operating infrastructure that run inside their workflows. Quoin is not a strategy-only consulting firm and not a point-solution software vendor. It is an AI operating partner for clients that need production AI inside real estate operations with governance, security, monitoring, and day-to-day operating accountability.
 
 ## Who this is for
 
-- Senior leadership (CEO, COO, President) at owner/operator firms in real estate
-- Vertically integrated multifamily REITs (e.g., Camden, AvalonBay, MAA, UDR, Essex)
-- Large private owner/operators (Cortland, Bell Partners, Trinity Property Consultants, regional firms with internal operations)
-- Firms with 2,000+ units or 1M+ square feet of owned, operated real estate
+- Senior leadership at vertically integrated real estate companies
+- Vertically integrated REITs and large private real estate companies
+- Real estate companies with in-house operating platforms
+- Firms with multi-property, multi-region, or multi-system complexity
+- Leadership teams that need AI to affect operating capacity, reporting quality, risk control, and portfolio performance
 
 ## Who this is not for
 
-- Pure-play asset managers / external managers (they do not operate)
-- Pure-play third-party property managers (they do not own)
-- Family offices and small private investors below ~$500M AUM
+- Pure asset managers with no operating control
+- Pure third-party property managers with no asset-side decision authority
+- Companies looking only for a chatbot
+- Companies that want isolated AI demos without changing workflows, controls, or operating ownership
+
+## Core Model
+
+1. Map the workflow: systems, roles, exceptions, approvals, source trust, and value.
+2. Build the intelligence layer: workflow objects, source inventory, decision rights, governance, readiness, and evidence.
+3. Build the agent: agents, automations, connectors, review queues, evals, audit trails, and operating interfaces.
+4. Deploy with controls: permitted actions, prohibited actions, human review, access boundaries, escalation, and logging.
+5. Manage continuously: quality, drift, overrides, incidents, adoption, access reviews, workflow changes, and expansion decisions.
 
 ## Core Pages
 
-- [AI for Real Estate Owner/Operators](https://quoinbuildings.com/owner-operators): The primary buyer-specific page. The pattern Quoin sees inside owner/operator firms, the discover/implement/manage lifecycle, who the engagement is and is not for, what 90 days looks like.
-- [AI Readiness Assessment](https://quoinbuildings.com/assessment): Five-minute diagnostic. Returns a score, peer benchmark, and three personalized recommendations specific to the firm.
-- [AI for Property Management Firms](https://quoinbuildings.com/ai-for-property-management): Maintained for the existing SEO cluster.
-- [AI for Asset Management Firms](https://quoinbuildings.com/ai-for-asset-management): Maintained for the existing SEO cluster.
-- [Managed AI Operations](https://quoinbuildings.com/managed-ai-operations): Quoin's model for ongoing AI monitoring, governance, evaluation, workflow expansion, and improvement after deployment.
-- [AI Governance for Property Management](https://quoinbuildings.com/ai-governance-property-management): Fair housing, tenant data privacy, audit trails, access control, human review, and bias monitoring.
+- [Operating Partner](https://quoinbuildings.com/): Positioning, value case, build/manage examples, operating partner model, platform summary, team accountability, and fit.
+- [Method](https://quoinbuildings.com/method): Conservative workflow, evidence, governance, readiness, and build-path method.
+- [Intelligence Platform](https://quoinbuildings.com/platform): Private operating intelligence workspace that becomes the build system for governed agents.
+- [Team](https://quoinbuildings.com/team): Quoin team, roles, institutional experience, and operating model.
+- [Contact](https://quoinbuildings.com/contact): Request an executive operating conversation.
 
 ## Best Summary
 
-Quoin is the AI partner built for the seam between asset decisions and operations. The firms that own and operate are the only ones who can deploy AI across that seam, and they are the only firms Quoin works with. The engagement runs the full lifecycle in 90 days: discover where AI fits a specific firm, implement the data foundation and the workflows, then manage them in production. No internal AI team to hire, no consulting deck that becomes shelfware.
+Quoin builds the organizational intelligence layer and governed AI operating infrastructure for vertically integrated real estate companies. The reason Quoin can build safe AI agents is that it first makes the company queryable, governable, and agent-ready. After launch, Quoin manages the AI infrastructure so agents remain useful, controlled, and aligned with changing workflows, systems, policies, portfolios, and risk posture.
 
 ## Contact
 

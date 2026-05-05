@@ -9,6 +9,7 @@ type ContactPayload = {
   email?: string
   role?: string
   propertyType?: string
+  currentAiActivity?: string
   portfolioUnits?: string
   portfolioSqFt?: string
   message?: string
@@ -70,6 +71,7 @@ export async function POST(request: Request) {
         email: body.email,
         role: body.role ?? "",
         propertyType: body.propertyType ?? "",
+        currentAiActivity: body.currentAiActivity ?? "",
         portfolioUnits: body.portfolioUnits ?? "",
         portfolioSqFt: body.portfolioSqFt ?? "",
         message: body.message,

@@ -1,12 +1,9 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Link from "next/link"
 import { motion, AnimatePresence } from "motion/react"
 
 const STORAGE_KEY = "quoin-cookie-consent"
-
-type Choice = "accepted" | "rejected"
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false)
@@ -37,11 +34,11 @@ export function CookieBanner() {
     return () => window.removeEventListener("quoin:open-cookie-banner", open)
   }, [])
 
-  const decide = (choice: Choice) => {
+  const acknowledge = () => {
     try {
       localStorage.setItem(
         STORAGE_KEY,
-        JSON.stringify({ choice, ts: Date.now() }),
+        JSON.stringify({ choice: "accepted", ts: Date.now() }),
       )
     } catch {
       // ignore
@@ -60,52 +57,23 @@ export function CookieBanner() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{
-            duration: 0.4,
+            duration: 0.32,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="fixed z-[60] bottom-4 left-4 right-4 md:bottom-6 md:right-6 md:left-auto md:max-w-[480px]"
+          className="fixed inset-x-0 bottom-3 z-[60] flex justify-center px-4 md:bottom-8"
         >
-          <div className="bg-background/95 backdrop-blur-md text-foreground border border-border rounded-sm shadow-[0_18px_48px_-16px_rgba(0,0,0,0.22)]">
-            <div className="p-4 md:p-5 flex flex-col gap-3 md:gap-4">
-              <div>
-                <p className="hidden md:block text-[11px] tracking-[0.25em] uppercase text-muted-foreground/60 mb-2">
-                  Cookies
-                </p>
-                <p className="text-[12px] md:text-[13px] leading-[1.5] md:leading-[1.6] text-foreground/80">
-                  <span className="md:hidden">
-                    We use cookies for security, preferences, and analytics.{" "}
-                  </span>
-                  <span className="hidden md:inline">
-                    We use a small number of cookies to keep the site secure, remember
-                    your preferences, and understand which pages are useful.{" "}
-                  </span>
-                  See our{" "}
-                  <Link
-                    href="/privacy"
-                    className="underline underline-offset-2 decoration-accent hover:text-foreground"
-                  >
-                    Privacy Policy
-                  </Link>
-                  <span className="hidden md:inline"> for details</span>
-                  .
-                </p>
-              </div>
-              <div className="flex items-center gap-2.5 md:gap-3">
-                <button
-                  onClick={() => decide("rejected")}
-                  className="flex-1 md:flex-none inline-flex items-center justify-center text-[11px] tracking-[0.2em] uppercase px-4 md:px-5 py-3 border border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground transition-colors duration-200 rounded-sm min-h-[44px]"
-                >
-                  <span className="md:hidden">Reject</span>
-                  <span className="hidden md:inline">Reject non-essential</span>
-                </button>
-                <button
-                  onClick={() => decide("accepted")}
-                  className="flex-1 md:flex-none inline-flex items-center justify-center text-[11px] tracking-[0.2em] uppercase px-4 md:px-5 py-3 bg-foreground text-background hover:bg-foreground/90 transition-colors duration-200 rounded-sm min-h-[44px]"
-                >
-                  Accept all
-                </button>
-              </div>
-            </div>
+          <div className="flex w-full max-w-[528px] items-start gap-4 border border-black/10 bg-white/95 px-4 py-3 text-ink-primary md:items-center md:gap-8 md:px-6 md:py-5">
+            <p className="flex-1 text-[13px] font-medium leading-[1.35] text-ink-secondary md:text-[18px] md:leading-[1.25]">
+              We use cookies to keep the site secure, remember preferences, and
+              analyze traffic.
+            </p>
+            <button
+              type="button"
+              onClick={acknowledge}
+              className="shrink-0 bg-[#ecebe8] px-3 py-2 text-[13px] font-medium leading-none text-ink-primary transition-colors duration-200 hover:bg-[#deddd9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:px-4 md:py-3 md:text-[15px]"
+            >
+              Okay
+            </button>
           </div>
         </motion.div>
       )}

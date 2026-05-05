@@ -4,10 +4,10 @@
 
 @layer base {
   :root {
-    /* Surfaces: DESIGN.md Editorial-Architectural palette */
-    --surface-base: 38 38% 95%;      /* #F8F4ED warm paper */
-    --surface-raised: 38 38% 95%;    /* same as base, no card-on-card depth */
-    --surface-sunken: 40 35% 89%;    /* #F0EAD8 paper-deep */
+    /* Surfaces: institutional white with restrained near-white depth */
+    --surface-base: 0 0% 100%;       /* #FFFFFF */
+    --surface-raised: 0 0% 100%;     /* same as base, no card-on-card depth */
+    --surface-sunken: 0 0% 96%;      /* #F5F5F5 near-white */
     --surface-inverse: 0 0% 10%;     /* #1A1A1A */
 
     /* Text */
@@ -15,11 +15,11 @@
     --text-secondary: 0 0% 29%;      /* #4A4A4A */
     --text-muted: 0 0% 48%;          /* #7A7A7A */
 
-    /* Accent: editorial red, replaces the retired accent */
-    --accent: 355 60% 49%;           /* #C8323C */
+    /* Accent: institutional dark green */
+    --accent: 153 40% 30%;           /* #2D6A4F */
 
     /* Borders */
-    --border-subtle: 38 28% 86%;     /* hairline-tinted to paper */
+    --border-subtle: 0 0% 88%;       /* neutral hairline */
     --border-strong: 0 0% 10%;       /* #1A1A1A */
     --border-hairline: 0 0% 10%;     /* used at 15% opacity in classes */
 
@@ -37,8 +37,8 @@
     --muted: var(--surface-sunken);
     --muted-foreground: var(--text-secondary);
     --accent-foreground: var(--surface-base);
-    --destructive: 355 60% 49%;
-    --destructive-foreground: 38 38% 95%;
+    --destructive: var(--accent);
+    --destructive-foreground: 0 0% 100%;
     --border: var(--border-subtle);
     --input: var(--border-subtle);
     --ring: var(--accent);
@@ -55,9 +55,10 @@
   }
   body {
     @apply bg-surface-base text-ink-primary;
-    font-family: var(--font-sans), "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: var(--font-sans), "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
   }
-  h1, h2, h3, blockquote {
+  blockquote {
     font-family: var(--font-serif), "Instrument Serif", Georgia, serif;
     font-feature-settings: 'kern' 1, 'liga' 1;
     text-rendering: optimizeLegibility;
@@ -91,6 +92,10 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .font-serif {
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    text-rendering: optimizeLegibility;
   }
   .measure {
     max-width: 68ch;

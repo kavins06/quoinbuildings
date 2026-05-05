@@ -1,6 +1,6 @@
 # Quoin Website
 
-Marketing site for [Quoin](https://quoinbuildings.com) — AI operating partner for property and asset management firms.
+Marketing site for [Quoin](https://quoinbuildings.com): Quoin maps real estate workflows, builds the intelligence layer required for safe AI, then builds, deploys, governs, and manages agents inside operating workflows.
 
 Built with Next.js 16 (App Router), Tailwind CSS, Magic UI / shadcn primitives, and motion. Deployed on Vercel from the `master` branch.
 
@@ -27,17 +27,16 @@ The dev server runs on [http://localhost:3000](http://localhost:3000).
 | `pnpm build`    | Production build (run before deploying)       |
 | `pnpm start`    | Run the production build locally              |
 | `pnpm lint`     | ESLint over the repo                          |
-| `pnpm exec tsc --noEmit` | Typecheck without emitting files     |
+| `pnpm typecheck` | Typecheck without emitting files          |
+| `pnpm test`     | Run unit tests                            |
 
 ## Project layout
 
 ```
 app/              Next.js App Router pages and route segments
-components/       Reusable UI components (incl. components/ui primitives)
-lib/              Shared utilities (cn, etc.)
-public/           Static assets (logos, images, fonts referenced by /)
-styles/           Global stylesheets (imported via app/globals.css)
-docs/             Internal design / spec notes (not shipped)
+components/       Reusable UI components
+lib/              Shared SEO and utility helpers
+public/           Static assets referenced by the current site
 ```
 
 ## Environment variables
@@ -59,7 +58,7 @@ Security headers (CSP, HSTS, X-Frame-Options, Referrer-Policy, Permissions-Polic
 ## Contributing
 
 1. Branch from `master`.
-2. Run `pnpm exec tsc --noEmit && pnpm lint && pnpm build` locally before opening a PR.
+2. Run `pnpm typecheck && pnpm lint && pnpm test && pnpm build` locally before opening a PR.
 3. CI must pass. The PR template covers the rest.
 
 ## Contact

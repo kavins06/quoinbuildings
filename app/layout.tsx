@@ -1,6 +1,6 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { DM_Sans, Instrument_Serif } from 'next/font/google'
+import { IBM_Plex_Sans, Instrument_Serif } from 'next/font/google'
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { CookieBanner } from "@/components/cookie-banner"
@@ -9,10 +9,10 @@ import { defaultDescription, organizationJsonLd, siteName, siteUrl, websiteJsonL
 
 import './globals.css'
 
-const dmSans = DM_Sans({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
-  weight: ['400', '500', '700'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: siteName,
   title: {
-    default: "Quoin | Your AI Operating Partner",
+    default: "Quoin | Governed AI Agents for Real Estate Companies",
     template: "%s | Quoin",
   },
   description: defaultDescription,
@@ -35,6 +35,8 @@ export const metadata: Metadata = {
     "AI for property management",
     "AI for asset management",
     "AI for REITs",
+    "AI agents for real estate companies",
+    "organizational intelligence real estate",
     "managed AI operations",
     "AI governance real estate",
     "real estate AI operations",
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Quoin | Your AI Operating Partner",
+    title: "Quoin | Governed AI Agents for Real Estate Companies",
     description: defaultDescription,
     url: siteUrl,
     siteName,
@@ -58,13 +60,13 @@ export const metadata: Metadata = {
         url: "/hero-bg.jpg",
         width: 1200,
         height: 630,
-        alt: "Quoin AI operating partner for property and asset management firms",
+        alt: "Quoin governed AI agents for vertically integrated real estate companies",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quoin | Your AI Operating Partner",
+    title: "Quoin | Governed AI Agents for Real Estate Companies",
     description: defaultDescription,
     images: ["/hero-bg.jpg"],
   },
@@ -91,7 +93,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={`${ibmPlexSans.variable} ${instrumentSerif.variable}`}>
       <body className="font-sans antialiased bg-surface-base text-ink-primary paper-grain">
         <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
         <a

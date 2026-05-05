@@ -4,45 +4,14 @@ export const siteUrl = "https://quoinbuildings.com"
 export const siteName = "Quoin"
 export const companyName = "Quoin Buildings, LLC"
 export const defaultDescription =
-  "Quoin helps real estate owner/operators make AI operational, governed, and measurable inside daily workflows."
+  "Quoin maps real estate workflows, builds the intelligence layer required for safe AI, then builds, deploys, governs, and manages agents inside operating workflows."
 
 export const publicRoutes = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
-  { path: "/owner-operators", priority: 0.95, changeFrequency: "monthly" },
-  { path: "/assessment", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/who-we-help", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/services", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/approach", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/governance", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/ai-for-property-management", priority: 0.95, changeFrequency: "monthly" },
-  { path: "/ai-maintenance-triage-property-management", priority: 0.88, changeFrequency: "monthly" },
-  { path: "/ai-leasing-automation-property-management", priority: 0.88, changeFrequency: "monthly" },
-  { path: "/property-management-ai-software-vs-operating-partner", priority: 0.85, changeFrequency: "monthly" },
-  { path: "/ai-for-asset-management", priority: 0.95, changeFrequency: "monthly" },
-  { path: "/managed-ai-operations", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/ai-readiness-property-management", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/ai-governance-property-management", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/method", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/platform", priority: 0.9, changeFrequency: "monthly" },
   { path: "/team", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/perspectives", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/perspectives/why-ai-pilots-are-failing", priority: 0.85, changeFrequency: "monthly" },
-  {
-    path: "/perspectives/the-governance-gap-why-property-management-firms-cant-scale-ai",
-    priority: 0.8,
-    changeFrequency: "monthly",
-  },
-  {
-    path: "/perspectives/what-property-management-needs-from-an-ai-partner",
-    priority: 0.8,
-    changeFrequency: "monthly",
-  },
-  {
-    path: "/perspectives/the-real-time-loop-asset-manager-ai",
-    priority: 0.8,
-    changeFrequency: "monthly",
-  },
   { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/responsible-ai", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/data-security", priority: 0.6, changeFrequency: "monthly" },
   { path: "/accessibility", priority: 0.3, changeFrequency: "yearly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.3, changeFrequency: "yearly" },
@@ -123,6 +92,8 @@ export const organizationJsonLd = {
   },
   sameAs: ["https://linkedin.com/company/quoinbuildings"],
   knowsAbout: [
+    "Organizational intelligence",
+    "AI agents for real estate companies",
     "AI for property management",
     "AI for asset management",
     "Managed AI operations",
@@ -154,85 +125,5 @@ export function breadcrumbJsonLd(items: Array<{ name: string; path: string }>) {
       name: item.name,
       item: absoluteUrl(item.path),
     })),
-  }
-}
-
-export function serviceJsonLd(input: {
-  name: string
-  description: string
-  path: string
-  serviceType: string
-  audience?: string
-}) {
-  const serviceId = input.serviceType
-    .toLowerCase()
-    .replace(/&/g, "and")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "")
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${absoluteUrl(input.path)}#${serviceId}`,
-    name: input.name,
-    description: input.description,
-    serviceType: input.serviceType,
-    url: absoluteUrl(input.path),
-    provider: {
-      "@id": `${siteUrl}/#organization`,
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "United States",
-    },
-    audience: {
-      "@type": "BusinessAudience",
-      audienceType:
-        input.audience ?? "Executives at property management and asset management firms",
-    },
-  }
-}
-
-export function faqJsonLd(items: Array<{ question: string; answer: string }>) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: items.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  }
-}
-
-export function articleJsonLd(input: {
-  title: string
-  description: string
-  path: string
-  datePublished: string
-  dateModified?: string
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: input.title,
-    description: input.description,
-    datePublished: input.datePublished,
-    dateModified: input.dateModified ?? input.datePublished,
-    mainEntityOfPage: absoluteUrl(input.path),
-    author: {
-      "@type": "Person",
-      name: "Kavin Sakthivel",
-      jobTitle: "CEO & Chief Engineer",
-      worksFor: {
-        "@id": `${siteUrl}/#organization`,
-      },
-    },
-    publisher: {
-      "@id": `${siteUrl}/#organization`,
-    },
   }
 }
