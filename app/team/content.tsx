@@ -219,7 +219,7 @@ export function TeamContent() {
                         alt={member.name}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover object-[center_16%] grayscale transition duration-500 group-hover:scale-[1.02] group-hover:grayscale-0"
+                        className="object-cover object-[center_16%] transition duration-500 group-hover:scale-[1.02]"
                       />
                     ) : (
                       <span className="flex h-full items-center justify-center text-4xl font-normal tracking-wider text-ink-muted">

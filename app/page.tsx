@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { Hero } from "@/components/hero"
 import { createPageMetadata } from "@/lib/seo"
@@ -74,6 +75,39 @@ const failurePatterns = [
   "Workflow not mapped.",
   "Source of truth disputed.",
   "Control path unclear.",
+]
+
+const teamMembers = [
+  {
+    name: "Kavin Sakthivel",
+    domain: "Real Estate AI Strategy & Engineering",
+    photo: "/team-kavin.jpeg",
+  },
+  {
+    name: "Dr. Cynthia J. Mendoza",
+    domain: "Governance & Security Architecture",
+    photo: "/team-cynthia.png",
+  },
+  {
+    name: "Jonathan Morris",
+    domain: "REIT Operations & Investment Judgment",
+    photo: "/team-jonathan.png",
+  },
+  {
+    name: "Rohith Roshan",
+    domain: "Agent Architecture & Evaluation",
+    photo: "/team-rohith.png",
+  },
+  {
+    name: "Ricky Fauntleroy",
+    domain: "Cybersecurity & Deployment Infrastructure",
+    photo: "/team-ricky.png",
+  },
+  {
+    name: "Brandon Timpane",
+    domain: "Data Readiness & Enterprise Applications",
+    photo: "/team-brandon.png",
+  },
 ]
 
 const workspaceContents = [
@@ -175,6 +209,7 @@ export default function Page() {
       <OperatingPrinciplesSection />
       <OfferingsSection />
       <OperatingValueSection />
+      <OperatorsSection />
       <BuildManageSection />
       <OperatingPartnerModelSection />
       <PlatformSection />
@@ -353,16 +388,6 @@ function OperatingPrinciplesSection() {
             </article>
           ))}
         </div>
-
-        <div className="mt-8 flex items-center justify-end">
-          <Link
-            href="/team"
-            className="cta-primary inline-flex items-center gap-2 text-[14px] font-medium"
-          >
-            <span>Six operators behind the work</span>
-            <span aria-hidden="true">&rarr;</span>
-          </Link>
-        </div>
       </div>
     </section>
   )
@@ -484,7 +509,7 @@ function OperatingValueSection() {
               <ul className="mt-5 space-y-3 text-[14px] leading-[1.55] text-ink-secondary">
                 <li className="flex items-start gap-3">
                   <span className="mt-2 h-px w-5 shrink-0 bg-accent" aria-hidden="true" />
-                  <span>Three-week mapping engagement, no production access required.</span>
+                  <span>Two-week mapping engagement, no production access required.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-2 h-px w-5 shrink-0 bg-accent" aria-hidden="true" />
@@ -527,6 +552,67 @@ function OperatingValueSection() {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function OperatorsSection() {
+  return (
+    <section
+      aria-labelledby="operators-heading"
+      className="border-y border-strong bg-surface-sunken py-20 md:py-28"
+    >
+      <div className="container-shell">
+        <header className="mb-14 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+              The team
+            </p>
+            <h2
+              id="operators-heading"
+              className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-ink-primary"
+            >
+              Six operators behind the work.
+            </h2>
+          </div>
+          <div className="lg:col-span-6 lg:col-start-7">
+            <p className="measure text-[17px] leading-[1.6] text-ink-secondary">
+              Recommendations, build paths, and managed operations plans are
+              reviewed across real estate operations, AI architecture,
+              governance, infrastructure, and data readiness before they reach
+              the client.
+            </p>
+          </div>
+        </header>
+
+        <div className="grid grid-cols-1 gap-px bg-[hsl(var(--border-subtle))] md:grid-cols-2 lg:grid-cols-3">
+          {teamMembers.map((member) => (
+            <Link
+              key={member.name}
+              href="/team"
+              className="group bg-surface-base"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden bg-surface-sunken">
+                <Image
+                  src={member.photo}
+                  alt={member.name}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover object-[center_16%] transition duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div className="p-5 md:p-6">
+                <h3 className="text-[20px] font-medium leading-[1.25] text-ink-primary">
+                  {member.name}
+                </h3>
+                <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.14em] text-accent">
+                  {member.domain}
+                </p>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
