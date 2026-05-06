@@ -911,14 +911,83 @@ function PlatformMockup() {
             })}
           </ul>
 
-          <div className="mt-7 grid grid-cols-1 gap-4 border-t border-strong/15 pt-5 md:grid-cols-[10rem_1fr]">
-            <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
-              Control model
-            </p>
-            <p className="text-[14px] leading-[1.55] text-ink-secondary">
-              AI may classify and draft. Human approval required before
-              vendor assignment or resident-facing action.
-            </p>
+          <div className="mt-7 grid grid-cols-1 gap-4 border-t border-strong/15 pt-5">
+            <div>
+              <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
+                Truth profile &middot; warranty status
+              </p>
+              <div className="mt-3 flex w-full overflow-hidden border border-strong/20 text-[10px] font-medium uppercase tracking-[0.12em]">
+                {[
+                  { label: "Authoritative", active: false },
+                  { label: "De facto trusted", active: false },
+                  { label: "Disputed", active: true },
+                  { label: "Fragile", active: false },
+                  { label: "Unknown", active: false },
+                ].map((state, i, arr) => (
+                  <span
+                    key={state.label}
+                    className={[
+                      "flex-1 px-2 py-1.5 text-center",
+                      i < arr.length - 1 ? "border-r border-strong/20" : "",
+                      state.active
+                        ? "bg-accent text-white"
+                        : "bg-surface-base text-ink-muted",
+                    ].join(" ")}
+                  >
+                    {state.label}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-2 text-[11px] leading-[1.45] text-ink-muted">
+                PMS work order is authoritative. Warranty status sits in two
+                disagreeing systems &mdash; agents may flag, not act.
+              </p>
+            </div>
+
+            <div className="mt-2">
+              <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
+                Agent safety ladder &middot; current rung
+              </p>
+              <div className="mt-3 grid grid-cols-8 gap-px bg-strong/15">
+                {[
+                  { n: 1, label: "Read-only", phase: "current" },
+                  { n: 2, label: "Summarize", phase: "current" },
+                  { n: 3, label: "Classify / route", phase: "current" },
+                  { n: 4, label: "Recommend", phase: "active" },
+                  { n: 5, label: "Draft (human approval)", phase: "next" },
+                  { n: 6, label: "Tool-using (read)", phase: "next" },
+                  { n: 7, label: "Approval-gated action", phase: "future" },
+                  { n: 8, label: "Bounded autonomous", phase: "future" },
+                ].map((r) => (
+                  <div
+                    key={r.n}
+                    className={[
+                      "flex flex-col items-center gap-1 px-1 py-2",
+                      r.phase === "active"
+                        ? "bg-accent text-white"
+                        : r.phase === "current"
+                          ? "bg-surface-base text-ink-primary"
+                          : r.phase === "next"
+                            ? "bg-surface-base text-ink-secondary"
+                            : "bg-surface-base text-ink-muted",
+                    ].join(" ")}
+                    title={r.label}
+                  >
+                    <span className="font-serif text-[14px] leading-none tabular-nums">
+                      {r.n}
+                    </span>
+                    <span className="hidden text-center text-[8px] uppercase tracking-[0.1em] leading-tight md:block">
+                      {r.label.split(" ")[0]}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-2 text-[11px] leading-[1.45] text-ink-muted">
+                Currently approved for rungs 1&ndash;3. Recommendation rung
+                pending owner sign-off. Higher rungs require evidence and
+                separate approval.
+              </p>
+            </div>
           </div>
         </div>
 
