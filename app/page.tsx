@@ -267,6 +267,87 @@ export default function Page() {
   )
 }
 
+function OfferingsSection() {
+  const offerings = [
+    {
+      eyebrow: "Section 01",
+      title: "Operating Diagnostic",
+      body: "Pre-build engagement that decides what AI belongs in the workflow. Five client touchpoints, seven umbrellas, one decision packet, one managed lifecycle object. No production credentials. Outputs are yours whether or not you build with us.",
+      href: "/diagnostic",
+      cta: "See the diagnostic",
+    },
+    {
+      eyebrow: "Section 02",
+      title: "Operating Implementation",
+      body: "Post-approval build of the Operating Intelligence Platform's first wedge — a Minimum Viable Foundry — and the agents on top of it. Eight-rung agent safety ladder. Eval harness, guardrails, observability. Built in your environment.",
+      href: "/implementation",
+      cta: "See implementation",
+    },
+    {
+      eyebrow: "Recurring",
+      title: "Managed AgentOps",
+      body: "We do not just deliver agents. We operate them. Eval regression, source freshness, access review, prompt and tool change control, incident response, expansion or retirement. Three lifecycle variants under one operating contract.",
+      href: "/agentops",
+      cta: "See AgentOps",
+    },
+  ]
+
+  return (
+    <section
+      aria-labelledby="offerings-heading"
+      className="bg-surface-base py-20 md:py-28"
+    >
+      <div className="container-shell">
+        <header className="mb-12 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+              What Quoin sells
+            </p>
+            <h2
+              id="offerings-heading"
+              className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-ink-primary"
+            >
+              Three offerings under one method.
+            </h2>
+          </div>
+          <div className="lg:col-span-6 lg:col-start-7 lg:pt-7">
+            <p className="measure text-[16px] leading-[1.65] text-ink-secondary md:text-[17px]">
+              The work is split contractually, not blended. Discovery decides
+              whether AI belongs. Implementation builds the Operating
+              Intelligence Platform and the agents on top. Managed AgentOps
+              keeps them safe, useful, and aligned as workflows change.
+            </p>
+          </div>
+        </header>
+
+        <div className="grid grid-cols-1 gap-px bg-[hsl(var(--border-subtle))] md:grid-cols-3">
+          {offerings.map((o) => (
+            <Link
+              key={o.title}
+              href={o.href}
+              className="group flex flex-col gap-5 bg-surface-base p-6 transition-colors hover:bg-surface-sunken md:p-8"
+            >
+              <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-accent">
+                {o.eyebrow}
+              </p>
+              <h3 className="text-balance font-serif text-[28px] leading-[1.1] tracking-normal text-ink-primary md:text-[32px]">
+                {o.title}
+              </h3>
+              <p className="text-[14px] leading-[1.65] text-ink-secondary md:text-[15px]">
+                {o.body}
+              </p>
+              <span className="mt-auto inline-flex items-center gap-2 border-b border-accent pb-1 self-start text-[14px] font-medium text-accent transition-colors group-hover:border-ink-primary group-hover:text-ink-primary">
+                <span>{o.cta}</span>
+                <span aria-hidden="true">&rarr;</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function OperatingIntelligenceSubClaim() {
   return (
     <section
