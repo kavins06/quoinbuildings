@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
 import { Hero } from "@/components/hero"
 import { createPageMetadata } from "@/lib/seo"
@@ -71,56 +70,10 @@ const buildManageRows = [
   },
 ]
 
-const proofPoints = [
-  {
-    source: "NAREIM 2026",
-    body: "Institutional real estate firms rated AI maturity 5.7/10 and governance readiness 5.1/10 while AI tools had already proliferated.",
-    href: "https://www.nareim.org/2026/04/20/technology-data-ai-survey-2026/",
-  },
-  {
-    source: "JLL 2025",
-    body: "88% of investors, owners, and landlords had started AI pilots.",
-    href: "https://www.jll.com/en-de/newsroom/real-estates-ai-reality-check-companies-piloting-only-achieved-all-ai-goals",
-  },
-  {
-    source: "Stanford Digital Economy Lab",
-    body: "Across 51 enterprise AI cases, the difference was the organization, not the model.",
-    href: "https://digitaleconomy.stanford.edu/publication/enterprise-ai-playbook/",
-  },
-]
-
 const failurePatterns = [
   "Workflow not mapped.",
   "Source of truth disputed.",
   "Control path unclear.",
-]
-
-const phaseOneTouchpoints = [
-  {
-    number: "01",
-    title: "Strategy and scope",
-    body: "Define business pressure, candidate operating areas, sponsor goals, constraints, and decision rights.",
-  },
-  {
-    number: "02",
-    title: "Workflow interviews",
-    body: "Use role-aware voice interviews to capture how work actually happens, including exceptions and informal judgment.",
-  },
-  {
-    number: "03",
-    title: "Evidence and data request",
-    body: "Collect approved artifacts, redacted examples, screenshots, reports, field lists, policies, and system context.",
-  },
-  {
-    number: "04",
-    title: "Governance validation",
-    body: "Resolve trusted sources, owners, access paths, sensitivity, retention, permitted AI actions, and prohibited behaviors.",
-  },
-  {
-    number: "05",
-    title: "Decision and handoff",
-    body: "Deliver the private intelligence workspace, readiness score, agent behavior contract, build path, and managed lifecycle plan.",
-  },
 ]
 
 const workspaceContents = [
@@ -197,39 +150,6 @@ const partnerPhases = [
   },
 ]
 
-const teamMembers = [
-  {
-    name: "Kavin Sakthivel",
-    domain: "Real Estate AI Strategy & Engineering",
-    photo: "/team-kavin.jpeg",
-  },
-  {
-    name: "Dr. Cynthia J. Mendoza",
-    domain: "Governance & Security Architecture",
-    photo: "/team-cynthia.png",
-  },
-  {
-    name: "Jonathan Morris",
-    domain: "REIT Operations & Investment Judgment",
-    photo: "/team-jonathan.png",
-  },
-  {
-    name: "Rohith Roshan",
-    domain: "Agent Architecture & Evaluation",
-    photo: "/team-rohith.png",
-  },
-  {
-    name: "Ricky Fauntleroy",
-    domain: "Cybersecurity & Deployment Infrastructure",
-    photo: "/team-ricky.png",
-  },
-  {
-    name: "Brandon Timpane",
-    domain: "Data Readiness & Enterprise Applications",
-    photo: "/team-brandon.png",
-  },
-]
-
 const goodFit = [
   "Vertically integrated REITs.",
   "Large private owner/operators.",
@@ -254,13 +174,10 @@ export default function Page() {
       <OperatingIntelligenceSubClaim />
       <OperatingPrinciplesSection />
       <OfferingsSection />
-      <WhyThisExistsSection />
       <OperatingValueSection />
-      <HumanAccountabilitySection />
       <BuildManageSection />
       <OperatingPartnerModelSection />
       <PlatformSection />
-      <QuoinMethodSection />
       <FitSection />
       <ClosingCtaSection />
     </>
@@ -436,6 +353,16 @@ function OperatingPrinciplesSection() {
             </article>
           ))}
         </div>
+
+        <div className="mt-8 flex items-center justify-end">
+          <Link
+            href="/team"
+            className="cta-primary inline-flex items-center gap-2 text-[14px] font-medium"
+          >
+            <span>Six operators behind the work</span>
+            <span aria-hidden="true">&rarr;</span>
+          </Link>
+        </div>
       </div>
     </section>
   )
@@ -501,6 +428,24 @@ function EvidenceBandSection() {
               Across 51 enterprise AI cases studied.
             </p>
           </a>
+        </div>
+
+        <div className="border-t border-strong/15 px-6 py-8 md:px-8 md:py-10">
+          <p className="mb-6 text-[10px] font-medium uppercase tracking-[0.18em] text-ink-muted">
+            Where AI fails inside operating workflows
+          </p>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-10">
+            {failurePatterns.map((pattern, index) => (
+              <div key={pattern} className="flex items-start gap-4">
+                <p className="font-serif text-[28px] leading-none text-accent tabular-nums md:text-[32px]">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <p className="text-[16px] font-medium leading-[1.3] text-ink-primary md:text-[17px]">
+                  {pattern}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -637,141 +582,6 @@ function BuildManageSection() {
               ))}
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function WhyThisExistsSection() {
-  return (
-    <section
-      aria-labelledby="why-this-exists-heading"
-      className="bg-[hsl(var(--surface-inverse))] py-20 text-white md:py-32"
-    >
-      <div className="container-shell">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
-          <header className="lg:col-span-5">
-            <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-white/45">
-              Why This Exists
-            </p>
-            <h2
-              id="why-this-exists-heading"
-              className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-white"
-            >
-              AI adoption has outrun operating readiness.
-            </h2>
-            <p className="mt-8 measure text-[17px] leading-[1.6] text-white/65">
-              Real estate companies are already testing AI through vendor features, Copilot,
-              ChatGPT, and internal pilots. The harder question is whether the company knows
-              which workflow AI can touch, which source is trusted, who approves action, and
-              what happens when the agent is wrong.
-            </p>
-          </header>
-
-          <div className="lg:col-span-7">
-            <div className="grid grid-cols-1 gap-px bg-white/15 md:grid-cols-3">
-              {proofPoints.map((point) => (
-                <a
-                  key={point.source}
-                  href={point.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block bg-[hsl(var(--surface-inverse))] p-6 transition-colors hover:bg-white/[0.03]"
-                >
-                  <p className="mb-5 text-[10px] font-medium uppercase tracking-[0.16em] text-accent">
-                    {point.source}
-                  </p>
-                  <p className="text-[15px] leading-[1.6] text-white/68">
-                    {point.body}
-                  </p>
-                </a>
-              ))}
-            </div>
-
-            <div className="mt-12 border-t border-white/20 pt-8">
-              <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-white/42">
-                Failure patterns
-              </p>
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-                {failurePatterns.map((pattern, index) => (
-                  <div key={pattern} className="border-l border-white/20 pl-5">
-                    <p className="mb-4 font-serif text-[44px] leading-none text-white/25 tabular-nums">
-                      0{index + 1}
-                    </p>
-                    <p className="text-[18px] font-medium leading-[1.3] text-white">
-                      {pattern}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function QuoinMethodSection() {
-  return (
-    <section aria-labelledby="quoin-method-heading" className="bg-surface-base py-20 md:py-32">
-      <div className="container-shell">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
-          <header className="lg:col-span-5">
-            <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
-              Inside Phase 01: Map
-            </p>
-            <h2
-              id="quoin-method-heading"
-              className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-ink-primary"
-            >
-              Five client touchpoints, not nineteen interruptions.
-            </h2>
-          </header>
-          <div className="lg:col-span-6 lg:col-start-7">
-            <p className="measure text-[17px] leading-[1.6] text-ink-secondary">
-              Phase 01 is where most engagements start. Leadership, operators,
-              technology, governance, and data owners each get pulled in once,
-              when their judgment changes the recommendation. The output is an
-              inspectable workflow map and a no-build-or-build decision packet.
-            </p>
-          </div>
-        </div>
-
-        <ol className="mt-16 grid grid-cols-1 border-t border-strong lg:grid-cols-5">
-          {phaseOneTouchpoints.map((step, index) => (
-            <li
-              key={step.number}
-              className={[
-                "border-b border-strong/15 py-8 lg:border-b-0 lg:border-t-0 lg:px-6",
-                index < phaseOneTouchpoints.length - 1 ? "lg:border-r lg:border-strong/15" : "",
-                index === 0 ? "lg:pl-0" : "",
-                index === phaseOneTouchpoints.length - 1 ? "lg:pr-0" : "",
-              ].join(" ")}
-            >
-              <p className="mb-8 font-serif text-[56px] leading-none text-accent tabular-nums">
-                {step.number}
-              </p>
-              <h3 className="text-[20px] font-medium leading-[1.25] text-ink-primary">
-                {step.title}
-              </h3>
-              <p className="mt-4 text-[15px] leading-[1.6] text-ink-secondary">
-                {step.body}
-              </p>
-            </li>
-          ))}
-        </ol>
-
-        <div className="mt-10 flex flex-col gap-6 border-t border-strong pt-8 md:flex-row md:items-center md:justify-between">
-          <p className="max-w-3xl text-[15px] leading-[1.6] text-ink-secondary">
-            No production access required to start. Redacted evidence accepted. Client owns
-            the output. Human-owned recommendations.
-          </p>
-          <Link href="/method" className="cta-primary inline-flex self-start items-center gap-2 text-[15px] font-medium">
-            <span>See the full method</span>
-            <span aria-hidden="true">&rarr;</span>
-          </Link>
         </div>
       </div>
     </section>
@@ -1087,67 +897,6 @@ function OperatingPartnerModelSection() {
             </li>
           ))}
         </ol>
-      </div>
-    </section>
-  )
-}
-
-function HumanAccountabilitySection() {
-  return (
-    <section
-      aria-labelledby="human-accountability-heading"
-      className="border-y border-strong bg-surface-sunken py-20 md:py-32"
-    >
-      <div className="container-shell">
-        <header className="mb-14 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-5">
-            <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
-              Human Accountability
-            </p>
-            <h2
-              id="human-accountability-heading"
-              className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-ink-primary"
-            >
-              AI-assisted work. Expert-owned decisions.
-            </h2>
-          </div>
-          <div className="lg:col-span-6 lg:col-start-7">
-            <p className="measure text-[17px] leading-[1.6] text-ink-secondary">
-              Quoin&apos;s platform accelerates interviews, extraction, mapping, scoring, and
-              draft deliverables. Recommendations, build paths, and managed operations
-              plans are reviewed across real estate operations, AI architecture,
-              governance, infrastructure, and data readiness before they reach the client.
-            </p>
-          </div>
-        </header>
-
-        <div className="grid grid-cols-1 gap-px bg-[hsl(var(--border-subtle))] md:grid-cols-2 lg:grid-cols-3">
-          {teamMembers.map((member) => (
-            <Link
-              key={member.name}
-              href="/team"
-              className="group bg-surface-base"
-            >
-              <div className="relative aspect-[4/3] overflow-hidden bg-surface-sunken">
-                <Image
-                  src={member.photo}
-                  alt={member.name}
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-cover object-[center_16%] grayscale transition duration-500 group-hover:scale-[1.02] group-hover:grayscale-0"
-                />
-              </div>
-              <div className="p-5 md:p-6">
-                <h3 className="text-[20px] font-medium leading-[1.25] text-ink-primary">
-                  {member.name}
-                </h3>
-                <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.14em] text-accent">
-                  {member.domain}
-                </p>
-              </div>
-            </Link>
-          ))}
-        </div>
       </div>
     </section>
   )
