@@ -4,12 +4,18 @@ export const siteUrl = "https://quoinbuildings.com"
 export const siteName = "Quoin"
 export const companyName = "Quoin Buildings, LLC"
 export const defaultDescription =
-  "Quoin maps real estate workflows, builds the intelligence layer required for safe AI, then builds, deploys, governs, and manages agents inside operating workflows."
+  "AI adoption has outrun operating readiness in real estate. Quoin runs a discovery diagnostic, builds a governed Operating Intelligence Platform, and operates the agents on top under Managed AgentOps. AI-assisted work, expert-owned decisions."
 
 export const publicRoutes = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
   { path: "/method", priority: 0.9, changeFrequency: "monthly" },
   { path: "/platform", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/diagnostic", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/implementation", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/agentops", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/technology-leaders", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/concepts", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/perspectives", priority: 0.7, changeFrequency: "weekly" },
   { path: "/team", priority: 0.7, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
   { path: "/accessibility", priority: 0.3, changeFrequency: "yearly" },

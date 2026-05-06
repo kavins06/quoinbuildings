@@ -1,43 +1,59 @@
 # Quoin Buildings
 
-> Quoin builds and operates governed AI agents for vertically integrated real estate companies.
+> Quoin is the AI Operating Partner for vertically integrated real estate companies. Discovery, governed implementation, and managed operations under one method.
 
-Quoin makes real estate companies queryable, governable, and agent-ready, then builds and manages the AI agents, automations, integrations, controls, and operating infrastructure that run inside their workflows. Quoin is not a strategy-only consulting firm and not a point-solution software vendor. It is an AI operating partner for clients that need production AI inside real estate operations with governance, security, monitoring, and day-to-day operating accountability.
+Quoin makes real estate companies queryable, governable, and agent-ready, then builds and operates the agents that run inside their workflows. Quoin runs three contractually distinct service lines: an Operating Diagnostic that decides whether AI belongs, an Operating Implementation that builds the Operating Intelligence Platform and the agents on top of it, and Managed AgentOps that operates them under continuous evals, change control, incident response, and lifecycle management.
+
+The defensible thesis: most enterprises do not have an AI-agent problem first; they have an operating intelligence problem first. Critical truth lives in spreadsheets, macros, manual adjustments, and expert memory. Agents that improvise over fragile truth fail. Quoin maps how truth is actually produced before any agent is built.
 
 ## Who this is for
 
 - Senior leadership at vertically integrated real estate companies
-- Vertically integrated REITs and large private real estate companies
-- Real estate companies with in-house operating platforms
-- Firms with multi-property, multi-region, or multi-system complexity
-- Leadership teams that need AI to affect operating capacity, reporting quality, risk control, and portfolio performance
+- REITs and large private real estate companies
+- Firms with regional operating layers and multi-system complexity
+- Technology, security, and risk leaders who must co-approve AI work
+- Leadership teams where AI needs to affect operating capacity, reporting quality, risk control, and portfolio performance
 
 ## Who this is not for
 
 - Pure asset managers with no operating control
-- Pure third-party property managers with no asset-side decision authority
+- Pure third-party property managers with no asset-side authority
 - Companies looking only for a chatbot
-- Companies that want isolated AI demos without changing workflows, controls, or operating ownership
+- Teams that want AI demos without changing workflows, controls, or operating ownership
 
 ## Core Model
 
+The five operating phases:
+
 1. Map the workflow: systems, roles, exceptions, approvals, source trust, and value.
-2. Build the intelligence layer: workflow objects, source inventory, decision rights, governance, readiness, and evidence.
-3. Build the agent: agents, automations, connectors, review queues, evals, audit trails, and operating interfaces.
-4. Deploy with controls: permitted actions, prohibited actions, human review, access boundaries, escalation, and logging.
-5. Manage continuously: quality, drift, overrides, incidents, adoption, access reviews, workflow changes, and expansion decisions.
+2. Build the Operating Intelligence Platform: source inventory, canonical entities, semantic and truth layer, document and knowledge layer, permissions, observability.
+3. Build the agent: agents, automations, connectors, review queues, evals, audit trails, operating interfaces.
+4. Deploy with controls: permitted actions, prohibited actions, human review, access boundaries, escalation, logging.
+5. Manage continuously under Managed AgentOps: quality, drift, overrides, incidents, adoption, change control, expansion or retirement.
+
+## Three Offerings
+
+- Operating Diagnostic: pre-build engagement that decides what AI belongs in the workflow. Outputs a decision packet and managed lifecycle object. No production credentials required.
+- Operating Implementation: post-approval build of the Operating Intelligence Platform's first wedge (a Minimum Viable Foundry) and the agents on top of it.
+- Managed AgentOps: recurring operation of deployed agents with evals, source freshness, change control, incident response, and lifecycle reviews.
 
 ## Core Pages
 
-- [Operating Partner](https://quoinbuildings.com/): Positioning, value case, build/manage examples, operating partner model, platform summary, team accountability, and fit.
-- [Method](https://quoinbuildings.com/method): Conservative workflow, evidence, governance, readiness, and build-path method.
-- [Intelligence Platform](https://quoinbuildings.com/platform): Private operating intelligence workspace that becomes the build system for governed agents.
-- [Team](https://quoinbuildings.com/team): Quoin team, roles, institutional experience, and operating model.
-- [Contact](https://quoinbuildings.com/contact): Request an executive operating conversation.
+- [Home](https://quoinbuildings.com/): Positioning, evidence, operating principles, three offerings, value case, method, fit.
+- [Method](https://quoinbuildings.com/method): The five operating phases plus the seven-umbrella detail and the five-touchpoint client experience.
+- [Platform](https://quoinbuildings.com/platform): Operating Intelligence Platform architecture, Minimum Viable Foundry, staged data access, REIT example queries, complementary stack.
+- [Diagnostic](https://quoinbuildings.com/diagnostic): Operating Diagnostic offering — Section 1 pre-build engagement.
+- [Implementation](https://quoinbuildings.com/implementation): Operating Implementation offering — Section 2 governed build.
+- [AgentOps](https://quoinbuildings.com/agentops): Managed AgentOps offering — recurring operations.
+- [Technology Leaders](https://quoinbuildings.com/technology-leaders): For CTOs, CIOs, CISOs, CDOs, and enterprise architects who must co-approve AI work.
+- [Concepts](https://quoinbuildings.com/concepts): Truth profile taxonomy, platform layers, Minimum Viable Foundry, agent safety ladder, readiness paths.
+- [Perspectives](https://quoinbuildings.com/perspectives): Long-form articles on operating intelligence, governance, and the gap between AI capability and enterprise readiness.
+- [Team](https://quoinbuildings.com/team): Quoin team, roles, institutional experience.
+- [Contact](https://quoinbuildings.com/contact): Request a 30-minute call.
 
 ## Best Summary
 
-Quoin builds the organizational intelligence layer and governed AI operating infrastructure for vertically integrated real estate companies. The reason Quoin can build safe AI agents is that it first makes the company queryable, governable, and agent-ready. After launch, Quoin manages the AI infrastructure so agents remain useful, controlled, and aligned with changing workflows, systems, policies, portfolios, and risk posture.
+Quoin runs an AI Operating Partner method built around one observation: AI fails inside enterprises because the underlying truth is fragile, not because the model is weak. Quoin's first job is to make the company queryable through governed sources, canonical entities, semantic definitions, and explicit truth profiles. Only then are agents built on top. After launch, Managed AgentOps keeps the agents safe, useful, and aligned as workflows, systems, policies, portfolios, and risk posture change.
 
 ## Contact
 
