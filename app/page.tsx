@@ -4,6 +4,9 @@ import Link from "next/link"
 import { Hero } from "@/components/hero"
 import { createPageMetadata } from "@/lib/seo"
 
+const memberSlug = (name: string) =>
+  name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")
+
 export const metadata: Metadata = createPageMetadata({
   title: "Quoin | Governed AI for Real Estate Operations",
   description:
@@ -203,6 +206,12 @@ const poorFit = [
 export default function Page() {
   return (
     <>
+      <link
+        rel="preload"
+        as="video"
+        href="/hero-bg.webm"
+        type="video/webm"
+      />
       <Hero />
       <EvidenceBandSection />
       <OperatingIntelligenceSubClaim />
@@ -574,7 +583,7 @@ function OperatorsSection() {
               id="operators-heading"
               className="text-balance font-sans text-[clamp(2rem,4.5vw,2.75rem)] font-medium leading-[1.12] tracking-normal text-ink-primary"
             >
-              Six operators behind the work.
+              Real estate AI requires more than AI engineers.
             </h2>
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
@@ -591,7 +600,7 @@ function OperatorsSection() {
           {teamMembers.map((member) => (
             <Link
               key={member.name}
-              href="/team"
+              href={`/team#${memberSlug(member.name)}`}
               className="group bg-surface-base"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-surface-sunken">
