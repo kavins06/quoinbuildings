@@ -251,7 +251,9 @@ export default function Page() {
     <>
       <Hero />
       <EvidenceBandSection />
+      <OperatingIntelligenceSubClaim />
       <OperatingPrinciplesSection />
+      <OfferingsSection />
       <WhyThisExistsSection />
       <OperatingValueSection />
       <HumanAccountabilitySection />
@@ -262,6 +264,46 @@ export default function Page() {
       <FitSection />
       <ClosingCtaSection />
     </>
+  )
+}
+
+function OperatingIntelligenceSubClaim() {
+  return (
+    <section
+      aria-label="Operating intelligence claim"
+      className="bg-surface-base py-20 md:py-28"
+    >
+      <div className="container-shell">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <p className="mb-6 text-[10px] font-medium uppercase tracking-[0.18em] text-accent">
+              The thesis
+            </p>
+            <p className="font-serif text-balance text-[clamp(1.6rem,3.4vw,2.5rem)] font-normal leading-[1.15] tracking-normal text-ink-primary">
+              Most enterprises do not have an AI-agent problem first. They have an
+              operating intelligence problem first.
+            </p>
+          </div>
+          <div className="lg:col-span-5 lg:col-start-8 lg:pt-3">
+            <p className="measure text-[16px] leading-[1.7] text-ink-secondary md:text-[17px]">
+              Critical truth lives in spreadsheets, macros, manual adjustments,
+              and expert memory. System-of-record data and de facto trusted data
+              are often not the same thing. Agents that improvise over fragile
+              truth fail. Quoin maps how truth is actually produced before any
+              agent is built, and assigns every metric a truth profile that
+              constrains what an agent is allowed to do with it.
+            </p>
+            <Link
+              href="/concepts"
+              className="cta-primary mt-7 inline-flex items-center gap-2 self-start text-[14px] font-medium"
+            >
+              <span>See the truth profile taxonomy</span>
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 
