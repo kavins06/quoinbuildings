@@ -4,24 +4,25 @@ import { createPageMetadata } from "@/lib/seo"
 import { PlatformContent } from "./content"
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Private Operating Intelligence Workspace",
+  title: "Operating Intelligence Platform",
   description:
-    "Quoin's intelligence platform turns operating evidence into the build and management layer for AI agents Quoin builds, deploys, governs, and manages.",
+    "A governed semantic layer that makes one workflow queryable, then another. Source inventory, canonical entities, semantic and truth layer, document and knowledge layer, permissions, observability, and the agent layer that sits on top.",
   path: "/platform",
   image: "/hero-bg.jpg",
   keywords: [
-    "operating intelligence workspace",
+    "operating intelligence platform",
     "real estate AI platform",
-    "AI readiness workspace",
-    "workflow intelligence platform",
+    "minimum viable foundry",
+    "governed semantic layer",
     "managed AI operations platform",
+    "truth profile AI",
   ],
 })
 
 export default function PlatformPage() {
   return (
     <>
-      <PageStructuredData name="Intelligence Platform" path="/platform" />
+      <PageStructuredData name="Operating Intelligence Platform" path="/platform" />
       <PlatformContent />
     </>
   )

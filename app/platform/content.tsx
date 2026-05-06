@@ -241,7 +241,7 @@ export function PlatformContent() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
             <BlurFade inView direction="up" className="lg:col-span-7">
               <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
-                Intelligence Platform
+                Operating Intelligence Platform
               </p>
               <h1 className="text-balance font-serif text-[clamp(3rem,7vw,5.875rem)] font-normal leading-[1.02] tracking-normal text-ink-primary">
                 A private operating intelligence workspace for real estate AI.

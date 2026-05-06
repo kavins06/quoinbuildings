@@ -660,7 +660,7 @@ function PlatformSection() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           <header className="lg:col-span-5">
             <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
-              Quoin Intelligence Platform
+              Operating Intelligence Platform
             </p>
             <h2
               id="platform-heading"
