@@ -9,8 +9,9 @@ import { AnimatedLogo } from "@/components/ui/animated-logo"
 
 const navLinks = [
   { label: "Method", href: "/method" },
-  { label: "Intelligence Platform", href: "/platform" },
+  { label: "Platform", href: "/platform" },
   { label: "Team", href: "/team" },
+  { label: "Perspectives", href: "/perspectives" },
   { label: "Contact", href: "/contact" },
 ]
 
