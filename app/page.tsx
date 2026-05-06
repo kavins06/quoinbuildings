@@ -324,6 +324,11 @@ function OperatingPrinciplesSection() {
       title: "We are allowed to recommend not building.",
       body: "Five readiness paths come out of every engagement: build, remediate, buy, pause, or do not automate. The right answer is sometimes don't.",
     },
+    {
+      eyebrow: "Complementary",
+      title: "We sit beside your stack. We do not replace it.",
+      body: "Quoin works alongside your existing systems: Snowflake, Databricks, Yardi, MRI, RealPage, Salesforce, Workday, ServiceNow, SharePoint, Argus, Power BI, Tableau, Excel. The Operating Intelligence Platform is a governed semantic layer, not a new system of record.",
+    },
   ]
 
   return (
@@ -332,7 +337,7 @@ function OperatingPrinciplesSection() {
       className="bg-surface-sunken py-16 md:py-20"
     >
       <div className="container-shell">
-        <div className="grid grid-cols-1 gap-px bg-[hsl(var(--border-subtle))] md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-px bg-[hsl(var(--border-subtle))] md:grid-cols-2 lg:grid-cols-4">
           {principles.map((p) => (
             <article
               key={p.title}
@@ -341,7 +346,7 @@ function OperatingPrinciplesSection() {
               <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-accent">
                 {p.eyebrow}
               </p>
-              <h3 className="mt-4 text-balance text-[19px] font-medium leading-[1.25] tracking-normal text-ink-primary md:text-[21px]">
+              <h3 className="mt-4 text-balance text-[19px] font-medium leading-[1.25] tracking-normal text-ink-primary md:text-[20px]">
                 {p.title}
               </h3>
               <p className="mt-4 text-[14px] leading-[1.65] text-ink-secondary md:text-[15px]">
